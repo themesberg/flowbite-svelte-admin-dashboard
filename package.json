@@ -1,23 +1,34 @@
 {
 	"name": "flowbite-svelte-admin-dashboard",
 	"version": "0.0.1",
-	"private": true,
+	"description": "Flowbite Admin Dashboard components for Svelte",
+	"main": "index.js",
+	"author": {
+		"name": "Shinichi Okada",
+		"email": "connect@codewithshin.com",
+		"url": "https://blog.codewithshin.com"
+	},
+	"bugs": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/issues",
+	"homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
+		"build:package": "svelte-kit sync && svelte-package",
 		"preview": "vite preview",
 		"test": "playwright test",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
-		"format": "prettier --plugin-search-dir . --write ."
+		"format": "prettier --plugin-search-dir . --write .",
+		"package:publish": "standard-version && git push --follow-tags origin main && npm run build:package && npm publish ./package"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
 		"@popperjs/core": "^2.11.6",
 		"@sveltejs/adapter-auto": "^1.0.0",
 		"@sveltejs/kit": "^1.0.0",
+		"@sveltejs/package": "^1.0.2",
 		"@typescript-eslint/eslint-plugin": "^5.45.0",
 		"@typescript-eslint/parser": "^5.45.0",
 		"autoprefixer": "^10.4.7",
@@ -40,5 +51,22 @@
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/themesberg/flowbite-svelte-admin-dashboard"
+	},
+	"engines": {
+		"npm": ">=7.0.0",
+		"node": ">=16.0.0"
+	},
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"tailwindcss",
+		"flowbite",
+		"ui",
+		"signin",
+		"signup"
+	]
 }
