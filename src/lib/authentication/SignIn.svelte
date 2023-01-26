@@ -10,9 +10,9 @@
 	export let rememberMe = true;
 	export let lostPassword = true;
 	export let createAccount = true;
-	export let lostPasswordLink = '#';
+	export let lostPasswordLink = '';
 	export let loginTitle = 'Login to your account';
-	export let registerLink = '#';
+	export let registerLink = '';
 	export let createAccountTitle = 'Create account';
 </script>
 
