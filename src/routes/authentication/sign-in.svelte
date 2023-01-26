@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { Label, Input } from 'flowbite-svelte';
 	import { SignIn } from '$lib';
+
 	let title = 'Sign in to platform';
 	let site = {
 		name: 'Flowbite',
@@ -38,4 +40,13 @@
 	{registerLink}
 	{createAccountTitle}
 	on:submit={onSubmit}
-/>
+>
+	<div>
+		<Label for="email" class="mb-2">Your email</Label>
+		<Input type="email" name="email" id="email" placeholder="name@company.com" required />
+	</div>
+	<div>
+		<Label for="password" class="mb-2">Your password</Label>
+		<Input type="password" name="password" id="password" placeholder="••••••••" required />
+	</div>
+</SignIn>

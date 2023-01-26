@@ -1,7 +1,15 @@
 {
 	"name": "flowbite-svelte-admin-dashboard",
 	"version": "0.0.1",
-	"private": true,
+	"description": "Flowbite Admin Dashboard components for Svelte",
+	"main": "index.js",
+	"author": {
+		"name": "Shinichi Okada",
+		"email": "connect@codewithshin.com",
+		"url": "https://blog.codewithshin.com"
+	},
+	"bugs": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/issues",
+	"homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -40,5 +48,22 @@
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/themesberg/flowbite-svelte-admin-dashboard"
+	},
+	"engines": {
+		"npm": ">=7.0.0",
+		"node": ">=16.0.0"
+	},
+	"keywords": [
+		"svelte",
+		"sveltekit",
+		"tailwindcss",
+		"flowbite",
+		"ui",
+		"signin",
+		"signup"
+	]
 }

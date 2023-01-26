@@ -33,27 +33,22 @@
 				{title}
 			</h2>
 			<form class="mt-8 space-y-6" on:submit|preventDefault>
-				<div>
-					<Label for="email" class="mb-2">Your email</Label>
-					<Input type="email" name="email" id="email" placeholder="name@company.com" required />
-				</div>
-				<div>
-					<Label for="password" class="mb-2">Your password</Label>
-					<Input type="password" name="password" id="password" placeholder="••••••••" required />
-				</div>
-				<div class="flex items-start">
-					{#if rememberMe}
-						<div class="flex items-center h-5">
-							<Checkbox id="remember" aria-describedby="remember" name="remember" value={1} />
-						</div>
-						<div class="ml-3 text-sm">
-							<Label for="remember">Remember me</Label>
-						</div>
-					{/if}
-					{#if lostPassword}
-						<A href={lostPasswordLink} aClass="ml-auto text-sm">Lost Password?</A>
-					{/if}
-				</div>
+				<slot />
+				{#if rememberMe || lostPassword}
+					<div class="flex items-start">
+						{#if rememberMe}
+							<div class="flex items-center h-5">
+								<Checkbox id="remember" aria-describedby="remember" name="remember" value={1} />
+							</div>
+							<div class="ml-3 text-sm">
+								<Label for="remember">Remember me</Label>
+							</div>
+						{/if}
+						{#if lostPassword}
+							<A href={lostPasswordLink} aClass="ml-auto text-sm">Lost Password?</A>
+						{/if}
+					</div>
+				{/if}
 				<Button type="submit">{loginTitle}</Button>
 				{#if createAccount}
 					<div class="text-sm font-medium text-gray-500 dark:text-gray-400">
