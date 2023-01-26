@@ -20,7 +20,7 @@
 					<img
 						class="w-8 h-8 rounded-full"
 						src="https://flowbite-admin-dashboard.vercel.app/images/users/bonnie-green.png"
-						alt="Bonnie image"
+						alt="Bonnie"
 					/>
 					<h2 class="mb-3 text-2xl font-bold text-gray-900 dark:text-white">Bonnie Green</h2>
 				</div>
@@ -57,7 +57,7 @@
 						<div class="ml-3 text-sm">
 							<label for="remember" class="font-medium text-gray-900 dark:text-white"
 								>I accept the <a
-									href="#"
+									href="/"
 									class="text-primary-700 hover:underline dark:text-primary-500"
 									>Terms and Conditions</a
 								></label
