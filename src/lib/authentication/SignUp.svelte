@@ -1,22 +1,17 @@
-<script>
+<script lang="ts">
 	import { Label, Input, Checkbox, A, Button } from 'flowbite-svelte';
-	export let title = 'Sign in to platform';
+	export let title = '';
 	export let site = {
-		name: 'Flowbite',
-		img: 'https://flowbite-admin-dashboard.vercel.app/images/logo.svg',
-		link: 'https://flowbite-admin-dashboard.vercel.app/',
-		imgAlt: 'FlowBite Logo'
+		name: '',
+		img: '',
+		link: '',
+		imgAlt: ''
 	};
-	export let rememberMe = true;
-	export let lostPassword = true;
-	export let createAccount = true;
-	export let lostPasswordLink = '#';
-	export let loginTitle = 'Login to your account';
-	export let registerLink = '#';
-	export let createAccountTitle = 'Create account';
-	export const handleOnSubmit = () => {
-		console.log('Form submitted');
-	};
+	export let acceptTerms: boolean;
+	export let haveAccount: boolean;
+	export let btnTitle = 'Create account';
+	export let termsLink = '/';
+	export let loginLink = '/';
 </script>
 
 <main class="bg-gray-50 dark:bg-gray-900">
@@ -35,7 +30,7 @@
 			<h2 class="text-2xl font-bold text-gray-900 dark:text-white">
 				{title}
 			</h2>
-			<form class="mt-8 space-y-6" on:submit|preventDefault={handleOnSubmit}>
+			<form class="mt-8 space-y-6" on:submit|preventDefault>
 				<div>
 					<Label for="email" class="mb-2">Your email</Label>
 					<Input type="email" name="email" id="email" placeholder="name@company.com" required />
@@ -44,25 +39,38 @@
 					<Label for="password" class="mb-2">Your password</Label>
 					<Input type="password" name="password" id="password" placeholder="••••••••" required />
 				</div>
-				<div class="flex items-start">
-					{#if rememberMe}
+				<div>
+					<Label for="confirm-password" class="mb-2">Confirm password</Label>
+					<Input
+						type="password"
+						name="confirm-password"
+						id="confirm-password"
+						placeholder="••••••••"
+						required
+					/>
+				</div>
+				{#if acceptTerms}
+					<div class="flex items-start">
 						<div class="flex items-center h-5">
-							<Checkbox id="remember" aria-describedby="remember" name="remember" />
+							<Checkbox id="accept" aria-describedby="accept" name="accept" value={1} />
 						</div>
 						<div class="ml-3 text-sm">
-							<Label for="remember">Remember me</Label>
+							<Label for="accept"
+								>I accept the <a
+									href={termsLink}
+									class="text-primary-700 hover:underline dark:text-primary-500"
+									>Terms and Conditions</a
+								></Label
+							>
 						</div>
-					{/if}
-					{#if lostPassword}
-						<A href={lostPasswordLink} aClass="ml-auto text-sm object-right">Lost Password?</A>
-					{/if}
-				</div>
-				<Button type="submit">{loginTitle}Test</Button>
-				{#if createAccount}
+					</div>
+				{/if}
+				<Button type="submit">{btnTitle}</Button>
+				{#if haveAccount}
 					<div class="text-sm font-medium text-gray-500 dark:text-gray-400">
-						Not registered? <a
-							href={registerLink}
-							class="text-primary-700 hover:underline dark:text-primary-500">{createAccountTitle}</a
+						Already have an account? <a
+							href={loginLink}
+							class="text-primary-700 hover:underline dark:text-primary-500">Login here</a
 						>
 					</div>
 				{/if}

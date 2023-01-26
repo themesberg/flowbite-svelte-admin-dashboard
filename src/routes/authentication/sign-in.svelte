@@ -1,7 +1,20 @@
 <script lang="ts">
 	import { SignIn } from '$lib';
-	const registerLink = 'sign-up';
-	const lostPasswordLink = 'forgot-password';
+	let title = 'Sign in to platform';
+	let site = {
+		name: 'Flowbite',
+		img: 'https://flowbite-admin-dashboard.vercel.app/images/logo.svg',
+		link: 'https://flowbite-admin-dashboard.vercel.app/',
+		imgAlt: 'FlowBite Logo'
+	};
+	let rememberMe = true;
+	let lostPassword = true;
+	let createAccount = true;
+	let lostPasswordLink = 'forgot-password';
+	let loginTitle = 'Login to your account';
+	let registerLink = 'sign-up';
+	let createAccountTitle = 'Create account';
+
 	const onSubmit = (e: Event) => {
 		const formData = new FormData(e.target as HTMLFormElement);
 
@@ -14,4 +27,15 @@
 	};
 </script>
 
-<SignIn {registerLink} {lostPasswordLink} on:submit={onSubmit} />
+<SignIn
+	{title}
+	{site}
+	{rememberMe}
+	{lostPassword}
+	{createAccount}
+	{lostPasswordLink}
+	{loginTitle}
+	{registerLink}
+	{createAccountTitle}
+	on:submit={onSubmit}
+/>
