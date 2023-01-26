@@ -52,7 +52,7 @@ If you want to use this project we recommend to also [study the component librar
 
 | Login page | Register page | 🚧 Reset password
 | --- | --- | --- |
-| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbitee-admin-dashboard/github/login.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)]()
+| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)]()
 
 | 🚧 Forgot password | 🚧 Profile lock | 🚧 Maintenance page
 | --- | --- | --- |
