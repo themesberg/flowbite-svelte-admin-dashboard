@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Label, Input, Checkbox, A, Button } from 'flowbite-svelte';
-	export let title = '';
+	import { Label, Checkbox, Button } from 'flowbite-svelte';
+	export let title = 'Create a Free Account';
 	export let site = {
 		name: 'Flowbite',
 		img: 'https://flowbite-admin-dashboard.vercel.app/images/logo.svg',
