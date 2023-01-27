@@ -18,7 +18,7 @@
 	export let siteImgClass = 'mr-4 h-11';
 	export let cardDivClass =
 		'w-full max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow dark:bg-gray-800';
-	export let cardH2Class = 'text-2xl font-bold text-gray-900 dark:text-white';
+	export let cardH1Class = 'text-2xl font-bold text-gray-900 dark:text-white';
 	export let termsLinkClass = 'text-primary-700 hover:underline dark:text-primary-500';
 </script>
 
@@ -30,9 +30,9 @@
 		</a>
 		<!-- Card -->
 		<div class={cardDivClass}>
-			<h2 class={cardH2Class}>
+			<h1 class={cardH1Class}>
 				{title}
-			</h2>
+			</h1>
 			<form class="mt-8 space-y-6" on:submit|preventDefault>
 				<slot />
 				{#if acceptTerms}

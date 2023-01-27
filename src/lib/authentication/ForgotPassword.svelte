@@ -18,7 +18,7 @@
 	export let siteImgClass = 'mr-4 h-11';
 	export let cardDivClass =
 		'w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800';
-	export let cardH2Class = 'mb-3 text-2xl font-bold text-gray-900 dark:text-white';
+	export let cardH1Class = 'mb-3 text-2xl font-bold text-gray-900 dark:text-white';
 	export let cardDiv2Class = 'w-full p-6 sm:p-8';
 </script>
 
@@ -31,7 +31,7 @@
 		<!-- Card -->
 		<div class={cardDivClass}>
 			<div class={cardDiv2Class}>
-				<h2 class={cardH2Class}>{title}</h2>
+				<h1 class={cardH1Class}>{title}</h1>
 				<P class="text-base font-normal text-gray-500 dark:text-gray-400">
 					{pageDescription}
 				</P>
