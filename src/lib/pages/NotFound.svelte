@@ -8,27 +8,29 @@
 		alt: 'astronaut'
 	};
 	export let btnTitle = 'Go back home';
-	export let btnLink = 'https://flowbite-svelte-admin-dashboard.vercel.app/';
+	export let btnHref = 'https://flowbite-svelte-admin-dashboard.vercel.app/';
 	export let mainClass = 'bg-gray-50 dark:bg-gray-900';
 	export let mainDivClass =
 		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';
 	export let h1Class =
 		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white';
+	export let imgDiv = 'block md:max-w-lg';
+	export let div2Class = 'text-center xl:max-w-4xl';
 </script>
 
 <main class={mainClass}>
 	<div class={mainDivClass}>
-		<div class="block md:max-w-lg">
+		<div class={imgDiv}>
 			<img src={image.src} alt={image.alt} />
 		</div>
-		<div class="text-center xl:max-w-4xl">
+		<div class={div2Class}>
 			<h1 class={h1Class}>
 				{title}
 			</h1>
 			<P class="mb-5 text-base font-normal text-gray-500 md:text-lg dark:text-gray-400">
 				{description}
 			</P>
-			<Button href={btnLink}>
+			<Button href={btnHref}>
 				<svg
 					class="mr-2 -ml-1 w-5 h-5"
 					fill="currentColor"
