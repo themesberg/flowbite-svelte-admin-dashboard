@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Label, Input } from 'flowbite-svelte';
 	import { ResetPassword } from '$lib';
-	const title = 'Create a Free Account';
+	const title = 'Reset your password';
 	const site = {
 		name: 'Flowbite',
 		img: 'https://flowbite-admin-dashboard.vercel.app/images/logo.svg',
