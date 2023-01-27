@@ -52,15 +52,15 @@ If you want to use this project we recommend to also [study the component librar
 
 | Login page | Register page | Reset password
 | --- | --- | --- |
-| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)]()
+| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/reset-password)
 
-| Forgot password | 🚧 Profile lock | 🚧 Maintenance page
+| Forgot password | Profile lock | Maintenance page
 | --- | --- | --- |
-| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)]() | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)]() | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)]()
+| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/forgot-password) | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/profile-lock) | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/maintenance)
 
-| 🚧 404 not found | 🚧 500 server error | 🚧 Playground
+| 404 not found | 500 server error | 🚧 Playground
 | --- | --- | --- |
-| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)]() | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)]() | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)]()
+| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/404) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/500) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)]()
 
 -   [Live Preview](https://flowbite-svelte-admin-dashboard.vercel.app/)
 
