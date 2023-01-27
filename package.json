@@ -1,6 +1,6 @@
 {
 	"name": "flowbite-svelte-admin-dashboard",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "Flowbite Admin Dashboard components for Svelte",
 	"main": "index.js",
 	"author": {
