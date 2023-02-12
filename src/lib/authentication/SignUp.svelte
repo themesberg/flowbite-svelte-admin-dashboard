@@ -18,8 +18,7 @@
 	export let siteLinkClass =
 		'flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white';
 	export let siteImgClass = 'mr-4 h-11';
-	export let cardDivClass =
-		'w-full max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow dark:bg-gray-800';
+	export let cardDivClass = 'w-full max-w-xl p-6 space-y-8 sm:p-8 bg-white rounded-lg shadow dark:bg-gray-800';
 	export let cardH1Class = 'text-2xl font-bold text-gray-900 dark:text-white';
 	export let haveAccountDivClass = 'text-sm font-medium text-gray-500 dark:text-gray-400';
 	export let haveAccountLinkClass = 'text-primary-700 hover:underline dark:text-primary-500';
