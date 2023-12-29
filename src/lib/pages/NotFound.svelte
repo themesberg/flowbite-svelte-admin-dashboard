@@ -4,11 +4,11 @@
 	export let description =
 		'Oops! Looks like you followed a bad link. If you think this is a problem with us, please	tell us.';
 	export let image = {
-		src: 'https://flowbite-admin-dashboard.vercel.app/images/illustrations/404.svg',
+		src: '/images/illustrations/404.svg',
 		alt: 'astronaut'
 	};
 	export let btnTitle = 'Go back home';
-	export let btnHref = 'https://flowbite-svelte-admin-dashboard.vercel.app/';
+	export let btnHref = '/';
 	export let mainClass = 'bg-gray-50 dark:bg-gray-900';
 	export let mainDivClass =
 		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';

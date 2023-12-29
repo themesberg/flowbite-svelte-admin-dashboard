@@ -5,8 +5,8 @@
 	let title = 'Sign in to platform';
 	let site = {
 		name: 'Flowbite',
-		img: 'https://flowbite-admin-dashboard.vercel.app/images/logo.svg',
-		link: 'https://flowbite-admin-dashboard.vercel.app/',
+		img: '/images/flowbite-svelte-icon-logo.svg',
+		link: '/',
 		imgAlt: 'FlowBite Logo'
 	};
 	let rememberMe = true;
