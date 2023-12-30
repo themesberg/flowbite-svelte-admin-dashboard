@@ -13,7 +13,7 @@
 	const btnTitle = 'Create account';
 	const termsLink = '/';
 	const loginLink = 'sign-in';
-	const labelClass = 'mb-2';
+	const labelClass = 'space-y-2';
 	const onSubmit = (e: Event) => {
 		const formData = new FormData(e.target as HTMLFormElement);
 
@@ -37,21 +37,21 @@
 	on:submit={onSubmit}
 >
 	<div>
-		<Label for="email" class="mb-2">Your email</Label>
-		<Input type="email" name="email" id="email" placeholder="name@company.com" required />
+		<Label class={labelClass}>
+			<span>Your email</span>
+			<Input type="email" name="email" placeholder="name@company.com" required />
+		</Label>
 	</div>
 	<div>
-		<Label for="password" class={labelClass}>Your password</Label>
-		<Input type="password" name="password" id="password" placeholder="••••••••" required />
+		<Label class={labelClass}>
+			<span>Your password</span>
+			<Input type="password" name="password" placeholder="••••••••" required />
+		</Label>
 	</div>
 	<div>
-		<Label for="confirm-password" class={labelClass}>Confirm password</Label>
-		<Input
-			type="password"
-			name="confirm-password"
-			id="confirm-password"
-			placeholder="••••••••"
-			required
-		/>
+		<Label class={labelClass}>
+			<span>Confirm password</span>
+			<Input type="password" name="confirm-password" placeholder="••••••••" required />
+		</Label>
 	</div>
 </SignUp>
