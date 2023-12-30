@@ -4,7 +4,7 @@
 	export let description =
 		'Oops! Looks like you followed a bad link. If you think this is a problem with us, please	tell us.';
 	export let image = {
-		src: '/images/illustrations/404.svg',
+		src: 'https://flowbite-admin-dashboard.vercel.app/images/illustrations/404.svg',
 		alt: 'astronaut'
 	};
 	export let btnTitle = 'Go back home';

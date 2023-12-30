@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { P, Checkbox, Button, Card } from 'flowbite-svelte';
+	import { Button, Card, P } from 'flowbite-svelte';
 	export let title = 'Forgot your password?';
 	export let site = {
 		name: 'Flowbite',

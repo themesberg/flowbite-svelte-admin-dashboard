@@ -43,6 +43,10 @@
 	});
 
 	let posts = {
+		CRUD: {
+			Products: '/crud/products',
+			Users: '/crud/users'
+		},
 		Pages: {
 			404: '/errors/404',
 			500: '/errors/500'

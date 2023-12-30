@@ -1,6 +1,10 @@
 <script>
-	import { Avatar, DarkMode, NavBrand, NavHamburger, Navbar, Search } from 'flowbite-svelte';
+	import UserMenu from '$lib/widgets/UserMenu.svelte';
+	import { DarkMode, NavBrand, NavHamburger, Navbar, Search, ToolbarButton } from 'flowbite-svelte';
+	import { BellSolid, GridSolid } from 'flowbite-svelte-icons';
 	import '../app.postcss';
+	import Users from './data/users.json';
+	import AppsMenu from '$lib/widgets/AppsMenu.svelte';
 </script>
 
 <Navbar fluid color="default" class="justify-between">
@@ -19,9 +23,20 @@
 		<Search size="sm" />
 	</div>
 
-	<div class="flex items-center ms-auto">
+	<div class="flex items-center ms-auto gap-2 p-1">
+		<a
+			class="github-button"
+			href="https://github.com/themesberg/flowbite-admin-dashboard"
+			data-color-scheme="no-preference: dark; light: light; dark: light;"
+			data-icon="octicon-star"
+			data-size="large"
+			data-show-count="true"
+			aria-label="Star themesberg/flowbite-admin-dashboard on GitHub">Star</a
+		>
+		<ToolbarButton size="lg"><BellSolid /></ToolbarButton>
+		<AppsMenu />
 		<DarkMode />
-		<Avatar size="sm" />
+		<UserMenu {...Users[4]} />
 	</div>
 </Navbar>
 
