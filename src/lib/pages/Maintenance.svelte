@@ -4,7 +4,8 @@
 	export let description =
 		'Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always <a href="/" class="text-primary-700 hover:underline dark:text-primary-500">contact us</a>, otherwise we’ll be back online shortly!.';
 	export let image = {
-		src: '/images/illustrations/maintenance.svg',
+		src: 'https://flowbite-admin-dashboard.vercel.app/images/illustrations/maintenance.svg',
+
 		alt: 'maintenance'
 	};
 	export let btnTitle = 'Go back home';
