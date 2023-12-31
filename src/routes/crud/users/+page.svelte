@@ -19,6 +19,7 @@
 		ToolbarGroup
 	} from 'flowbite-svelte';
 	import {
+		CogOutline,
 		DotsVerticalOutline,
 		DownloadSolid,
 		EditOutline,
@@ -41,25 +42,23 @@
 		</Breadcrumb>
 		<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All users</Heading>
 
-		<div class="flex items-center w-full">
-			<Toolbar color="default" embedded={true} class="text-gray-500 dark:text-gray-400 p-0 w-full">
-				<ToolbarGroup class="w-80 xl:w-96">
-					<Input placeholder="Search for users" />
-				</ToolbarGroup>
-				<ToolbarGroup>
-					<ToolbarButton><TrashBinSolid /></ToolbarButton>
-					<ToolbarButton><ExclamationCircleSolid /></ToolbarButton>
-					<ToolbarButton><DotsVerticalOutline /></ToolbarButton>
-				</ToolbarGroup>
-				<ToolbarGroup></ToolbarGroup>
-			</Toolbar>
-			<Button size="sm" class="ms-auto gap-2 whitespace-nowrap"
-				><PlusSolid size="xs" />Add user</Button
-			>
-			<Button size="sm" color="alternative" class="ms-2 gap-2"
-				><DownloadSolid size="xs" />Export</Button
-			>
-		</div>
+		<Toolbar embedded class="-mx-2 text-gray-500 dark:text-gray-400 p-2 w-full">
+			<ToolbarGroup class="w-80 xl:w-96">
+				<Input placeholder="Search for users" />
+			</ToolbarGroup>
+			<ToolbarGroup>
+				<ToolbarButton><CogOutline /></ToolbarButton>
+				<ToolbarButton><TrashBinSolid /></ToolbarButton>
+				<ToolbarButton><ExclamationCircleSolid /></ToolbarButton>
+				<ToolbarButton><DotsVerticalOutline /></ToolbarButton>
+			</ToolbarGroup>
+			<div slot="end" class="space-x-2">
+				<Button size="sm" class="gap-2 whitespace-nowrap"><PlusSolid size="xs" />Add user</Button>
+				<Button size="sm" color="alternative" class="gap-2">
+					<DownloadSolid size="xs" />Export
+				</Button>
+			</div>
+		</Toolbar>
 	</div>
 	<Table>
 		<TableHead class="border-y bg-gray-100 border-gray-200 dark:border-gray-700">
