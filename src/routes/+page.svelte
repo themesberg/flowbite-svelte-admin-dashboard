@@ -13,7 +13,13 @@
 		SidebarWrapper,
 		Sidebar
 	} from 'flowbite-svelte';
-	import { ChevronDownSolid, ChevronUpSolid } from 'flowbite-svelte-icons';
+	import {
+		ChevronDownSolid,
+		ChevronUpSolid,
+		FileChartBarSolid,
+		LockSolid,
+		RectangleListSolid
+	} from 'flowbite-svelte-icons';
 
 	let drawerHidden: boolean = false;
 
@@ -21,7 +27,7 @@
 		drawerHidden = true;
 	};
 
-	let spanClass = '';
+	let spanClass = 'ms-9';
 	let nonActiveClass =
 		'transition-colors duration-200 relative flex items-center flex-wrap font-medium hover:text-gray-900 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
 	let activeClass =
@@ -42,23 +48,35 @@
 		// dropdowns[key] = true;
 	});
 
-	let posts = {
-		CRUD: {
-			Products: '/crud/products',
-			Users: '/crud/users'
+	let posts = [
+		{
+			name: 'CRUD',
+			icon: RectangleListSolid,
+			children: {
+				Products: '/crud/products',
+				Users: '/crud/users'
+			}
 		},
-		Pages: {
-			404: '/errors/404',
-			500: '/errors/500'
+		{
+			name: 'Pages',
+			icon: FileChartBarSolid,
+			children: {
+				'404 not found': '/errors/404',
+				'500 server error': '/errors/500'
+			}
 		},
-		Authenication: {
-			'Forgot password': '/authentication/forgot-password',
-			'Profile lock': '/authentication/profile-lock',
-			'Reset password': '/authentication/reset-password',
-			'Sign in': '/authentication/sign-in',
-			'Sign up': '/authentication/sign-up'
+		{
+			name: 'Authenication',
+			icon: LockSolid,
+			children: {
+				'Forgot password': '/authentication/forgot-password',
+				'Profile lock': '/authentication/profile-lock',
+				'Reset password': '/authentication/reset-password',
+				'Sign in': '/authentication/sign-in',
+				'Sign up': '/authentication/sign-up'
+			}
 		}
-	};
+	];
 	let dropdowns = Object.fromEntries(Object.keys(posts).map((x) => [x, false]));
 </script>
 
@@ -72,22 +90,23 @@
 	<SidebarWrapper
 		divClass="overflow-y-auto px-4 pt-20 lg:pt-0 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-8rem)] lg:block dark:bg-gray-900 lg:me-0 lg:sticky top-20"
 	>
-		<nav class="font-normal text-base lg:text-sm">
+		<nav class="font-normal text-base">
 			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4">
-				{#each Object.entries(posts) as [key, values] (key)}
+				{#each posts as { name, icon, children } (name)}
 					<SidebarDropdownWrapper
-						bind:isOpen={dropdowns[key]}
-						label={key}
+						bind:isOpen={dropdowns[name]}
+						label={name}
 						ulClass="space-y-2.5"
-						btnClass="flex items-center justify-between w-full my-4 text-sm font-semibold tracking-wide uppercase hover:text-primary-700 dark:hover:text-primary-600"
+						btnClass="flex items-center justify-start gap-4 w-full my-4 text-base font-semibold tracking-wide uppercase hover:text-primary-700 dark:hover:text-primary-600"
 						spanClass=""
-						class={dropdowns[key]
+						class={dropdowns[name]
 							? 'text-primary-700 dark:text-primary-700'
 							: 'text-gray-900 dark:text-white'}
 					>
 						<ChevronDownSolid slot="arrowdown" class="w-3 h-3 text-gray-800 dark:text-white" />
 						<ChevronUpSolid slot="arrowup" class="w-3 h-3 text-gray-800 dark:text-white" />
-						{#each Object.entries(values) as [title, href]}
+						<svelte:component this={icon} slot="icon" />
+						{#each Object.entries(children) as [title, href]}
 							<SidebarItem
 								label={title}
 								{href}
