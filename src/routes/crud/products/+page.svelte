@@ -6,7 +6,6 @@
 		Button,
 		Checkbox,
 		Heading,
-		Indicator,
 		Input,
 		Table,
 		TableBody,
@@ -21,10 +20,8 @@
 	import {
 		CogOutline,
 		DotsVerticalOutline,
-		DownloadSolid,
 		EditOutline,
 		ExclamationCircleSolid,
-		PlusSolid,
 		TrashBinSolid
 	} from 'flowbite-svelte-icons';
 	import Products from '../../data/product.json';
