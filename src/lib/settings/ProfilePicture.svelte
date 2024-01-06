@@ -6,7 +6,7 @@
 		'https://flowbite-admin-dashboard.vercel.app/images/users/' + 'roberta-casas.png';
 </script>
 
-<Card size="xl" class="w-full gap-4" horizontal>
+<Card size="xl" class="w-full gap-4 {$$props.class ?? ''}" horizontal>
 	<Avatar {src} class="h-28 w-28" size="none" rounded />
 	<div>
 		<Heading tag="h3" class="mb-1 text-xl">Profile picture</Heading>

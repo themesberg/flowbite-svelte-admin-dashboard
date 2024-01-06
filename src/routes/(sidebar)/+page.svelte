@@ -3,17 +3,14 @@
 	import { page } from '$app/stores';
 
 	import {
-		A,
-		Heading,
-		Li,
-		List,
+		Sidebar,
 		SidebarDropdownWrapper,
 		SidebarGroup,
 		SidebarItem,
-		SidebarWrapper,
-		Sidebar
+		SidebarWrapper
 	} from 'flowbite-svelte';
 	import {
+		ChartPieSolid,
 		ChevronDownSolid,
 		ChevronUpSolid,
 		CogOutline,
@@ -50,6 +47,7 @@
 	});
 
 	let posts = [
+		{ name: 'Dasboard', icon: ChartPieSolid, href: '/pages/dashboard' },
 		{ name: 'Settings', icon: CogOutline, href: '/settings' },
 		{
 			name: 'CRUD',
@@ -93,14 +91,14 @@
 		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-900 lg:me-0 lg:sticky top-20"
 	>
 		<nav class="font-normal text-base">
-			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4">
+			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-4">
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
 						<SidebarDropdownWrapper
 							bind:isOpen={dropdowns[name]}
 							label={name}
 							ulClass="space-y-2.5"
-							btnClass="flex items-center justify-start gap-4 w-full my-4 text-base font-semibold tracking-wide uppercase hover:text-primary-700 dark:hover:text-primary-600"
+							btnClass="flex items-center justify-start gap-4 w-full text-base font-semibold tracking-wide uppercase hover:text-primary-700 dark:hover:text-primary-600"
 							spanClass=""
 							class={dropdowns[name]
 								? 'text-primary-700 dark:text-primary-700'

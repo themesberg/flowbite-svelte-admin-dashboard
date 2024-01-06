@@ -1,13 +1,13 @@
 <script>
+	import AppsMenu from '$lib/widgets/AppsMenu.svelte';
 	import UserMenu from '$lib/widgets/UserMenu.svelte';
 	import { DarkMode, NavBrand, NavHamburger, Navbar, Search, ToolbarButton } from 'flowbite-svelte';
-	import { BellSolid, GridSolid } from 'flowbite-svelte-icons';
-	import '../app.postcss';
-	import Users from './data/users.json';
-	import AppsMenu from '$lib/widgets/AppsMenu.svelte';
+	import { BellSolid } from 'flowbite-svelte-icons';
+	import '../../app.postcss';
+	import Users from '../data/users.json';
 </script>
 
-<Navbar fluid color="default" class="justify-between">
+<Navbar fluid color="default" class="justify-between border-b">
 	<div class="flex items-center justify-start w-fit">
 		<NavHamburger />
 		<NavBrand href="/" class="ms-2 md:me-24">
@@ -20,7 +20,9 @@
 				Flowbite
 			</span>
 		</NavBrand>
-		<Search size="sm" />
+		<div class="w-96">
+			<Search size="md" />
+		</div>
 	</div>
 
 	<div class="flex items-center ms-auto gap-2 p-1">
@@ -39,7 +41,3 @@
 		<UserMenu {...Users[4]} />
 	</div>
 </Navbar>
-
-<div class="lg:flex items-center justify-center">
-	<slot />
-</div>
