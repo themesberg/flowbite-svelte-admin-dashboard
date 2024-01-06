@@ -47,7 +47,7 @@
 	});
 
 	let posts = [
-		{ name: 'Dasboard', icon: ChartPieSolid, href: '/dashboard' },
+		{ name: 'Dashboard', icon: ChartPieSolid, href: '/dashboard' },
 		{ name: 'Settings', icon: CogOutline, href: '/settings' },
 		{
 			name: 'CRUD',
