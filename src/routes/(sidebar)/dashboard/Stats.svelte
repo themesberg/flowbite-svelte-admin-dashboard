@@ -83,7 +83,7 @@
 			<span slot="title">Top customers</span>
 			<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 				{#each customers as { email, name, avatar }}
-					<li class="py-3 sm:py-4">
+					<li class="py-3 sm:py-3.5">
 						<div class="flex items-center justify-between">
 							<div class="flex items-center min-w-0">
 								<Avatar src="{imgDir}/users/{avatar}" />

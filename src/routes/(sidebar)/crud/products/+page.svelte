@@ -24,38 +24,37 @@
 		ExclamationCircleSolid,
 		TrashBinSolid
 	} from 'flowbite-svelte-icons';
-	import Products from '../../data/product.json';
+	import Products from '../../../data/product.json';
 
 	let avatar = false;
 </script>
 
-<main>
-	<div class="p-4 block sm:flex flex-col items-start justify-between lg:mt-1.5">
-		<Breadcrumb class="mb-5">
-			<BreadcrumbItem home>Home</BreadcrumbItem>
-			<BreadcrumbItem
-				class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white"
-				href="/curd/users">E-commerce</BreadcrumbItem
-			>
-			<BreadcrumbItem>Products</BreadcrumbItem>
-		</Breadcrumb>
-		<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All users</Heading>
+<main class="relative w-full h-full p-4 overflow-y-auto bg-gray-50 dark:bg-gray-900">
+	<Breadcrumb class="mb-5">
+		<BreadcrumbItem home>Home</BreadcrumbItem>
+		<BreadcrumbItem
+			class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white"
+			href="/curd/users">E-commerce</BreadcrumbItem
+		>
+		<BreadcrumbItem>Products</BreadcrumbItem>
+	</Breadcrumb>
+	<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All users</Heading>
 
-		<Toolbar embedded class="-mx-2 text-gray-500 dark:text-gray-400 p-2 w-full">
-			<ToolbarGroup class="w-80 xl:w-96">
-				<Input placeholder="Search for users" />
-			</ToolbarGroup>
-			<ToolbarGroup>
-				<ToolbarButton><CogOutline /></ToolbarButton>
-				<ToolbarButton><TrashBinSolid /></ToolbarButton>
-				<ToolbarButton><ExclamationCircleSolid /></ToolbarButton>
-				<ToolbarButton><DotsVerticalOutline /></ToolbarButton>
-			</ToolbarGroup>
-			<div slot="end" class="space-x-2">
-				<Button size="sm" class="gap-2 whitespace-nowrap">Add new product</Button>
-			</div>
-		</Toolbar>
-	</div>
+	<Toolbar embedded class="-mx-2 text-gray-500 dark:text-gray-400 p-2 w-full">
+		<ToolbarGroup class="w-80 xl:w-96">
+			<Input placeholder="Search for users" />
+		</ToolbarGroup>
+		<ToolbarGroup>
+			<ToolbarButton><CogOutline /></ToolbarButton>
+			<ToolbarButton><TrashBinSolid /></ToolbarButton>
+			<ToolbarButton><ExclamationCircleSolid /></ToolbarButton>
+			<ToolbarButton><DotsVerticalOutline /></ToolbarButton>
+		</ToolbarGroup>
+		<div slot="end" class="space-x-2">
+			<Button size="sm" class="gap-2 whitespace-nowrap">Add new product</Button>
+		</div>
+	</Toolbar>
+
 	<Table>
 		<TableHead class="border-y bg-gray-100 border-gray-200 dark:border-gray-700">
 			<TableHeadCell><Checkbox /></TableHeadCell>
