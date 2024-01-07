@@ -97,7 +97,7 @@
 						<SidebarDropdownWrapper
 							bind:isOpen={dropdowns[name]}
 							label={name}
-							ulClass="space-y-2.5"
+							ulClass="mt-2.5 space-y-2.5"
 							btnClass="flex items-center justify-start gap-4 w-full text-base font-semibold tracking-wide uppercase hover:text-primary-700 dark:hover:text-primary-600"
 							spanClass=""
 							class={dropdowns[name]

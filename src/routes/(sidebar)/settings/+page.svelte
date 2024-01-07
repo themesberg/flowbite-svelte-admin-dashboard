@@ -3,6 +3,7 @@
 	import ProfilePicture from '$lib/settings/ProfilePicture.svelte';
 	import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
 	import GeneralInfo from '../dashboard/GeneralInfo.svelte';
+	import Footer from '../footer.svelte';
 </script>
 
 <main class="relative w-full h-full p-4 overflow-y-auto bg-gray-50 dark:bg-gray-900">
@@ -16,7 +17,7 @@
 	</Breadcrumb>
 	<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">User settings</Heading>
 
-	<div class="grid grid-cols-1 px-4 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
+	<div class="grid grid-cols-1 pt-6 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
 		<div class="col-span-full xl:col-auto">
 			<ProfilePicture class="mb-4" />
 			<LanguageTime />
@@ -25,4 +26,5 @@
 			<GeneralInfo />
 		</div>
 	</div>
+	<Footer />
 </main>
