@@ -18,12 +18,14 @@
 </script>
 
 <Card size="xl">
-	<Heading tag="h3" class="mb-4 text-xl font-semibold dark:text-white">General Info</Heading>
+	<Heading tag="h3" class="mb-4 text-xl font-medium tracking-wide dark:text-white"
+		>General Information</Heading
+	>
 	<form class="grid grid-cols-6 gap-6">
 		{#each inputs as { label, type, placeholder }}
 			<Label class="space-y-2 col-span-6 sm:col-span-3">
 				<span>{label}</span>
-				<Input {type} {placeholder} />
+				<Input {type} {placeholder} class="font-normal" />
 			</Label>
 		{/each}
 		<Button>Save all</Button>

@@ -11,7 +11,7 @@
 	$: color = value > 0 ? colorUp : value < 0 ? colorDown : '';
 </script>
 
-<div class="flex items-center justify-end flex-1 text-sm {color}">
+<div class="flex items-center flex-1 text-sm {color}">
 	{#if value > 0}
 		<ArrowUpOutline size="xs" />
 		{value}{unit}

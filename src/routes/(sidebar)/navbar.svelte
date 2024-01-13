@@ -7,7 +7,7 @@
 	import Users from '../data/users.json';
 </script>
 
-<Navbar fluid color="default" class="justify-between border-b">
+<Navbar fluid color="default">
 	<div class="flex items-center justify-start w-fit">
 		<NavHamburger />
 		<NavBrand href="/" class="ms-2 md:me-24">
