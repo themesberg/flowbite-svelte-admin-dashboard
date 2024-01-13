@@ -27,10 +27,13 @@
 	};
 
 	let spanClass = 'ms-9';
+	let childClass =
+		'p-2 hover:bg-gray-100 text-gray-500 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium';
+
 	let nonActiveClass =
-		'p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium text-gray-500 hover:text-gray-500 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
-	let activeClass =
-		'p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium cursor-default text-green-100 dark:text-primary-700';
+		childClass +
+		' hover:text-gray-500 hover:cursor-pointer dark:text-gray-400 dark:hover:text-white';
+	let activeClass = childClass + ' cursor-default dark:text-primary-700';
 
 	$: mainSidebarUrl = $page.url.pathname;
 	let activeMainSidebar: string;
