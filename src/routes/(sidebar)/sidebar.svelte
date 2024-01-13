@@ -28,9 +28,9 @@
 
 	let spanClass = 'ms-9';
 	let nonActiveClass =
-		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium text-gray-500 hover:text-gray-500 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
+		'p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium text-gray-500 hover:text-gray-500 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
 	let activeClass =
-		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium cursor-default text-primary-700 dark:text-primary-700';
+		'p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium cursor-default text-green-100 dark:text-primary-700';
 
 	$: mainSidebarUrl = $page.url.pathname;
 	let activeMainSidebar: string;
@@ -96,9 +96,8 @@
 	activeUrl={mainSidebarUrl}
 	asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block"
 >
-	<h4 id="sidebar-label" class="sr-only">Browse docs</h4>
 	<SidebarWrapper
-		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-900 lg:me-0 lg:sticky top-20"
+		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
 	>
 		<nav class="font-medium text-base">
 			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-2">
@@ -108,14 +107,20 @@
 							bind:isOpen={dropdowns[name]}
 							label={name}
 							ulClass="mt-0.5"
-							btnClass="flex p-2 rounded items-center justify-start gap-4 w-full text-base font-medium tracking-wide hover:text-primary-700 dark:hover:text-primary-600 hover:bg-gray-100"
+							btnClass="flex p-2 rounded-lg items-center justify-start gap-4 w-full text-base font-medium tracking-wide hover:text-primary-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
 							spanClass=""
 							class={dropdowns[name]
-								? 'text-primary-700 dark:text-primary-700'
-								: 'text-gray-500 dark:text-white'}
+								? 'text-primary-700 dark:text-white'
+								: 'text-gray-500 dark:text-gray-400'}
 						>
-							<ChevronDownSolid slot="arrowdown" class="w-3 h-3 text-gray-800 dark:text-white" />
-							<ChevronUpSolid slot="arrowup" class="w-3 h-3 text-gray-800 dark:text-white" />
+							<ChevronDownSolid
+								slot="arrowdown"
+								class="w-3 h-3 ms-auto text-gray-800 dark:text-white"
+							/>
+							<ChevronUpSolid
+								slot="arrowup"
+								class="w-3 h-3 ms-auto text-gray-800 dark:text-white"
+							/>
 							<svelte:component this={icon} slot="icon" />
 							{#each Object.entries(children) as [title, href]}
 								<SidebarItem
@@ -128,11 +133,7 @@
 							{/each}
 						</SidebarDropdownWrapper>
 					{:else}
-						<SidebarItem
-							label={name}
-							{href}
-							class1="text-base p-2 font-medium tracking-wide text-gray-500 dark:text-white hover:text-primary-700 dark:hover:text-primary-600"
-						>
+						<SidebarItem label={name} {href}>
 							<svelte:component this={icon} slot="icon" />
 						</SidebarItem>
 					{/if}
