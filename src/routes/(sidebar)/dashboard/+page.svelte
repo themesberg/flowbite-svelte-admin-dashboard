@@ -12,7 +12,7 @@
 	export let data: PageData;
 </script>
 
-<main class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3 w-full sm:p-6 p-4">
+<main class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3 w-full p-2 sm:p-4">
 	<div class="2xl:col-span-2">
 		<ChartWidget chartOptions={data} title="$345" subtitle="Sales this week" />
 	</div>
@@ -20,7 +20,7 @@
 		<Stats />
 	</div>
 	<div class="col-span-1">
-		<Card horizontal class="items-center justify-between">
+		<Card horizontal class="items-center justify-between" size="lg">
 			<div>
 				<p>New products</p>
 				<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
@@ -32,7 +32,7 @@
 		</Card>
 	</div>
 	<div class="col-span-1">
-		<Card horizontal class="items-center justify-between">
+		<Card horizontal class="items-center justify-between" size="lg">
 			<div>
 				<p>Users</p>
 				<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
@@ -44,7 +44,7 @@
 		</Card>
 	</div>
 	<div class="col-span-1">
-		<Card horizontal class="items-center justify-between">
+		<Card horizontal class="items-center justify-between" size="lg">
 			<div>
 				<p>Users</p>
 				<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">

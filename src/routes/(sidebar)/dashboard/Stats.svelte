@@ -47,9 +47,9 @@
 </script>
 
 <Card size="xl">
-	<Heading tag="h3" class="mb-4 text-xl font-semibold dark:text-white">
-		Statistics this month
-	</Heading>
+	<Heading tag="h3" class="mb-4 text-lg font-medium tracking-wide dark:text-white"
+		>Statistics this month</Heading
+	>
 	<Tabs
 		style="full"
 		defaultClass="flex divide-x rtl:divide-x-reverse divide-gray-200 shadow dark:divide-gray-700"

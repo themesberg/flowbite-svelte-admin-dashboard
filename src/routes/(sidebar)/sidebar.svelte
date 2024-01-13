@@ -25,11 +25,11 @@
 		drawerHidden = true;
 	};
 
-	let spanClass = 'ms-9';
+	let spanClass = 'ms-12';
 	let nonActiveClass =
-		'transition-colors duration-200 relative flex items-center flex-wrap font-medium hover:text-gray-900 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
+		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-normal text-gray-500 hover:text-gray-500 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
 	let activeClass =
-		'relative flex items-center flex-wrap font-medium cursor-default text-primary-700 dark:text-primary-700';
+		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-normal cursor-default text-primary-700 dark:text-primary-700';
 
 	$: mainSidebarUrl = $page.url.pathname;
 	let activeMainSidebar: string;
@@ -48,7 +48,7 @@
 
 	let posts = [
 		{ name: 'Dashboard', icon: ChartPieSolid, href: '/dashboard' },
-		{ name: 'Settings', icon: CogOutline, href: '/settings' },
+		{ name: 'Layouts', icon: CogOutline, href: '/settings' },
 		{
 			name: 'CRUD',
 			icon: RectangleListSolid,
@@ -57,6 +57,7 @@
 				Users: '/crud/users'
 			}
 		},
+		{ name: 'Settings', icon: CogOutline, href: '/settings' },
 		{
 			name: 'Pages',
 			icon: FileChartBarSolid,
@@ -83,6 +84,7 @@
 <Sidebar
 	class={drawerHidden ? 'hidden' : ''}
 	{nonActiveClass}
+	{activeClass}
 	activeUrl={mainSidebarUrl}
 	asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block"
 >
@@ -91,18 +93,18 @@
 		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-900 lg:me-0 lg:sticky top-20"
 	>
 		<nav class="font-normal text-base">
-			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-4">
+			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-2">
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
 						<SidebarDropdownWrapper
 							bind:isOpen={dropdowns[name]}
 							label={name}
-							ulClass="mt-2.5 space-y-2.5"
-							btnClass="flex items-center justify-start gap-4 w-full text-base font-semibold tracking-wide uppercase hover:text-primary-700 dark:hover:text-primary-600"
+							ulClass="mt-0.5"
+							btnClass="flex p-2 rounded items-center justify-start gap-4 w-full text-base font-normal tracking-wide hover:text-primary-700 dark:hover:text-primary-600 hover:bg-gray-100"
 							spanClass=""
 							class={dropdowns[name]
 								? 'text-primary-700 dark:text-primary-700'
-								: 'text-gray-900 dark:text-white'}
+								: 'text-gray-500 dark:text-white'}
 						>
 							<ChevronDownSolid slot="arrowdown" class="w-3 h-3 text-gray-800 dark:text-white" />
 							<ChevronUpSolid slot="arrowup" class="w-3 h-3 text-gray-800 dark:text-white" />
@@ -121,7 +123,7 @@
 						<SidebarItem
 							label={name}
 							{href}
-							class="text-base font-semibold tracking-wide uppercase text-gray-900 dark:text-white hover:text-primary-700 dark:hover:text-primary-600"
+							class1="text-base p-2 font-normal tracking-wide text-gray-500 dark:text-white hover:text-primary-700 dark:hover:text-primary-600"
 						>
 							<svelte:component this={icon} slot="icon" />
 						</SidebarItem>
