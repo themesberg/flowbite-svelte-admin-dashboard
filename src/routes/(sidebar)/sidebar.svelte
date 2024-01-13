@@ -16,7 +16,8 @@
 		CogOutline,
 		FileChartBarSolid,
 		LockSolid,
-		RectangleListSolid
+		RectangleListSolid,
+		TableColumnSolid
 	} from 'flowbite-svelte-icons';
 
 	let drawerHidden: boolean = false;
@@ -25,11 +26,11 @@
 		drawerHidden = true;
 	};
 
-	let spanClass = 'ms-12';
+	let spanClass = 'ms-9';
 	let nonActiveClass =
-		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-normal text-gray-500 hover:text-gray-500 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
+		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium text-gray-500 hover:text-gray-500 hover:cursor-pointer text-gray-500 dark:text-gray-400 dark:hover:text-white';
 	let activeClass =
-		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-normal cursor-default text-primary-700 dark:text-primary-700';
+		'p-2 hover:bg-gray-100 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium cursor-default text-primary-700 dark:text-primary-700';
 
 	$: mainSidebarUrl = $page.url.pathname;
 	let activeMainSidebar: string;
@@ -48,7 +49,14 @@
 
 	let posts = [
 		{ name: 'Dashboard', icon: ChartPieSolid, href: '/dashboard' },
-		{ name: 'Layouts', icon: CogOutline, href: '/settings' },
+		{
+			name: 'Layouts',
+			icon: TableColumnSolid,
+			children: {
+				Stacked: '',
+				Sidebar: ''
+			}
+		},
 		{
 			name: 'CRUD',
 			icon: RectangleListSolid,
@@ -92,7 +100,7 @@
 	<SidebarWrapper
 		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-900 lg:me-0 lg:sticky top-20"
 	>
-		<nav class="font-normal text-base">
+		<nav class="font-medium text-base">
 			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-2">
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
@@ -100,7 +108,7 @@
 							bind:isOpen={dropdowns[name]}
 							label={name}
 							ulClass="mt-0.5"
-							btnClass="flex p-2 rounded items-center justify-start gap-4 w-full text-base font-normal tracking-wide hover:text-primary-700 dark:hover:text-primary-600 hover:bg-gray-100"
+							btnClass="flex p-2 rounded items-center justify-start gap-4 w-full text-base font-medium tracking-wide hover:text-primary-700 dark:hover:text-primary-600 hover:bg-gray-100"
 							spanClass=""
 							class={dropdowns[name]
 								? 'text-primary-700 dark:text-primary-700'
@@ -123,7 +131,7 @@
 						<SidebarItem
 							label={name}
 							{href}
-							class1="text-base p-2 font-normal tracking-wide text-gray-500 dark:text-white hover:text-primary-700 dark:hover:text-primary-600"
+							class1="text-base p-2 font-medium tracking-wide text-gray-500 dark:text-white hover:text-primary-700 dark:hover:text-primary-600"
 						>
 							<svelte:component this={icon} slot="icon" />
 						</SidebarItem>

@@ -1,0 +1,47 @@
+<script>
+	import { A, Avatar, Button, Card, Heading } from 'flowbite-svelte';
+	import { DribbbleSolid, GithubSolid, TwitterSolid } from 'flowbite-svelte-icons';
+	import Users from '../../routes/data/users.json';
+
+	const imgDir = 'https://flowbite-admin-dashboard.vercel.app/images/';
+
+	const items = [
+		{ icon: TwitterSolid, name: 'Twitter account', link: 'www.twitter.com/themesberg' },
+		{ icon: GithubSolid, name: 'Github account', link: '' },
+		{ icon: DribbbleSolid, name: 'Dribble account', link: '' }
+	];
+</script>
+
+<Card size="xl" class="gap-4">
+	<Heading tag="h3" class="text-xl tracking-wide font-medium">SessSocial accounts</Heading>
+	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
+		{#each Users.slice(0, 4) as { avatar, name, country, status }}
+			<li class="py-4">
+				<div class="flex items-center space-x-4">
+					<div class="flex-shrink-0">
+						<Avatar src="{imgDir}/users/{avatar}" />
+					</div>
+					<div class="flex-1 min-w-0">
+						<p class="text-base font-semibold text-gray-900 truncate dark:text-white">
+							{name}
+						</p>
+						<p class="text-sm font-normal text-primary-700 truncate dark:text-primary-500">
+							{country}
+						</p>
+						<p class="mt-1 text-xs font-medium text-gray-500 dark:text-gray-400">
+							Last seen: {Math.ceil(Math.random() * 10)} min ago
+						</p>
+					</div>
+					<div class="inline-flex items-center">
+						{#if status === 'Active'}
+							<Button color="alternative">Disconnect</Button>
+						{:else}
+							<Button>Connect</Button>
+						{/if}
+					</div>
+				</div>
+			</li>
+		{/each}
+	</ul>
+	<Button class="w-fit">See more</Button>
+</Card>

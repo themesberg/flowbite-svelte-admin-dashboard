@@ -22,14 +22,14 @@
 </script>
 
 <Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl">Language &amp; Time</Heading>
+	<Heading tag="h3" class="text-xl tracking-wide font-medium">Language &amp; Time</Heading>
 	<Label class="space-y-2">
 		<span>Select language</span>
-		<Select items={languages}></Select>
+		<Select items={languages} class="font-normal"></Select>
 	</Label>
 	<Label class="space-y-2">
 		<span>Time Zone</span>
-		<Select items={timezones}></Select>
+		<Select items={timezones} class="font-normal"></Select>
 	</Label>
 	<Button class="w-fit">Save all</Button>
 </Card>
