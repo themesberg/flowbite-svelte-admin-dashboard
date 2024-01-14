@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { imagesPath } from '$lib/variables';
 	import { Button, P } from 'flowbite-svelte';
 	export let title = 'Something has gone seriously wrong';
 	export let description =
 		"It's always time for a coffee break. We should be back by the time you finish your coffee.";
 	export let image = {
-		src: 'https://flowbite-admin-dashboard.vercel.app/images/illustrations/500.svg',
+		src: imagesPath('illustrations/500.svg'),
 		alt: 'astronaut'
 	};
 	export let btnHref = '/';

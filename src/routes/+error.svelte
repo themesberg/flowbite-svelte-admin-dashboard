@@ -1,4 +1,5 @@
 <script lang="ts">
+	import '../app.postcss';
 	import { page } from '$app/stores';
 	import NotFound from '$lib/pages/NotFound.svelte';
 	import Maintenance from '$lib/pages/Maintenance.svelte';

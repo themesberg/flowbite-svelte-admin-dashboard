@@ -1,12 +1,6 @@
 <script>
-	import { Button, Card, Heading, Label, Input, A } from 'flowbite-svelte';
-	import {
-		DesktopPcOutline,
-		DribbbleSolid,
-		GithubSolid,
-		MobilePhoneOutline,
-		TwitterSolid
-	} from 'flowbite-svelte-icons';
+	import { A, Button, Card, Heading } from 'flowbite-svelte';
+	import { DribbbleSolid, GithubSolid, TwitterSolid } from 'flowbite-svelte-icons';
 
 	const items = [
 		{ icon: TwitterSolid, name: 'Twitter account', link: 'www.twitter.com/themesberg' },
@@ -16,7 +10,7 @@
 </script>
 
 <Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl tracking-wide font-medium">SessSocial accounts</Heading>
+	<Heading tag="h3" class="text-xl tracking-wide font-medium">Social accounts</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each items as { icon, name, link }}
 			<li class="py-4">

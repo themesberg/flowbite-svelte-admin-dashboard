@@ -29,7 +29,7 @@
 		'Payment method',
 		'Status'
 	];
-	const data = [
+	const data: [string, string, string, string, number, CreditCard['state']][] = [
 		['Payment from Bonnie Green', 'Apr 23 ,2021', '$2300', '0047568936', 475, 'completed'],
 		['Payment refund to #00910', 'Apr 23 ,2021', '-$670', '0078568936', 924, 'completed'],
 		['Payment failed from #087651', 'Apr 18 ,2021', '$234', '0088568934', 826, 'cancelled'],

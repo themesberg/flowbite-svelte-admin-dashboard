@@ -28,6 +28,7 @@
 		TrashBinSolid
 	} from 'flowbite-svelte-icons';
 	import Users from '../../../data/users.json';
+	import { imagesPath } from '$lib/variables';
 </script>
 
 <main class="relative w-full h-full p-4 overflow-y-auto bg-gray-50 dark:bg-gray-900">
@@ -74,7 +75,7 @@
 				<TableBodyRow>
 					<TableBodyCell><Checkbox /></TableBodyCell>
 					<TableBodyCell class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap">
-						<Avatar src="https://flowbite-admin-dashboard.vercel.app/images/users/{user.avatar}" />
+						<Avatar src={imagesPath(user.avatar, 'users')} />
 						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
 							<div class="text-base font-semibold text-gray-900 dark:text-white">{user.name}</div>
 							<div class="text-sm font-normal text-gray-500 dark:text-gray-400">{user.email}</div>

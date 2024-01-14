@@ -1,9 +1,6 @@
 <script>
+	import { imagesPath } from '$lib/variables';
 	import { Card, Textarea, ToolbarButton } from 'flowbite-svelte';
-	import Users from '../../data/users.json';
-	import ChatMsg from './ChatMsg.svelte';
-	import Message from './Message.svelte';
-	import { avatarPath } from '$lib/variables';
 	import {
 		ChevronUpOutline,
 		DotsVerticalOutline,
@@ -11,6 +8,9 @@
 		FileLinesSolid,
 		TableColumnOutline
 	} from 'flowbite-svelte-icons';
+	import Users from '../../data/users.json';
+	import ChatMsg from './ChatMsg.svelte';
+	import Message from './Message.svelte';
 </script>
 
 <Card size="xl">
@@ -25,7 +25,7 @@
 	</div>
 	<!-- Chat -->
 	<form class="overflow-y-auto lg:max-h-[60rem] 2xl:max-h-fit">
-		<ChatMsg replays={4} name={Users[2].name} avatar={avatarPath(Users[2].avatar)}>
+		<ChatMsg replays={4} name={Users[2].name} avatar={imagesPath(Users[2].avatar, 'users')}>
 			<p>
 				Hello <a
 					href="#top"
@@ -35,7 +35,7 @@
 			</p>
 			<p>Looking forward to it! Thanks.</p>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[4].name} avatar={avatarPath(Users[4].avatar)}>
+		<ChatMsg replays={0} name={Users[4].name} avatar={imagesPath(Users[4].avatar, 'users')}>
 			<p>Hello everyone,</p>
 			<p>
 				Thank you for the workshop, it was very productive meeting. I can't wait to start working on
@@ -176,7 +176,7 @@
 				</button>
 			</div>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[3].name} avatar={avatarPath(Users[3].avatar)}>
+		<ChatMsg replays={0} name={Users[3].name} avatar={imagesPath(Users[3].avatar, 'users')}>
 			<p>
 				Ok <a href="#top" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
 					>@team</a
@@ -227,7 +227,12 @@
 				</div>
 			</div>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[8].name} avatar={avatarPath(Users[8].avatar)} class="pl-12">
+		<ChatMsg
+			replays={0}
+			name={Users[8].name}
+			avatar={imagesPath(Users[8].avatar, 'users')}
+			class="pl-12"
+		>
 			<p>
 				Hello <a
 					href="#top"
@@ -235,7 +240,12 @@
 				> I need some informations about flowbite react version.
 			</p>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[3].name} avatar={avatarPath(Users[3].avatar)} class="pl-12">
+		<ChatMsg
+			replays={0}
+			name={Users[3].name}
+			avatar={imagesPath(Users[3].avatar, 'users')}
+			class="pl-12"
+		>
 			<p class="mb-5">
 				Hi <a href="#top" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
 					>@josephh</a
