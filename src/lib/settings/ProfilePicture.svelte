@@ -2,8 +2,7 @@
 	import { Avatar, Button, Card, Heading } from 'flowbite-svelte';
 	import { UploadSolid } from 'flowbite-svelte-icons';
 
-	export let src: string =
-		'https://flowbite-admin-dashboard.vercel.app/images/users/' + 'roberta-casas.png';
+	export let src: string;
 </script>
 
 <Card size="xl" class="w-full gap-4 {$$props.class ?? ''}" horizontal>

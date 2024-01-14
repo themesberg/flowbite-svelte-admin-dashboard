@@ -1,9 +1,6 @@
 <script>
+	import { imagesPath } from '$lib/variables';
 	import { Card, Textarea, ToolbarButton } from 'flowbite-svelte';
-	import Users from '../../data/users.json';
-	import ChatMsg from './ChatMsg.svelte';
-	import Message from './Message.svelte';
-	import { avatarPath } from '$lib/variables';
 	import {
 		ChevronUpOutline,
 		DotsVerticalOutline,
@@ -11,13 +8,16 @@
 		FileLinesSolid,
 		TableColumnOutline
 	} from 'flowbite-svelte-icons';
+	import Users from '../../data/users.json';
+	import ChatMsg from './ChatMsg.svelte';
+	import Message from './Message.svelte';
 </script>
 
 <Card size="xl">
 	<div class="flex items-center justify-between mb-4">
 		<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Smart chat</h3>
 		<a
-			href="#"
+			href="#top"
 			class="inline-flex items-center p-2 text-sm font-medium rounded-lg text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
 		>
 			View all
@@ -25,16 +25,17 @@
 	</div>
 	<!-- Chat -->
 	<form class="overflow-y-auto lg:max-h-[60rem] 2xl:max-h-fit">
-		<ChatMsg replays={4} name={Users[2].name} avatar={avatarPath(Users[2].avatar)}>
+		<ChatMsg replays={4} name={Users[2].name} avatar={imagesPath(Users[2].avatar, 'users')}>
 			<p>
-				Hello <a href="#" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
-					>@designteam</a
+				Hello <a
+					href="#top"
+					class="font-medium hover:underline text-primary-600 dark:text-primary-500">@designteam</a
 				> Let's schedule a kick-off meeting and workshop this week. It would be great to gather everyone
 				involved in the design project. Let me know about your availability in the thread.
 			</p>
 			<p>Looking forward to it! Thanks.</p>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[4].name} avatar={avatarPath(Users[4].avatar)}>
+		<ChatMsg replays={0} name={Users[4].name} avatar={imagesPath(Users[4].avatar, 'users')}>
 			<p>Hello everyone,</p>
 			<p>
 				Thank you for the workshop, it was very productive meeting. I can't wait to start working on
@@ -175,9 +176,9 @@
 				</button>
 			</div>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[3].name} avatar={avatarPath(Users[3].avatar)}>
+		<ChatMsg replays={0} name={Users[3].name} avatar={imagesPath(Users[3].avatar, 'users')}>
 			<p>
-				Ok <a href="#" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
+				Ok <a href="#top" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
 					>@team</a
 				> I'am attaching our offer and pitch deck. Take your time to review everything. I'am looking
 				forward to the next steps! Thank you.
@@ -226,16 +227,27 @@
 				</div>
 			</div>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[8].name} avatar={avatarPath(Users[8].avatar)} class="pl-12">
+		<ChatMsg
+			replays={0}
+			name={Users[8].name}
+			avatar={imagesPath(Users[8].avatar, 'users')}
+			class="pl-12"
+		>
 			<p>
-				Hello <a href="#" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
-					>@jeseleos</a
+				Hello <a
+					href="#top"
+					class="font-medium hover:underline text-primary-600 dark:text-primary-500">@jeseleos</a
 				> I need some informations about flowbite react version.
 			</p>
 		</ChatMsg>
-		<ChatMsg replays={0} name={Users[3].name} avatar={avatarPath(Users[3].avatar)} class="pl-12">
+		<ChatMsg
+			replays={0}
+			name={Users[3].name}
+			avatar={imagesPath(Users[3].avatar, 'users')}
+			class="pl-12"
+		>
 			<p class="mb-5">
-				Hi <a href="#" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
+				Hi <a href="#top" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
 					>@josephh</a
 				> Sure, just let me know whean you are available and we can speak.
 			</p>

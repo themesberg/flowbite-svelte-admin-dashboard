@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { imagesPath } from '$lib/variables';
 	import { Avatar, Dropdown, DropdownDivider, DropdownHeader, DropdownItem } from 'flowbite-svelte';
 
 	// export let id: number = 0; // 1,
@@ -12,11 +13,7 @@
 </script>
 
 <button class="focus:ring-4 ring-gray-400 dark:ring-gray-600 rounded-full mr-2">
-	<Avatar
-		size="sm"
-		src="https://flowbite-admin-dashboard.vercel.app/images/users/{avatar}"
-		tabindex="0"
-	/>
+	<Avatar size="sm" src={imagesPath(avatar, 'users')} tabindex="0" />
 </button>
 <Dropdown>
 	<DropdownHeader>

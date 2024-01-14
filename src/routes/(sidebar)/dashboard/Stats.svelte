@@ -2,40 +2,39 @@
 	import { Avatar, Card, Heading, TabItem, Tabs } from 'flowbite-svelte';
 	import Change from './Change.svelte';
 	import Customers from '../../data/users.json';
-
-	const imgDir = 'https://flowbite-admin-dashboard.vercel.app/images/';
+	import { avatarPath, imagesPath } from '$lib/variables';
 
 	const products = [
 		{
-			src: 'products/iphone.png',
+			src: 'iphone.png',
 			image: 'iphone',
 			label: 'iPhone 14 Pro',
 			change: 2.5,
 			price: '$445,467'
 		},
 		{
-			src: 'products/imac.png',
+			src: 'imac.png',
 			image: 'imac',
 			label: 'Apple iMac 27',
 			change: 12.5,
 			price: '$256,982'
 		},
 		{
-			src: 'products/watch.png',
+			src: 'watch.png',
 			image: 'watch',
 			label: 'Apple Watch SE',
 			change: -1.35,
 			price: '$201,869'
 		},
 		{
-			src: 'products/ipad.png',
+			src: 'ipad.png',
 			image: 'ipad',
 			label: 'Apple iPad Air',
 			change: 12.5,
 			price: '$103,967'
 		},
 		{
-			src: 'products/imac.png',
+			src: 'imac.png',
 			image: 'imac',
 			label: 'Apple iMac 24',
 			change: -2,
@@ -61,7 +60,11 @@
 					<li class="py-3 sm:py-4">
 						<div class="flex items-center justify-between">
 							<div class="flex items-center min-w-0">
-								<img class="flex-shrink-0 w-10 h-10" src="{imgDir}/{src}" alt={image} />
+								<img
+									class="flex-shrink-0 w-10 h-10"
+									src={imagesPath(src, 'products')}
+									alt={image}
+								/>
 								<div class="ml-3">
 									<p class="font-medium text-gray-900 truncate dark:text-white">
 										{label}
@@ -86,7 +89,7 @@
 					<li class="py-3 sm:py-3.5">
 						<div class="flex items-center justify-between">
 							<div class="flex items-center min-w-0">
-								<Avatar src="{imgDir}/users/{avatar}" />
+								<Avatar src={imagesPath(avatar, 'users')} />
 								<div class="ml-3">
 									<p class="font-medium text-gray-900 truncate dark:text-white">
 										{name}

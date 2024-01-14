@@ -2,6 +2,6 @@
 	import '../../app.postcss';
 </script>
 
-<div class="lg:flex items-center justify-center">
+<div class="lg:flex">
 	<slot />
 </div>

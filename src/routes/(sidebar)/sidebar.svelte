@@ -13,8 +13,12 @@
 		ChartPieSolid,
 		ChevronDownSolid,
 		ChevronUpSolid,
+		ClipboardListSolid,
 		CogOutline,
 		FileChartBarSolid,
+		GithubSolid,
+		LayersSolid,
+		LifeBuoySolid,
 		LockSolid,
 		RectangleListSolid,
 		TableColumnSolid
@@ -56,7 +60,7 @@
 			name: 'Layouts',
 			icon: TableColumnSolid,
 			children: {
-				Stacked: '',
+				Stacked: '/layouts/stacked',
 				Sidebar: ''
 			}
 		},
@@ -73,6 +77,7 @@
 			name: 'Pages',
 			icon: FileChartBarSolid,
 			children: {
+				Maintenance: '/errors/400',
 				'404 not found': '/errors/404',
 				'500 server error': '/errors/500'
 			}
@@ -97,12 +102,12 @@
 	{nonActiveClass}
 	{activeClass}
 	activeUrl={mainSidebarUrl}
-	asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:static lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-0 lg:block"
+	asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-20 lg:-mt-2 lg:block"
 >
 	<SidebarWrapper
 		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
 	>
-		<nav class="font-medium text-base">
+		<nav class="font-medium text-base divide-y">
 			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-2">
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
@@ -141,6 +146,36 @@
 						</SidebarItem>
 					{/if}
 				{/each}
+			</SidebarGroup>
+			<SidebarGroup ulClass="list-unstyled fw-normal small pt-4 space-y-2">
+				<SidebarItem
+					label="GitHub Repository"
+					href="https://github.com/themesberg/flowbite-admin-dashboard"
+					target="_blank"
+				>
+					<GithubSolid slot="icon" />
+				</SidebarItem>
+				<SidebarItem
+					label="Flowbite Docs"
+					href="https://flowbite.com/docs/getting-started/introduction/"
+					target="_blank"
+				>
+					<ClipboardListSolid slot="icon" />
+				</SidebarItem>
+				<SidebarItem
+					label="Components"
+					href="https://flowbite.com/docs/components/alerts/"
+					target="_blank"
+				>
+					<LayersSolid slot="icon" />
+				</SidebarItem>
+				<SidebarItem
+					label="Support"
+					href="https://github.com/themesberg/flowbite-admin-dashboard/issues"
+					target="_blank"
+				>
+					<LifeBuoySolid slot="icon" />
+				</SidebarItem>
 			</SidebarGroup>
 		</nav>
 	</SidebarWrapper>

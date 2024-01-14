@@ -25,8 +25,7 @@
 		TrashBinSolid
 	} from 'flowbite-svelte-icons';
 	import Products from '../../../data/product.json';
-
-	let avatar = false;
+	import { imagesPath } from '$lib/variables';
 </script>
 
 <main class="relative w-full h-full p-4 overflow-y-auto bg-gray-50 dark:bg-gray-900">
@@ -67,11 +66,6 @@
 				<TableBodyRow>
 					<TableBodyCell><Checkbox /></TableBodyCell>
 					<TableBodyCell class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap">
-						{#if avatar}
-							<Avatar
-								src="https://flowbite-admin-dashboard.vercel.app/images/users/{product.avatar}"
-							/>
-						{/if}
 						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
 							<div class="text-base font-semibold text-gray-900 dark:text-white">
 								{product.name}

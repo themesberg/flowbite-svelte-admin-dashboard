@@ -1,15 +1,19 @@
 <script lang="ts">
+	import thickbars from '$lib/graphs/thickbars';
+	import thinfillbars from '$lib/graphs/thinfillbars';
 	import ChartWidget from '$lib/widgets/ChartWidget.svelte';
 	import { Card, Chart } from 'flowbite-svelte';
 	import type { PageData } from '../$types';
 	import Stats from './Stats.svelte';
-	import thickbars from '$lib/graphs/thickbars';
-	import thinfillbars from '$lib/graphs/thinfillbars';
 
-	import Change from './Change.svelte';
 	import Footer from '../footer.svelte';
+	import ActivityList from './ActivityList.svelte';
+	import Change from './Change.svelte';
 	import Chat from './Chat.svelte';
 	import DesktopPc from './DesktopPc.svelte';
+	import Traffic from './Traffic.svelte';
+	import Insights from './Insights.svelte';
+	import Transactions from './Transactions.svelte';
 
 	export let data: PageData;
 </script>
@@ -23,7 +27,7 @@
 			<Stats />
 		</div>
 		<div class="col-span-1">
-			<Card horizontal class="items-center justify-between" size="lg">
+			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>New products</p>
 					<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
@@ -35,7 +39,7 @@
 			</Card>
 		</div>
 		<div class="col-span-1">
-			<Card horizontal class="items-center justify-between" size="lg">
+			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>Users</p>
 					<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
@@ -47,7 +51,7 @@
 			</Card>
 		</div>
 		<div class="col-span-1">
-			<Card horizontal class="items-center justify-between" size="lg">
+			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>Users</p>
 					<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
@@ -69,7 +73,15 @@
 	</main>
 	<div class="grid grid-cols-1 my-4 xl:grid-cols-2 xl:gap-4">
 		<Chat />
-		<DesktopPc />
+		<div class="grid gap-4">
+			<DesktopPc />
+			<Traffic />
+		</div>
+		<ActivityList />
+		<Insights />
+		<div class="col-span-2">
+			<Transactions />
+		</div>
 	</div>
 	<Footer class="col-span-1 xl:col-span-2 2xl:col-span-3" />
 </div>

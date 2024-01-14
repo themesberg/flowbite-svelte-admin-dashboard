@@ -2,6 +2,7 @@
 	import { ProfileLock } from '$lib';
 	import { Input, Label } from 'flowbite-svelte';
 	import Users from '../data/users.json';
+	import { avatarPath, imagesPath } from '$lib/variables';
 
 	const onSubmit = (e: Event) => {
 		const formData = new FormData(e.target as HTMLFormElement);
@@ -9,7 +10,7 @@
 	};
 
 	let user = {
-		img: 'https://flowbite-admin-dashboard.vercel.app/images/users/' + Users[0].avatar,
+		img: imagesPath(Users[0].avatar, 'users'),
 		imgAlt: Users[0].name,
 		name: Users[0].name
 	};
