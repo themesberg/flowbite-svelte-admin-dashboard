@@ -9,7 +9,9 @@
 >
 	<Navbar />
 </header>
-<div class="lg:flex">
+<div class="lg:flex overflow-hidden">
 	<Sidebar />
-	<slot />
+	<div class="relative w-full h-full overflow-y-auto lg:ml-64">
+		<slot />
+	</div>
 </div>
