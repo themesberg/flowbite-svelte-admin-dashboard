@@ -1,0 +1,91 @@
+<script lang="ts">
+	import { Button, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle } from 'flowbite-svelte';
+	import { ArrowLeftToBracketOutline, CloseOutline } from 'flowbite-svelte-icons';
+	import PriceCard from './PriceCard.svelte';
+
+	let yearly: boolean = false;
+	let prices: string[][] = [
+		['$24', '$200'],
+		['$49', '$400'],
+		['$499', '$1500']
+	];
+	$: period = yearly ? 'year' : 'month';
+</script>
+
+<Navbar class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 border-b">
+	<NavBrand href="/">
+		<img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
+		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite</span
+		>
+	</NavBrand>
+	<NavHamburger />
+	<NavUl class="ms-8 me-auto">
+		<NavLi href="/" active={true}>Home</NavLi>
+		<NavLi href="/about">About</NavLi>
+		<NavLi href="/docs/components/navbar">Navbar</NavLi>
+		<NavLi href="/pricing">Pricing</NavLi>
+		<NavLi href="/contact">Contact</NavLi>
+	</NavUl>
+	<NavUl>
+		<Button class="gap-2"><ArrowLeftToBracketOutline />Login/Register</Button>
+	</NavUl>
+</Navbar>
+
+<main class="bg-gray-50 dark:bg-gray-900 mx-auto">
+	<div class="container px-4 pt-24 mx-auto md:pt-32 lg:px-0 dark:bg-gray-900">
+		<h1
+			class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl sm:leading-none sm:tracking-tight dark:text-white"
+		>
+			Our pricing plan made simple
+		</h1>
+		<p class="mb-6 text-lg font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+			All types of businesses need access to development resources, so we give you the option to
+			decide how much you need to use.
+		</p>
+		<div class="flex items-center">
+			<span class="text-base font-medium text-gray-900 dark:text-white"> Monthly</span>
+			<Toggle class="ms-3" bind:checked={yearly} />
+			<span class="text-base font-medium text-gray-900 dark:text-white"> Yearly </span>
+		</div>
+		<section
+			class="grid grid-cols-1 space-y-12 md:space-y-0 md:grid-cols-2 lg:grid-cols-3 md:gap-x-6 md:gap-6 pt-9"
+		>
+			<PriceCard title="Starter" price={prices[0][+yearly]} {period} let:Item>
+				<svelte:fragment slot="subtitle">
+					Best option for personal use and for your next project.
+				</svelte:fragment>
+				<Item>Individual configuration</Item>
+				<Item>No setup, or hidden fees</Item>
+				<Item>Team size: <span class="font-semibold">1 developer</span></Item>
+				<Item>
+					<CloseOutline slot="icon" size="xs" class="ms-1 text-red-500 dark:text-red-400" />
+					Premium support
+				</Item>
+				<Item>
+					<CloseOutline slot="icon" size="xs" class="ms-1 text-red-500 dark:text-red-400" />
+					Free updates
+				</Item>
+			</PriceCard>
+			<PriceCard title="Company" price={prices[1][+yearly]} {period} let:Item>
+				<svelte:fragment slot="subtitle">
+					Relevant for multiple users, extended & premium support.
+				</svelte:fragment>
+				<Item>Individual configuration</Item>
+				<Item>No setup, or hidden fees</Item>
+				<Item>Team size: <span class="font-semibold">10 developers</span></Item>
+				<Item>Premium support: <span class="font-semibold">24 months</span></Item>
+				<Item>Free updates: <span class="font-semibold">24 months</span></Item>
+			</PriceCard>
+			<PriceCard title="Enterprise" price={prices[2][+yearly]} {period} let:Item>
+				<svelte:fragment slot="subtitle">
+					Best for large scale uses and extended redistribution rights.
+				</svelte:fragment>
+				<Item>Individual configuration</Item>
+				<Item>No setup, or hidden fees</Item>
+				<Item>Team size: <span class="font-semibold">100 developers</span></Item>
+				<Item>Premium support: <span class="font-semibold">36 months</span></Item>
+				<Item>Free updates: <span class="font-semibold">36 months</span></Item>
+			</PriceCard>
+		</section>
+	</div>
+</main>
