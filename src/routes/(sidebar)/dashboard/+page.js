@@ -1,14 +1,11 @@
-
-
 /** @type {import('./$types').PageLoad} */
 export function load({ params }) {
-
 	let mainChartColors = {
-        borderColor: '#374151',
-        labelColor: '#9CA3AF',
-        opacityFrom: 0,
-        opacityTo: 0.15,
-    }
+		borderColor: '#374151',
+		labelColor: '#9CA3AF',
+		opacityFrom: 0,
+		opacityTo: 0.15
+	};
 
 	// if (document.documentElement.classList.contains('dark')) {
 	// 	mainChartColors = {
@@ -50,8 +47,8 @@ export function load({ params }) {
 		tooltip: {
 			style: {
 				fontSize: '14px',
-				fontFamily: 'Inter, sans-serif',
-			},
+				fontFamily: 'Inter, sans-serif'
+			}
 		},
 		grid: {
 			show: true,
@@ -88,14 +85,14 @@ export function load({ params }) {
 				style: {
 					colors: [mainChartColors.labelColor],
 					fontSize: '14px',
-					fontWeight: 500,
-				},
+					fontWeight: 500
+				}
 			},
 			axisBorder: {
-				color: mainChartColors.borderColor,
+				color: mainChartColors.borderColor
 			},
 			axisTicks: {
-				color: mainChartColors.borderColor,
+				color: mainChartColors.borderColor
 			},
 			crosshairs: {
 				show: true,
@@ -103,21 +100,21 @@ export function load({ params }) {
 				stroke: {
 					color: mainChartColors.borderColor,
 					width: 1,
-					dashArray: 10,
-				},
-			},
+					dashArray: 10
+				}
+			}
 		},
 		yaxis: {
 			labels: {
 				style: {
 					colors: [mainChartColors.labelColor],
 					fontSize: '14px',
-					fontWeight: 500,
+					fontWeight: 500
 				},
 				formatter: function (value) {
 					return '$' + value;
 				}
-			},
+			}
 		},
 		legend: {
 			fontSize: '14px',

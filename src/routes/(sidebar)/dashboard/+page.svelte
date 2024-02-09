@@ -6,7 +6,7 @@
 	import type { PageData } from '../$types';
 	import Stats from './Stats.svelte';
 
-	import Footer from '../footer.svelte';
+	import Footer from '../Footer.svelte';
 	import ActivityList from './ActivityList.svelte';
 	import Change from './Change.svelte';
 	import Chat from './Chat.svelte';
@@ -19,7 +19,7 @@
 </script>
 
 <div class=" p-2 sm:p-4">
-	<main class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3 w-full">
+	<main class="grid w-full gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 		<div class="2xl:col-span-2">
 			<ChartWidget chartOptions={data} title="$345" subtitle="Sales this week" />
 		</div>
@@ -30,7 +30,7 @@
 			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>New products</p>
-					<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
+					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						2,340
 					</p>
 					<Change value={12.5} since="Since last month" />
@@ -42,7 +42,7 @@
 			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>Users</p>
-					<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
+					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						4,420
 					</p>
 					<Change value={-3.4} since="Since last month" />
@@ -54,7 +54,7 @@
 			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>Users</p>
-					<p class="text-2xl sm:text-3xl leading-none font-bold text-gray-900 dark:text-white">
+					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						4,420
 					</p>
 					<Change value={-3.4} since="Since last month" />
@@ -71,7 +71,7 @@
 			</Card>
 		</div>
 	</main>
-	<div class="grid grid-cols-1 my-4 xl:grid-cols-2 xl:gap-4">
+	<div class="my-4 grid grid-cols-1 xl:grid-cols-2 xl:gap-4">
 		<Chat />
 		<div class="grid gap-4">
 			<DesktopPc />

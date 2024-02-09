@@ -9,7 +9,7 @@
 </script>
 
 <Card size="xl" {...$$restProps}>
-	<Heading tag="h3" class="text-xl tracking-wide font-semibold">{title}</Heading>
+	<Heading tag="h3" class="text-xl font-semibold tracking-wide">{title}</Heading>
 	{#if subtitle}
 		<p class="text-sm font-normal text-gray-500 dark:text-gray-400">{subtitle}</p>
 	{/if}
@@ -21,5 +21,15 @@
 			</li>
 		{/each}
 	</ul>
-	<Button class="w-fit mt-2">{buttonLabel}</Button>
+	<Button class="mt-2 w-fit">{buttonLabel}</Button>
 </Card>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Props
+@prop export let title: string;
+@prop export let subtitle: string = '';
+@prop export let buttonLabel: string = 'Save all';
+@prop export let items: any[] = [];
+-->

@@ -29,9 +29,9 @@
 <Card
 	size=""
 	horizontal
-	class="w-full md:items-center md:justify-between md:max-w-none my-4 {$$props.class ?? ''}"
+	class="my-4 w-full md:max-w-none md:items-center md:justify-between {$$props.class ?? ''}"
 >
-	<ul class="flex flex-wrap items-center mb-6 space-y-1 md:mb-0 gap-4 md:gap-6">
+	<ul class="mb-6 flex flex-wrap items-center gap-4 space-y-1 md:mb-0 md:gap-6">
 		{#each links as { name, href }}
 			<li>
 				<a {href} class="text-sm font-normal text-gray-500 hover:underline dark:text-gray-400">

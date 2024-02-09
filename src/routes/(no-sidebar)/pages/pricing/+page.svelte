@@ -19,14 +19,14 @@
 	<title>Tailwind CSS Pricing Page - Flowbite</title>
 </svelte:head>
 
-<Navbar class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 border-b">
+<Navbar class="fixed start-0 top-0 z-20 w-full border-b px-2 py-2.5 sm:px-4">
 	<NavBrand href="/">
 		<img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
 		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite</span
 		>
 	</NavBrand>
 	<NavHamburger />
-	<NavUl class="ms-8 me-auto">
+	<NavUl class="me-auto ms-8">
 		<NavLi href="/" active={true}>Home</NavLi>
 		<NavLi href="/about">About</NavLi>
 		<NavLi href="/docs/components/navbar">Navbar</NavLi>
@@ -38,14 +38,14 @@
 	</NavUl>
 </Navbar>
 
-<main class="bg-gray-50 dark:bg-gray-900 mx-auto">
-	<div class="container px-4 pt-24 mx-auto md:pt-32 lg:px-0 dark:bg-gray-900">
+<main class="mx-auto bg-gray-50 dark:bg-gray-900">
+	<div class="container mx-auto px-4 pt-24 dark:bg-gray-900 md:pt-32 lg:px-0">
 		<h1
-			class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl sm:leading-none sm:tracking-tight dark:text-white"
+			class="mb-3 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl sm:leading-none sm:tracking-tight"
 		>
 			Our pricing plan made simple
 		</h1>
-		<p class="mb-6 text-lg font-normal text-gray-500 sm:text-xl dark:text-gray-400">
+		<p class="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400 sm:text-xl">
 			All types of businesses need access to development resources, so we give you the option to
 			decide how much you need to use.
 		</p>
@@ -55,7 +55,7 @@
 			<span class="text-base font-medium text-gray-900 dark:text-white"> Yearly </span>
 		</div>
 		<section
-			class="grid grid-cols-1 space-y-12 md:space-y-0 md:grid-cols-2 lg:grid-cols-3 md:gap-x-6 md:gap-6 pt-9"
+			class="grid grid-cols-1 space-y-12 pt-9 md:grid-cols-2 md:gap-6 md:gap-x-6 md:space-y-0 lg:grid-cols-3"
 		>
 			<PriceCard title="Starter" price={prices[0][+yearly]} {period} let:Item>
 				<svelte:fragment slot="subtitle">

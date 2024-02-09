@@ -3,7 +3,7 @@
 	import ProfilePicture from '$lib/settings/ProfilePicture.svelte';
 	import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
 	import GeneralInfo from '../dashboard/GeneralInfo.svelte';
-	import Footer from '../footer.svelte';
+	import Footer from '../Footer.svelte';
 	import PasswordInfo from '$lib/settings/PasswordInfo.svelte';
 	import Sessions from '$lib/settings/Sessions.svelte';
 	import SocialAccounts from '$lib/settings/SocialAccounts.svelte';
@@ -15,7 +15,7 @@
 	import { imagesPath } from '$lib/variables';
 </script>
 
-<main class="relative w-full h-full p-4 overflow-y-auto bg-gray-50 dark:bg-gray-900">
+<main class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
 	<Breadcrumb class="mb-5">
 		<BreadcrumbItem home>Home</BreadcrumbItem>
 		<BreadcrumbItem
@@ -25,12 +25,12 @@
 		<BreadcrumbItem>Settings</BreadcrumbItem>
 	</Breadcrumb>
 
-	<Heading tag="h1" class="mb-4 font-semibold tracking-wide text-xl sm:text-2xl">
+	<Heading tag="h1" class="mb-4 text-xl font-semibold tracking-wide sm:text-2xl">
 		User settings
 	</Heading>
 
-	<div class="grid grid-cols-1 pt-2 xl:grid-cols-3 xl:gap-4 dark:bg-gray-900">
-		<div class="col-span-full xl:col-auto space-y-4">
+	<div class="grid grid-cols-1 pt-2 dark:bg-gray-900 xl:grid-cols-3 xl:gap-4">
+		<div class="col-span-full space-y-4 xl:col-auto">
 			<ProfilePicture src={imagesPath(Users[4].avatar, 'users')} />
 			<LanguageTime />
 			<SocialAccounts />
@@ -42,7 +42,7 @@
 			<Sessions />
 		</div>
 	</div>
-	<div class="grid grid-cols-1 xl:grid-cols-2 xl:gap-4 mt-4">
+	<div class="mt-4 grid grid-cols-1 xl:grid-cols-2 xl:gap-4">
 		<Alerts />
 		<Emails />
 	</div>

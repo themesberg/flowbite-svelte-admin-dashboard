@@ -26,12 +26,12 @@
 		</div>
 		<div class={div2Class}>
 			<h1 class={h1Class}>{title}</h1>
-			<P class="mb-5 text-base font-normal text-gray-500 md:text-lg dark:text-gray-400">
+			<P class="mb-5 text-base font-normal text-gray-500 dark:text-gray-400 md:text-lg">
 				{@html description}
 			</P>
 			<Button href={btnHref}>
 				<svg
-					class="mr-2 -ml-1 w-5 h-5"
+					class="-ml-1 mr-2 h-5 w-5"
 					fill="currentColor"
 					viewBox="0 0 20 20"
 					xmlns="http://www.w3.org/2000/svg"
@@ -46,3 +46,25 @@
 		</div>
 	</div>
 </main>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Props
+@prop export let title = 'Under Maintenance';
+@prop export let description =
+		'Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always <a href="/" class="text-primary-700 hover:underline dark:text-primary-500">contact us</a>, otherwise we’ll be back online shortly!.';
+@prop export let image = {
+		src: imagesPath('illustrations/maintenance.svg'),
+		alt: 'maintenance'
+	};
+@prop export let btnTitle = 'Go back home';
+@prop export let btnHref = '/';
+@prop export let mainClass = 'bg-gray-50 dark:bg-gray-900';
+@prop export let mainDivClass =
+		'flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900';
+@prop export let h1Class =
+		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white';
+@prop export let imgDiv = 'block mb-5 md:max-w-md';
+@prop export let div2Class = 'text-center xl:max-w-4xl';
+-->

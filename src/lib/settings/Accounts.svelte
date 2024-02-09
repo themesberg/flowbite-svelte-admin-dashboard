@@ -5,7 +5,7 @@
 </script>
 
 <Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl tracking-wide font-medium">Other accounts</Heading>
+	<Heading tag="h3" class="text-xl font-medium tracking-wide">Other accounts</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each Users.slice(0, 4) as { avatar, name, country, status }}
 			<li class="py-4">
@@ -13,11 +13,11 @@
 					<div class="flex-shrink-0">
 						<Avatar src={imagesPath(avatar, 'users')} />
 					</div>
-					<div class="flex-1 min-w-0">
-						<p class="text-base font-semibold text-gray-900 truncate dark:text-white">
+					<div class="min-w-0 flex-1">
+						<p class="truncate text-base font-semibold text-gray-900 dark:text-white">
 							{name}
 						</p>
-						<p class="text-sm font-normal text-primary-700 truncate dark:text-primary-500">
+						<p class="truncate text-sm font-normal text-primary-700 dark:text-primary-500">
 							{country}
 						</p>
 						<p class="mt-1 text-xs font-medium text-gray-500 dark:text-gray-400">

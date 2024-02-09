@@ -34,7 +34,7 @@
 		<TableHeadCell></TableHeadCell>
 		{#each columns as column}
 			<TableHeadCell
-				class="p-4 text-base font-semibold tracking-wider text-right text-gray-900 dark:text-white"
+				class="p-4 text-right text-base font-semibold tracking-wider text-gray-900 dark:text-white"
 				>{column}</TableHeadCell
 			>
 		{/each}
@@ -43,7 +43,7 @@
 		{#each rows as row}
 			<TableBodyRow class="border-none">
 				<TableBodyCell
-					class="p-4 text-base font-normal text-gray-500 rounded-l-lg whitespace-nowrap dark:text-gray-400"
+					class="whitespace-nowrap rounded-l-lg p-4 text-base font-normal text-gray-500 dark:text-gray-400"
 				>
 					{row.name}
 				</TableBodyCell>
@@ -59,7 +59,7 @@
 						</TableBodyCell>
 					{:else}
 						<TableBodyCell
-							class="flex-shrink-0 text-xs font-medium text-gray-900 sm:text-sm md:text-base dark:text-white text-right"
+							class="flex-shrink-0 text-right text-xs font-medium text-gray-900 dark:text-white sm:text-sm md:text-base"
 						>
 							{value}
 						</TableBodyCell>

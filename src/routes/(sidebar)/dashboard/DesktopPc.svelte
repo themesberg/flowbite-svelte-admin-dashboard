@@ -8,17 +8,17 @@
 
 <Card size="xl" class="h-fit">
 	<div
-		class="items-center justify-between pb-4 border-b border-gray-200 sm:flex dark:border-gray-700"
+		class="items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-700 sm:flex"
 	>
-		<div class="w-full mb-4 sm:mb-0">
+		<div class="mb-4 w-full sm:mb-0">
 			<h3 class="text-base font-normal text-gray-500 dark:text-gray-400">Sales by category</h3>
-			<span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white"
+			<span class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl"
 				>Desktop PC</span
 			>
 			<Change value={2.5} since="Since last month" />
 		</div>
 		<div class="w-full max-w-lg">
-			<div class="grid items-center grid-cols-2 gap-4">
+			<div class="grid grid-cols-2 items-center gap-4">
 				<Input placeholder="From">
 					<CalendarMonthOutline slot="left" size="sm" />
 				</Input>

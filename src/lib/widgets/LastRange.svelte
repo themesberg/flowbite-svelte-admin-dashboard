@@ -1,6 +1,6 @@
 <script>
 	import { Button, Dropdown, DropdownItem } from 'flowbite-svelte';
-	import { ChevronDownOutline, ChevronDownSolid } from 'flowbite-svelte-icons';
+	import { ChevronDownOutline, AngleDownOutline } from 'flowbite-svelte-icons';
 </script>
 
 <div class="font-normal">

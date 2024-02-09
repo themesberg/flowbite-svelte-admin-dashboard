@@ -14,11 +14,11 @@
 </script>
 
 <Card size="xl">
-	<div class="flex items-center justify-between mb-4">
+	<div class="mb-4 flex items-center justify-between">
 		<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Smart chat</h3>
 		<a
 			href="#top"
-			class="inline-flex items-center p-2 text-sm font-medium rounded-lg text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
+			class="inline-flex items-center rounded-lg p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
 		>
 			View all
 		</a>
@@ -29,7 +29,7 @@
 			<p>
 				Hello <a
 					href="#top"
-					class="font-medium hover:underline text-primary-600 dark:text-primary-500">@designteam</a
+					class="font-medium text-primary-600 hover:underline dark:text-primary-500">@designteam</a
 				> Let's schedule a kick-off meeting and workshop this week. It would be great to gather everyone
 				involved in the design project. Let me know about your availability in the thread.
 			</p>
@@ -43,14 +43,14 @@
 				deck from you. It would be great to get it by the end o the month.
 			</p>
 			<p>Cheers!</p>
-			<div class="flex items-center mb-2 space-x-2">
+			<div class="mb-2 flex items-center space-x-2">
 				<button
 					type="button"
-					class="py-1.5 px-3 inline-flex items-center rounded-lg bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 dark:bg-gray-700"
+					class="inline-flex items-center rounded-lg bg-gray-100 px-3 py-1.5 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600"
 				>
 					<svg
 						aria-hidden="true"
-						class="h-5 mr-2"
+						class="mr-2 h-5"
 						viewBox="0 0 24 27"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -68,11 +68,11 @@
 				</button>
 				<button
 					type="button"
-					class="py-1.5 px-3 inline-flex items-center rounded-lg bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 dark:bg-gray-700"
+					class="inline-flex items-center rounded-lg bg-gray-100 px-3 py-1.5 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600"
 				>
 					<svg
 						aria-hidden="true"
-						class="h-5 mr-2"
+						class="mr-2 h-5"
 						viewBox="0 0 24 24"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -102,11 +102,11 @@
 				</button>
 				<button
 					type="button"
-					class="py-1.5 px-3 inline-flex items-center rounded-lg bg-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 dark:bg-gray-700"
+					class="inline-flex items-center rounded-lg bg-gray-100 px-3 py-1.5 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600"
 				>
 					<svg
 						aria-hidden="true"
-						class="h-5 mr-2"
+						class="mr-2 h-5"
 						viewBox="0 0 24 25"
 						fill="none"
 						xmlns="http://www.w3.org/2000/svg"
@@ -178,19 +178,19 @@
 		</ChatMsg>
 		<ChatMsg replays={0} name={Users[3].name} avatar={imagesPath(Users[3].avatar, 'users')}>
 			<p>
-				Ok <a href="#top" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
+				Ok <a href="#top" class="font-medium text-primary-600 hover:underline dark:text-primary-500"
 					>@team</a
 				> I'am attaching our offer and pitch deck. Take your time to review everything. I'am looking
 				forward to the next steps! Thank you.
 			</p>
 			<p>Looking forward to it! Thanks.</p>
-			<div class="items-center 2xl:space-x-4 2xl:flex">
+			<div class="items-center 2xl:flex 2xl:space-x-4">
 				<!-- Item -->
 				<div
-					class="flex items-center p-3 mb-3.5 border border-gray-200 dark:border-gray-700 rounded-lg"
+					class="mb-3.5 flex items-center rounded-lg border border-gray-200 p-3 dark:border-gray-700"
 				>
 					<div
-						class="flex items-center justify-center w-10 h-10 mr-3 rounded-lg bg-primary-100 dark:bg-primary-900 text-primary-600 dark:text-primary-300"
+						class="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-300"
 					>
 						<FileLinesSolid size="md" />
 					</div>
@@ -198,7 +198,7 @@
 						<p class="text-sm font-semibold text-gray-900 dark:text-white">flowbite_offer_345"</p>
 						<p class="text-sm text-gray-500 dark:text-gray-400">PDF, 2.3 MB</p>
 					</div>
-					<div class="flex items-center ml-auto">
+					<div class="ml-auto flex items-center">
 						<ToolbarButton><DownloadOutline /><span class="sr-only">Download</span></ToolbarButton>
 						<ToolbarButton>
 							<DotsVerticalOutline /> <span class="sr-only">Actions</span>
@@ -207,10 +207,10 @@
 				</div>
 				<!-- Item -->
 				<div
-					class="flex items-center p-3 mb-3.5 border border-gray-200 dark:border-gray-700 rounded-lg"
+					class="mb-3.5 flex items-center rounded-lg border border-gray-200 p-3 dark:border-gray-700"
 				>
 					<div
-						class="flex items-center justify-center w-10 h-10 mr-3 bg-teal-100 rounded-lg dark:bg-teal-900 text-teal-600 dark:text-teal-300"
+						class="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-teal-100 text-teal-600 dark:bg-teal-900 dark:text-teal-300"
 					>
 						<TableColumnOutline size="md" />
 					</div>
@@ -218,7 +218,7 @@
 						<p class="text-sm font-semibold text-gray-900 dark:text-white">bergside_pitch"</p>
 						<p class="text-sm text-gray-500 dark:text-gray-400">PPTX, 10.1 MB</p>
 					</div>
-					<div class="flex items-center ml-auto">
+					<div class="ml-auto flex items-center">
 						<ToolbarButton><DownloadOutline /><span class="sr-only">Download</span></ToolbarButton>
 						<ToolbarButton>
 							<DotsVerticalOutline /> <span class="sr-only">Actions</span>
@@ -236,7 +236,7 @@
 			<p>
 				Hello <a
 					href="#top"
-					class="font-medium hover:underline text-primary-600 dark:text-primary-500">@jeseleos</a
+					class="font-medium text-primary-600 hover:underline dark:text-primary-500">@jeseleos</a
 				> I need some informations about flowbite react version.
 			</p>
 		</ChatMsg>
@@ -247,7 +247,7 @@
 			class="pl-12"
 		>
 			<p class="mb-5">
-				Hi <a href="#top" class="font-medium hover:underline text-primary-600 dark:text-primary-500"
+				Hi <a href="#top" class="font-medium text-primary-600 hover:underline dark:text-primary-500"
 					>@josephh</a
 				> Sure, just let me know whean you are available and we can speak.
 			</p>
@@ -258,7 +258,7 @@
 				<ToolbarButton type="submit" color="primary">
 					<svg
 						aria-hidden="true"
-						class="w-6 h-6 rotate-90"
+						class="h-6 w-6 rotate-90"
 						fill="currentColor"
 						viewBox="0 0 20 20"
 						xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +271,7 @@
 			</div>
 
 			<span
-				class="inline-flex items-center text-xs gap-2 font-medium cursor-pointer hover:underline text-primary-700 sm:text-sm dark:text-primary-500"
+				class="inline-flex cursor-pointer items-center gap-2 text-xs font-medium text-primary-700 hover:underline dark:text-primary-500 sm:text-sm"
 			>
 				Hide thread <ChevronUpOutline size="xs" />
 			</span>

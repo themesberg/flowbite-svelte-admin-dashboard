@@ -22,7 +22,7 @@
 </script>
 
 <Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl tracking-wide font-medium">Language &amp; Time</Heading>
+	<Heading tag="h3" class="text-xl font-medium tracking-wide">Language &amp; Time</Heading>
 	<Label class="space-y-2">
 		<span>Select language</span>
 		<Select items={languages} class="font-normal"></Select>

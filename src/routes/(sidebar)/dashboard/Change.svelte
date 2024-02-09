@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ArrowDownOutline, ArrowUpOutline } from 'flowbite-svelte-icons';
+	import { AngleDownOutline, ArrowUpOutline } from 'flowbite-svelte-icons';
 
 	export let value: number;
 	export let unit: string = '%';
@@ -11,12 +11,12 @@
 	$: color = value > 0 ? colorUp : value < 0 ? colorDown : '';
 </script>
 
-<div class="flex items-center flex-1 text-sm {color}">
+<div class="flex flex-1 items-center text-sm {color}">
 	{#if value > 0}
 		<ArrowUpOutline size="xs" />
 		{value}{unit}
 	{:else if value < 0}
-		<ArrowDownOutline size="xs" />
+		<AngleDownOutline size="xs" />
 		{Math.abs(value)}{unit}
 	{:else}
 		--

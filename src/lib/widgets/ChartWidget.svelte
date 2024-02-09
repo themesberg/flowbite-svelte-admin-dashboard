@@ -15,3 +15,12 @@
 	<hr />
 	<LastRange />
 </Card>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Props
+@prop export let title: string = '';
+@prop export let subtitle: string = '';
+@prop export let chartOptions: ApexOptions;
+-->

@@ -4,11 +4,11 @@
 </script>
 
 <Card size="xl">
-	<div class="flex items-center justify-between mb-4">
+	<div class="mb-4 flex items-center justify-between">
 		<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Latest Activity</h3>
 		<a
 			href="#top"
-			class="inline-flex items-center p-2 text-sm font-medium rounded-lg text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
+			class="inline-flex items-center rounded-lg p-2 text-sm font-medium text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700"
 		>
 			View all
 		</a>
@@ -19,7 +19,7 @@
 				GGet access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,
 				and pre-order E-commerce & Marketing pages.
 			</p>
-			<Button color="alternative">Learn more<ArrowRightOutline class="ms-2 w-3 h-3" /></Button>
+			<Button color="alternative">Learn more<ArrowRightOutline class="ms-2 h-3 w-3" /></Button>
 		</TimelineItem>
 		<TimelineItem title="Marketing UI code in Flowbite" date="March 2023">
 			<p class="text-base font-normal text-gray-500 dark:text-gray-400">
@@ -28,9 +28,9 @@
 			</p>
 			<a
 				href="#top"
-				class="inline-flex items-center text-xs font-medium hover:underline text-primary-700 sm:text-sm dark:text-primary-500"
+				class="inline-flex items-center text-xs font-medium text-primary-700 hover:underline dark:text-primary-500 sm:text-sm"
 			>
-				Go to Flowbite Blocks<ArrowRightOutline class="ms-2 w-3 h-3" />
+				Go to Flowbite Blocks<ArrowRightOutline class="ms-2 h-3 w-3" />
 			</a>
 		</TimelineItem>
 		<TimelineItem title="Marketing UI design in Figma" date="February 2023">

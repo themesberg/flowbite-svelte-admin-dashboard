@@ -8,10 +8,10 @@
 	export let period: string = 'month';
 </script>
 
-<Card size="none" class="max-w-lg mx-auto text-gray-900" padding="xl">
+<Card size="none" class="mx-auto max-w-lg text-gray-900" padding="xl">
 	<h3 class="mb-4 text-2xl font-semibold">{title}</h3>
 	{#if $$slots.subtitle}
-		<p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+		<p class="font-light text-gray-500 dark:text-gray-400 sm:text-lg">
 			<slot name="subtitle" />
 		</p>
 	{/if}
@@ -22,7 +22,7 @@
 	</ul>
 	<a
 		href="#top"
-		class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
+		class="rounded-lg bg-primary-600 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 dark:text-white dark:focus:ring-primary-900"
 		>Get started</a
 	>
 </Card>

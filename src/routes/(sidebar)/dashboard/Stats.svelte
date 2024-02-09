@@ -59,14 +59,14 @@
 				{#each products as { src, image, label, price, change }}
 					<li class="py-3 sm:py-4">
 						<div class="flex items-center justify-between">
-							<div class="flex items-center min-w-0">
+							<div class="flex min-w-0 items-center">
 								<img
-									class="flex-shrink-0 w-10 h-10"
+									class="h-10 w-10 flex-shrink-0"
 									src={imagesPath(src, 'products')}
 									alt={image}
 								/>
 								<div class="ml-3">
-									<p class="font-medium text-gray-900 truncate dark:text-white">
+									<p class="truncate font-medium text-gray-900 dark:text-white">
 										{label}
 									</p>
 									<Change value={change} />
@@ -88,10 +88,10 @@
 				{#each customers as { email, name, avatar }}
 					<li class="py-3 sm:py-3.5">
 						<div class="flex items-center justify-between">
-							<div class="flex items-center min-w-0">
+							<div class="flex min-w-0 items-center">
 								<Avatar src={imagesPath(avatar, 'users')} />
 								<div class="ml-3">
-									<p class="font-medium text-gray-900 truncate dark:text-white">
+									<p class="truncate font-medium text-gray-900 dark:text-white">
 										{name}
 									</p>
 									<span class="text-gray-500">{email}</span>

@@ -35,7 +35,7 @@
 	{#if replays}
 		<a
 			href="/"
-			class="inline-flex items-center text-xs font-medium text-primary-700 sm:text-sm dark:text-primary-500 gap-2"
+			class="inline-flex items-center gap-2 text-xs font-medium text-primary-700 dark:text-primary-500 sm:text-sm"
 		>
 			{replays} replies
 			<ChevronDownOutline size="xs" />

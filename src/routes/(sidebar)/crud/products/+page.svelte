@@ -28,7 +28,7 @@
 	import { imagesPath } from '$lib/variables';
 </script>
 
-<main class="relative w-full h-full p-4 overflow-y-auto bg-gray-50 dark:bg-gray-900">
+<main class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
 	<Breadcrumb class="mb-5">
 		<BreadcrumbItem home>Home</BreadcrumbItem>
 		<BreadcrumbItem
@@ -39,7 +39,7 @@
 	</Breadcrumb>
 	<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All users</Heading>
 
-	<Toolbar embedded class="-mx-2 text-gray-500 dark:text-gray-400 p-2 w-full">
+	<Toolbar embedded class="-mx-2 w-full p-2 text-gray-500 dark:text-gray-400">
 		<ToolbarGroup class="w-80 xl:w-96">
 			<Input placeholder="Search for users" />
 		</ToolbarGroup>
@@ -55,7 +55,7 @@
 	</Toolbar>
 
 	<Table>
-		<TableHead class="border-y bg-gray-100 border-gray-200 dark:border-gray-700">
+		<TableHead class="border-y border-gray-200 bg-gray-100 dark:border-gray-700">
 			<TableHeadCell><Checkbox /></TableHeadCell>
 			{#each ['Product Name', 'Technology', 'Description', 'ID', 'Price', 'Discount', 'Actions'] as title}
 				<TableHeadCell>{title}</TableHeadCell>
@@ -65,7 +65,7 @@
 			{#each Products as product}
 				<TableBodyRow>
 					<TableBodyCell><Checkbox /></TableBodyCell>
-					<TableBodyCell class="flex items-center p-4 mr-12 space-x-6 whitespace-nowrap">
+					<TableBodyCell class="mr-12 flex items-center space-x-6 whitespace-nowrap p-4">
 						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
 							<div class="text-base font-semibold text-gray-900 dark:text-white">
 								{product.name}
@@ -77,7 +77,7 @@
 					</TableBodyCell>
 					<TableBodyCell>{product.category}</TableBodyCell>
 					<TableBodyCell
-						class="max-w-sm p-4 overflow-hidden text-base font-normal text-gray-500 truncate xl:max-w-xs dark:text-gray-400"
+						class="max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-gray-400 xl:max-w-xs"
 						>{product.description}</TableBodyCell
 					>
 					<TableBodyCell>#{product.id}</TableBodyCell>

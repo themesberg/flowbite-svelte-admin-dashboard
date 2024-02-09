@@ -7,7 +7,7 @@
 
 {#if type === 'master'}
 	<svg
-		class="w-7 h-7"
+		class="h-7 w-7"
 		aria-hidden="true"
 		enable-background="new 0 0 780 500"
 		viewBox="0 0 780 500"
@@ -32,7 +32,7 @@
 	>
 {/if}
 {#if type === 'visa'}
-	<svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 83"
+	<svg class="h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 83"
 		><defs
 			><linearGradient id="logosVisa0" x1="45.974%" x2="54.877%" y1="-2.006%" y2="100%"
 				><stop offset="0%" stop-color="#222357"></stop><stop offset="100%" stop-color="#254AA5"

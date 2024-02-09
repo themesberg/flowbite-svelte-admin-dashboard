@@ -10,15 +10,15 @@
 		SidebarWrapper
 	} from 'flowbite-svelte';
 	import {
-		ChartPieSolid,
-		ChevronDownSolid,
-		ChevronUpSolid,
+		PieChartSolid,
+		AngleDownOutline,
+		AngleUpOutline,
 		ClipboardListSolid,
 		CogOutline,
 		FileChartBarSolid,
 		GithubSolid,
 		LayersSolid,
-		LifeBuoySolid,
+		LifeSaverSolid,
 		LockSolid,
 		RectangleListSolid,
 		TableColumnSolid
@@ -55,7 +55,7 @@
 	});
 
 	let posts = [
-		{ name: 'Dashboard', icon: ChartPieSolid, href: '/dashboard' },
+		{ name: 'Dashboard', icon: PieChartSolid, href: '/dashboard' },
 		{
 			name: 'Layouts',
 			icon: TableColumnSolid,
@@ -108,7 +108,7 @@
 	<SidebarWrapper
 		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
 	>
-		<nav class="font-medium text-base divide-y">
+		<nav class="divide-y text-base font-medium">
 			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-2">
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
@@ -122,14 +122,8 @@
 								? 'text-primary-700 dark:text-white'
 								: 'text-gray-500 dark:text-gray-400'}
 						>
-							<ChevronDownSolid
-								slot="arrowdown"
-								class="w-3 h-3 ms-auto text-gray-800 dark:text-white"
-							/>
-							<ChevronUpSolid
-								slot="arrowup"
-								class="w-3 h-3 ms-auto text-gray-800 dark:text-white"
-							/>
+							<AngleDownOutline slot="arrowdown" class="ms-auto text-gray-800 dark:text-white" />
+							<AngleUpOutline slot="arrowup" class="ms-auto text-gray-800 dark:text-white" />
 							<svelte:component this={icon} slot="icon" />
 							{#each Object.entries(children) as [title, href]}
 								<SidebarItem
@@ -151,31 +145,31 @@
 			<SidebarGroup ulClass="list-unstyled fw-normal small pt-4 space-y-2">
 				<SidebarItem
 					label="GitHub Repository"
-					href="https://github.com/themesberg/flowbite-admin-dashboard"
+					href="https://github.com/themesberg/flowbite-svelte-admin-dashboard"
 					target="_blank"
 				>
 					<GithubSolid slot="icon" />
 				</SidebarItem>
 				<SidebarItem
-					label="Flowbite Docs"
-					href="https://flowbite.com/docs/getting-started/introduction/"
+					label="Flowbite Svelte"
+					href="https://flowbite-svelte.com/docs/pages/quickstart"
 					target="_blank"
 				>
 					<ClipboardListSolid slot="icon" />
 				</SidebarItem>
 				<SidebarItem
 					label="Components"
-					href="https://flowbite.com/docs/components/alerts/"
+					href="https://flowbite-svelte.com/docs/components/accordion"
 					target="_blank"
 				>
 					<LayersSolid slot="icon" />
 				</SidebarItem>
 				<SidebarItem
 					label="Support"
-					href="https://github.com/themesberg/flowbite-admin-dashboard/issues"
+					href="https://github.com/themesberg/flowbite-svelte-admin-dashboard/issues"
 					target="_blank"
 				>
-					<LifeBuoySolid slot="icon" />
+					<LifeSaverSolid slot="icon" />
 				</SidebarItem>
 			</SidebarGroup>
 		</nav>

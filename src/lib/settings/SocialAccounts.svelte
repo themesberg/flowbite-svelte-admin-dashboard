@@ -10,7 +10,7 @@
 </script>
 
 <Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl tracking-wide font-medium">Social accounts</Heading>
+	<Heading tag="h3" class="text-xl font-medium tracking-wide">Social accounts</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each items as { icon, name, link }}
 			<li class="py-4">
@@ -18,11 +18,11 @@
 					<div class="flex-shrink-0">
 						<svelte:component this={icon} />
 					</div>
-					<div class="flex-1 min-w-0">
-						<p class="text-base font-semibold text-gray-900 truncate dark:text-white">
+					<div class="min-w-0 flex-1">
+						<p class="truncate text-base font-semibold text-gray-900 dark:text-white">
 							{name}
 						</p>
-						<p class="text-sm font-normal text-gray-500 truncate dark:text-gray-400">
+						<p class="truncate text-sm font-normal text-gray-500 dark:text-gray-400">
 							{#if link}
 								<A href="">{link}</A>
 							{:else}

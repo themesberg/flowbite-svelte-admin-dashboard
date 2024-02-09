@@ -7,17 +7,17 @@
 
 <Card size="xl" class="h-fit">
 	<div
-		class="items-center justify-between pb-4 border-b border-gray-200 sm:flex dark:border-gray-700"
+		class="items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-700 sm:flex"
 	>
-		<div class="w-full mb-4 sm:mb-0">
+		<div class="mb-4 w-full sm:mb-0">
 			<h3 class="text-base font-normal text-gray-500 dark:text-gray-400">Traffic by device</h3>
-			<span class="text-2xl font-bold leading-none text-gray-900 sm:text-3xl dark:text-white"
+			<span class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl"
 				>Desktop</span
 			>
 		</div>
 	</div>
 	<Chart {options}></Chart>
-	<div class="flex items-center justify-between pt-4 lg:justify-evenly sm:pt-6">
+	<div class="flex items-center justify-between pt-4 sm:pt-6 lg:justify-evenly">
 		<SmallPanel title="Desktop" subtitle="234k" change={4}>
 			<DesktopPcOutline slot="icon" />
 		</SmallPanel>
