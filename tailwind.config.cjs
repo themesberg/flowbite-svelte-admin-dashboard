@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 const config = {
 	content: [
 		"./src/**/*.{html,js,svelte,ts,md}",
@@ -9,10 +11,13 @@ const config = {
 	},
 
 	plugins: [
-		require('flowbite/plugin')
+		// require('flowbite/plugin')
 	],
 	darkMode: 'class',
 	theme: {
+		fontFamily: {
+			'sans': ['Inter', ...defaultTheme.fontFamily.sans],
+		},
 		extend: {
 			colors: {
 				// flowbite-svelte
