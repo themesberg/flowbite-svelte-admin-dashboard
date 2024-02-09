@@ -42,27 +42,27 @@ If you want to use this project we recommend to also [study the component librar
 
 ## Demo pages
 
-| 🚧 Dashboard | 🚧 Stacked Layout | 🚧 Products (CRUD)
-| --- | --- | --- |
-| [![Dashboard](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/homepage.jpg)]() | [![Stacked Layout](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/stacked.jpg)]() | [![Products (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/products-crud.jpg)]()
+| 🚧 Dashboard                                                                                               | 🚧 Stacked Layout                                                                                              | 🚧 Products (CRUD)                                                                                                    |
+| ---------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [![Dashboard](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/homepage.jpg)]() | [![Stacked Layout](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/stacked.jpg)]() | [![Products (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/products-crud.jpg)]() |
 
-| 🚧 Users (CRUD) | 🚧 Settings | 🚧 Pricing page
-| --- | --- | --- |
-| [![Users (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/users.jpg)]() | [![Settings](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/settings.jpg)]() | [![Pricing page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/pricing.jpg)]()
+| 🚧 Users (CRUD)                                                                                            | 🚧 Settings                                                                                               | 🚧 Pricing page                                                                                              |
+| ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| [![Users (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/users.jpg)]() | [![Settings](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/settings.jpg)]() | [![Pricing page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/pricing.jpg)]() |
 
-| Login page | Register page | Reset password
-| --- | --- | --- |
-| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/reset-password)
+| Login page                                                                                                                                                                         | Register page                                                                                                                                                                            | Reset password                                                                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/reset-password) |
 
-| Forgot password | Profile lock | Maintenance page
-| --- | --- | --- |
-| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/forgot-password) | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/profile-lock) | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/maintenance)
+| Forgot password                                                                                                                                                                                          | Profile lock                                                                                                                                                                                    | Maintenance page                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/forgot-password) | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/authentication/profile-lock) | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/maintenance) |
 
-| 404 not found | 500 server error | 🚧 Playground
-| --- | --- | --- |
-| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/404) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/500) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)]()
+| 404 not found                                                                                                                                                         | 500 server error                                                                                                                                                         | 🚧 Playground                                                                                                 |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
+| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/404) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](https://flowbite-svelte-admin-dashboard.vercel.app/pages/500) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)]() |
 
--   [Live Preview](https://flowbite-svelte-admin-dashboard.vercel.app/)
+- [Live Preview](https://flowbite-svelte-admin-dashboard.vercel.app/)
 
 ## Quick start
 
@@ -71,7 +71,7 @@ If you want to use this project we recommend to also [study the component librar
 2. Install flowbite-svelte-admin-dashboard
 
 ```bash
-pnpm i flowbite-svelte-admin-dashboard 
+pnpm i flowbite-svelte-admin-dashboard
 ```
 
 ## Browser Support
