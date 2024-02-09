@@ -1,195 +1,195 @@
 {
-	"name": "flowbite-svelte-admin-dashboard",
-	"version": "0.1.1",
-	"description": "Flowbite Admin Dashboard components for Svelte",
-	"main": "dist/index.js",
-	"homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
-	"private": false,
-	"license": "MIT",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview",
-		"test": "npm run test:integration && npm run test:unit",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write .",
-		"test:integration": "playwright test",
-		"test:unit": "vitest",
-		"gen:exports": "svelte-lib-helpers exports",
-		"gen:docs": "svelte-lib-helpers docs",
-		"gen:compo-data": "svelte-lib-helpers compo-data",
-		"copy:package": "svelte-lib-helpers package",
-		"lib-helpers": "npm run gen:docs && npm run gen:compo-data && npm run build && npm run gen:exports && npm run copy:package",
-		"package:publish": "standard-version && git push --follow-tags origin main && npm run lib-helpers && npm publish"
-	},
-	"devDependencies": {
-		"@playwright/test": "^1.28.1",
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@types/eslint": "8.56.0",
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"autoprefixer": "^10.4.16",
-		"eslint": "^8.56.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.35.1",
-		"postcss": "^8.4.32",
-		"postcss-load-config": "^5.0.2",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.1.2",
-		"prettier-plugin-tailwindcss": "^0.5.9",
-		"svelte": "^4.2.7",
-		"svelte-check": "^3.6.0",
-		"svelte-lib-helpers": "^0.3.17",
-		"tailwindcss": "^3.3.6",
-		"tslib": "^2.4.1",
-		"typescript": "^5.0.0",
-		"vite": "^5.0.3",
-		"vitest": "^1.2.0"
-	},
-	"type": "module",
-	"peerDependencies": {
-		"svelte": "^4.0.0"
-	},
-	"dependencies": {
-		"flowbite-svelte": "^0.44.23",
-		"flowbite-svelte-icons": "^1.3.1"
-	},
-	"keywords": [
-		"svelte",
-		"sveltekit",
-		"tailwindcss",
-		"flowbite",
-		"ui",
-		"admin dashboard",
-		"signup"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/themesberg/flowbite-svelte-admin-dashboard"
-	},
-	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
-	],
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
-		},
-		"./ForgotPassword.svelte": {
-			"types": "./dist/authentication/ForgotPassword.svelte.d.ts",
-			"svelte": "./dist/authentication/ForgotPassword.svelte"
-		},
-		"./ProfileLock.svelte": {
-			"types": "./dist/authentication/ProfileLock.svelte.d.ts",
-			"svelte": "./dist/authentication/ProfileLock.svelte"
-		},
-		"./ResetPassword.svelte": {
-			"types": "./dist/authentication/ResetPassword.svelte.d.ts",
-			"svelte": "./dist/authentication/ResetPassword.svelte"
-		},
-		"./SignIn.svelte": {
-			"types": "./dist/authentication/SignIn.svelte.d.ts",
-			"svelte": "./dist/authentication/SignIn.svelte"
-		},
-		"./SignUp.svelte": {
-			"types": "./dist/authentication/SignUp.svelte.d.ts",
-			"svelte": "./dist/authentication/SignUp.svelte"
-		},
-		"./Products.svelte": {
-			"types": "./dist/crud/Products.svelte.d.ts",
-			"svelte": "./dist/crud/Products.svelte"
-		},
-		"./Users.svelte": {
-			"types": "./dist/crud/Users.svelte.d.ts",
-			"svelte": "./dist/crud/Users.svelte"
-		},
-		"./Sidebar.svelte": {
-			"types": "./dist/playground/Sidebar.svelte.d.ts",
-			"svelte": "./dist/playground/Sidebar.svelte"
-		},
-		"./stacked.svelte": {
-			"types": "./dist/layouts/stacked.svelte.d.ts",
-			"svelte": "./dist/layouts/stacked.svelte"
-		},
-		"./Maintenance.svelte": {
-			"types": "./dist/pages/Maintenance.svelte.d.ts",
-			"svelte": "./dist/pages/Maintenance.svelte"
-		},
-		"./NotFound.svelte": {
-			"types": "./dist/pages/NotFound.svelte.d.ts",
-			"svelte": "./dist/pages/NotFound.svelte"
-		},
-		"./Pricing.svelte": {
-			"types": "./dist/pages/Pricing.svelte.d.ts",
-			"svelte": "./dist/pages/Pricing.svelte"
-		},
-		"./ServerError.svelte": {
-			"types": "./dist/pages/ServerError.svelte.d.ts",
-			"svelte": "./dist/pages/ServerError.svelte"
-		},
-		"./Stacked.svelte": {
-			"types": "./dist/playground/Stacked.svelte.d.ts",
-			"svelte": "./dist/playground/Stacked.svelte"
-		},
-		"./Accounts.svelte": {
-			"types": "./dist/settings/Accounts.svelte.d.ts",
-			"svelte": "./dist/settings/Accounts.svelte"
-		},
-		"./Alerts.svelte": {
-			"types": "./dist/settings/Alerts.svelte.d.ts",
-			"svelte": "./dist/settings/Alerts.svelte"
-		},
-		"./CardList.svelte": {
-			"types": "./dist/settings/CardList.svelte.d.ts",
-			"svelte": "./dist/settings/CardList.svelte"
-		},
-		"./Emails.svelte": {
-			"types": "./dist/settings/Emails.svelte.d.ts",
-			"svelte": "./dist/settings/Emails.svelte"
-		},
-		"./LanguageTime.svelte": {
-			"types": "./dist/settings/LanguageTime.svelte.d.ts",
-			"svelte": "./dist/settings/LanguageTime.svelte"
-		},
-		"./PasswordInfo.svelte": {
-			"types": "./dist/settings/PasswordInfo.svelte.d.ts",
-			"svelte": "./dist/settings/PasswordInfo.svelte"
-		},
-		"./ProfilePicture.svelte": {
-			"types": "./dist/settings/ProfilePicture.svelte.d.ts",
-			"svelte": "./dist/settings/ProfilePicture.svelte"
-		},
-		"./Sessions.svelte": {
-			"types": "./dist/settings/Sessions.svelte.d.ts",
-			"svelte": "./dist/settings/Sessions.svelte"
-		},
-		"./SocialAccounts.svelte": {
-			"types": "./dist/settings/SocialAccounts.svelte.d.ts",
-			"svelte": "./dist/settings/SocialAccounts.svelte"
-		},
-		"./AppsMenu.svelte": {
-			"types": "./dist/widgets/AppsMenu.svelte.d.ts",
-			"svelte": "./dist/widgets/AppsMenu.svelte"
-		},
-		"./ChartWidget.svelte": {
-			"types": "./dist/widgets/ChartWidget.svelte.d.ts",
-			"svelte": "./dist/widgets/ChartWidget.svelte"
-		},
-		"./LastRange.svelte": {
-			"types": "./dist/widgets/LastRange.svelte.d.ts",
-			"svelte": "./dist/widgets/LastRange.svelte"
-		},
-		"./UserMenu.svelte": {
-			"types": "./dist/widgets/UserMenu.svelte.d.ts",
-			"svelte": "./dist/widgets/UserMenu.svelte"
-		}
-	}
+  "name": "flowbite-svelte-admin-dashboard",
+  "version": "0.1.1",
+  "description": "Flowbite Admin Dashboard components for Svelte",
+  "main": "dist/index.js",
+  "homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
+  "private": false,
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "npm run test:integration && npm run test:unit",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
+    "test:integration": "playwright test",
+    "test:unit": "vitest",
+    "gen:exports": "svelte-lib-helpers exports",
+    "gen:docs": "svelte-lib-helpers docs",
+    "gen:compo-data": "svelte-lib-helpers compo-data",
+    "copy:package": "svelte-lib-helpers package",
+    "lib-helpers": "npm run gen:docs && npm run gen:compo-data && npm run build && npm run gen:exports && npm run copy:package",
+    "package:publish": "standard-version && git push --follow-tags origin main && npm publish"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.28.1",
+    "@sveltejs/adapter-auto": "^3.0.0",
+    "@sveltejs/kit": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^3.0.0",
+    "@types/eslint": "8.56.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.35.1",
+    "postcss": "^8.4.32",
+    "postcss-load-config": "^5.0.2",
+    "prettier": "^3.1.1",
+    "prettier-plugin-svelte": "^3.1.2",
+    "prettier-plugin-tailwindcss": "^0.5.9",
+    "svelte": "^4.2.7",
+    "svelte-check": "^3.6.0",
+    "svelte-lib-helpers": "^0.3.17",
+    "tailwindcss": "^3.3.6",
+    "tslib": "^2.4.1",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.3",
+    "vitest": "^1.2.0"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "svelte": "^4.0.0"
+  },
+  "dependencies": {
+    "flowbite-svelte": "^0.44.23",
+    "flowbite-svelte-icons": "^1.3.1"
+  },
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "tailwindcss",
+    "flowbite",
+    "ui",
+    "admin dashboard",
+    "signup"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/themesberg/flowbite-svelte-admin-dashboard"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    },
+    "./ForgotPassword.svelte": {
+      "types": "./dist/authentication/ForgotPassword.svelte.d.ts",
+      "svelte": "./dist/authentication/ForgotPassword.svelte"
+    },
+    "./ProfileLock.svelte": {
+      "types": "./dist/authentication/ProfileLock.svelte.d.ts",
+      "svelte": "./dist/authentication/ProfileLock.svelte"
+    },
+    "./ResetPassword.svelte": {
+      "types": "./dist/authentication/ResetPassword.svelte.d.ts",
+      "svelte": "./dist/authentication/ResetPassword.svelte"
+    },
+    "./SignIn.svelte": {
+      "types": "./dist/authentication/SignIn.svelte.d.ts",
+      "svelte": "./dist/authentication/SignIn.svelte"
+    },
+    "./SignUp.svelte": {
+      "types": "./dist/authentication/SignUp.svelte.d.ts",
+      "svelte": "./dist/authentication/SignUp.svelte"
+    },
+    "./Products.svelte": {
+      "types": "./dist/crud/Products.svelte.d.ts",
+      "svelte": "./dist/crud/Products.svelte"
+    },
+    "./Users.svelte": {
+      "types": "./dist/crud/Users.svelte.d.ts",
+      "svelte": "./dist/crud/Users.svelte"
+    },
+    "./Sidebar.svelte": {
+      "types": "./dist/playground/Sidebar.svelte.d.ts",
+      "svelte": "./dist/playground/Sidebar.svelte"
+    },
+    "./stacked.svelte": {
+      "types": "./dist/layouts/stacked.svelte.d.ts",
+      "svelte": "./dist/layouts/stacked.svelte"
+    },
+    "./Maintenance.svelte": {
+      "types": "./dist/pages/Maintenance.svelte.d.ts",
+      "svelte": "./dist/pages/Maintenance.svelte"
+    },
+    "./NotFound.svelte": {
+      "types": "./dist/pages/NotFound.svelte.d.ts",
+      "svelte": "./dist/pages/NotFound.svelte"
+    },
+    "./Pricing.svelte": {
+      "types": "./dist/pages/Pricing.svelte.d.ts",
+      "svelte": "./dist/pages/Pricing.svelte"
+    },
+    "./ServerError.svelte": {
+      "types": "./dist/pages/ServerError.svelte.d.ts",
+      "svelte": "./dist/pages/ServerError.svelte"
+    },
+    "./Stacked.svelte": {
+      "types": "./dist/playground/Stacked.svelte.d.ts",
+      "svelte": "./dist/playground/Stacked.svelte"
+    },
+    "./Accounts.svelte": {
+      "types": "./dist/settings/Accounts.svelte.d.ts",
+      "svelte": "./dist/settings/Accounts.svelte"
+    },
+    "./Alerts.svelte": {
+      "types": "./dist/settings/Alerts.svelte.d.ts",
+      "svelte": "./dist/settings/Alerts.svelte"
+    },
+    "./CardList.svelte": {
+      "types": "./dist/settings/CardList.svelte.d.ts",
+      "svelte": "./dist/settings/CardList.svelte"
+    },
+    "./Emails.svelte": {
+      "types": "./dist/settings/Emails.svelte.d.ts",
+      "svelte": "./dist/settings/Emails.svelte"
+    },
+    "./LanguageTime.svelte": {
+      "types": "./dist/settings/LanguageTime.svelte.d.ts",
+      "svelte": "./dist/settings/LanguageTime.svelte"
+    },
+    "./PasswordInfo.svelte": {
+      "types": "./dist/settings/PasswordInfo.svelte.d.ts",
+      "svelte": "./dist/settings/PasswordInfo.svelte"
+    },
+    "./ProfilePicture.svelte": {
+      "types": "./dist/settings/ProfilePicture.svelte.d.ts",
+      "svelte": "./dist/settings/ProfilePicture.svelte"
+    },
+    "./Sessions.svelte": {
+      "types": "./dist/settings/Sessions.svelte.d.ts",
+      "svelte": "./dist/settings/Sessions.svelte"
+    },
+    "./SocialAccounts.svelte": {
+      "types": "./dist/settings/SocialAccounts.svelte.d.ts",
+      "svelte": "./dist/settings/SocialAccounts.svelte"
+    },
+    "./AppsMenu.svelte": {
+      "types": "./dist/widgets/AppsMenu.svelte.d.ts",
+      "svelte": "./dist/widgets/AppsMenu.svelte"
+    },
+    "./ChartWidget.svelte": {
+      "types": "./dist/widgets/ChartWidget.svelte.d.ts",
+      "svelte": "./dist/widgets/ChartWidget.svelte"
+    },
+    "./LastRange.svelte": {
+      "types": "./dist/widgets/LastRange.svelte.d.ts",
+      "svelte": "./dist/widgets/LastRange.svelte"
+    },
+    "./UserMenu.svelte": {
+      "types": "./dist/widgets/UserMenu.svelte.d.ts",
+      "svelte": "./dist/widgets/UserMenu.svelte"
+    }
+  }
 }
