@@ -2,6 +2,9 @@
 	import { Button, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle } from 'flowbite-svelte';
 	import { ArrowLeftToBracketOutline, CloseOutline } from 'flowbite-svelte-icons';
 	import PriceCard from './PriceCard.svelte';
+	import ComparisonTable from './ComparisonTable.svelte';
+	import Faq from './FAQ.svelte';
+	import Footer from './Footer.svelte';
 
 	let yearly: boolean = false;
 	let prices: string[][] = [
@@ -11,6 +14,10 @@
 	];
 	$: period = yearly ? 'year' : 'month';
 </script>
+
+<svelte:head>
+	<title>Tailwind CSS Pricing Page - Flowbite</title>
+</svelte:head>
 
 <Navbar class="px-2 sm:px-4 py-2.5 fixed w-full z-20 top-0 start-0 border-b">
 	<NavBrand href="/">
@@ -87,5 +94,18 @@
 				<Item>Free updates: <span class="font-semibold">36 months</span></Item>
 			</PriceCard>
 		</section>
+		<section class="flex flex-col pt-10 md:pt-20">
+			<div class="overflow-x-auto rounded-lg">
+				<div class="inline-block min-w-full align-middle">
+					<div class="overflow-hidden shadow sm:rounded-lg">
+						<ComparisonTable />
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="pt-20">
+			<Faq />
+		</section>
 	</div>
 </main>
+<Footer />

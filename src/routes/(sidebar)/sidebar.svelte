@@ -77,6 +77,7 @@
 			name: 'Pages',
 			icon: FileChartBarSolid,
 			children: {
+				Pricing: '/pages/pricing',
 				Maintenance: '/errors/400',
 				'404 not found': '/errors/404',
 				'500 server error': '/errors/500'
