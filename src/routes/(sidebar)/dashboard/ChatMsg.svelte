@@ -34,7 +34,7 @@
 	<div class="space-y-2 text-gray-900 dark:text-white"><slot /></div>
 	{#if replays}
 		<a
-			href="#"
+			href="/"
 			class="inline-flex items-center text-xs font-medium text-primary-700 sm:text-sm dark:text-primary-500 gap-2"
 		>
 			{replays} replies
