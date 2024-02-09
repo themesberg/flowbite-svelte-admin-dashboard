@@ -42,7 +42,7 @@
 		</p>
 		<p class="text-gray-600 dark:text-gray-400">
 			Feel free to <a
-				href="#"
+				href="/"
 				class="font-medium underline text-primary-600 hover:no-underline dark:text-primary-500"
 				target="_blank"
 				rel="noreferrer">contact us</a
@@ -71,7 +71,7 @@
 		</h3>
 		<p class="text-gray-600 dark:text-gray-400">
 			The free updates that will be provided is based on the <a
-				href="#"
+				href="/"
 				class="font-medium underline text-primary-600 hover:no-underline dark:text-primary-500"
 				>roadmap</a
 			> that we have laid out for this project. It is also possible that we will provide extra updates
@@ -84,7 +84,7 @@
 		</h3>
 		<p class="text-gray-600 dark:text-gray-400">
 			The <a
-				href="#"
+				href="/"
 				class="font-medium underline text-primary-600 hover:no-underline dark:text-primary-500"
 				>free version</a
 			> of FlowBite includes a minimal style guidelines, component variants, and a dashboard page with
@@ -202,7 +202,7 @@
 		<p class="text-gray-600 dark:text-gray-400">
 			If you forgot to complete the information, or you didn't get the invoice by email, feel free
 			to <a
-				href="#"
+				href="/"
 				class="font-medium underline text-primary-600 hover:no-underline dark:text-primary-500"
 				target="_blank"
 				rel="noreferrer">contact us</a
@@ -227,7 +227,7 @@
 		<h3 class="text-lg font-medium text-gray-900 dark:text-white">What is your refund policy?</h3>
 		<p class="text-gray-600 dark:text-gray-400">
 			If you are unhappy with your purchase, just <a
-				href="#"
+				href="/"
 				class="font-medium underline text-primary-600 hover:no-underline dark:text-primary-500"
 				target="_blank"
 				rel="noreferrer">contact us</a
