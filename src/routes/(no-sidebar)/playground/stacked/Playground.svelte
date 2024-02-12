@@ -15,17 +15,17 @@
 			<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">Create something awesome here</Heading>
 		</div>
 		<div class="col-span-full xl:col-auto">
-			<EmptyCard size="md" class="mb-4 w-full space-y-6 2xl:col-span-2"></EmptyCard>
-			<EmptyCard size="md" class="mb-4 w-full space-y-6 2xl:col-span-2"></EmptyCard>
+			<EmptyCard size="md" class="mb-4 h-80 w-full space-y-6 2xl:col-span-2"></EmptyCard>
+			<EmptyCard size="md" class="mb-4 h-80 w-full space-y-6 2xl:col-span-2"></EmptyCard>
 		</div>
 		<div class="col-span-2">
-			<EmptyCard size="xl" class="mb-4 w-full space-y-6"></EmptyCard>
-			<EmptyCard size="xl" class="mb-4 w-full space-y-6"></EmptyCard>
+			<EmptyCard size="xl" class="mb-4 h-80 w-full space-y-6"></EmptyCard>
+			<EmptyCard size="xl" class="mb-4 h-80 w-full space-y-6"></EmptyCard>
 		</div>
 	</div>
 	<div class="mb-4 grid gap-4 px-4 md:grid-cols-2 xl:grid-cols-4">
 		{#each Array(4) as _, i}
-			<EmptyCard size="lg" class="mb-4 w-full space-y-6 sm:p-6" bodyClass="h-16"></EmptyCard>
+			<EmptyCard size="lg" class="mb-4 h-60 w-full space-y-6 sm:p-6"></EmptyCard>
 		{/each}
 	</div>
 </main>
