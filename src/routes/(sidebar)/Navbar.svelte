@@ -5,9 +5,11 @@
 	import { BellSolid } from 'flowbite-svelte-icons';
 	import '../../app.pcss';
 	import Users from '../data/users.json';
+
+	export let fluid = true;
 </script>
 
-<Navbar fluid color="default">
+<Navbar {fluid} color="default">
 	<div class="flex w-fit items-center justify-start">
 		<NavHamburger />
 		<NavBrand href="/" class="ms-2 md:me-24">

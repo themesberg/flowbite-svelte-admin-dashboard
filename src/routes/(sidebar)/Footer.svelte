@@ -27,7 +27,7 @@
 </script>
 
 <Card
-	size=""
+	size="none"
 	horizontal
 	class="my-4 w-full md:max-w-none md:items-center md:justify-between {$$props.class ?? ''}"
 >

@@ -93,6 +93,14 @@
 				'Sign in': '/authentication/sign-in',
 				'Sign up': '/authentication/sign-up'
 			}
+		},
+		{
+			name: 'Playground',
+			icon: LockSolid,
+			children: {
+				Stacked: '/playground/stacked',
+				Sidebar: '/playground/sidebar'
+			}
 		}
 	];
 	let dropdowns = Object.fromEntries(Object.keys(posts).map((x) => [x, false]));

@@ -6,22 +6,12 @@
 		Button,
 		Checkbox,
 		Heading,
-		Indicator,
-		Input,
-		Table,
-		TableBody,
-		TableBodyCell,
-		TableBodyRow,
-		TableHead,
-		TableHeadCell,
-		Toolbar,
-		ToolbarButton,
-		ToolbarGroup
+		Indicator
 	} from 'flowbite-svelte';
+	import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
+	import { TableHeadCell, Toolbar, ToolbarButton, ToolbarGroup } from 'flowbite-svelte';
+	import { CogOutline, DotsVerticalOutline, DownloadSolid } from 'flowbite-svelte-icons';
 	import {
-		CogOutline,
-		DotsVerticalOutline,
-		DownloadSolid,
 		EditOutline,
 		ExclamationCircleSolid,
 		PlusSolid,
@@ -29,15 +19,20 @@
 	} from 'flowbite-svelte-icons';
 	import Users from '../../../data/users.json';
 	import { imagesPath } from '$lib/variables';
+
+	import User from './User.svelte';
+	import Delete from './Delete.svelte';
+
+	let openUser: boolean = false; // modal control
+	let openDelete: boolean = false; // modal control
+
+	let current_user: any = {};
 </script>
 
 <main class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
 	<Breadcrumb class="mb-5">
 		<BreadcrumbItem home>Home</BreadcrumbItem>
-		<BreadcrumbItem
-			class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white"
-			href="/curd/users">Users</BreadcrumbItem
-		>
+		<BreadcrumbItem href="/crud/users">Users</BreadcrumbItem>
 		<BreadcrumbItem>List</BreadcrumbItem>
 	</Breadcrumb>
 	<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All users</Heading>
@@ -53,7 +48,13 @@
 			<ToolbarButton><DotsVerticalOutline /></ToolbarButton>
 		</ToolbarGroup>
 		<div slot="end" class="space-x-2">
-			<Button size="sm" class="gap-2 whitespace-nowrap"><PlusSolid size="xs" />Add user</Button>
+			<Button
+				size="sm"
+				class="gap-2 whitespace-nowrap"
+				on:click={() => ((current_user = {}), (openUser = true))}
+			>
+				<PlusSolid size="xs" />Add user
+			</Button>
 			<Button size="sm" color="alternative" class="gap-2">
 				<DownloadSolid size="xs" />Export
 			</Button>
@@ -82,7 +83,7 @@
 						</div>
 					</TableBodyCell>
 					<TableBodyCell
-						class="max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-gray-400 xl:max-w-xs"
+						class="overflow-open max-w-sm truncate p-4 text-base font-normal text-gray-500 dark:text-gray-400 xl:max-w-xs"
 						>{user.biography}</TableBodyCell
 					>
 					<TableBodyCell>{user.position}</TableBodyCell>
@@ -94,15 +95,30 @@
 						</div>
 					</TableBodyCell>
 					<TableBodyCell class="space-x-2">
-						<Button color1="blue" size="sm" class="gap-2"
-							><EditOutline size="sm" /> Edit user</Button
+						<Button
+							color1="blue"
+							size="sm"
+							class="gap-2"
+							on:click={() => ((current_user = user), (openUser = true))}
 						>
-						<Button color="red" size="sm" class="gap-2"
-							><TrashBinSolid size="sm" /> Delete user</Button
+							<EditOutline size="sm" /> Edit user
+						</Button>
+						<Button
+							color="red"
+							size="sm"
+							class="gap-2"
+							on:click={() => ((current_user = user), (openDelete = true))}
 						>
+							<TrashBinSolid size="sm" /> Delete user
+						</Button>
 					</TableBodyCell>
 				</TableBodyRow>
 			{/each}
 		</TableBody>
 	</Table>
 </main>
+
+<!-- Modals -->
+
+<User bind:open={openUser} data={current_user} />
+<Delete bind:open={openDelete} />
