@@ -1,47 +1,34 @@
 <script lang="ts">
-	import {
-		Avatar,
-		Breadcrumb,
-		BreadcrumbItem,
-		Button,
-		Checkbox,
-		Heading,
-		Input,
-		Table,
-		TableBody,
-		TableBodyCell,
-		TableBodyRow,
-		TableHead,
-		TableHeadCell,
-		Toolbar,
-		ToolbarButton,
-		ToolbarGroup
-	} from 'flowbite-svelte';
-	import {
-		CogOutline,
-		DotsVerticalOutline,
-		EditOutline,
-		ExclamationCircleSolid,
-		TrashBinSolid
-	} from 'flowbite-svelte-icons';
+	import { Breadcrumb, BreadcrumbItem, Button, Checkbox, Drawer, Heading } from 'flowbite-svelte';
+	import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
+	import { TableHeadCell, Toolbar, ToolbarButton, ToolbarGroup } from 'flowbite-svelte';
+	import { CogOutline, DotsVerticalOutline, EditOutline } from 'flowbite-svelte-icons';
+	import { ExclamationCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
 	import Products from '../../../data/product.json';
-	import { imagesPath } from '$lib/variables';
+	import Product from './Product.svelte';
+	import Delete from './Delete.svelte';
+	import type { ComponentType } from 'svelte';
+
+	let hidden: boolean = true; // modal control
+	let drawerComponent: ComponentType = Product; // drawer component
+
+	const toggle = (component: ComponentType) => {
+		drawerComponent = component;
+		hidden = !hidden;
+	};
 </script>
 
 <main class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
 	<Breadcrumb class="mb-5">
 		<BreadcrumbItem home>Home</BreadcrumbItem>
-		<BreadcrumbItem
-			class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white"
-			href="/curd/users">E-commerce</BreadcrumbItem
-		>
+		<BreadcrumbItem href="/crud/products">E-commerce</BreadcrumbItem>
 		<BreadcrumbItem>Products</BreadcrumbItem>
 	</Breadcrumb>
-	<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All users</Heading>
+	<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All products</Heading>
 
 	<Toolbar embedded class="-mx-2 w-full p-2 text-gray-500 dark:text-gray-400">
 		<ToolbarGroup class="w-80 xl:w-96">
-			<Input placeholder="Search for users" />
+			<Input placeholder="Search for products" />
 		</ToolbarGroup>
 		<ToolbarGroup>
 			<ToolbarButton><CogOutline /></ToolbarButton>
@@ -50,7 +37,9 @@
 			<ToolbarButton><DotsVerticalOutline /></ToolbarButton>
 		</ToolbarGroup>
 		<div slot="end" class="space-x-2">
-			<Button size="sm" class="gap-2 whitespace-nowrap">Add new product</Button>
+			<Button size="sm" class="gap-2 whitespace-nowrap" on:click={() => toggle(Product)}>
+				Add new product
+			</Button>
 		</div>
 	</Toolbar>
 
@@ -84,13 +73,19 @@
 					<TableBodyCell>{product.price}</TableBodyCell>
 					<TableBodyCell>{product.discount}</TableBodyCell>
 					<TableBodyCell class="space-x-2">
-						<Button color1="blue" size="sm" class="gap-2"><EditOutline size="sm" /> Edit</Button>
-						<Button color="red" size="sm" class="gap-2"
-							><TrashBinSolid size="sm" /> Delete item</Button
-						>
+						<Button size="sm" class="gap-2" on:click={() => toggle(Product)}>
+							<EditOutline size="sm" /> Edit
+						</Button>
+						<Button color="red" size="sm" class="gap-2" on:click={() => toggle(Delete)}>
+							<TrashBinSolid size="sm" /> Delete item
+						</Button>
 					</TableBodyCell>
 				</TableBodyRow>
 			{/each}
 		</TableBody>
 	</Table>
 </main>
+
+<Drawer placement="right" transitionType="fly" bind:hidden>
+	<svelte:component this={drawerComponent} bind:hidden />
+</Drawer>
