@@ -17,7 +17,7 @@
 
 <div class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
 	<main>
-		<div class="grid grid-cols-1 pt-2 dark:bg-gray-900 xl:grid-cols-3 xl:gap-4">
+		<div class="grid grid-cols-1 space-y-4 dark:bg-gray-900 xl:grid-cols-3 xl:gap-4">
 			<div class="col-span-full mb-4 xl:mb-2">
 				<Breadcrumb class="mb-5">
 					<BreadcrumbItem home>Home</BreadcrumbItem>
@@ -28,7 +28,7 @@
 					<BreadcrumbItem>Settings</BreadcrumbItem>
 				</Breadcrumb>
 
-				<Heading tag="h1" class="mb-4 text-xl font-semibold tracking-wide sm:text-2xl">
+				<Heading tag="h1" class="text-xl font-semibold tracking-wide sm:text-2xl">
 					User settings
 				</Heading>
 			</div>
@@ -44,7 +44,7 @@
 				<Sessions />
 			</div>
 		</div>
-		<div class="mt-4 grid grid-cols-1 xl:grid-cols-2 xl:gap-4">
+		<div class="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-4">
 			<Alerts />
 			<Emails />
 		</div>

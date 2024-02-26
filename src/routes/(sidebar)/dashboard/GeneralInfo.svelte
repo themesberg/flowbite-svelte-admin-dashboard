@@ -25,9 +25,9 @@
 		{#each inputs as { label, type, placeholder }}
 			<Label class="col-span-6 space-y-2 sm:col-span-3">
 				<span>{label}</span>
-				<Input {type} {placeholder} class="font-normal" />
+				<Input {type} {placeholder} class="border font-normal" />
 			</Label>
 		{/each}
-		<Button>Save all</Button>
+		<Button class="px-2">Save all</Button>
 	</form>
 </Card>
