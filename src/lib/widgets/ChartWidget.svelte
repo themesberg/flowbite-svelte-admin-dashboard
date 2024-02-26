@@ -8,7 +8,7 @@
 	export let chartOptions: ApexOptions;
 </script>
 
-<Card size="xl" class="w-full max-w-none">
+<Card size="xl" class="w-full max-w-none 2xl:col-span-2">
 	<Heading tag="h3" class="text-2xl">{title}</Heading>
 	<p>{subtitle}</p>
 	<Chart options={chartOptions}></Chart>
