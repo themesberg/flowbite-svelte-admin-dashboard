@@ -18,15 +18,14 @@
 	export let data: PageData;
 </script>
 
-<div class=" p-2 sm:p-4">
-	<main class="grid w-full gap-4 xl:grid-cols-2 2xl:grid-cols-3">
-		<div class="2xl:col-span-2">
+<main>
+	<div class="space-y-4 px-4 pt-4">
+		<div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<ChartWidget chartOptions={data} title="$345" subtitle="Sales this week" />
-		</div>
-		<div class="col-span-1">
+
 			<Stats />
 		</div>
-		<div class="col-span-1">
+		<div class="grid grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>New products</p>
@@ -37,8 +36,6 @@
 				</div>
 				<Chart options={thickbars} />
 			</Card>
-		</div>
-		<div class="col-span-1">
 			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>Users</p>
@@ -49,8 +46,6 @@
 				</div>
 				<Chart options={thinfillbars} />
 			</Card>
-		</div>
-		<div class="col-span-1">
 			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>Users</p>
@@ -70,18 +65,19 @@
 				/>
 			</Card>
 		</div>
-	</main>
-	<div class="my-4 grid grid-cols-1 xl:grid-cols-2 xl:gap-4">
-		<Chat />
-		<div class="grid gap-4">
-			<DesktopPc />
-			<Traffic />
+		<div class="grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-4">
+			<Chat />
+			<div class="grid gap-4">
+				<DesktopPc />
+				<Traffic />
+			</div>
 		</div>
-		<ActivityList />
-		<Insights />
-		<div class="col-span-2">
-			<Transactions />
+		<div class="grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-4">
+			<ActivityList />
+			<Insights />
 		</div>
+
+		<Transactions />
 	</div>
-	<Footer class="col-span-1 xl:col-span-2 2xl:col-span-3" />
-</div>
+</main>
+<Footer class="mx-4" />

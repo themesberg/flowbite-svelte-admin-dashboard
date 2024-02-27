@@ -27,11 +27,12 @@
 </script>
 
 <Card
+	tag="footer"
 	size="none"
 	horizontal
-	class="my-4 w-full md:max-w-none md:items-center md:justify-between {$$props.class ?? ''}"
+	class="my-4 w-auto md:max-w-none md:items-center md:justify-between {$$props.class ?? ''}"
 >
-	<ul class="mb-6 flex flex-wrap items-center gap-4 space-y-1 md:mb-0 md:gap-6">
+	<ul class="flex flex-wrap items-center gap-4 space-y-1 md:mb-0">
 		{#each links as { name, href }}
 			<li>
 				<a {href} class="text-sm font-normal text-gray-500 hover:underline dark:text-gray-400">

@@ -22,8 +22,8 @@
 				Flowbite
 			</span>
 		</NavBrand>
-		<div class="w-96">
-			<Search size="md" />
+		<div class="hidden lg:block lg:pl-3.5">
+			<Search size="md" class="w-96 border" />
 		</div>
 	</div>
 
