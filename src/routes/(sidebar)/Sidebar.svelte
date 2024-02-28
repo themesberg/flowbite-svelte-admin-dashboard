@@ -24,7 +24,7 @@
 		TableColumnSolid
 	} from 'flowbite-svelte-icons';
 
-	let drawerHidden: boolean = false;
+	export let drawerHidden: boolean = false;
 
 	const closeDrawer = () => {
 		drawerHidden = true;
@@ -111,10 +111,11 @@
 	{nonActiveClass}
 	{activeClass}
 	activeUrl={mainSidebarUrl}
-	asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-20 lg:-mt-2 lg:block"
+	asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-16 lg:block"
 >
+	<h4 class="sr-only">Main menu</h4>
 	<SidebarWrapper
-		divClass="overflow-y-auto px-4 pt-20 lg:pt-4 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4.5rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
+		divClass="overflow-y-auto px-3 pt-20 lg:pt-7 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
 	>
 		<nav class="divide-y text-base font-medium">
 			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-2">
@@ -132,7 +133,7 @@
 						>
 							<AngleDownOutline slot="arrowdown" class="ms-auto text-gray-800 dark:text-white" />
 							<AngleUpOutline slot="arrowup" class="ms-auto text-gray-800 dark:text-white" />
-							<svelte:component this={icon} slot="icon" />
+							<svelte:component this={icon} slot="icon" class="-me-0.5 h-6 w-6" />
 							{#each Object.entries(children) as [title, href]}
 								<SidebarItem
 									label={title}
@@ -145,7 +146,7 @@
 						</SidebarDropdownWrapper>
 					{:else}
 						<SidebarItem label={name} {href}>
-							<svelte:component this={icon} slot="icon" />
+							<svelte:component this={icon} slot="icon" class="h-6 w-6" />
 						</SidebarItem>
 					{/if}
 				{/each}

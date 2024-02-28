@@ -18,9 +18,9 @@
 </script>
 
 <Card size="xl">
-	<Heading tag="h3" class="mb-4 text-xl font-medium tracking-wide dark:text-white"
-		>General Information</Heading
-	>
+	<Heading tag="h3" class="mb-4 text-xl font-medium tracking-wide dark:text-white">
+		General Information
+	</Heading>
 	<form class="grid grid-cols-6 gap-6">
 		{#each inputs as { label, type, placeholder }}
 			<Label class="col-span-6 space-y-2 sm:col-span-3">
@@ -28,6 +28,6 @@
 				<Input {type} {placeholder} class="border font-normal" />
 			</Label>
 		{/each}
-		<Button class="px-2">Save all</Button>
+		<Button class="w-fit whitespace-nowrap">Save all</Button>
 	</form>
 </Card>
