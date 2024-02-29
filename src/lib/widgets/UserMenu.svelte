@@ -12,10 +12,10 @@
 	// export let status: string = ''; // "Active"
 </script>
 
-<button class="mr-2 rounded-full ring-gray-400 focus:ring-4 dark:ring-gray-600">
+<button class="m-2 rounded-full ring-gray-400 focus:ring-4 dark:ring-gray-600">
 	<Avatar size="sm" src={imagesPath(avatar, 'users')} tabindex="0" />
 </button>
-<Dropdown>
+<Dropdown placement="bottom-end">
 	<DropdownHeader>
 		<span class="block text-sm">{name}</span>
 		<span class="block truncate text-sm font-medium">{email}</span>

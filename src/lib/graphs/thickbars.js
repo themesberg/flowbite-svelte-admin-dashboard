@@ -4,7 +4,7 @@ export default {
 	series: [
 		{
 			name: 'Quantity',
-			color: '#1A56DB',
+			color: '#EF562F',
 			data: [
 				{ x: '01 Feb', y: 170 },
 				{ x: '02 Feb', y: 180 },

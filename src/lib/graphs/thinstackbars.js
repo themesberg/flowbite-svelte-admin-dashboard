@@ -45,7 +45,7 @@ export default {
 	theme: {
 		monochrome: {
 			enabled: true,
-			color: '#1A56DB'
+			color: '#EF562F'
 		}
 	},
 	tooltip: {

@@ -13,7 +13,7 @@
 </script>
 
 <Card size="xl">
-	<Carousel images={items} let:Controls>
+	<Carousel images={items} let:Controls class="h-full md:h-full xl:h-full 2xl:h-full">
 		<div slot="slide" let:index>
 			{#if index == 0}
 				<div class="mb-4 flex items-center gap-2 text-lg font-medium text-primary-600">
@@ -122,7 +122,7 @@
 			{/if}
 		</div>
 		<Controls let:changeSlide>
-			<div class="flex items-center justify-center gap-5">
+			<div class="-mt-2 flex items-center justify-center gap-5">
 				<button on:click={changeSlide(false)}><ArrowLeftOutline size="md" /></button>
 				<button on:click={changeSlide(true)}><ArrowRightOutline size="md" /></button>
 			</div>

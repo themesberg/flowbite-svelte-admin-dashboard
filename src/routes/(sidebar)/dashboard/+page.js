@@ -63,7 +63,7 @@ export function load({ params }) {
 			{
 				name: 'Revenue',
 				data: [6356, 6218, 6156, 6526, 6356, 6256, 6056],
-				color: '#1A56DB'
+				color: '#EF562F'
 			},
 			{
 				name: 'Revenue (previous period)',
