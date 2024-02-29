@@ -14,14 +14,39 @@
 	import Traffic from './Traffic.svelte';
 	import Insights from './Insights.svelte';
 	import Transactions from './Transactions.svelte';
+	import chart_options_func from './chart_options';
+	import { onMount } from 'svelte';
 
 	export let data: PageData;
+
+	let chartOptions = chart_options_func(false);
+	chartOptions.series = data.series;
+
+	onMount(() => {
+		const observer: MutationObserver = new MutationObserver((mutations) => {
+			for (const mutation of mutations) {
+				if (mutation.attributeName === 'class') {
+					const dark = document.documentElement.classList.contains('dark');
+
+					chartOptions = chart_options_func(dark);
+					chartOptions.series = data.series;
+				}
+			}
+		});
+		observer.observe(document.documentElement, {
+			attributes: true,
+			childList: false,
+			subtree: false
+		});
+
+		return () => observer.disconnect();
+	});
 </script>
 
 <main>
 	<div class="space-y-2 px-2 pt-2 sm:space-y-4 sm:px-4 sm:pt-4">
 		<div class="grid gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
-			<ChartWidget chartOptions={data} title="$345" subtitle="Sales this week" />
+			<ChartWidget {chartOptions} title="$345" subtitle="Sales this week" />
 
 			<Stats />
 		</div>
