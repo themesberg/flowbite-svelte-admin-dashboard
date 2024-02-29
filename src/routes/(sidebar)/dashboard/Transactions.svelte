@@ -60,9 +60,9 @@
 					<ChevronDownOutline size="xs" class="ms-2" />
 				</Button>
 				<Dropdown class="w-44 space-y-3 p-3 text-sm" placement="bottom-start">
-					<li><Checkbox>Completed (56)</Checkbox></li>
+					<li><Checkbox class="accent-primary-600">Completed (56)</Checkbox></li>
 					<li><Checkbox checked>Cancelled (56)</Checkbox></li>
-					<li><Checkbox>In progress (56)</Checkbox></li>
+					<li><Checkbox class="accent-primary-600">In progress (56)</Checkbox></li>
 					<li><Checkbox checked>In review (97)</Checkbox></li>
 				</Dropdown>
 				<Input placeholder="From">
