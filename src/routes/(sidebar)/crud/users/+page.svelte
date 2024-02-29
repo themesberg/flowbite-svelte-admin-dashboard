@@ -63,7 +63,7 @@
 
 	<Table>
 		<TableHead class="border-y border-gray-200 bg-gray-100 dark:border-gray-700">
-			<TableHeadCell><Checkbox /></TableHeadCell>
+			<TableHeadCell><Checkbox class="accent-primary-600" /></TableHeadCell>
 			<TableHeadCell>Name</TableHeadCell>
 			<TableHeadCell>Biography</TableHeadCell>
 			<TableHeadCell>Position</TableHeadCell>
@@ -74,7 +74,7 @@
 		<TableBody>
 			{#each Users as user}
 				<TableBodyRow>
-					<TableBodyCell><Checkbox /></TableBodyCell>
+					<TableBodyCell><Checkbox class="accent-primary-600" /></TableBodyCell>
 					<TableBodyCell class="mr-12 flex items-center space-x-6 whitespace-nowrap p-4">
 						<Avatar src={imagesPath(user.avatar, 'users')} />
 						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">

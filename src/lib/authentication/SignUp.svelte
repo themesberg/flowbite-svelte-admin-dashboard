@@ -36,7 +36,7 @@
 			<form class="mt-8 space-y-6" on:submit|preventDefault>
 				<slot />
 				{#if acceptTerms}
-					<Checkbox name="accept">
+					<Checkbox class="accent-primary-600" name="accept">
 						<span>
 							I accept the <A href={termsLink}>Terms and Conditions</A>
 						</span>

@@ -16,6 +16,13 @@
 <ForgotPassword on:submit={onSubmit}>
 	<div>
 		<Label for="email" class="mb-2">Your email</Label>
-		<Input type="email" name="email" id="email" placeholder="name@company.com" required />
+		<Input
+			type="email"
+			name="email"
+			id="email"
+			placeholder="name@company.com"
+			required
+			class="border outline-none"
+		/>
 	</div>
 </ForgotPassword>

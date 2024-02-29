@@ -39,19 +39,37 @@
 	<div>
 		<Label class={labelClass}>
 			<span>Your email</span>
-			<Input type="email" name="email" placeholder="name@company.com" required />
+			<Input
+				type="email"
+				name="email"
+				placeholder="name@company.com"
+				required
+				class="border outline-none"
+			/>
 		</Label>
 	</div>
 	<div>
 		<Label class={labelClass}>
 			<span>Your password</span>
-			<Input type="password" name="password" placeholder="••••••••" required />
+			<Input
+				type="password"
+				name="password"
+				placeholder="••••••••"
+				required
+				class="border outline-none"
+			/>
 		</Label>
 	</div>
 	<div>
 		<Label class={labelClass}>
 			<span>Confirm password</span>
-			<Input type="password" name="confirm-password" placeholder="••••••••" required />
+			<Input
+				type="password"
+				name="confirm-password"
+				placeholder="••••••••"
+				required
+				class="border outline-none"
+			/>
 		</Label>
 	</div>
 </SignUp>

@@ -1,10 +1,10 @@
 /** @type {import('apexcharts').ApexOptions} */
 export default {
-	colors: ['#1A56DB', '#FDBA8C'],
+	colors: ['#EF562F', '#FDBA8C'],
 	series: [
 		{
 			name: 'Desktop PC',
-			color: '#1A56DB',
+			color: '#EF562F',
 			data: [
 				{ x: '01 Feb', y: 170 },
 				{ x: '02 Feb', y: 180 },

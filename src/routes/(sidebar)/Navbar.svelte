@@ -30,7 +30,7 @@
 		>
 	</NavBrand>
 	<div class="hidden lg:block lg:ps-4">
-		<Search size="md" class="w-96 border" />
+		<Search size="md" class="w-96 border focus:outline-none" />
 	</div>
 	<div class="ms-auto flex items-center sm:order-2">
 		<ToolbarButton size="lg"><BellSolid /></ToolbarButton>
@@ -39,23 +39,3 @@
 		<UserMenu {...Users[4]} />
 	</div>
 </Navbar>
-<!--
-	<Navbar {fluid} color="default">
-	<Search size="md" class="w-96 border" />
-	<NavBrand href="/" class="ms-2 md:me-24">
-		<img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-8" alt="Flowbite Logo" />
-		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white sm:text-2xl">
-			Flowbite
-		</span>
-
-	</NavBrand>
-	<NavHamburger />
-
-	<NavUl class="ms-auto flex items-center ">
-		<NavLi>
-			
-		</NavLi>
-
-	</NavUl>
-</Navbar>
--->

@@ -13,12 +13,12 @@
 	<div class="space-y-4">
 		<Label class="space-y-2">
 			<span>Name</span>
-			<Input name="title" class="border" placeholder="Type product name" required />
+			<Input name="title" class="border outline-none" placeholder="Type product name" required />
 		</Label>
 
 		<Label class="space-y-2">
 			<span>Price</span>
-			<Input name="price" class="border" placeholder="$2999" required />
+			<Input name="price" class="border outline-none" placeholder="$2999" required />
 		</Label>
 		<Label class="space-y-2">
 			<span>Technology</span>
@@ -32,7 +32,10 @@
 		</Label>
 		<Label class="space-y-2">
 			<span>Description</span>
-			<Textarea rows="4" placeholder="Enter event description here" class="border-gray-300"
+			<Textarea
+				rows="4"
+				placeholder="Enter event description here"
+				class="border-gray-300 outline-none"
 			></Textarea>
 		</Label>
 		<Label class="space-y-2">

@@ -27,11 +27,25 @@
 <ResetPassword {title} {site} {acceptTerms} {btnTitle} {termsLink} on:submit={onSubmit}>
 	<div>
 		<Label for="email" class="mb-2">Your email</Label>
-		<Input type="email" name="email" id="email" placeholder="name@company.com" required />
+		<Input
+			type="email"
+			name="email"
+			id="email"
+			placeholder="name@company.com"
+			required
+			class="border outline-none"
+		/>
 	</div>
 	<div>
 		<Label for="password" class={labelClass}>Your password</Label>
-		<Input type="password" name="password" id="password" placeholder="••••••••" required />
+		<Input
+			type="password"
+			name="password"
+			id="password"
+			placeholder="••••••••"
+			required
+			class="border outline-none"
+		/>
 	</div>
 	<div>
 		<Label for="confirm-password" class={labelClass}>Confirm password</Label>
@@ -41,6 +55,7 @@
 			id="confirm-password"
 			placeholder="••••••••"
 			required
+			class="border outline-none"
 		/>
 	</div>
 </ResetPassword>
