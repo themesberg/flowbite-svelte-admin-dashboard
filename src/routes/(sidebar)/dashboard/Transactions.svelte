@@ -55,10 +55,11 @@
 		</div>
 		<div class="w-full max-w-lg">
 			<div class="grid grid-cols-3 items-center gap-4">
-				<Button color="alternative">
-					Filter by status <ChevronDownOutline size="xs" class="ms-2" />
+				<Button color="alternative" class="whitespace-nowrap">
+					Filter by <span class="hidden sm:inline">status</span>
+					<ChevronDownOutline size="xs" class="ms-2" />
 				</Button>
-				<Dropdown class="w-44 space-y-3 p-3 text-sm">
+				<Dropdown class="w-44 space-y-3 p-3 text-sm" placement="bottom-start">
 					<li><Checkbox>Completed (56)</Checkbox></li>
 					<li><Checkbox checked>Cancelled (56)</Checkbox></li>
 					<li><Checkbox>In progress (56)</Checkbox></li>

@@ -19,13 +19,13 @@
 </script>
 
 <main>
-	<div class="space-y-4 px-4 pt-4">
-		<div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
+	<div class="space-y-2 px-2 pt-2 sm:space-y-4 sm:px-4 sm:pt-4">
+		<div class="grid gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<ChartWidget chartOptions={data} title="$345" subtitle="Sales this week" />
 
 			<Stats />
 		</div>
-		<div class="grid grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3">
+		<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<Card horizontal class="items-center justify-between" size="xl">
 				<div>
 					<p>New products</p>
@@ -65,14 +65,14 @@
 				/>
 			</Card>
 		</div>
-		<div class="grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-4">
+		<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2">
 			<Chat />
-			<div class="grid gap-4">
+			<div class="grid gap-2 sm:gap-4">
 				<DesktopPc />
 				<Traffic />
 			</div>
 		</div>
-		<div class="grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-4">
+		<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2">
 			<ActivityList />
 			<Insights />
 		</div>
@@ -80,4 +80,4 @@
 		<Transactions />
 	</div>
 </main>
-<Footer class="mx-4" />
+<Footer class="mx-2 my-2 sm:mx-4 sm:my-4" />
