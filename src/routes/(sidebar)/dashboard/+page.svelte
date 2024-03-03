@@ -92,7 +92,7 @@
 		</div>
 		<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2">
 			<Chat />
-			<div class="grid gap-2 sm:gap-4">
+			<div class="flex flex-col gap-2 sm:gap-4">
 				<DesktopPc />
 				<Traffic />
 			</div>
