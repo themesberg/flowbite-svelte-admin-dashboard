@@ -4,6 +4,7 @@
 	import { Card, Chart, Input } from 'flowbite-svelte';
 	import { CalendarMonthOutline } from 'flowbite-svelte-icons';
 	import Change from './Change.svelte';
+	import More from '$lib/widgets/More.svelte';
 </script>
 
 <Card size="xl" class="h-fit">
@@ -15,7 +16,7 @@
 			<span class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl"
 				>Desktop PC</span
 			>
-			<Change value={2.5} since="Since last month" />
+			<Change value={2.5} since="Since last month" size="sm" />
 		</div>
 		<div class="w-full max-w-lg">
 			<div class="grid grid-cols-2 items-center gap-4">
@@ -29,6 +30,10 @@
 		</div>
 	</div>
 	<Chart {options}></Chart>
-	<hr />
-	<LastRange />
-</Card>
+	<div
+		class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700 sm:pt-6"
+	>
+		<LastRange />
+		<More title="Sales Report" href="#top" />
+	</div></Card
+>

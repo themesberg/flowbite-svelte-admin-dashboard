@@ -31,25 +31,29 @@
 	let divClass: string;
 	$: divClass = twMerge(
 		'flex flex-1 items-center gap-1',
-		value > 0 ? colorUp : value < 0 ? colorDown : '',
+
 		textSize[size],
 		$$props.class
 	);
+
+	$: color = value > 0 ? colorUp : value < 0 ? colorDown : '';
 </script>
 
 <div class={divClass}>
-	{#if value > 0}
-		<ArrowUpOutline {size} />
-		{value}{unit}
-	{:else if value < 0}
-		<AngleDownOutline {size} />
-		{Math.abs(value)}{unit}
-	{:else}
-		--
-	{/if}
+	<span class={twMerge('inline-flex items-center', color)}>
+		{#if value > 0}
+			<ArrowUpOutline {size} />
+			{value}{unit}
+		{:else if value < 0}
+			<AngleDownOutline {size} />
+			{Math.abs(value)}{unit}
+		{:else}
+			--
+		{/if}
+	</span>
 	{#if equalHeight}
-		<span class="text-gray-500">{since}</span>
+		<span>{since}</span>
 	{:else}
-		<span class="ml-1 text-gray-500 {spanTextSize[size]}">{since}</span>
+		<span class={spanTextSize[size]}>{since}</span>
 	{/if}
 </div>

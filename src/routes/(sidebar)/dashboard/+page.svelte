@@ -22,24 +22,18 @@
 	let chartOptions = chart_options_func(false);
 	chartOptions.series = data.series;
 
+	let dark = false;
+
+	function handler(ev: Event) {
+		if ('detail' in ev) {
+			chartOptions = chart_options_func(ev.detail);
+			chartOptions.series = data.series;
+			dark = !!ev.detail;
+		}
+	}
+
 	onMount(() => {
-		const observer: MutationObserver = new MutationObserver((mutations) => {
-			for (const mutation of mutations) {
-				if (mutation.attributeName === 'class') {
-					const dark = document.documentElement.classList.contains('dark');
-
-					chartOptions = chart_options_func(dark);
-					chartOptions.series = data.series;
-				}
-			}
-		});
-		observer.observe(document.documentElement, {
-			attributes: true,
-			childList: false,
-			subtree: false
-		});
-
-		return () => observer.disconnect();
+		document.addEventListener('dark', handler);
 	});
 </script>
 
@@ -94,7 +88,7 @@
 			<Chat />
 			<div class="flex flex-col gap-2 sm:gap-4">
 				<DesktopPc />
-				<Traffic />
+				<Traffic {dark} />
 			</div>
 		</div>
 		<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2">
