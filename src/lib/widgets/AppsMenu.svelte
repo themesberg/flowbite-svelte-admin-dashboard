@@ -6,19 +6,32 @@
 		InboxSolid,
 		ProfileCardOutline,
 		UsersGroupSolid,
-		UserSettingsSolid
+		UserSettingsSolid,
+		InboxOutline,
+		CogSolid,
+		CogOutline,
+		DollarSolid,
+		SalePercentOutline,
+		ShoppingBagSolid,
+		ArchiveSolid
 	} from 'flowbite-svelte-icons';
 
 	const menu = [
-		{ name: 'About us', href: '/about', icon: UsersGroupSolid },
+		{ name: 'Sales', href: '/sales', icon: ShoppingBagSolid },
+		{ name: 'Users', href: '/users', icon: UsersGroupSolid },
+		{ name: 'Inbox', href: '/inbox', icon: InboxOutline },
 		{ name: 'Profile', href: '/profile', icon: ProfileCardOutline },
-		{ name: 'Settings', href: '/settings', icon: UserSettingsSolid },
-		{ name: 'Inbox', href: '/inbox', icon: InboxSolid },
+		{ name: 'Settings', href: '/settings', icon: CogOutline },
+		{ name: 'Prouducts', href: '/products', icon: ArchiveSolid },
+		{ name: 'Pricing', href: '/pricing', icon: DollarSolid },
+		{ name: 'Billing', href: '/billing', icon: SalePercentOutline },
 		{ name: 'Logout', href: '/logout', icon: ArrowRightToBracketOutline }
 	];
 </script>
 
-<ToolbarButton size="lg"><GridSolid /></ToolbarButton>
+<ToolbarButton size="lg" class="hover:text-gray-900 dark:hover:text-white">
+	<GridSolid size="lg" />
+</ToolbarButton>
 <MegaMenu items={menu} let:item>
 	<a
 		href={item.href}

@@ -11,7 +11,12 @@
 		Search,
 		ToolbarButton
 	} from 'flowbite-svelte';
-	import { BellSolid } from 'flowbite-svelte-icons';
+	import {
+		BellActiveAltSolid,
+		BellActiveSolid,
+		BellRingSolid,
+		BellSolid
+	} from 'flowbite-svelte-icons';
 	import '../../app.pcss';
 	import Users from '../data/users.json';
 
@@ -33,8 +38,10 @@
 	<div class="hidden lg:block lg:ps-4">
 		<Search size="md" class="w-96 border focus:outline-none" />
 	</div>
-	<div class="ms-auto flex items-center sm:order-2">
-		<ToolbarButton size="lg"><BellSolid /></ToolbarButton>
+	<div class="ms-auto flex items-center text-gray-500 dark:text-gray-400 sm:order-2">
+		<ToolbarButton size="lg" class="hover:text-gray-900 dark:hover:text-white">
+			<BellSolid size="lg" />
+		</ToolbarButton>
 		<AppsMenu />
 		<DarkMode />
 		<UserMenu {...Users[4]} />
