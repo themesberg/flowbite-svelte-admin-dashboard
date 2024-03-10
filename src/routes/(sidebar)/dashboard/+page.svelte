@@ -44,7 +44,7 @@
 </script>
 
 <main>
-	<div class="space-y-2 px-2 pt-2 sm:space-y-4 sm:px-4 sm:pt-4">
+	<div class="space-y-4 px-4 pt-5">
 		<div class="grid gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<ChartWidget {chartOptions} title="$345" subtitle="Sales this week" />
 
@@ -57,7 +57,7 @@
 					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						2,340
 					</p>
-					<Change value={12.5} since="Since last month" />
+					<Change size="sm" value={12.5} since="Since last month" />
 				</div>
 				<Chart options={thickbars} />
 			</Card>
@@ -67,7 +67,7 @@
 					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						4,420
 					</p>
-					<Change value={-3.4} since="Since last month" />
+					<Change size="sm" value={-3.4} since="Since last month" />
 				</div>
 				<Chart options={thinfillbars} />
 			</Card>
@@ -77,7 +77,7 @@
 					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						4,420
 					</p>
-					<Change value={-3.4} since="Since last month" />
+					<Change size="sm" value={-3.4} since="Since last month" />
 				</div>
 				<Chart
 					options={{
