@@ -20,11 +20,11 @@
 		</div>
 		<div class="w-full max-w-lg">
 			<div class="grid grid-cols-2 items-center gap-4">
-				<Input placeholder="From">
-					<CalendarMonthOutline slot="left" size="sm" />
+				<Input placeholder="From" class="border">
+					<CalendarMonthOutline slot="left" size="md" />
 				</Input>
-				<Input placeholder="To">
-					<CalendarMonthOutline slot="left" size="sm" />
+				<Input placeholder="To" class="border">
+					<CalendarMonthOutline slot="left" size="md" />
 				</Input>
 			</div>
 		</div>

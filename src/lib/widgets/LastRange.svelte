@@ -26,8 +26,8 @@
 
 <div class="font-normal">
 	<button
-		class="inline-flex items-center rounded-lg p-2 text-center text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
-		>{timeslot} <ChevronDownOutline size="xs" /></button
+		class="inline-flex items-center gap-1 rounded-lg p-2 text-center text-sm font-medium text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
+		>{timeslot} <ChevronDownOutline size="lg" /></button
 	>
 	<Dropdown class="min-w-48">
 		<div slot="header" role="none">

@@ -21,6 +21,8 @@
 	import StatusBadge from './StatusBadge.svelte';
 	import CreditCard from './CreditCard.svelte';
 
+	export let dark: boolean = false;
+
 	const headers = [
 		'Transaction',
 		'Date & Time',
@@ -89,13 +91,17 @@
 			{#each data as [name, date, amount, reference, method, status]}
 				<TableBodyRow>
 					<TableBodyCell class="font-normal">{name}</TableBodyCell>
-					<TableBodyCell class="font-normal">{date}</TableBodyCell>
+					<TableBodyCell class="font-normal text-gray-500 dark:text-gray-400">{date}</TableBodyCell>
 					<TableBodyCell>{amount}</TableBodyCell>
-					<TableBodyCell class="font-normal">{reference}</TableBodyCell>
-					<TableBodyCell class="flex items-center gap-2 font-normal">
+					<TableBodyCell class="font-normal  text-gray-500 dark:text-gray-400"
+						>{reference}</TableBodyCell
+					>
+					<TableBodyCell
+						class="flex items-center gap-2 font-normal  text-gray-500 dark:text-gray-400"
+					>
 						<CreditCard number={method} /> <span>••• {method}</span>
 					</TableBodyCell>
-					<TableBodyCell class="font-normal"><StatusBadge state={status} /></TableBodyCell>
+					<TableBodyCell class="font-normal"><StatusBadge state={status} {dark} /></TableBodyCell>
 				</TableBodyRow>
 			{/each}
 		</TableBody>

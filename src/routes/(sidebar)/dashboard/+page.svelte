@@ -34,6 +34,7 @@
 
 	onMount(() => {
 		document.addEventListener('dark', handler);
+		return () => document.removeEventListener('dark', handler);
 	});
 </script>
 
@@ -96,7 +97,7 @@
 			<Insights />
 		</div>
 
-		<Transactions />
+		<Transactions {dark} />
 	</div>
 </main>
 <Footer class="mx-2 my-2 sm:mx-4 sm:my-4" />

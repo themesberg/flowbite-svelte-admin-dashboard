@@ -3,14 +3,13 @@
 	import {
 		ArrowLeftOutline,
 		ArrowRightOutline,
-		CircleCheckSolid,
-		CheckSolid,
+		CheckCircleSolid,
+		CheckOutline,
 		FireSolid,
 		LayersSolid,
-		RocketSolid,
-		CheckOutline
+		RocketSolid
 	} from 'flowbite-svelte-icons';
-	import { crossfade, fade, fly, slide } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	const items = [{}, {}, {}];
 	let animation = (node: Element) => fade(node, { duration: 200 });
 
@@ -119,19 +118,19 @@
 						class="my-5 mb-4 list-disc space-y-3 pl-2 text-gray-500 dark:text-gray-400"
 					>
 						<li class="flex items-center space-x-3">
-							<CircleCheckSolid class="text-purple-600 dark:text-purple-500" size="sm" />
+							<CheckCircleSolid class="text-purple-600 dark:text-purple-500" size="sm" />
 							<span class="leading-tight">Dynamic reports and dashboards</span>
 						</li>
 						<li class="flex items-center space-x-3">
-							<CircleCheckSolid class="text-purple-600 dark:text-purple-500" size="sm" />
+							<CheckCircleSolid class="text-purple-600 dark:text-purple-500" size="sm" />
 							<span class="leading-tight">Templates for everyone</span>
 						</li>
 						<li class="flex items-center space-x-3">
-							<CircleCheckSolid class="text-purple-600 dark:text-purple-500" size="sm" />
+							<CheckCircleSolid class="text-purple-600 dark:text-purple-500" size="sm" />
 							<span class="leading-tight">Development workflow</span>
 						</li>
 						<li class="flex items-center space-x-3">
-							<CircleCheckSolid class="text-purple-600 dark:text-purple-500" size="sm" />
+							<CheckCircleSolid class="text-purple-600 dark:text-purple-500" size="sm" />
 							<span class="leading-tight">Limitless business automation</span>
 						</li>
 					</ul>

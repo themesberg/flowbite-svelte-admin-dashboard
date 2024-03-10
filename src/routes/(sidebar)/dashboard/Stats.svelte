@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { Avatar, Card, Heading, TabItem, Tabs } from 'flowbite-svelte';
+	import { Avatar, Card, Heading, Popover, TabItem, Tabs } from 'flowbite-svelte';
 	import Change from './Change.svelte';
 	import Customers from '../../data/users.json';
 	import { avatarPath, imagesPath } from '$lib/variables';
 	import LastRange from '$lib/widgets/LastRange.svelte';
 	import More from '$lib/widgets/More.svelte';
+	import { QuestionCircleSolid } from 'flowbite-svelte-icons';
 
 	const products = [
 		{
@@ -48,9 +49,25 @@
 </script>
 
 <Card size="xl">
-	<Heading tag="h3" class="mb-4 text-lg font-medium tracking-wide dark:text-white"
-		>Statistics this month</Heading
-	>
+	<div class="mb-4 flex items-center gap-2">
+		<Heading tag="h3" class="w-fit text-lg font-semibold tracking-wide dark:text-white">
+			Statistics this month
+		</Heading>
+		<button>
+			<span class="sr-only">Show information</span>
+			<QuestionCircleSolid size="sm" class="text-gray-400 hover:text-gray-500" />
+		</button>
+		<Popover placement="bottom-start">
+			<div class="w-72 space-y-2 text-sm font-normal text-gray-500 dark:text-gray-400">
+				<h3 class="font-semibold text-gray-900 dark:text-white">Statistics</h3>
+				<p>
+					Statistics is a branch of applied mathematics that involves the collection, description,
+					analysis, and inference of conclusions from quantitative data.
+				</p>
+				<More title="Read more" href="#top" flat />
+			</div>
+		</Popover>
+	</div>
 	<Tabs
 		style="full"
 		defaultClass="flex divide-x rtl:divide-x-reverse divide-gray-200 shadow dark:divide-gray-700"
