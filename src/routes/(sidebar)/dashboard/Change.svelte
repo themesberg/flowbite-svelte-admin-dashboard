@@ -46,5 +46,6 @@
 	{:else}
 		--
 	{/if}
-	<span class="ml-1 text-gray-500 {spanTextSize[size]}">{since}</span>
+	<!-- span class="ml-1 text-gray-500 {spanTextSize[size]}">{since}</span -->
+	<span class="ml-1 text-gray-500">{since}</span>
 </div>

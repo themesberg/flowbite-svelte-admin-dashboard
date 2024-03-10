@@ -44,7 +44,7 @@
 </script>
 
 <main>
-	<div class="space-y-4 px-4 pt-5">
+	<div class="space-y-4 px-4 pt-4">
 		<div class="grid gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<ChartWidget {chartOptions} title="$345" subtitle="Sales this week" />
 

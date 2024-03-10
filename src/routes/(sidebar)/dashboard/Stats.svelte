@@ -3,6 +3,8 @@
 	import Change from './Change.svelte';
 	import Customers from '../../data/users.json';
 	import { avatarPath, imagesPath } from '$lib/variables';
+	import LastRange from '$lib/widgets/LastRange.svelte';
+	import More from '$lib/widgets/More.svelte';
 
 	const products = [
 		{
@@ -53,9 +55,9 @@
 		style="full"
 		defaultClass="flex divide-x rtl:divide-x-reverse divide-gray-200 shadow dark:divide-gray-700"
 	>
-		<TabItem class="w-full">
+		<TabItem class="w-full" open>
 			<span slot="title">Top products</span>
-			<ul class="divide-y divide-gray-200 dark:divide-gray-700">
+			<ul class="-m-3 divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800">
 				{#each products as { src, image, label, price, change }}
 					<li class="py-3 sm:py-4">
 						<div class="flex items-center justify-between">
@@ -69,7 +71,7 @@
 									<p class="truncate font-medium text-gray-900 dark:text-white">
 										{label}
 									</p>
-									<Change value={change} />
+									<Change value={change} size="sm" />
 								</div>
 							</div>
 							<div
@@ -82,9 +84,9 @@
 				{/each}
 			</ul>
 		</TabItem>
-		<TabItem class="w-full" open>
+		<TabItem class="w-full">
 			<span slot="title">Top customers</span>
-			<ul class="divide-y divide-gray-200 dark:divide-gray-700">
+			<ul class="-m-3 divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800">
 				{#each customers as { email, name, avatar }}
 					<li class="py-3 sm:py-3.5">
 						<div class="flex items-center justify-between">
@@ -108,4 +110,11 @@
 			</ul>
 		</TabItem>
 	</Tabs>
+
+	<div
+		class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700 sm:pt-6"
+	>
+		<LastRange />
+		<More title="Full Report" href="#top" />
+	</div>
 </Card>

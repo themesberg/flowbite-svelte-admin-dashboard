@@ -4,6 +4,7 @@
 	import { ChevronRightOutline } from 'flowbite-svelte-icons';
 	import Change from '../../routes/(sidebar)/dashboard/Change.svelte';
 	import LastRange from './LastRange.svelte';
+	import More from './More.svelte';
 
 	export let title: string = '';
 	export let subtitle: string = '';
@@ -24,16 +25,7 @@
 		class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700 sm:pt-6"
 	>
 		<LastRange />
-
-		<div class="flex-shrink-0">
-			<a
-				href="#top"
-				class="inline-flex items-center rounded-lg p-2 text-xs font-medium uppercase text-primary-700 hover:bg-gray-100 dark:text-primary-500 dark:hover:bg-gray-700 sm:text-sm"
-			>
-				Sales Report
-				<ChevronRightOutline size="md" />
-			</a>
-		</div>
+		<More title="Sales Report" href="#top" />
 	</div>
 </Card>
 
