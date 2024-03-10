@@ -12,8 +12,11 @@
 	<Heading tag="h3" class="text-2xl">{title}</Heading>
 	<p>{subtitle}</p>
 	<Chart options={chartOptions}></Chart>
-	<hr />
-	<LastRange />
+	<div
+		class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700 sm:pt-6"
+	>
+		<LastRange />
+	</div>
 </Card>
 
 <!--
