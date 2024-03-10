@@ -25,38 +25,39 @@
 		"package:publish": "standard-version && git push --follow-tags origin main && npm publish"
 	},
 	"devDependencies": {
-		"@playwright/test": "^1.41.2",
+		"@playwright/test": "^1.42.1",
 		"@sveltejs/adapter-auto": "^3.1.1",
-		"@sveltejs/kit": "^2.5.0",
+		"@sveltejs/kit": "^2.5.3",
 		"@sveltejs/vite-plugin-svelte": "^3.0.2",
 		"@types/eslint": "8.56.0",
 		"@typescript-eslint/eslint-plugin": "^6.21.0",
 		"@typescript-eslint/parser": "^6.21.0",
-		"autoprefixer": "^10.4.17",
-		"eslint": "^8.56.0",
+		"autoprefixer": "^10.4.18",
+		"dayjs": "^1.11.10",
+		"eslint": "^8.57.0",
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.35.1",
 		"postcss": "^8.4.35",
 		"postcss-load-config": "^5.0.3",
 		"prettier": "^3.2.5",
-		"prettier-plugin-svelte": "^3.1.2",
-		"prettier-plugin-tailwindcss": "^0.5.11",
-		"svelte": "^4.2.10",
-		"svelte-check": "^3.6.4",
+		"prettier-plugin-svelte": "^3.2.2",
+		"prettier-plugin-tailwindcss": "^0.5.12",
+		"svelte": "^4.2.12",
+		"svelte-check": "^3.6.6",
 		"svelte-lib-helpers": "^0.3.17",
 		"tailwindcss": "^3.4.1",
 		"tslib": "^2.6.2",
-		"typescript": "^5.3.3",
-		"vite": "^5.1.1",
-		"vitest": "^1.2.2"
+		"typescript": "^5.4.2",
+		"vite": "^5.1.5",
+		"vitest": "^1.3.1"
 	},
 	"type": "module",
 	"peerDependencies": {
 		"svelte": "^4.0.0"
 	},
 	"dependencies": {
-		"flowbite-svelte": "^0.44.23",
-		"flowbite-svelte-icons": "^1.3.1",
+		"flowbite-svelte": "^0.44.24",
+		"flowbite-svelte-icons": "^1.4.3",
 		"tailwind-merge": "^2.2.1"
 	},
 	"keywords": [

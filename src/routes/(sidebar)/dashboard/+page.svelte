@@ -22,29 +22,24 @@
 	let chartOptions = chart_options_func(false);
 	chartOptions.series = data.series;
 
+	let dark = false;
+
+	function handler(ev: Event) {
+		if ('detail' in ev) {
+			chartOptions = chart_options_func(ev.detail);
+			chartOptions.series = data.series;
+			dark = !!ev.detail;
+		}
+	}
+
 	onMount(() => {
-		const observer: MutationObserver = new MutationObserver((mutations) => {
-			for (const mutation of mutations) {
-				if (mutation.attributeName === 'class') {
-					const dark = document.documentElement.classList.contains('dark');
-
-					chartOptions = chart_options_func(dark);
-					chartOptions.series = data.series;
-				}
-			}
-		});
-		observer.observe(document.documentElement, {
-			attributes: true,
-			childList: false,
-			subtree: false
-		});
-
-		return () => observer.disconnect();
+		document.addEventListener('dark', handler);
+		return () => document.removeEventListener('dark', handler);
 	});
 </script>
 
 <main>
-	<div class="space-y-2 px-2 pt-2 sm:space-y-4 sm:px-4 sm:pt-4">
+	<div class="space-y-4 px-4 pt-4">
 		<div class="grid gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<ChartWidget {chartOptions} title="$345" subtitle="Sales this week" />
 
@@ -52,32 +47,32 @@
 		</div>
 		<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<Card horizontal class="items-center justify-between" size="xl">
-				<div>
+				<div class="w-full">
 					<p>New products</p>
 					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						2,340
 					</p>
-					<Change value={12.5} since="Since last month" />
+					<Change size="sm" value={12.5} since="Since last month" />
 				</div>
-				<Chart options={thickbars} />
+				<Chart options={thickbars} class="w-full" />
 			</Card>
 			<Card horizontal class="items-center justify-between" size="xl">
-				<div>
+				<div class="w-full">
 					<p>Users</p>
 					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						4,420
 					</p>
-					<Change value={-3.4} since="Since last month" />
+					<Change size="sm" value={-3.4} since="Since last month" />
 				</div>
-				<Chart options={thinfillbars} />
+				<Chart options={thinfillbars} class="w-full" />
 			</Card>
 			<Card horizontal class="items-center justify-between" size="xl">
-				<div>
+				<div class="w-full">
 					<p>Users</p>
 					<p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
 						4,420
 					</p>
-					<Change value={-3.4} since="Since last month" />
+					<Change size="sm" value={-3.4} since="Since last month" class="w-full" />
 				</div>
 				<Chart
 					options={{
@@ -94,7 +89,7 @@
 			<Chat />
 			<div class="flex flex-col gap-2 sm:gap-4">
 				<DesktopPc />
-				<Traffic />
+				<Traffic {dark} />
 			</div>
 		</div>
 		<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2">
@@ -102,7 +97,7 @@
 			<Insights />
 		</div>
 
-		<Transactions />
+		<Transactions {dark} />
 	</div>
 </main>
 <Footer class="mx-2 my-2 sm:mx-4 sm:my-4" />

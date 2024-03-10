@@ -1,8 +1,11 @@
 <script lang="ts">
-	import { Avatar, Card, Heading, TabItem, Tabs } from 'flowbite-svelte';
+	import { Avatar, Card, Heading, Popover, TabItem, Tabs } from 'flowbite-svelte';
 	import Change from './Change.svelte';
 	import Customers from '../../data/users.json';
 	import { avatarPath, imagesPath } from '$lib/variables';
+	import LastRange from '$lib/widgets/LastRange.svelte';
+	import More from '$lib/widgets/More.svelte';
+	import { QuestionCircleSolid } from 'flowbite-svelte-icons';
 
 	const products = [
 		{
@@ -46,16 +49,32 @@
 </script>
 
 <Card size="xl">
-	<Heading tag="h3" class="mb-4 text-lg font-medium tracking-wide dark:text-white"
-		>Statistics this month</Heading
-	>
+	<div class="mb-4 flex items-center gap-2">
+		<Heading tag="h3" class="w-fit text-lg font-semibold tracking-wide dark:text-white">
+			Statistics this month
+		</Heading>
+		<button>
+			<span class="sr-only">Show information</span>
+			<QuestionCircleSolid size="sm" class="text-gray-400 hover:text-gray-500" />
+		</button>
+		<Popover placement="bottom-start">
+			<div class="w-72 space-y-2 text-sm font-normal text-gray-500 dark:text-gray-400">
+				<h3 class="font-semibold text-gray-900 dark:text-white">Statistics</h3>
+				<p>
+					Statistics is a branch of applied mathematics that involves the collection, description,
+					analysis, and inference of conclusions from quantitative data.
+				</p>
+				<More title="Read more" href="#top" flat />
+			</div>
+		</Popover>
+	</div>
 	<Tabs
 		style="full"
 		defaultClass="flex divide-x rtl:divide-x-reverse divide-gray-200 shadow dark:divide-gray-700"
 	>
-		<TabItem class="w-full">
+		<TabItem class="w-full" open>
 			<span slot="title">Top products</span>
-			<ul class="divide-y divide-gray-200 dark:divide-gray-700">
+			<ul class="-m-3 divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800">
 				{#each products as { src, image, label, price, change }}
 					<li class="py-3 sm:py-4">
 						<div class="flex items-center justify-between">
@@ -69,7 +88,7 @@
 									<p class="truncate font-medium text-gray-900 dark:text-white">
 										{label}
 									</p>
-									<Change value={change} />
+									<Change value={change} size="sm" equalHeight />
 								</div>
 							</div>
 							<div
@@ -82,9 +101,9 @@
 				{/each}
 			</ul>
 		</TabItem>
-		<TabItem class="w-full" open>
+		<TabItem class="w-full">
 			<span slot="title">Top customers</span>
-			<ul class="divide-y divide-gray-200 dark:divide-gray-700">
+			<ul class="-m-3 divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800">
 				{#each customers as { email, name, avatar }}
 					<li class="py-3 sm:py-3.5">
 						<div class="flex items-center justify-between">
@@ -108,4 +127,11 @@
 			</ul>
 		</TabItem>
 	</Tabs>
+
+	<div
+		class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700 sm:pt-6"
+	>
+		<LastRange />
+		<More title="Full Report" href="#top" />
+	</div>
 </Card>

@@ -1,6 +1,10 @@
 <script lang="ts">
 	import { Avatar, Dropdown, DropdownItem, ToolbarButton } from 'flowbite-svelte';
-	import { ChevronDownOutline, DotsHorizontalOutline } from 'flowbite-svelte-icons';
+	import {
+		ChevronDownOutline,
+		DotsHorizontalOutline,
+		DotsHorizontalSolid
+	} from 'flowbite-svelte-icons';
 
 	export let avatar: string = 'https://flowbite.com/docs/images/people/profile-picture-2.jpg';
 	export let name: string = 'Michael Gough';
@@ -21,8 +25,8 @@
 				>
 			</p>
 		</div>
-		<ToolbarButton>
-			<DotsHorizontalOutline size="md" />
+		<ToolbarButton class="rounded dark:hover:text-white">
+			<DotsHorizontalSolid size="lg" />
 			<span class="sr-only">Comment settings</span>
 		</ToolbarButton>
 		<Dropdown class="w-32" placement="bottom-end">
@@ -35,10 +39,10 @@
 	{#if replays}
 		<a
 			href="/"
-			class="inline-flex items-center gap-2 text-xs font-medium text-primary-700 dark:text-primary-500 sm:text-sm"
+			class="inline-flex items-center gap-1 text-xs font-medium text-primary-700 dark:text-primary-500 sm:text-sm"
 		>
 			{replays} replies
-			<ChevronDownOutline size="xs" />
+			<ChevronDownOutline size="lg" />
 		</a>
 	{/if}
 </article>

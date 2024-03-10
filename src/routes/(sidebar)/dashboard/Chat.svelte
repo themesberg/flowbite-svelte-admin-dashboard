@@ -192,16 +192,18 @@
 					<div
 						class="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600 dark:bg-primary-900 dark:text-primary-300"
 					>
-						<FileLinesSolid size="md" />
+						<FileLinesSolid size="lg" />
 					</div>
 					<div class="mr-4">
 						<p class="text-sm font-semibold text-gray-900 dark:text-white">flowbite_offer_345"</p>
 						<p class="text-sm text-gray-500 dark:text-gray-400">PDF, 2.3 MB</p>
 					</div>
-					<div class="ml-auto flex items-center">
-						<ToolbarButton><DownloadOutline /><span class="sr-only">Download</span></ToolbarButton>
-						<ToolbarButton>
-							<DotsVerticalOutline /> <span class="sr-only">Actions</span>
+					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-400">
+						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+							<DownloadOutline size="lg" /><span class="sr-only">Download</span>
+						</ToolbarButton>
+						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+							<DotsVerticalOutline size="lg" /> <span class="sr-only">Actions</span>
 						</ToolbarButton>
 					</div>
 				</div>
@@ -212,16 +214,18 @@
 					<div
 						class="mr-3 flex h-10 w-10 items-center justify-center rounded-lg bg-teal-100 text-teal-600 dark:bg-teal-900 dark:text-teal-300"
 					>
-						<TableColumnOutline size="md" />
+						<TableColumnOutline size="lg" />
 					</div>
 					<div class="mr-4">
 						<p class="text-sm font-semibold text-gray-900 dark:text-white">bergside_pitch"</p>
 						<p class="text-sm text-gray-500 dark:text-gray-400">PPTX, 10.1 MB</p>
 					</div>
-					<div class="ml-auto flex items-center">
-						<ToolbarButton><DownloadOutline /><span class="sr-only">Download</span></ToolbarButton>
-						<ToolbarButton>
-							<DotsVerticalOutline /> <span class="sr-only">Actions</span>
+					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-400">
+						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+							<DownloadOutline size="lg" /><span class="sr-only">Download</span>
+						</ToolbarButton>
+						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+							<DotsVerticalOutline size="lg" /> <span class="sr-only">Actions</span>
 						</ToolbarButton>
 					</div>
 				</div>
@@ -255,7 +259,11 @@
 			<label for="chat" class="sr-only">Your message</label>
 			<div class="flex items-center gap-5">
 				<Textarea rows="1" placeholder="Reply in thread..." />
-				<ToolbarButton type="submit" color="primary">
+				<ToolbarButton
+					type="submit"
+					color="default"
+					class="p-2 text-primary-600 hover:bg-primary-100"
+				>
 					<svg
 						aria-hidden="true"
 						class="h-6 w-6 rotate-90"
@@ -271,9 +279,9 @@
 			</div>
 
 			<span
-				class="inline-flex cursor-pointer items-center gap-2 text-xs font-medium text-primary-700 hover:underline dark:text-primary-500 sm:text-sm"
+				class="inline-flex cursor-pointer items-center gap-1 text-xs font-medium text-primary-700 hover:underline dark:text-primary-500 sm:text-sm"
 			>
-				Hide thread <ChevronUpOutline size="xs" />
+				Hide thread <ChevronUpOutline size="lg" />
 			</span>
 		</ChatMsg>
 	</form>

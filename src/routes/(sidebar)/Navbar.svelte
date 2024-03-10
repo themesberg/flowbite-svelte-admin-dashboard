@@ -11,29 +11,37 @@
 		Search,
 		ToolbarButton
 	} from 'flowbite-svelte';
-	import { BellSolid } from 'flowbite-svelte-icons';
+	import {
+		BellActiveAltSolid,
+		BellActiveSolid,
+		BellRingSolid,
+		BellSolid
+	} from 'flowbite-svelte-icons';
 	import '../../app.pcss';
 	import Users from '../data/users.json';
+	import Notifications from './dashboard/NotificationList.svelte';
 
 	export let fluid = true;
 	export let drawerHidden = false;
 </script>
 
-<Navbar {fluid} class="mt-px" color="default">
+<Navbar {fluid} class="mt-px text-black" color="default">
 	<NavHamburger
 		onClick={() => (drawerHidden = !drawerHidden)}
 		class="m-0 me-3 md:block lg:hidden"
 	/>
 	<NavBrand href="/" class="py-1.5 lg:w-60">
 		<img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
-		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite</span
+		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white sm:text-2xl"
+			>Flowbite</span
 		>
 	</NavBrand>
 	<div class="hidden lg:block lg:ps-4">
 		<Search size="md" class="w-96 border focus:outline-none" />
 	</div>
-	<div class="ms-auto flex items-center sm:order-2">
-		<ToolbarButton size="lg"><BellSolid /></ToolbarButton>
+	<div class="ms-auto flex items-center text-gray-500 dark:text-gray-400 sm:order-2">
+		<Notifications />
+
 		<AppsMenu />
 		<DarkMode />
 		<UserMenu {...Users[4]} />
