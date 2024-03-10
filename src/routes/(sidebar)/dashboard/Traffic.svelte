@@ -6,8 +6,6 @@
 	import More from '$lib/widgets/More.svelte';
 
 	export let dark: boolean = false;
-
-	console.log(options(dark));
 </script>
 
 <Card size="xl" class="h-fit">
