@@ -71,7 +71,7 @@
 									<p class="truncate font-medium text-gray-900 dark:text-white">
 										{label}
 									</p>
-									<Change value={change} size="sm" />
+									<Change value={change} size="sm" equalHeight />
 								</div>
 							</div>
 							<div
