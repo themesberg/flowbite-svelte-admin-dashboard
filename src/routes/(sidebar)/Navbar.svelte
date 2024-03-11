@@ -1,25 +1,10 @@
 <script>
 	import AppsMenu from '$lib/widgets/AppsMenu.svelte';
 	import UserMenu from '$lib/widgets/UserMenu.svelte';
-	import {
-		DarkMode,
-		NavBrand,
-		NavHamburger,
-		NavLi,
-		NavUl,
-		Navbar,
-		Search,
-		ToolbarButton
-	} from 'flowbite-svelte';
-	import {
-		BellActiveAltSolid,
-		BellActiveSolid,
-		BellRingSolid,
-		BellSolid
-	} from 'flowbite-svelte-icons';
-	import '../../app.pcss';
+	import { DarkMode, NavBrand, NavHamburger, Navbar, Search } from 'flowbite-svelte';
 	import Users from '../data/users.json';
 	import Notifications from './dashboard/NotificationList.svelte';
+	import '../../app.pcss';
 
 	export let fluid = true;
 	export let drawerHidden = false;
