@@ -1,19 +1,16 @@
 <script>
 	import { MegaMenu, ToolbarButton } from 'flowbite-svelte';
 	import {
+		ArchiveSolid,
 		ArrowRightToBracketOutline,
-		GridSolid,
-		InboxSolid,
-		ProfileCardOutline,
-		UsersGroupSolid,
-		UserSettingsSolid,
-		InboxOutline,
-		CogSolid,
 		CogOutline,
 		DollarSolid,
+		GridSolid,
+		InboxOutline,
+		ProfileCardOutline,
 		SalePercentOutline,
 		ShoppingBagSolid,
-		ArchiveSolid
+		UsersGroupSolid
 	} from 'flowbite-svelte-icons';
 
 	const menu = [
@@ -29,7 +26,7 @@
 	];
 </script>
 
-<ToolbarButton size="lg" class="hover:text-gray-900 dark:hover:text-white">
+<ToolbarButton size="lg" class="-mx-0.5 hover:text-gray-900 dark:hover:text-white">
 	<GridSolid size="lg" />
 </ToolbarButton>
 <MegaMenu items={menu} let:item>

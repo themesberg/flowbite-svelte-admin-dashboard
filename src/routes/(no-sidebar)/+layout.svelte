@@ -1,5 +1,14 @@
 <script>
+	import Navbar from '../(sidebar)/Navbar.svelte';
+
 	import '../../app.pcss';
 </script>
 
-<slot />
+<header
+	class="sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-white dark:border-gray-600 dark:bg-gray-800"
+>
+	<Navbar fluid={false} list />
+</header>
+<div class="container mx-auto">
+	<slot />
+</div>
