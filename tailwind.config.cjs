@@ -10,9 +10,7 @@ const config = {
 		extend: {}
 	},
 
-	plugins: [
-		// require('flowbite/plugin')
-	],
+	plugins: [require('flowbite/plugin')],
 	darkMode: 'class',
 	theme: {
 		fontFamily: {

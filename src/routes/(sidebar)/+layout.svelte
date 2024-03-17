@@ -1,5 +1,6 @@
 <script>
 	import '../../app.pcss';
+	import Footer from './Footer.svelte';
 	import Navbar from './Navbar.svelte';
 	import Sidebar from './Sidebar.svelte';
 	let drawerHidden = false;
@@ -14,5 +15,6 @@
 	<Sidebar bind:drawerHidden />
 	<div class="relative h-full w-full overflow-y-auto lg:ml-64">
 		<slot />
+		<Footer />
 	</div>
 </div>

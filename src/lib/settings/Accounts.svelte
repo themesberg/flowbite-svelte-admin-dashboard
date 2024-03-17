@@ -4,15 +4,13 @@
 	import Users from '../../routes/data/users.json';
 </script>
 
-<Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl font-medium tracking-wide">Other accounts</Heading>
+<Card size="xl">
+	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Other accounts</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each Users.slice(0, 4) as { avatar, name, country, status }}
-			<li class="py-4">
-				<div class="flex items-center space-x-4">
-					<div class="flex-shrink-0">
-						<Avatar src={imagesPath(avatar, 'users')} />
-					</div>
+			<li class="flex items-center justify-between space-x-4 py-4">
+				<div class="flex items-start space-x-4">
+					<Avatar src={imagesPath(avatar, 'users')} size="xs" class="mt-1" />
 					<div class="min-w-0 flex-1">
 						<p class="truncate text-base font-semibold text-gray-900 dark:text-white">
 							{name}
@@ -24,16 +22,15 @@
 							Last seen: {Math.ceil(Math.random() * 10)} min ago
 						</p>
 					</div>
-					<div class="inline-flex items-center">
-						{#if status === 'Active'}
-							<Button color="alternative">Disconnect</Button>
-						{:else}
-							<Button>Connect</Button>
-						{/if}
-					</div>
 				</div>
+
+				{#if status === 'Active'}
+					<Button class="px-3 py-2" color="alternative">Disconnect</Button>
+				{:else}
+					<Button class="px-3 py-2">Connect</Button>
+				{/if}
 			</li>
 		{/each}
 	</ul>
-	<Button class="w-fit">See more</Button>
+	<Button class="mt-2 w-fit">Save all</Button>
 </Card>

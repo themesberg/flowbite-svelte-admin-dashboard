@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Breadcrumb, BreadcrumbItem, Button, Checkbox, Drawer, Heading } from 'flowbite-svelte';
 	import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
-	import { TableHeadCell, Toolbar, ToolbarButton, ToolbarGroup } from 'flowbite-svelte';
-	import { CogOutline, DotsVerticalOutline, EditOutline } from 'flowbite-svelte-icons';
+	import { TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
+	import { CogSolid, DotsVerticalSolid, EditOutline } from 'flowbite-svelte-icons';
 	import { ExclamationCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
 	import Products from '../../../data/product.json';
 	import Product from './Product.svelte';
@@ -18,43 +18,61 @@
 	};
 </script>
 
-<main class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
-	<Breadcrumb class="mb-5">
-		<BreadcrumbItem home>Home</BreadcrumbItem>
-		<BreadcrumbItem href="/crud/products">E-commerce</BreadcrumbItem>
-		<BreadcrumbItem>Products</BreadcrumbItem>
-	</Breadcrumb>
-	<Heading tag="h1" class="mb-4 text-xl sm:text-2xl">All products</Heading>
+<main class="relative h-full w-full overflow-y-auto bg-white dark:bg-gray-800">
+	<div class="p-4">
+		<Breadcrumb class="mb-5">
+			<BreadcrumbItem home>Home</BreadcrumbItem>
+			<BreadcrumbItem href="/crud/products">E-commerce</BreadcrumbItem>
+			<BreadcrumbItem>Products</BreadcrumbItem>
+		</Breadcrumb>
+		<Heading tag="h1" class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+			All products
+		</Heading>
 
-	<Toolbar embedded class="-mx-2 w-full p-2 text-gray-500 dark:text-gray-400">
-		<ToolbarGroup class="w-80 xl:w-96">
-			<Input placeholder="Search for products" />
-		</ToolbarGroup>
-		<ToolbarGroup>
-			<ToolbarButton><CogOutline /></ToolbarButton>
-			<ToolbarButton><TrashBinSolid /></ToolbarButton>
-			<ToolbarButton><ExclamationCircleSolid /></ToolbarButton>
-			<ToolbarButton><DotsVerticalOutline /></ToolbarButton>
-		</ToolbarGroup>
-		<div slot="end" class="space-x-2">
-			<Button size="sm" class="gap-2 whitespace-nowrap" on:click={() => toggle(Product)}>
-				Add new product
-			</Button>
-		</div>
-	</Toolbar>
+		<Toolbar embedded class="w-full py-4 text-gray-500 dark:text-gray-400">
+			<Input placeholder="Search for products" class="me-6 w-80 border xl:w-96" />
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
+				<CogSolid size="lg" />
+			</ToolbarButton>
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
+				<TrashBinSolid size="lg" />
+			</ToolbarButton>
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
+				<ExclamationCircleSolid size="lg" />
+			</ToolbarButton>
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
+				<DotsVerticalSolid size="lg" />
+			</ToolbarButton>
 
+			<div slot="end" class="space-x-2">
+				<Button class="whitespace-nowrap" on:click={() => toggle(Product)}>Add new product</Button>
+			</div>
+		</Toolbar>
+	</div>
 	<Table>
 		<TableHead class="border-y border-gray-200 bg-gray-100 dark:border-gray-700">
-			<TableHeadCell><Checkbox class="accent-primary-600" /></TableHeadCell>
+			<TableHeadCell class="w-4 p-4"><Checkbox /></TableHeadCell>
 			{#each ['Product Name', 'Technology', 'Description', 'ID', 'Price', 'Discount', 'Actions'] as title}
-				<TableHeadCell>{title}</TableHeadCell>
+				<TableHeadCell class="ps-4 font-normal">{title}</TableHeadCell>
 			{/each}
 		</TableHead>
 		<TableBody>
 			{#each Products as product}
-				<TableBodyRow>
-					<TableBodyCell><Checkbox class="accent-primary-600" /></TableBodyCell>
-					<TableBodyCell class="mr-12 flex items-center space-x-6 whitespace-nowrap p-4">
+				<TableBodyRow class="text-base">
+					<TableBodyCell class="w-4 p-4"><Checkbox /></TableBodyCell>
+					<TableBodyCell class="flex items-center space-x-6 whitespace-nowrap p-4">
 						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
 							<div class="text-base font-semibold text-gray-900 dark:text-white">
 								{product.name}
@@ -64,19 +82,19 @@
 							</div>
 						</div>
 					</TableBodyCell>
-					<TableBodyCell>{product.category}</TableBodyCell>
+					<TableBodyCell class="p-4">{product.technology}</TableBodyCell>
 					<TableBodyCell
 						class="max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-gray-400 xl:max-w-xs"
 						>{product.description}</TableBodyCell
 					>
-					<TableBodyCell>#{product.id}</TableBodyCell>
-					<TableBodyCell>{product.price}</TableBodyCell>
-					<TableBodyCell>{product.discount}</TableBodyCell>
+					<TableBodyCell class="p-4">#{product.id}</TableBodyCell>
+					<TableBodyCell class="p-4">{product.price}</TableBodyCell>
+					<TableBodyCell class="p-4">{product.discount}</TableBodyCell>
 					<TableBodyCell class="space-x-2">
-						<Button size="sm" class="gap-2" on:click={() => toggle(Product)}>
-							<EditOutline size="sm" /> Edit
+						<Button size="sm" class="gap-2 px-3" on:click={() => toggle(Product)}>
+							<EditOutline size="sm" /> Update
 						</Button>
-						<Button color="red" size="sm" class="gap-2" on:click={() => toggle(Delete)}>
+						<Button color="red" size="sm" class="gap-2 px-3" on:click={() => toggle(Delete)}>
 							<TrashBinSolid size="sm" /> Delete item
 						</Button>
 					</TableBodyCell>

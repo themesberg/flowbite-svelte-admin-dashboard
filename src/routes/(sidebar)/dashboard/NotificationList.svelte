@@ -1,22 +1,19 @@
 <script>
-	import { Avatar, Button, Indicator, Popover, ToolbarButton } from 'flowbite-svelte';
+	import { Button, Popover, ToolbarButton } from 'flowbite-svelte';
 	import {
 		AnnotationSolid,
 		BellSolid,
 		CameraFotoSolid,
 		DownloadSolid,
-		EyeSlashSolid,
 		EyeSolid,
 		HeartSolid,
 		UsersGroupSolid
 	} from 'flowbite-svelte-icons';
 	import Users from '../../data/users.json';
-	import { imagesPath } from '$lib/variables';
-	import IconAvatar from '$lib/widgets/IconAvatar.svelte';
 	import Notification from './Notification.svelte';
 </script>
 
-<ToolbarButton size="lg" class="hover:text-gray-900 dark:hover:text-white">
+<ToolbarButton size="lg" class="-mx-0.5 hover:text-gray-900 dark:hover:text-white">
 	<BellSolid size="lg" />
 </ToolbarButton>
 <Popover class="max-w-sm border-0" trigger="click" defaultClass="p-0" arrow={false} offset={10}>

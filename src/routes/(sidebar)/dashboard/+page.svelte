@@ -6,16 +6,15 @@
 	import type { PageData } from '../$types';
 	import Stats from './Stats.svelte';
 
-	import Footer from '../Footer.svelte';
+	import { onMount } from 'svelte';
 	import ActivityList from './ActivityList.svelte';
 	import Change from './Change.svelte';
 	import Chat from './Chat.svelte';
 	import DesktopPc from './DesktopPc.svelte';
-	import Traffic from './Traffic.svelte';
 	import Insights from './Insights.svelte';
+	import Traffic from './Traffic.svelte';
 	import Transactions from './Transactions.svelte';
 	import chart_options_func from './chart_options';
-	import { onMount } from 'svelte';
 
 	export let data: PageData;
 
@@ -39,7 +38,7 @@
 </script>
 
 <main>
-	<div class="space-y-4 px-4 pt-4">
+	<div class="space-y-4 p-4">
 		<div class="grid gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 			<ChartWidget {chartOptions} title="$345" subtitle="Sales this week" />
 
@@ -100,4 +99,3 @@
 		<Transactions {dark} />
 	</div>
 </main>
-<Footer class="mx-2 my-2 sm:mx-4 sm:my-4" />

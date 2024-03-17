@@ -13,7 +13,7 @@
 	const btnTitle = 'Create account';
 	const termsLink = '/';
 	const loginLink = 'sign-in';
-	const labelClass = 'space-y-2';
+	const labelClass = 'space-y-2 dark:text-white';
 	const onSubmit = (e: Event) => {
 		const formData = new FormData(e.target as HTMLFormElement);
 
@@ -44,7 +44,7 @@
 				name="email"
 				placeholder="name@company.com"
 				required
-				class="border outline-none"
+				class="border outline-none dark:border-gray-600 dark:bg-gray-700"
 			/>
 		</Label>
 	</div>
@@ -56,7 +56,7 @@
 				name="password"
 				placeholder="••••••••"
 				required
-				class="border outline-none"
+				class="border outline-none dark:border-gray-600 dark:bg-gray-700"
 			/>
 		</Label>
 	</div>
@@ -68,7 +68,7 @@
 				name="confirm-password"
 				placeholder="••••••••"
 				required
-				class="border outline-none"
+				class="border outline-none dark:border-gray-600 dark:bg-gray-700"
 			/>
 		</Label>
 	</div>

@@ -5,7 +5,7 @@
 
 <Li icon class="space-x-3">
 	<slot name="icon">
-		<CheckOutline size="sm" class="ms-1 text-green-500 dark:text-green-400" />
+		<CheckOutline size="md" class="text-green-500 dark:text-green-400" />
 	</slot>
-	<span><slot /></span>
+	<span class="dark:text-white"><slot /></span>
 </Li>

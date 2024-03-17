@@ -55,7 +55,7 @@
 			icon: TableColumnSolid,
 			children: {
 				Stacked: '/layouts/stacked',
-				Sidebar: ''
+				Sidebar: '/layouts/sidebar'
 			}
 		},
 		{
@@ -81,11 +81,11 @@
 			name: 'Authenication',
 			icon: LockSolid,
 			children: {
-				'Forgot password': '/authentication/forgot-password',
-				'Profile lock': '/authentication/profile-lock',
-				'Reset password': '/authentication/reset-password',
 				'Sign in': '/authentication/sign-in',
-				'Sign up': '/authentication/sign-up'
+				'Sign up': '/authentication/sign-up',
+				'Forgot password': '/authentication/forgot-password',
+				'Reset password': '/authentication/reset-password',
+				'Profile lock': '/authentication/profile-lock'
 			}
 		},
 		{

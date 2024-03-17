@@ -3,7 +3,7 @@
 </script>
 
 <Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl font-medium tracking-wide">Password Information</Heading>
+	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Password Information</Heading>
 	<div class="grid grid-cols-6 gap-6">
 		<Label class="col-span-6 space-y-2 sm:col-span-3">
 			<span>Current password</span>

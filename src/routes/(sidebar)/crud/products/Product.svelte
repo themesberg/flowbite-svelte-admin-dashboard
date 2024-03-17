@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Button, CloseButton, Heading, Input, Label, Select, Textarea } from 'flowbite-svelte';
+	import { CloseSolid } from 'flowbite-svelte-icons';
 	export let hidden: boolean = true; // modal control
 </script>
 
@@ -13,16 +14,21 @@
 	<div class="space-y-4">
 		<Label class="space-y-2">
 			<span>Name</span>
-			<Input name="title" class="border outline-none" placeholder="Type product name" required />
+			<Input
+				name="title"
+				class="border font-normal outline-none"
+				placeholder="Type product name"
+				required
+			/>
 		</Label>
 
 		<Label class="space-y-2">
 			<span>Price</span>
-			<Input name="price" class="border outline-none" placeholder="$2999" required />
+			<Input name="price" class="border font-normal outline-none" placeholder="$2999" required />
 		</Label>
 		<Label class="space-y-2">
 			<span>Technology</span>
-			<Select class="border-gray-300">
+			<Select class="border-gray-300 font-normal outline-none">
 				<option selected>Select category</option>
 				<option value="FL">Flowbite</option>
 				<option value="RE">React</option>
@@ -35,12 +41,12 @@
 			<Textarea
 				rows="4"
 				placeholder="Enter event description here"
-				class="border-gray-300 outline-none"
+				class="border-gray-300 font-normal outline-none"
 			></Textarea>
 		</Label>
 		<Label class="space-y-2">
 			<span>Discount</span>
-			<Select>
+			<Select class="border-gray-300 font-normal outline-none">
 				<option selected>No</option>
 				<option value="5">5%</option>
 				<option value="10">10%</option>
@@ -54,22 +60,7 @@
 		<div class="bottom-0 left-0 flex w-full justify-center space-x-4 pb-4 md:absolute md:px-4">
 			<Button type="submit" class="w-full">Add product</Button>
 			<Button color="alternative" class="w-full" on:click={() => (hidden = true)}>
-				<svg
-					aria-hidden="true"
-					class="-ml-1 h-5 w-5 sm:mr-1"
-					fill="none"
-					stroke="currentColor"
-					viewBox="0 0 24 24"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M6 18L18 6M6 6l12 12"
-					>
-					</path>
-				</svg>
+				<CloseSolid />
 				Cancel
 			</Button>
 		</div>

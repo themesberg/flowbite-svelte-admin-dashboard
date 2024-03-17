@@ -26,14 +26,14 @@
 			<span>{site.name}</span>
 		</a>
 		<!-- Card -->
-		<Card class="w-full" size="md">
+		<Card class="w-full max-w-md" border={false}>
 			<h1 class={cardH1Class}>{title}</h1>
 			<P class="text-base font-normal text-gray-500 dark:text-gray-400">
 				{pageDescription}
 			</P>
 			<form class="mt-8 space-y-6" on:submit|preventDefault>
 				<slot />
-				<Button type="submit">{btnTitle}</Button>
+				<Button type="submit" size="lg">{btnTitle}</Button>
 			</form>
 		</Card>
 	</div>

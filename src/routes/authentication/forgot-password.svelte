@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ForgotPassword } from '$lib';
-	import { Label, Input } from 'flowbite-svelte';
+	import { Label, Input, Checkbox, A } from 'flowbite-svelte';
 	const onSubmit = (e: Event) => {
 		const formData = new FormData(e.target as HTMLFormElement);
 
@@ -25,4 +25,5 @@
 			class="border outline-none"
 		/>
 	</div>
+	<Checkbox class="gap-1">I accept the <A href="/">Terms and Conditions</A></Checkbox>
 </ForgotPassword>

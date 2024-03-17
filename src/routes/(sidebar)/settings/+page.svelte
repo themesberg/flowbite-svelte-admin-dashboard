@@ -49,5 +49,4 @@
 			<Emails />
 		</div>
 	</main>
-	<Footer />
 </div>
