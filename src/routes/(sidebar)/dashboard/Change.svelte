@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { SizeType } from 'flowbite-svelte';
-	import { AngleDownOutline, ArrowUpOutline } from 'flowbite-svelte-icons';
 	import { twMerge } from 'tailwind-merge';
 	export let value: number;
 	export let unit: string = '%';
@@ -29,24 +28,17 @@
 	};
 
 	let divClass: string;
-	$: divClass = twMerge(
-		'flex flex-1 items-center gap-1',
-
-		textSize[size],
-		$$props.class
-	);
-
+	$: divClass = twMerge(textSize[size], $$props.class);
+	let color: string;
 	$: color = value > 0 ? colorUp : value < 0 ? colorDown : '';
 </script>
 
 <div class={divClass}>
-	<span class={twMerge('inline-flex items-center', color)}>
+	<span class={color}>
 		{#if value > 0}
-			<ArrowUpOutline {size} />
-			{value}{unit}
+			↑{value}{unit}
 		{:else if value < 0}
-			<AngleDownOutline {size} />
-			{Math.abs(value)}{unit}
+			↓{Math.abs(value)}{unit}
 		{:else}
 			--
 		{/if}

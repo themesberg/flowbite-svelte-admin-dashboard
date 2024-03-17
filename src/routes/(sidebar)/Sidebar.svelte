@@ -10,8 +10,7 @@
 		SidebarWrapper
 	} from 'flowbite-svelte';
 	import {
-		PieChartSolid,
-		AngleDownOutline,
+		AngleDownSolid,
 		AngleUpOutline,
 		ClipboardListSolid,
 		CogOutline,
@@ -20,6 +19,8 @@
 		LayersSolid,
 		LifeSaverSolid,
 		LockSolid,
+		MagicWandSolid,
+		PieChartSolid,
 		RectangleListSolid,
 		TableColumnSolid
 	} from 'flowbite-svelte-icons';
@@ -30,14 +31,11 @@
 		drawerHidden = true;
 	};
 
-	let spanClass = 'ms-9';
-	let childClass =
-		'p-2 hover:bg-gray-100 text-gray-500 dark:hover:bg-gray-700 rounded-lg transition-colors duration-200 relative flex items-center flex-wrap font-medium';
-
-	let nonActiveClass =
-		childClass +
-		' hover:text-gray-500 hover:cursor-pointer dark:text-gray-400 dark:hover:text-white';
-	let activeClass = childClass + ' cursor-default dark:text-primary-700';
+	let iconClass =
+		'flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white';
+	let itemClass =
+		'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700';
+	let groupClass = 'pt-2 space-y-2';
 
 	$: mainSidebarUrl = $page.url.pathname;
 	let activeMainSidebar: string;
@@ -48,10 +46,6 @@
 		closeDrawer();
 
 		activeMainSidebar = navigation.to?.url.pathname ?? '';
-
-		// const key = fileDir(activeMainSidebar);
-		// for (const k in dropdowns) dropdowns[k] = false;
-		// dropdowns[key] = true;
 	});
 
 	let posts = [
@@ -96,11 +90,34 @@
 		},
 		{
 			name: 'Playground',
-			icon: LockSolid,
+			icon: MagicWandSolid,
 			children: {
 				Stacked: '/playground/stacked',
 				Sidebar: '/playground/sidebar'
 			}
+		}
+	];
+
+	let links = [
+		{
+			label: 'GitHub Repository',
+			href: 'https://github.com/themesberg/flowbite-svelte-admin-dashboard',
+			icon: GithubSolid
+		},
+		{
+			label: 'Flowbite Svelte',
+			href: 'https://flowbite-svelte.com/docs/pages/quickstart',
+			icon: ClipboardListSolid
+		},
+		{
+			label: 'Components',
+			href: 'https://flowbite-svelte.com/docs/components/accordion',
+			icon: LayersSolid
+		},
+		{
+			label: 'Support',
+			href: 'https://github.com/themesberg/flowbite-svelte-admin-dashboard/issues',
+			icon: LifeSaverSolid
 		}
 	];
 	let dropdowns = Object.fromEntries(Object.keys(posts).map((x) => [x, false]));
@@ -108,78 +125,59 @@
 
 <Sidebar
 	class={drawerHidden ? 'hidden' : ''}
-	{nonActiveClass}
-	{activeClass}
 	activeUrl={mainSidebarUrl}
+	activeClass="bg-gray-100 dark:bg-gray-700"
 	asideClass="fixed inset-0 z-30 flex-none h-full w-64 lg:h-auto border-e border-gray-200 dark:border-gray-600 lg:overflow-y-visible lg:pt-16 lg:block"
 >
 	<h4 class="sr-only">Main menu</h4>
 	<SidebarWrapper
-		divClass="overflow-y-auto px-3 pt-20 lg:pt-7 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
+		divClass="overflow-y-auto px-3 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2"
 	>
-		<nav class="divide-y text-base font-medium">
-			<SidebarGroup ulClass="list-unstyled fw-normal small mb-4 space-y-2">
+		<nav class="divide-y divide-gray-200 dark:divide-gray-700">
+			<SidebarGroup ulClass={groupClass} class="mb-3">
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
-						<SidebarDropdownWrapper
-							bind:isOpen={dropdowns[name]}
-							label={name}
-							ulClass="mt-0.5"
-							btnClass="flex p-2 rounded-lg items-center justify-start gap-4 w-full text-base font-medium tracking-wide hover:text-primary-700 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-							spanClass=""
-							class={dropdowns[name]
-								? 'text-primary-700 dark:text-white'
-								: 'text-gray-500 dark:text-gray-400'}
-						>
-							<AngleDownOutline slot="arrowdown" class="ms-auto text-gray-800 dark:text-white" />
-							<AngleUpOutline slot="arrowup" class="ms-auto text-gray-800 dark:text-white" />
-							<svelte:component this={icon} slot="icon" class="-me-0.5 h-6 w-6" />
+						<SidebarDropdownWrapper bind:isOpen={dropdowns[name]} label={name}>
+							<AngleDownSolid slot="arrowdown" strokeWidth="3.3" size="sm" />
+							<AngleUpOutline slot="arrowup" strokeWidth="3.3" size="sm" />
+							<svelte:component this={icon} slot="icon" class={iconClass} />
+
 							{#each Object.entries(children) as [title, href]}
 								<SidebarItem
 									label={title}
 									{href}
-									{spanClass}
-									{activeClass}
+									spanClass="ml-9"
+									class={itemClass}
 									active={activeMainSidebar === href}
 								/>
 							{/each}
 						</SidebarDropdownWrapper>
 					{:else}
-						<SidebarItem label={name} {href}>
-							<svelte:component this={icon} slot="icon" class="h-6 w-6" />
+						<SidebarItem
+							label={name}
+							{href}
+							spanClass="ml-3"
+							class={itemClass}
+							active={activeMainSidebar === href}
+						>
+							<svelte:component this={icon} slot="icon" class={iconClass} />
 						</SidebarItem>
 					{/if}
 				{/each}
 			</SidebarGroup>
-			<SidebarGroup ulClass="list-unstyled fw-normal small pt-4 space-y-2">
-				<SidebarItem
-					label="GitHub Repository"
-					href="https://github.com/themesberg/flowbite-svelte-admin-dashboard"
-					target="_blank"
-				>
-					<GithubSolid slot="icon" />
-				</SidebarItem>
-				<SidebarItem
-					label="Flowbite Svelte"
-					href="https://flowbite-svelte.com/docs/pages/quickstart"
-					target="_blank"
-				>
-					<ClipboardListSolid slot="icon" />
-				</SidebarItem>
-				<SidebarItem
-					label="Components"
-					href="https://flowbite-svelte.com/docs/components/accordion"
-					target="_blank"
-				>
-					<LayersSolid slot="icon" />
-				</SidebarItem>
-				<SidebarItem
-					label="Support"
-					href="https://github.com/themesberg/flowbite-svelte-admin-dashboard/issues"
-					target="_blank"
-				>
-					<LifeSaverSolid slot="icon" />
-				</SidebarItem>
+			<SidebarGroup ulClass={groupClass}>
+				{#each links as { label, href, icon } (label)}
+					<SidebarItem
+						{label}
+						{href}
+						spanClass="ml-3"
+						class={itemClass}
+						active={activeMainSidebar === href}
+						target="_blank"
+					>
+						<svelte:component this={icon} slot="icon" class={iconClass} />
+					</SidebarItem>
+				{/each}
 			</SidebarGroup>
 		</nav>
 	</SidebarWrapper>
