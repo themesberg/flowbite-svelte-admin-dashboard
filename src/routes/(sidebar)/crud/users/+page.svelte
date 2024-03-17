@@ -85,7 +85,7 @@
 	</div>
 	<Table>
 		<TableHead class="border-y border-gray-200 bg-gray-100 dark:border-gray-700">
-			<TableHeadCell class="w-4 p-4"><Checkbox class="accent-primary-600" /></TableHeadCell>
+			<TableHeadCell class="w-4 p-4"><Checkbox /></TableHeadCell>
 			{#each ['Name', 'Biography', 'Position', 'Country', 'Status', 'Actions'] as title}
 				<TableHeadCell class="p-4 font-medium">{title}</TableHeadCell>
 			{/each}
@@ -93,7 +93,7 @@
 		<TableBody>
 			{#each Users as user}
 				<TableBodyRow class="text-base">
-					<TableBodyCell class="w-4 p-4"><Checkbox class1="accent-primary-600" /></TableBodyCell>
+					<TableBodyCell class="w-4 p-4"><Checkbox /></TableBodyCell>
 					<TableBodyCell class="mr-12 flex items-center space-x-6 whitespace-nowrap p-4">
 						<Avatar src={imagesPath(user.avatar, 'users')} />
 						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
