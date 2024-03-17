@@ -90,6 +90,6 @@
 
 	<!-- Modal footer -->
 	<div slot="footer">
-		<Button type="submit">Save all</Button>
+		<Button type="submit">{Object.keys(data).length ? 'Save all' : 'Add user'}</Button>
 	</div>
 </Modal>

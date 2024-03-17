@@ -2,7 +2,7 @@
 	import { Breadcrumb, BreadcrumbItem, Button, Checkbox, Drawer, Heading } from 'flowbite-svelte';
 	import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
 	import { TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
-	import { CogOutline, DotsVerticalSolid, EditOutline } from 'flowbite-svelte-icons';
+	import { CogSolid, DotsVerticalSolid, EditOutline } from 'flowbite-svelte-icons';
 	import { ExclamationCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
 	import Products from '../../../data/product.json';
 	import Product from './Product.svelte';
@@ -18,7 +18,7 @@
 	};
 </script>
 
-<main class="relative h-full w-full overflow-y-auto bg-white dark:bg-gray-900">
+<main class="relative h-full w-full overflow-y-auto bg-white dark:bg-gray-800">
 	<div class="p-4">
 		<Breadcrumb class="mb-5">
 			<BreadcrumbItem home>Home</BreadcrumbItem>
@@ -31,14 +31,28 @@
 
 		<Toolbar embedded class="w-full py-4 text-gray-500 dark:text-gray-400">
 			<Input placeholder="Search for products" class="me-6 w-80 border xl:w-96" />
-			<ToolbarButton color="dark" class="m-0 focus:ring-0"><CogOutline size="lg" /></ToolbarButton>
-			<ToolbarButton color="dark" class="m-0 focus:ring-0">
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
+				<CogSolid size="lg" />
+			</ToolbarButton>
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
 				<TrashBinSolid size="lg" />
 			</ToolbarButton>
-			<ToolbarButton color="dark" class="m-0 focus:ring-0">
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
 				<ExclamationCircleSolid size="lg" />
 			</ToolbarButton>
-			<ToolbarButton color="dark" class="m-0 focus:ring-0">
+			<ToolbarButton
+				color="dark"
+				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
+			>
 				<DotsVerticalSolid size="lg" />
 			</ToolbarButton>
 
