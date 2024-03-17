@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Input, Label, type InputType, Heading, Button } from 'flowbite-svelte';
-	import Card from './Card.svelte';
+	import Card from '../widgets/Card.svelte';
 
 	const inputs: { label: string; type: InputType; placeholder: string }[] = [
 		{ label: 'First Name', type: 'text', placeholder: 'Bonnie' },

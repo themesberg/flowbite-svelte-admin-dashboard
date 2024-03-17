@@ -1,7 +1,7 @@
 <script>
 	import { A, Button } from 'flowbite-svelte';
 	import { DribbbleSolid, FacebookSolid, GithubSolid, TwitterSolid } from 'flowbite-svelte-icons';
-	import Card from './Card.svelte';
+	import Card from '../widgets/Card.svelte';
 
 	const items = [
 		{ icon: FacebookSolid, name: 'Facebook account', link: 'www.facebook.com/themesberg' },
