@@ -52,9 +52,9 @@
 					{#if typeof value === 'boolean'}
 						<TableBodyCell>
 							{#if value}
-								<CheckOutline size="sm" class="ml-auto text-green-400" />
+								<CheckOutline class="ml-auto text-green-400" />
 							{:else}
-								<CloseOutline size="sm" class="ml-auto text-red-500" />
+								<CloseOutline class="ml-auto text-red-500" />
 							{/if}
 						</TableBodyCell>
 					{:else}

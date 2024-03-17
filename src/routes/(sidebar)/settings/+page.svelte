@@ -15,7 +15,7 @@
 	import { imagesPath } from '$lib/variables';
 </script>
 
-<div class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
+<div class="relative h-full w-full overflow-y-auto bg-gray-50 dark:bg-gray-900">
 	<main>
 		<div class="grid grid-cols-1 space-y-4 dark:bg-gray-900 xl:grid-cols-3 xl:gap-4">
 			<div class="col-span-full mb-4 xl:mb-2">

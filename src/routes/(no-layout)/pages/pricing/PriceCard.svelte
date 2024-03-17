@@ -9,7 +9,7 @@
 </script>
 
 <Card size="none" class="mx-auto max-w-lg text-gray-900" padding="xl">
-	<h3 class="mb-4 text-2xl font-semibold">{title}</h3>
+	<h3 class="mb-4 text-2xl font-semibold dark:text-white">{title}</h3>
 	{#if $$slots.subtitle}
 		<p class="font-light text-gray-500 dark:text-gray-400 sm:text-lg">
 			<slot name="subtitle" />

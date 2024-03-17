@@ -61,7 +61,7 @@
 			icon: TableColumnSolid,
 			children: {
 				Stacked: '/layouts/stacked',
-				Sidebar: ''
+				Sidebar: '/layouts/sidebar'
 			}
 		},
 		{

@@ -19,7 +19,10 @@
 	<title>Tailwind CSS Pricing Page - Flowbite</title>
 </svelte:head>
 
-<Navbar class="fixed start-0 top-0 z-20 w-full border-b px-2 py-2.5 sm:px-4">
+<Navbar
+	class="fixed start-0 top-0 z-20 w-full border-b border-gray-200 px-2 py-1 dark:border-gray-700 sm:px-4"
+	color="dark"
+>
 	<NavBrand href="/">
 		<img src="/images/flowbite-svelte-icon-logo.svg" class="me-3 h-6 sm:h-9" alt="Flowbite Logo" />
 		<span class="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Flowbite</span
@@ -28,16 +31,14 @@
 	<NavHamburger />
 	<NavUl class="me-auto ms-8">
 		<NavLi href="/" active={true}>Home</NavLi>
-		<NavLi href="/about">About</NavLi>
-		<NavLi href="/docs/components/navbar">Navbar</NavLi>
+		<NavLi href="/">Team</NavLi>
 		<NavLi href="/pricing">Pricing</NavLi>
 		<NavLi href="/contact">Contact</NavLi>
 	</NavUl>
-	<NavUl>
-		<Button class="gap-2"><ArrowLeftToBracketOutline />Login/Register</Button>
-	</NavUl>
+	<div class="py-4">
+		<Button class="gap-2 px-3"><ArrowLeftToBracketOutline />Login/Register</Button>
+	</div>
 </Navbar>
-
 <main class="mx-auto bg-gray-50 dark:bg-gray-900">
 	<div class="container mx-auto px-4 pt-24 dark:bg-gray-900 md:pt-32 lg:px-0">
 		<h1
@@ -51,8 +52,8 @@
 		</p>
 		<div class="flex items-center">
 			<span class="text-base font-medium text-gray-900 dark:text-white"> Monthly</span>
-			<Toggle class="ms-3" bind:checked={yearly} />
-			<span class="text-base font-medium text-gray-900 dark:text-white"> Yearly </span>
+			<Toggle class="ms-3" classDiv="peer-focus:ring-0" bind:checked={yearly} />
+			<span class="text-base font-medium text-gray-900 dark:text-gray-400"> Yearly </span>
 		</div>
 		<section
 			class="grid grid-cols-1 space-y-12 pt-9 md:grid-cols-2 md:gap-6 md:gap-x-6 md:space-y-0 lg:grid-cols-3"
@@ -65,11 +66,11 @@
 				<Item>No setup, or hidden fees</Item>
 				<Item>Team size: <span class="font-semibold">1 developer</span></Item>
 				<Item>
-					<CloseOutline slot="icon" size="xs" class="ms-1 text-red-500 dark:text-red-400" />
+					<CloseOutline slot="icon" class="text-red-500 dark:text-red-400" />
 					Premium support
 				</Item>
 				<Item>
-					<CloseOutline slot="icon" size="xs" class="ms-1 text-red-500 dark:text-red-400" />
+					<CloseOutline slot="icon" class="text-red-500 dark:text-red-400" />
 					Free updates
 				</Item>
 			</PriceCard>
