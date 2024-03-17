@@ -8,7 +8,7 @@
 		FileLinesSolid,
 		TableColumnOutline
 	} from 'flowbite-svelte-icons';
-	import Users from '../../data/users.json';
+	import Users from '../../routes/data/users.json';
 	import ChatMsg from './ChatMsg.svelte';
 	import Message from './Message.svelte';
 </script>

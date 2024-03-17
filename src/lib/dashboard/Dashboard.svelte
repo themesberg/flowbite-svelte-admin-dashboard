@@ -4,16 +4,16 @@
 	import ChartWidget from '$lib/widgets/ChartWidget.svelte';
 	import { Card, Chart } from 'flowbite-svelte';
 	import type { PageData } from '../../routes/(sidebar)/$types';
-	import Stats from '../../routes/(sidebar)/dashboard/Stats.svelte';
+	import Stats from './Stats.svelte';
 
 	import { onMount } from 'svelte';
-	import ActivityList from '../../routes/(sidebar)/dashboard/ActivityList.svelte';
-	import Change from '../../routes/(sidebar)/dashboard/Change.svelte';
-	import Chat from '../../routes/(sidebar)/dashboard/Chat.svelte';
-	import DesktopPc from '../../routes/(sidebar)/dashboard/DesktopPc.svelte';
-	import Insights from '../../routes/(sidebar)/dashboard/Insights.svelte';
-	import Traffic from '../../routes/(sidebar)/dashboard/Traffic.svelte';
-	import Transactions from '../../routes/(sidebar)/dashboard/Transactions.svelte';
+	import ActivityList from './ActivityList.svelte';
+	import Change from './Change.svelte';
+	import Chat from './Chat.svelte';
+	import DesktopPc from './DesktopPc.svelte';
+	import Insights from './Insights.svelte';
+	import Traffic from './Traffic.svelte';
+	import Transactions from './Transactions.svelte';
 	import chart_options_func from '../../routes/(sidebar)/dashboard/chart_options';
 
 	export let data: PageData;

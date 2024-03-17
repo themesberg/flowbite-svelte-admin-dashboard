@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Avatar, Card, Heading, Popover, TabItem, Tabs } from 'flowbite-svelte';
-	import Change from './Change.svelte';
-	import Customers from '../../data/users.json';
+	import Change from '$lib/dashboard/Change.svelte';
+	import Customers from '../../routes/data/users.json';
 	import { avatarPath, imagesPath } from '$lib/variables';
 	import LastRange from '$lib/widgets/LastRange.svelte';
 	import More from '$lib/widgets/More.svelte';
@@ -50,7 +50,7 @@
 
 <Card size="xl">
 	<div class="mb-4 flex items-center gap-2">
-		<Heading tag="h3" class="w-fit text-lg font-semibold tracking-wide dark:text-white">
+		<Heading tag="h3" class="w-fit text-lg font-semibold dark:text-white">
 			Statistics this month
 		</Heading>
 		<button>
@@ -71,10 +71,11 @@
 	<Tabs
 		style="full"
 		defaultClass="flex divide-x rtl:divide-x-reverse divide-gray-200 shadow dark:divide-gray-700"
+		contentClass="p-3 mt-4"
 	>
 		<TabItem class="w-full" open>
 			<span slot="title">Top products</span>
-			<ul class="-m-3 divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800">
+			<ul class="-m-3 divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-800">
 				{#each products as { src, image, label, price, change }}
 					<li class="py-3 sm:py-4">
 						<div class="flex items-center justify-between">
@@ -88,7 +89,7 @@
 									<p class="truncate font-medium text-gray-900 dark:text-white">
 										{label}
 									</p>
-									<Change value={change} size="sm" equalHeight />
+									<Change value={change} size="sm" equalHeight class="ml-px" />
 								</div>
 							</div>
 							<div
