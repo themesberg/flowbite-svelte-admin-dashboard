@@ -5,7 +5,7 @@
 </script>
 
 <Card size="xl">
-	<Heading tag="h3" class="text-xl font-medium tracking-wide">Other accounts</Heading>
+	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Other accounts</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each Users.slice(0, 4) as { avatar, name, country, status }}
 			<li class="flex items-center justify-between space-x-4 py-4">

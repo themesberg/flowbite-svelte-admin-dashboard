@@ -4,7 +4,7 @@
 </script>
 
 <Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl font-medium tracking-wide">Sessions</Heading>
+	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Sessions</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		<li class="py-4">
 			<div class="flex items-center space-x-4">

@@ -13,7 +13,7 @@
 </header>
 <div class="overflow-hidden lg:flex">
 	<Sidebar bind:drawerHidden />
-	<div class="relative h-full w-full overflow-y-auto p-4 lg:ml-64">
+	<div class="relative h-full w-full overflow-y-auto lg:ml-64">
 		<slot />
 		<Footer />
 	</div>

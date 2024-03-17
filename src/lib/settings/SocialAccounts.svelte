@@ -11,7 +11,7 @@
 </script>
 
 <Card size="xl">
-	<Heading tag="h3" class="text-xl font-medium tracking-wide">Social accounts</Heading>
+	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Social accounts</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each items as { icon, name, link }}
 			<li class="py-4">

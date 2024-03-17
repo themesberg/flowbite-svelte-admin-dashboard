@@ -24,9 +24,9 @@
 			<EmptyCard size="none" class="mb-4 h-80 w-full space-y-6"></EmptyCard>
 		</div>
 	</div>
-	<div class="mb-4 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+	<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
 		{#each Array(4) as _, i}
-			<EmptyCard size="xl" class="mb-4 h-60 w-full space-y-6 sm:p-6"></EmptyCard>
+			<EmptyCard size="xl" class="h-60 w-full space-y-6 sm:p-6"></EmptyCard>
 		{/each}
 	</div>
 </main>
