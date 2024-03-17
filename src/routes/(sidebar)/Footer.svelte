@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Card, type LinkType } from 'flowbite-svelte';
+	import { Card, Frame, type LinkType } from 'flowbite-svelte';
 	import {
 		DiscordSolid,
 		DribbbleSolid,
@@ -19,21 +19,19 @@
 
 	const brands: [ComponentType, string][] = [
 		[FacebookSolid, ''],
+		[DiscordSolid, ''],
 		[TwitterSolid, ''],
 		[GithubSolid, ''],
-		[DribbbleSolid, ''],
-		[DiscordSolid, '']
+		[DribbbleSolid, '']
 	];
 </script>
 
-<Card
+<Frame
 	tag="footer"
-	size="none"
-	horizontal
-	class="my-4 w-auto gap-2 sm:gap-4 md:max-w-none md:items-center md:justify-between {$$props.class ??
-		''}"
+	rounded
+	class="my-4 flex w-auto gap-2 p-8 sm:gap-4 md:max-w-none md:items-center md:justify-between"
 >
-	<ul class="flex flex-wrap items-center gap-2 sm:gap-4 md:mb-0">
+	<ul class="flex flex-wrap items-center gap-2 sm:gap-6 md:mb-0">
 		{#each links as { name, href }}
 			<li>
 				<a {href} class="text-sm font-normal text-gray-500 hover:underline dark:text-gray-400">
@@ -45,8 +43,14 @@
 	<div class="flex space-x-6 sm:justify-center">
 		{#each brands as [component, href]}
 			<a {href} class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
-				<svelte:component this={component} size="sm" />
+				<svelte:component this={component} size="md" />
 			</a>
 		{/each}
 	</div>
-</Card>
+</Frame>
+
+<p class="my-10 text-center text-sm text-gray-500">
+	© 2019-2023 <a href="https://flowbite.com/" class="hover:underline" target="_blank"
+		>Flowbite.com</a
+	>. All rights reserved.
+</p>
