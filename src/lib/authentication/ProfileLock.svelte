@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { P, Button, Card } from 'flowbite-svelte';
+	import { P, Button, Card, Checkbox } from 'flowbite-svelte';
+	import { LockOpenSolid, LockSolid } from 'flowbite-svelte-icons';
 	export let site = {
 		name: 'Flowbite',
 		img: '/images/flowbite-svelte-icon-logo.svg',
@@ -11,7 +12,7 @@
 		img: '/images/users/bonnie-green.png',
 		imgAlt: 'Bonnie Green'
 	};
-	export let btnTitle = 'Reset password';
+	export let btnTitle = 'Unlock';
 	export let pageDescription = 'Better to be safe than sorry.';
 	export let mainClass = 'bg-gray-50 dark:bg-gray-900 w-full';
 	export let mainDivClass =
@@ -22,6 +23,10 @@
 	export let cardH1Class = 'mb-3 text-2xl font-bold text-gray-900 dark:text-white';
 	export let cardDiv3Class = 'flex space-x-4';
 	export let userImgClass = 'w-8 h-8 rounded-full';
+
+	export let acceptTerms: boolean = true;
+	export let termsLink = '/';
+	export let termsLinkClass = 'text-primary-700 hover:underline dark:text-primary-500';
 </script>
 
 <main class={mainClass}>
@@ -31,7 +36,7 @@
 			<span>{site.name}</span>
 		</a>
 		<!-- Card -->
-		<Card size="md" class="w-full">
+		<Card class="w-full max-w-md" border={false}>
 			<div class={cardDiv3Class}>
 				<img class={userImgClass} src={user.img} alt={user.imgAlt} />
 				<h1 class={cardH1Class}>{user.name}</h1>
@@ -41,7 +46,17 @@
 			</P>
 			<form class="mt-8 space-y-6" on:submit|preventDefault>
 				<slot />
-				<Button type="submit">{btnTitle}</Button>
+				{#if acceptTerms}
+					<Checkbox class="accent-primary-600">
+						<span>
+							I accept the <a href={termsLink} class={termsLinkClass}>Terms and Conditions</a>
+						</span>
+					</Checkbox>
+				{/if}
+				<Button size="lg" type="submit">
+					<LockOpenSolid size="lg" class="mr-2" />
+					{btnTitle}
+				</Button>
 			</form>
 		</Card>
 	</div>

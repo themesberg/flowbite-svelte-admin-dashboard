@@ -11,7 +11,8 @@
 	const acceptTerms = true;
 	const btnTitle = 'Create account';
 	const termsLink = '/';
-	const labelClass = 'mb-2';
+	const labelClass = 'mb-2 dark:text-white';
+	const inputClass = 'border outline-none dark:border-gray-600 dark:bg-gray-700';
 	const onSubmit = (e: Event) => {
 		const formData = new FormData(e.target as HTMLFormElement);
 
@@ -26,14 +27,14 @@
 
 <ResetPassword {title} {site} {acceptTerms} {btnTitle} {termsLink} on:submit={onSubmit}>
 	<div>
-		<Label for="email" class="mb-2">Your email</Label>
+		<Label for="email" class={labelClass}>Your email</Label>
 		<Input
 			type="email"
 			name="email"
 			id="email"
 			placeholder="name@company.com"
 			required
-			class="border outline-none"
+			class={inputClass}
 		/>
 	</div>
 	<div>
@@ -44,7 +45,7 @@
 			id="password"
 			placeholder="••••••••"
 			required
-			class="border outline-none"
+			class={inputClass}
 		/>
 	</div>
 	<div>
@@ -55,7 +56,7 @@
 			id="confirm-password"
 			placeholder="••••••••"
 			required
-			class="border outline-none"
+			class={inputClass}
 		/>
 	</div>
 </ResetPassword>

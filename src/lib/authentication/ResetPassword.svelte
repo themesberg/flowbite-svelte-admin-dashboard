@@ -27,7 +27,7 @@
 			<span>{site.name}</span>
 		</a>
 		<!-- Card -->
-		<Card class="w-full">
+		<Card class="w-full" size="md" border={false}>
 			<h1 class={cardH1Class}>
 				{title}
 			</h1>
