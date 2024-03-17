@@ -10,7 +10,7 @@
 >
 	<Navbar fluid={false} list />
 </header>
-<div class="container mx-auto py-4">
+<div class="mx-auto max-w-screen-2xl px-4 py-4">
 	<slot />
 	<Footer />
 </div>
