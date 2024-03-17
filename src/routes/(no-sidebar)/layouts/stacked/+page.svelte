@@ -1,7 +1,9 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Dashboard from '../../../(sidebar)/dashboard/+page.svelte';
+	import Dashboard from '$lib/dashboard/Dashboard.svelte';
 	export let data: PageData;
 </script>
 
-<Dashboard {data} />
+<main class="py-4">
+	<Dashboard {data} />
+</main>

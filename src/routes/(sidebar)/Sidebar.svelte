@@ -137,7 +137,7 @@
 			<SidebarGroup ulClass={groupClass} class="mb-3">
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
-						<SidebarDropdownWrapper bind:isOpen={dropdowns[name]} label={name}>
+						<SidebarDropdownWrapper bind:isOpen={dropdowns[name]} label={name} class="pr-3">
 							<AngleDownSolid slot="arrowdown" strokeWidth="3.3" size="sm" />
 							<AngleUpOutline slot="arrowup" strokeWidth="3.3" size="sm" />
 							<svelte:component this={icon} slot="icon" class={iconClass} />
