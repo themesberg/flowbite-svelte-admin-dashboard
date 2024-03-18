@@ -45,30 +45,26 @@
 </script>
 
 <Card title="Transactions" subtitle="This is a list of latest transactions">
-	<div class="items-center justify-between sm:flex">
-		<div class="w-full max-w-lg">
-			<div class="items-center space-y-4 sm:flex">
-				<div class="flex items-center">
-					<Button color="alternative" class="w-fit whitespace-nowrap px-4 py-2">
-						Filter by status
-						<ChevronDownOutline size="lg" />
-					</Button>
-					<Dropdown class="w-44 space-y-3 p-3 text-sm" placement="bottom-start">
-						<li><Checkbox class="accent-primary-600">Completed (56)</Checkbox></li>
-						<li><Checkbox checked>Cancelled (56)</Checkbox></li>
-						<li><Checkbox class="accent-primary-600">In progress (56)</Checkbox></li>
-						<li><Checkbox checked>In review (97)</Checkbox></li>
-					</Dropdown>
-				</div>
-				<div class="flex items-center space-x-4">
-					<Input placeholder="From" class="w-full">
-						<CalendarMonthOutline slot="left" size="md" />
-					</Input>
-					<Input placeholder="To" class="w-full">
-						<CalendarMonthOutline slot="left" size="md" />
-					</Input>
-				</div>
-			</div>
+	<div class="items-center justify-between space-y-4 sm:flex">
+		<div class="flex items-center">
+			<Button color="alternative" class="w-fit whitespace-nowrap px-4 py-2">
+				Filter by status
+				<ChevronDownOutline size="lg" />
+			</Button>
+			<Dropdown class="w-44 space-y-3 p-3 text-sm" placement="bottom-start">
+				<li><Checkbox class="accent-primary-600">Completed (56)</Checkbox></li>
+				<li><Checkbox checked>Cancelled (56)</Checkbox></li>
+				<li><Checkbox class="accent-primary-600">In progress (56)</Checkbox></li>
+				<li><Checkbox checked>In review (97)</Checkbox></li>
+			</Dropdown>
+		</div>
+		<div class="flex items-center space-x-4">
+			<Input placeholder="From" class="w-full">
+				<CalendarMonthOutline slot="left" size="md" />
+			</Input>
+			<Input placeholder="To" class="w-full">
+				<CalendarMonthOutline slot="left" size="md" />
+			</Input>
 		</div>
 	</div>
 	<Table
