@@ -38,12 +38,12 @@
 </script>
 
 <div class="mt-px space-y-4">
-	<div class="grid gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
+	<div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 		<ChartWidget {chartOptions} title="$45,385" subtitle="Sales this week" />
 
 		<Stats />
 	</div>
-	<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2 2xl:grid-cols-3">
+	<div class="grid grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3">
 		<Card horizontal class="items-center justify-between" size="xl">
 			<div class="w-full">
 				<p>New products</p>
@@ -83,14 +83,14 @@
 			/>
 		</Card>
 	</div>
-	<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2">
+	<div class="grid grid-cols-1 gap-4 xl:grid-cols-2">
 		<Chat />
-		<div class="flex flex-col gap-2 sm:gap-4">
+		<div class="flex flex-col gap-4">
 			<DesktopPc />
 			<Traffic {dark} />
 		</div>
 	</div>
-	<div class="grid grid-cols-1 gap-2 sm:gap-4 xl:grid-cols-2">
+	<div class="grid grid-cols-1 gap-4 xl:grid-cols-2">
 		<ActivityList />
 		<Insights />
 	</div>

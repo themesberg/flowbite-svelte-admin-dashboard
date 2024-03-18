@@ -4,4 +4,6 @@
 	export let data: PageData;
 </script>
 
-<Dashboard {data} />
+<main class="p-4">
+	<Dashboard {data} />
+</main>
