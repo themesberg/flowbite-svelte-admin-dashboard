@@ -2,8 +2,10 @@
 	import LastRange from '$lib/widgets/LastRange.svelte';
 	import {
 		Button,
+		Card,
 		Checkbox,
 		Dropdown,
+		Heading,
 		Input,
 		Table,
 		TableBody,
@@ -19,7 +21,7 @@
 	} from 'flowbite-svelte-icons';
 	import StatusBadge from './StatusBadge.svelte';
 	import CreditCard from './CreditCard.svelte';
-	import Card from '$lib/widgets/Card.svelte';
+
 	export let dark: boolean = false;
 
 	const headers = [
@@ -44,27 +46,37 @@
 	];
 </script>
 
-<Card title="Transactions" subtitle="This is a list of latest transactions">
-	<div class="items-center justify-between space-y-4 sm:flex">
-		<div class="flex items-center">
-			<Button color="alternative" class="w-fit whitespace-nowrap px-4 py-2">
-				Filter by status
-				<ChevronDownOutline size="lg" />
-			</Button>
-			<Dropdown class="w-44 space-y-3 p-3 text-sm" placement="bottom-start">
-				<li><Checkbox class="accent-primary-600">Completed (56)</Checkbox></li>
-				<li><Checkbox checked>Cancelled (56)</Checkbox></li>
-				<li><Checkbox class="accent-primary-600">In progress (56)</Checkbox></li>
-				<li><Checkbox checked>In review (97)</Checkbox></li>
-			</Dropdown>
+<Card size="xl" class="shadow-sm">
+	<div class="items-center justify-between lg:flex">
+		<div class="mb-4 mt-px lg:mb-0">
+			<Heading tag="h3" class="-ml-0.25 mb-2 text-xl font-semibold dark:text-white">
+				Transactions
+			</Heading>
+			<span class="text-base font-normal text-gray-500 dark:text-gray-400">
+				This is a list of latest transactions
+			</span>
 		</div>
-		<div class="flex items-center space-x-4">
-			<Input placeholder="From" class="w-full">
-				<CalendarMonthOutline slot="left" size="md" />
-			</Input>
-			<Input placeholder="To" class="w-full">
-				<CalendarMonthOutline slot="left" size="md" />
-			</Input>
+		<div class="items-center justify-between gap-3 space-y-4 sm:flex sm:space-y-0">
+			<div class="flex items-center">
+				<Button color="alternative" class="w-fit whitespace-nowrap px-4 py-2">
+					Filter by status
+					<ChevronDownOutline size="lg" />
+				</Button>
+				<Dropdown class="w-44 space-y-3 p-3 text-sm" placement="bottom-start">
+					<li><Checkbox class="accent-primary-600">Completed (56)</Checkbox></li>
+					<li><Checkbox checked>Cancelled (56)</Checkbox></li>
+					<li><Checkbox class="accent-primary-600">In progress (56)</Checkbox></li>
+					<li><Checkbox checked>In review (97)</Checkbox></li>
+				</Dropdown>
+			</div>
+			<div class="flex items-center space-x-4">
+				<Input placeholder="From" class="w-full">
+					<CalendarMonthOutline slot="left" size="md" />
+				</Input>
+				<Input placeholder="To" class="w-full">
+					<CalendarMonthOutline slot="left" size="md" />
+				</Input>
+			</div>
 		</div>
 	</div>
 	<Table
