@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { P, Button, Card, Checkbox } from 'flowbite-svelte';
-	import { LockOpenSolid, LockSolid } from 'flowbite-svelte-icons';
+	import { Button, Card, Checkbox, P } from 'flowbite-svelte';
+	import { LockOpenSolid } from 'flowbite-svelte-icons';
 	export let site = {
 		name: 'Flowbite',
 		img: '/images/flowbite-svelte-icon-logo.svg',

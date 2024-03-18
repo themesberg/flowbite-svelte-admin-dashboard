@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import Dashboard from './dashboard/+page.svelte';
+	import Dashboard from '../../lib/dashboard/Dashboard.svelte';
 	export let data: PageData;
 </script>
 

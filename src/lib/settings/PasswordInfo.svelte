@@ -1,9 +1,9 @@
 <script>
-	import { Button, Card, Heading, Label, Input } from 'flowbite-svelte';
+	import { Button, Heading, Label, Input } from 'flowbite-svelte';
+	import Card from '../widgets/Card.svelte';
 </script>
 
-<Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Password Information</Heading>
+<Card title="Password Information">
 	<div class="grid grid-cols-6 gap-6">
 		<Label class="col-span-6 space-y-2 sm:col-span-3">
 			<span>Current password</span>

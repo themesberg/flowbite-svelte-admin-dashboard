@@ -1,8 +1,7 @@
 <script lang="ts">
+	import Change from '$lib/dashboard/Change.svelte';
 	import type { ApexOptions } from 'apexcharts';
 	import { Card, Chart, Heading } from 'flowbite-svelte';
-	import { ChevronRightOutline } from 'flowbite-svelte-icons';
-	import Change from '../../routes/(sidebar)/dashboard/Change.svelte';
 	import LastRange from './LastRange.svelte';
 	import More from './More.svelte';
 

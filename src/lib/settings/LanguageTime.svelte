@@ -1,5 +1,6 @@
 <script>
-	import { Button, Card, Heading, Label, Select } from 'flowbite-svelte';
+	import { Button, Heading, Label, Select } from 'flowbite-svelte';
+	import Card from '../widgets/Card.svelte';
 	const languages = [
 		{ name: 'English (US)', value: 'en' },
 		{ name: 'Italiano', value: 'it' },
@@ -21,15 +22,16 @@
 	];
 </script>
 
-<Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Language &amp; Time</Heading>
-	<Label class="space-y-2">
-		<span>Select language</span>
-		<Select items={languages} class="font-normal"></Select>
-	</Label>
-	<Label class="space-y-2">
-		<span>Time Zone</span>
-		<Select items={timezones} class="font-normal"></Select>
-	</Label>
-	<Button class="w-fit">Save all</Button>
+<Card title="Language &amp; Time">
+	<div class="space-y-4">
+		<Label class="space-y-2">
+			<span>Select language</span>
+			<Select items={languages} class="font-normal"></Select>
+		</Label>
+		<Label class="space-y-2">
+			<span>Time Zone</span>
+			<Select items={timezones} class="font-normal"></Select>
+		</Label>
+	</div>
+	<Button class="mt-6 w-fit">Save all</Button>
 </Card>

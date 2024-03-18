@@ -1,10 +1,10 @@
 <script>
-	import { Button, Card, Heading, Label, Input } from 'flowbite-svelte';
+	import { Button } from 'flowbite-svelte';
 	import { DesktopPcOutline, MobilePhoneOutline } from 'flowbite-svelte-icons';
+	import Card from '../widgets/Card.svelte';
 </script>
 
-<Card size="xl" class="gap-4">
-	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Sessions</Heading>
+<Card title="Sessions">
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		<li class="py-4">
 			<div class="flex items-center space-x-4">

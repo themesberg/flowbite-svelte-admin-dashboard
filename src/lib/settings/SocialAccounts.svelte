@@ -1,6 +1,7 @@
 <script>
-	import { A, Button, Card, Heading } from 'flowbite-svelte';
+	import { A, Button } from 'flowbite-svelte';
 	import { DribbbleSolid, FacebookSolid, GithubSolid, TwitterSolid } from 'flowbite-svelte-icons';
+	import Card from '../widgets/Card.svelte';
 
 	const items = [
 		{ icon: FacebookSolid, name: 'Facebook account', link: 'www.facebook.com/themesberg' },
@@ -10,8 +11,7 @@
 	];
 </script>
 
-<Card size="xl">
-	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Social accounts</Heading>
+<Card title="Social accounts">
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each items as { icon, name, link }}
 			<li class="py-4">

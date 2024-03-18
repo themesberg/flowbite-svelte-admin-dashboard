@@ -2,7 +2,7 @@
 	import LanguageTime from '$lib/settings/LanguageTime.svelte';
 	import ProfilePicture from '$lib/settings/ProfilePicture.svelte';
 	import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
-	import GeneralInfo from '../dashboard/GeneralInfo.svelte';
+	import GeneralInfo from '$lib/settings/GeneralInfo.svelte';
 	import Footer from '../Footer.svelte';
 	import PasswordInfo from '$lib/settings/PasswordInfo.svelte';
 	import Sessions from '$lib/settings/Sessions.svelte';
@@ -15,38 +15,36 @@
 	import { imagesPath } from '$lib/variables';
 </script>
 
-<div class="relative h-full w-full overflow-y-auto bg-gray-50 p-4 dark:bg-gray-900">
-	<main>
-		<div class="grid grid-cols-1 space-y-4 dark:bg-gray-900 xl:grid-cols-3 xl:gap-4">
-			<div class="col-span-full mb-4 xl:mb-2">
-				<Breadcrumb class="mb-5">
-					<BreadcrumbItem home>Home</BreadcrumbItem>
-					<BreadcrumbItem
-						class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white"
-						href="/curd/users">Users</BreadcrumbItem
-					>
-					<BreadcrumbItem>Settings</BreadcrumbItem>
-				</Breadcrumb>
+<main class="p-4">
+	<div class="grid grid-cols-1 space-y-2 dark:bg-gray-900 xl:grid-cols-3 xl:gap-3.5">
+		<div class="col-span-full xl:mb-0">
+			<Breadcrumb class="mb-6">
+				<BreadcrumbItem home>Home</BreadcrumbItem>
+				<BreadcrumbItem
+					class="inline-flex items-center text-gray-700 hover:text-primary-600 dark:text-gray-300 dark:hover:text-white"
+					href="/curd/users">Users</BreadcrumbItem
+				>
+				<BreadcrumbItem>Settings</BreadcrumbItem>
+			</Breadcrumb>
 
-				<Heading tag="h1" class="text-xl font-semibold tracking-wide sm:text-2xl">
-					User settings
-				</Heading>
-			</div>
-			<div class="col-span-full space-y-4 xl:col-auto">
-				<ProfilePicture src={imagesPath(Users[4].avatar, 'users')} />
-				<LanguageTime />
-				<SocialAccounts />
-				<Accounts />
-			</div>
-			<div class="col-span-2 space-y-4">
-				<GeneralInfo />
-				<PasswordInfo />
-				<Sessions />
-			</div>
+			<Heading tag="h1" class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl">
+				User settings
+			</Heading>
 		</div>
-		<div class="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-4">
-			<Alerts />
-			<Emails />
+		<div class="col-span-full space-y-4 xl:col-auto">
+			<ProfilePicture src={imagesPath(Users[4].avatar, 'users')} />
+			<LanguageTime />
+			<SocialAccounts />
+			<Accounts />
 		</div>
-	</main>
-</div>
+		<div class="col-span-2 space-y-4">
+			<GeneralInfo />
+			<PasswordInfo />
+			<Sessions />
+		</div>
+	</div>
+	<div class="mt-4 grid grid-cols-1 gap-4 xl:grid-cols-2 xl:gap-4">
+		<Alerts />
+		<Emails />
+	</div>
+</main>

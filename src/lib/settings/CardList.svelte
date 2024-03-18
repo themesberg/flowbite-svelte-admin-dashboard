@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Button, Card, Heading } from 'flowbite-svelte';
+	import { Button, Heading } from 'flowbite-svelte';
+	import Card from '../widgets/Card.svelte';
 
 	export let title: string;
 	export let subtitle: string = '';
@@ -8,8 +9,7 @@
 	export let items: any[] = [];
 </script>
 
-<Card size="xl" {...$$restProps}>
-	<Heading tag="h3" class="text-xl font-semibold tracking-wide">{title}</Heading>
+<Card {title} {...$$restProps}>
 	{#if subtitle}
 		<p class="text-sm font-normal text-gray-500 dark:text-gray-400">{subtitle}</p>
 	{/if}
