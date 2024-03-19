@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-	<title>Tailwind CSS Pricing Page - Flowbite</title>
+	<title>Tailwind CSS Pricing Page - Flowbite Dashboard</title>
 </svelte:head>
 
 <div
