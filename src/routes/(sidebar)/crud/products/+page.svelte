@@ -8,6 +8,7 @@
 	import Product from './Product.svelte';
 	import Delete from './Delete.svelte';
 	import type { ComponentType } from 'svelte';
+	import MetaTag from '../../../utils/MetaTag.svelte';
 
 	let hidden: boolean = true; // modal control
 	let drawerComponent: ComponentType = Product; // drawer component
@@ -16,7 +17,15 @@
 		drawerComponent = component;
 		hidden = !hidden;
 	};
+
+	const path: string = '/crud/products';
+  const description: string = 'CRUD products examaple - Flowbite Svelte Admin Dashboard';
+  const title: string = 'Flowbite Svelte Admin Dashboard - CRUD Products';
+  const subtitle: string = 'CRUD Products';
 </script>
+
+<MetaTag {path} {description} {title} {subtitle} />
+
 
 <main class="relative h-full w-full overflow-y-auto bg-white dark:bg-gray-800">
 	<div class="p-4">

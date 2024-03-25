@@ -22,12 +22,19 @@
 
 	import User from './User.svelte';
 	import Delete from './Delete.svelte';
+	import MetaTag from '../../../utils/MetaTag.svelte';
 
 	let openUser: boolean = false; // modal control
 	let openDelete: boolean = false; // modal control
 
 	let current_user: any = {};
+	const path: string = '/crud/users';
+  const description: string = 'CRUD users examaple - Flowbite Svelte Admin Dashboard';
+  const title: string = 'Flowbite Svelte Admin Dashboard - CRUD Users';
+  const subtitle: string = 'CRUD Users';
 </script>
+
+<MetaTag {path} {description} {title} {subtitle} />
 
 <main class="relative h-full w-full overflow-y-auto bg-white dark:bg-gray-800">
 	<div class="p-4">

@@ -13,11 +13,15 @@
 		['$499', '$1500']
 	];
 	$: period = yearly ? 'year' : 'month';
+	import MetaTag from '../../../utils/MetaTag.svelte';
+
+	const path: string = '/pages/pricing';
+  const description: string = 'Pricing examaple - Flowbite Svelte Admin Dashboard';
+  const title: string = 'Flowbite Svelte Admin Dashboard - Pricing';
+  const subtitle: string = 'Pricing';
 </script>
 
-<svelte:head>
-	<title>Tailwind CSS Pricing Page - Flowbite Dashboard</title>
-</svelte:head>
+<MetaTag {path} {description} {title} {subtitle} />
 
 <Navbar
 	class="fixed start-0 top-0 z-20 w-full border-b border-gray-200 px-2 py-1 dark:border-gray-700 sm:px-4"

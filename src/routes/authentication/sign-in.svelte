@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Label, Input } from 'flowbite-svelte';
 	import { SignIn } from '$lib';
-
+  import MetaTag from '../utils/MetaTag.svelte';
 	let title = 'Sign in to platform';
 	let site = {
 		name: 'Flowbite',
@@ -27,7 +27,14 @@
 		}
 		console.log(data);
 	};
+
+	const path: string = '/authentication/sign-in';
+  const description: string = 'Sign in example - Flowbite Svelte Admin Dashboard';
+	const metaTitle: string = 'Flowbite Svelte Admin Dashboard - Sign in';
+  const subtitle: string = 'Sign in';
 </script>
+
+<MetaTag {path} {description} title={metaTitle} {subtitle} />
 
 <SignIn
 	{title}
