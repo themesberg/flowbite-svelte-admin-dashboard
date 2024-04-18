@@ -1,6 +1,6 @@
 <script>
 	import { Button, Textarea, Toolbar, ToolbarButton } from 'flowbite-svelte';
-	import { ImageSolid, MapPinAltSolid, PaperClipSolid } from 'flowbite-svelte-icons';
+	import { ImageSolid, MapPinAltSolid, PaperClipOutline } from 'flowbite-svelte-icons';
 	import { setContext } from 'svelte';
 
 	setContext('background', false);
@@ -12,7 +12,7 @@
 			<Button type="submit" size="xs">Post comment</Button>
 			<Toolbar embedded class="text-gray-500 dark:text-gray-400" slot="foot">
 				<ToolbarButton class="p-2 hover:text-gray-900 dark:hover:text-white">
-					<PaperClipSolid size="md" />
+					<PaperClipOutline size="md" />
 					<span class="sr-only">Attach file</span>
 				</ToolbarButton>
 				<ToolbarButton class="p-2 hover:text-gray-900 dark:hover:text-white">

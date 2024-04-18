@@ -2,8 +2,7 @@
 	import { Avatar, Dropdown, DropdownItem, ToolbarButton } from 'flowbite-svelte';
 	import {
 		ChevronDownOutline,
-		DotsHorizontalOutline,
-		DotsHorizontalSolid
+		DotsHorizontalOutline
 	} from 'flowbite-svelte-icons';
 
 	export let avatar: string = 'https://flowbite.com/docs/images/people/profile-picture-2.jpg';
@@ -26,7 +25,7 @@
 			</p>
 		</div>
 		<ToolbarButton class="rounded dark:hover:text-white">
-			<DotsHorizontalSolid size="lg" />
+			<DotsHorizontalOutline size="lg" />
 			<span class="sr-only">Comment settings</span>
 		</ToolbarButton>
 		<Dropdown class="w-32" placement="bottom-end">

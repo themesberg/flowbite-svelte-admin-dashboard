@@ -10,7 +10,7 @@
 		SidebarWrapper
 	} from 'flowbite-svelte';
 	import {
-		AngleDownSolid,
+		AngleDownOutline,
 		AngleUpOutline,
 		ClipboardListSolid,
 		CogOutline,
@@ -19,8 +19,8 @@
 		LayersSolid,
 		LifeSaverSolid,
 		LockSolid,
-		MagicWandSolid,
-		PieChartSolid,
+		WandMagicSparklesOutline,
+		ChartPieOutline,
 		RectangleListSolid,
 		TableColumnSolid
 	} from 'flowbite-svelte-icons';
@@ -49,7 +49,7 @@
 	});
 
 	let posts = [
-		{ name: 'Dashboard', icon: PieChartSolid, href: '/dashboard' },
+		{ name: 'Dashboard', icon: ChartPieOutline, href: '/dashboard' },
 		{
 			name: 'Layouts',
 			icon: TableColumnSolid,
@@ -90,7 +90,7 @@
 		},
 		{
 			name: 'Playground',
-			icon: MagicWandSolid,
+			icon: WandMagicSparklesOutline,
 			children: {
 				Stacked: '/playground/stacked',
 				Sidebar: '/playground/sidebar'
@@ -138,7 +138,7 @@
 				{#each posts as { name, icon, children, href } (name)}
 					{#if children}
 						<SidebarDropdownWrapper bind:isOpen={dropdowns[name]} label={name} class="pr-3">
-							<AngleDownSolid slot="arrowdown" strokeWidth="3.3" size="sm" />
+							<AngleDownOutline slot="arrowdown" strokeWidth="3.3" size="sm" />
 							<AngleUpOutline slot="arrowup" strokeWidth="3.3" size="sm" />
 							<svelte:component this={icon} slot="icon" class={iconClass} />
 

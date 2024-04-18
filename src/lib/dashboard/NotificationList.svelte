@@ -3,7 +3,7 @@
 	import {
 		AnnotationSolid,
 		BellSolid,
-		CameraFotoSolid,
+		CameraPhotoOutline,
 		DownloadSolid,
 		EyeSolid,
 		HeartSolid,
@@ -68,7 +68,7 @@
 		<Notification
 			href="#"
 			src={Users[5].avatar}
-			icon={CameraFotoSolid}
+			icon={CameraPhotoOutline}
 			when="3 hours ago"
 			color="purple"
 		>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button, CloseButton, Heading, Input, Label, Select, Textarea } from 'flowbite-svelte';
-	import { CloseSolid } from 'flowbite-svelte-icons';
+	import { CloseOutline } from 'flowbite-svelte-icons';
 	export let hidden: boolean = true; // modal control
 </script>
 
@@ -60,7 +60,7 @@
 		<div class="bottom-0 left-0 flex w-full justify-center space-x-4 pb-4 md:absolute md:px-4">
 			<Button type="submit" class="w-full">Add product</Button>
 			<Button color="alternative" class="w-full" on:click={() => (hidden = true)}>
-				<CloseSolid />
+				<CloseOutline />
 				Cancel
 			</Button>
 		</div>

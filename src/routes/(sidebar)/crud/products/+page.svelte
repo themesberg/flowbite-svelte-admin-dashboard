@@ -2,7 +2,7 @@
 	import { Breadcrumb, BreadcrumbItem, Button, Checkbox, Drawer, Heading } from 'flowbite-svelte';
 	import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
 	import { TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
-	import { CogSolid, DotsVerticalSolid, EditOutline } from 'flowbite-svelte-icons';
+	import { CogSolid, DotsVerticalOutline, EditOutline } from 'flowbite-svelte-icons';
 	import { ExclamationCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
 	import Products from '../../../data/product.json';
 	import Product from './Product.svelte';
@@ -62,7 +62,7 @@
 				color="dark"
 				class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
 			>
-				<DotsVerticalSolid size="lg" />
+				<DotsVerticalOutline size="lg" />
 			</ToolbarButton>
 
 			<div slot="end" class="space-x-2">

@@ -10,11 +10,11 @@
 	} from 'flowbite-svelte';
 	import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
 	import { TableHeadCell, Toolbar, ToolbarButton, ToolbarGroup } from 'flowbite-svelte';
-	import { CogSolid, DotsVerticalSolid, DownloadSolid } from 'flowbite-svelte-icons';
+	import { CogSolid, DotsVerticalOutline, DownloadSolid } from 'flowbite-svelte-icons';
 	import {
 		EditOutline,
 		ExclamationCircleSolid,
-		PlusSolid,
+		PlusOutline,
 		TrashBinSolid
 	} from 'flowbite-svelte-icons';
 	import Users from '../../../data/users.json';
@@ -72,7 +72,7 @@
 					color="dark"
 					class="m-0 rounded p-1 hover:bg-gray-100 focus:ring-0 dark:hover:bg-gray-700"
 				>
-					<DotsVerticalSolid size="lg" />
+					<DotsVerticalOutline size="lg" />
 				</ToolbarButton>
 			</div>
 
@@ -82,7 +82,7 @@
 					class="gap-2 whitespace-nowrap px-3"
 					on:click={() => ((current_user = {}), (openUser = true))}
 				>
-					<PlusSolid size="sm" />Add user
+					<PlusOutline size="sm" />Add user
 				</Button>
 				<Button size="sm" color="alternative" class="gap-2 px-3">
 					<DownloadSolid size="md" class="-ml-1" />Export

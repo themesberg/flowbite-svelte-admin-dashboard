@@ -4,7 +4,7 @@
 		ArchiveSolid,
 		ArrowRightToBracketOutline,
 		CogOutline,
-		DollarSolid,
+		DollarOutline,
 		GridSolid,
 		InboxOutline,
 		ProfileCardOutline,
@@ -20,7 +20,7 @@
 		{ name: 'Profile', href: '/profile', icon: ProfileCardOutline },
 		{ name: 'Settings', href: '/settings', icon: CogOutline },
 		{ name: 'Prouducts', href: '/products', icon: ArchiveSolid },
-		{ name: 'Pricing', href: '/pricing', icon: DollarSolid },
+		{ name: 'Pricing', href: '/pricing', icon: DollarOutline },
 		{ name: 'Billing', href: '/billing', icon: SalePercentOutline },
 		{ name: 'Logout', href: '/logout', icon: ArrowRightToBracketOutline }
 	];
