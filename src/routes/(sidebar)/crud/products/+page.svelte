@@ -11,8 +11,6 @@
 	let hidden: boolean = true; // modal control
 	let drawerComponent: ComponentType = Product; // drawer component
 
-	export let showFooter: boolean = false; // footer control
-
 	const toggle = (component: ComponentType) => {
 		drawerComponent = component;
 		hidden = !hidden;

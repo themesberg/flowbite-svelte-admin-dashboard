@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle } from 'flowbite-svelte';
+	import { Button, DarkMode, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle } from 'flowbite-svelte';
 	import { ArrowLeftToBracketOutline, CloseOutline } from 'flowbite-svelte-icons';
 	import MetaTag from '../../../utils/MetaTag.svelte';
 	import ComparisonTable from './ComparisonTable.svelte';
@@ -40,7 +40,7 @@
 		<NavLi href="/contact">Contact</NavLi>
 	</NavUl>
 	<div class="py-4">
-		
+		<DarkMode />
 		<Button class="gap-2 px-3"><ArrowLeftToBracketOutline />Login/Register</Button>
 	</div>
 </Navbar>
