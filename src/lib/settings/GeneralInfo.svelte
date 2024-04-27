@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Input, Label, type InputType, Heading, Button } from 'flowbite-svelte';
+	import { Button, Input, Label, type InputType } from 'flowbite-svelte';
 	import Card from '../widgets/Card.svelte';
 
 	const inputs: { label: string; type: InputType; placeholder: string }[] = [
@@ -18,7 +18,7 @@
 	];
 </script>
 
-<Card title="General Information" class="-mt-px">
+<Card title="General Information" class="-mt-px max-w-none">
 	<form class="grid grid-cols-6 gap-6">
 		{#each inputs as { label, type, placeholder }}
 			<Label class="col-span-6 space-y-2 sm:col-span-3">

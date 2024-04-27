@@ -1,14 +1,12 @@
 <script lang="ts">
-	import { Breadcrumb, BreadcrumbItem, Button, Checkbox, Drawer, Heading } from 'flowbite-svelte';
-	import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
-	import { TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
-	import { CogSolid, DotsVerticalOutline, EditOutline } from 'flowbite-svelte-icons';
-	import { ExclamationCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
-	import Products from '../../../data/product.json';
-	import Product from './Product.svelte';
-	import Delete from './Delete.svelte';
+	import { Breadcrumb, BreadcrumbItem, Button, Checkbox, Drawer, Heading, Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
+	import { CogSolid, DotsVerticalOutline, EditOutline, ExclamationCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
 	import type { ComponentType } from 'svelte';
+	import { sineIn } from 'svelte/easing';
+	import Products from '../../../data/product.json';
 	import MetaTag from '../../../utils/MetaTag.svelte';
+	import Delete from './Delete.svelte';
+	import Product from './Product.svelte';
 
 	let hidden: boolean = true; // modal control
 	let drawerComponent: ComponentType = Product; // drawer component
@@ -19,9 +17,14 @@
 	};
 
 	const path: string = '/crud/products';
-  const description: string = 'CRUD products examaple - Flowbite Svelte Admin Dashboard';
-  const title: string = 'Flowbite Svelte Admin Dashboard - CRUD Products';
-  const subtitle: string = 'CRUD Products';
+  	const description: string = 'CRUD products examaple - Flowbite Svelte Admin Dashboard';
+	const title: string = 'Flowbite Svelte Admin Dashboard - CRUD Products';
+	const subtitle: string = 'CRUD Products';
+	let transitionParams = {
+		x: 320,
+		duration: 200,
+		easing: sineIn
+	};
 </script>
 
 <MetaTag {path} {description} {title} {subtitle} />
@@ -113,6 +116,7 @@
 	</Table>
 </main>
 
-<Drawer placement="right" transitionType="fly" bind:hidden>
+
+<Drawer placement="right" transitionType="fly" {transitionParams} bind:hidden>
 	<svelte:component this={drawerComponent} bind:hidden />
 </Drawer>

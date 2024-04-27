@@ -4,7 +4,7 @@
 	import Card from '../widgets/Card.svelte';
 </script>
 
-<Card title="Sessions">
+<Card title="Sessions" class="max-w-none">
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		<li class="py-4">
 			<div class="flex items-center space-x-4">

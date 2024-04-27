@@ -1,10 +1,11 @@
 <script lang="ts">
-	import { Button, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle } from 'flowbite-svelte';
+	import { Button, DarkMode, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle } from 'flowbite-svelte';
 	import { ArrowLeftToBracketOutline, CloseOutline } from 'flowbite-svelte-icons';
-	import PriceCard from './PriceCard.svelte';
+	import MetaTag from '../../../utils/MetaTag.svelte';
 	import ComparisonTable from './ComparisonTable.svelte';
 	import Faq from './FAQ.svelte';
 	import Footer from './Footer.svelte';
+	import PriceCard from './PriceCard.svelte';
 
 	let yearly: boolean = false;
 	let prices: string[][] = [
@@ -13,7 +14,6 @@
 		['$499', '$1500']
 	];
 	$: period = yearly ? 'year' : 'month';
-	import MetaTag from '../../../utils/MetaTag.svelte';
 
 	const path: string = '/pages/pricing';
   const description: string = 'Pricing examaple - Flowbite Svelte Admin Dashboard';
@@ -40,6 +40,7 @@
 		<NavLi href="/contact">Contact</NavLi>
 	</NavUl>
 	<div class="py-4">
+		<DarkMode />
 		<Button class="gap-2 px-3"><ArrowLeftToBracketOutline />Login/Register</Button>
 	</div>
 </Navbar>

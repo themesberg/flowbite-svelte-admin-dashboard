@@ -19,8 +19,8 @@
 		ChevronDownOutline,
 		ChevronRightOutline
 	} from 'flowbite-svelte-icons';
-	import StatusBadge from './StatusBadge.svelte';
 	import CreditCard from './CreditCard.svelte';
+	import StatusBadge from './StatusBadge.svelte';
 
 	export let dark: boolean = false;
 
@@ -46,7 +46,7 @@
 	];
 </script>
 
-<Card size="xl" class="shadow-sm">
+<Card size="xl" class="shadow-sm max-w-none">
 	<div class="items-center justify-between lg:flex">
 		<div class="mb-4 mt-px lg:mb-0">
 			<Heading tag="h3" class="-ml-0.25 mb-2 text-xl font-semibold dark:text-white">

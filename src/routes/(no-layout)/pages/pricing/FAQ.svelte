@@ -14,7 +14,7 @@
 	how much you need to use.
 </p>
 <Hr />
-<div class="columns-3 gap-8 space-y-10">
+<div class="lg:columns-3 gap-8 space-y-10">
 	<div class="space-y-4">
 		<h3 class="text-lg font-medium text-gray-900 dark:text-white">
 			What do you mean by "Figma assets"?
