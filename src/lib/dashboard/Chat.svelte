@@ -199,10 +199,10 @@
 						<p class="text-sm text-gray-500 dark:text-gray-400">PDF, 2.3 MB</p>
 					</div>
 					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-400">
-						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+						<ToolbarButton class="rounded">
 							<DownloadOutline size="lg" /><span class="sr-only">Download</span>
 						</ToolbarButton>
-						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+						<ToolbarButton class="rounded">
 							<DotsVerticalOutline size="lg" /> <span class="sr-only">Actions</span>
 						</ToolbarButton>
 					</div>
@@ -221,10 +221,10 @@
 						<p class="text-sm text-gray-500 dark:text-gray-400">PPTX, 10.1 MB</p>
 					</div>
 					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-400">
-						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+						<ToolbarButton class="rounded">
 							<DownloadOutline size="lg" /><span class="sr-only">Download</span>
 						</ToolbarButton>
-						<ToolbarButton class="rounded dark:hover:bg-gray-100">
+						<ToolbarButton class="rounded">
 							<DotsVerticalOutline size="lg" /> <span class="sr-only">Actions</span>
 						</ToolbarButton>
 					</div>

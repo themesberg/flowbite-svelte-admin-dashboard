@@ -1,18 +1,18 @@
 <script lang="ts">
-	import LanguageTime from '$lib/settings/LanguageTime.svelte';
-	import ProfilePicture from '$lib/settings/ProfilePicture.svelte';
-	import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
-	import GeneralInfo from '$lib/settings/GeneralInfo.svelte';
-	import Footer from '../Footer.svelte';
-	import PasswordInfo from '$lib/settings/PasswordInfo.svelte';
-	import Sessions from '$lib/settings/Sessions.svelte';
-	import SocialAccounts from '$lib/settings/SocialAccounts.svelte';
 	import Accounts from '$lib/settings/Accounts.svelte';
 	import Alerts from '$lib/settings/Alerts.svelte';
 	import Emails from '$lib/settings/Emails.svelte';
+	import GeneralInfo from '$lib/settings/GeneralInfo.svelte';
+	import LanguageTime from '$lib/settings/LanguageTime.svelte';
+	import PasswordInfo from '$lib/settings/PasswordInfo.svelte';
+	import ProfilePicture from '$lib/settings/ProfilePicture.svelte';
+	import Sessions from '$lib/settings/Sessions.svelte';
+	import SocialAccounts from '$lib/settings/SocialAccounts.svelte';
+	import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
+	import Footer from '../Footer.svelte';
 
-	import Users from '../../data/users.json';
 	import { imagesPath } from '$lib/variables';
+	import Users from '../../data/users.json';
 	import MetaTag from '../../utils/MetaTag.svelte';
 
 	const path: string = '/settings';
@@ -56,3 +56,4 @@
 		<Emails />
 	</div>
 </main>
+<Footer />

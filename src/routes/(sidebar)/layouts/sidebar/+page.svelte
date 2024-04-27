@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import Dashboard from '../../../../lib/dashboard/Dashboard.svelte';
 	import MetaTag from '../../../utils/MetaTag.svelte';
+	import Footer from '../../Footer.svelte';
+	import type { PageData } from './$types';
 	export let data: PageData;
 	
 	const path: string = '/layouts/sidebar';
@@ -15,3 +16,4 @@
 <main class="p-4">
 	<Dashboard {data} />
 </main>
+<Footer />
