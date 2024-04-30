@@ -66,7 +66,7 @@ If you want to use this project we recommend to also [study the component librar
 
 ## Quick start
 
-1. [Install Flowbite-Svelte](https://flowbite-svelte.com/pages/getting-started)
+1. [Install Flowbite-Svelte](https://flowbite-svelte.com/docs/pages/introduction)
 
 2. Install flowbite-svelte-admin-dashboard
 
