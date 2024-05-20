@@ -1,12 +1,14 @@
 <script lang="ts">
 	import thickbars from '$lib/graphs/thickbars';
-	import thinfillbars from '$lib/graphs/thinfillbars';
 	import ChartWidget from '$lib/widgets/ChartWidget.svelte';
 	import { Card, Chart } from 'flowbite-svelte';
 	import type { PageData } from '../../routes/(sidebar)/$types';
 	import Stats from './Stats.svelte';
 
+	import users from '$lib/graphs/users';
+	import DarkChart from '$lib/widgets/DarkChart.svelte';
 	import { onMount } from 'svelte';
+	import chart_options_func from '../../routes/(sidebar)/dashboard/chart_options';
 	import ActivityList from './ActivityList.svelte';
 	import Change from './Change.svelte';
 	import Chat from './Chat.svelte';
@@ -14,7 +16,6 @@
 	import Insights from './Insights.svelte';
 	import Traffic from './Traffic.svelte';
 	import Transactions from './Transactions.svelte';
-	import chart_options_func from '../../routes/(sidebar)/dashboard/chart_options';
 
 	export let data: PageData;
 
@@ -62,7 +63,7 @@
 				</p>
 				<Change size="sm" value={-3.4} since="Since last month" />
 			</div>
-			<Chart options={thinfillbars} class="w-full" />
+			<DarkChart configFunc={users} class="w-full" />
 		</Card>
 		<Card horizontal class="items-center justify-between" size="xl">
 			<div class="w-full">
@@ -72,15 +73,7 @@
 				</p>
 				<Change size="sm" value={-3.4} since="Since last month" class="w-full" />
 			</div>
-			<Chart
-				options={{
-					...thinfillbars,
-					plotOptions: {
-						...thinfillbars.plotOptions,
-						bar: { ...thinfillbars.plotOptions?.bar, horizontal: true }
-					}
-				}}
-			/>
+			<DarkChart configFunc={(d)=>{const x = users(d); x.plotOptions.bar.horizontal=true; return x}} class="w-full"/>
 		</Card>
 	</div>
 	<div class="grid grid-cols-1 gap-4 xl:grid-cols-2">
