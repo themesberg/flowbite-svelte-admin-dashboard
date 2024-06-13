@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Label, Input } from 'flowbite-svelte';
-	import { SignUp } from '$lib';
+	import SignUp from '../utils/authentication/SignUp.svelte';
   import MetaTag from '../utils/MetaTag.svelte';
 
 	const title = 'Create a Free Account';

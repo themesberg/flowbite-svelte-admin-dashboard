@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { imagesPath } from '$lib/variables';
+	import { imagesPath } from '../variables';
 	import { Button, P } from 'flowbite-svelte';
 	export let title = 'Under Maintenance';
 	export let description =

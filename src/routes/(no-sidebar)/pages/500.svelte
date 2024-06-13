@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ServerError } from '$lib';
+	import ServerError from '../../utils/pages/ServerError.svelte';
 </script>
 
 <ServerError />

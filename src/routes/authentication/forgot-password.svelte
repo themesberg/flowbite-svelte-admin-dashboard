@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ForgotPassword } from '$lib';
+	import ForgotPassword from '../utils/authentication/ForgotPassword.svelte';
 	import { Label, Input, Checkbox, A } from 'flowbite-svelte';
 	import MetaTag from '../utils/MetaTag.svelte';
 	const onSubmit = (e: Event) => {

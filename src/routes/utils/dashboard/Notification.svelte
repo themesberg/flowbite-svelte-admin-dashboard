@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IconAvatar from '$lib/widgets/IconAvatar.svelte';
+	import IconAvatar from '../widgets/IconAvatar.svelte';
 
 	export let src: string = '';
 	export let icon: ConstructorOfATypedSvelteComponent | null = null;

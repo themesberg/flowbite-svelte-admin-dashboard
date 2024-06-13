@@ -1,4 +1,4 @@
-const site = 'https://svelte-5-ui-lib.codewithshin.com'; 
+const site = 'https://flowbite-svelte-admin-dashboard.vercel.app/'; 
 const pages: string[] = [
   '',
   'dashboard',

@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Badge } from 'flowbite-svelte';
 	import type { BadgeProps } from 'flowbite-svelte/Badge.svelte';
-	import { onMount } from 'svelte';
 
 	export let state: keyof typeof states;
 	export let dark: boolean = false;

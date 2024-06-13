@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Label, Input } from 'flowbite-svelte';
-	import { SignIn } from '$lib';
+	import SignIn from '../utils/authentication/SignIn.svelte';
   import MetaTag from '../utils/MetaTag.svelte';
 	let title = 'Sign in to platform';
 	let site = {

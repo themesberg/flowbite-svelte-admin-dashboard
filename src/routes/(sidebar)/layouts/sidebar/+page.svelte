@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Dashboard from '../../../../lib/dashboard/Dashboard.svelte';
+	import Dashboard from '../../../utils/dashboard/Dashboard.svelte';
 	import MetaTag from '../../../utils/MetaTag.svelte';
 	import Footer from '../../Footer.svelte';
 	import type { PageData } from './$types';

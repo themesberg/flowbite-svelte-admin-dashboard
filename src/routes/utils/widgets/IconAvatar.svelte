@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { imagesPath } from '$lib/variables';
+	import { imagesPath } from '../../utils/variables';
 	import { Avatar, Indicator } from 'flowbite-svelte';
 	export let src: string = '';
 	export let color: Indicator['color'] = 'dark';

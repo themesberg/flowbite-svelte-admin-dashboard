@@ -18,7 +18,7 @@
 		TrashBinSolid
 	} from 'flowbite-svelte-icons';
 	import Users from '../../../data/users.json';
-	import { imagesPath } from '$lib/variables';
+	import { imagesPath } from '../../../utils/variables';
 
 	import User from './User.svelte';
 	import Delete from './Delete.svelte';

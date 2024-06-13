@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Label, Input } from 'flowbite-svelte';
-	import { ResetPassword } from '$lib';
+	import ResetPassword from '../utils/authentication/ResetPassword.svelte';
 	import MetaTag from '../utils/MetaTag.svelte';
 	const title = 'Reset your password';
 	const site = {

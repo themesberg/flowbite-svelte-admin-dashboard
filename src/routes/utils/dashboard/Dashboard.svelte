@@ -1,14 +1,16 @@
 <script lang="ts">
-	import thickbars from '$lib/graphs/thickbars';
-	import ChartWidget from '$lib/widgets/ChartWidget.svelte';
+	import thickbars from '../graphs/thickbars';
+	import ChartWidget from '../widgets/ChartWidget.svelte';
 	import { Card, Chart } from 'flowbite-svelte';
-	import type { PageData } from '../../routes/(sidebar)/$types';
+	// import type { PageData } from '../../routes/(sidebar)/$types';
+	import type { PageData } from '../../(sidebar)/$types';
 	import Stats from './Stats.svelte';
 
-	import users from '$lib/graphs/users';
-	import DarkChart from '$lib/widgets/DarkChart.svelte';
+	import users from '../graphs/users';
+	import DarkChart from '../widgets/DarkChart.svelte';
 	import { onMount } from 'svelte';
-	import chart_options_func from '../../routes/(sidebar)/dashboard/chart_options';
+	// import chart_options_func from '../../routes/(sidebar)/dashboard/chart_options';
+  import chart_options_func from '../../(sidebar)/dashboard/chart_options';
 	import ActivityList from './ActivityList.svelte';
 	import Change from './Change.svelte';
 	import Chat from './Chat.svelte';

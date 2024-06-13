@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { imagesPath } from '$lib/variables';
+	import { imagesPath } from '../../utils/variables';
 	import { Button, P } from 'flowbite-svelte';
 	export let title = 'Page not found';
 	export let description =

@@ -9,7 +9,7 @@
 		HeartSolid,
 		UsersGroupSolid
 	} from 'flowbite-svelte-icons';
-	import Users from '../../routes/data/users.json';
+	import Users from '../../data/users.json';
 	import Notification from './Notification.svelte';
 </script>
 

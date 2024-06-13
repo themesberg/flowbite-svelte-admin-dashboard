@@ -1,5 +1,5 @@
 <script>
-	import modeobserver from '$lib/modeobserver';
+	import modeobserver from './utils/modeobserver';
 	import { onMount } from 'svelte';
 	import Runatics from './utils/Runatics.svelte';
   export let data;

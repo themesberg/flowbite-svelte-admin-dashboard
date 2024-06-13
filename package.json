@@ -2,7 +2,6 @@
 	"name": "flowbite-svelte-admin-dashboard",
 	"version": "0.1.2",
 	"description": "Flowbite Admin Dashboard components for Svelte",
-	"main": "dist/index.js",
 	"homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
 	"private": false,
 	"license": "MIT",
@@ -85,114 +84,6 @@
 		".": {
 			"types": "./dist/index.d.ts",
 			"svelte": "./dist/index.js"
-		},
-		"./ForgotPassword.svelte": {
-			"types": "./dist/authentication/ForgotPassword.svelte.d.ts",
-			"svelte": "./dist/authentication/ForgotPassword.svelte"
-		},
-		"./ProfileLock.svelte": {
-			"types": "./dist/authentication/ProfileLock.svelte.d.ts",
-			"svelte": "./dist/authentication/ProfileLock.svelte"
-		},
-		"./ResetPassword.svelte": {
-			"types": "./dist/authentication/ResetPassword.svelte.d.ts",
-			"svelte": "./dist/authentication/ResetPassword.svelte"
-		},
-		"./SignIn.svelte": {
-			"types": "./dist/authentication/SignIn.svelte.d.ts",
-			"svelte": "./dist/authentication/SignIn.svelte"
-		},
-		"./SignUp.svelte": {
-			"types": "./dist/authentication/SignUp.svelte.d.ts",
-			"svelte": "./dist/authentication/SignUp.svelte"
-		},
-		"./Products.svelte": {
-			"types": "./dist/crud/Products.svelte.d.ts",
-			"svelte": "./dist/crud/Products.svelte"
-		},
-		"./Users.svelte": {
-			"types": "./dist/crud/Users.svelte.d.ts",
-			"svelte": "./dist/crud/Users.svelte"
-		},
-		"./Sidebar.svelte": {
-			"types": "./dist/playground/Sidebar.svelte.d.ts",
-			"svelte": "./dist/playground/Sidebar.svelte"
-		},
-		"./stacked.svelte": {
-			"types": "./dist/layouts/stacked.svelte.d.ts",
-			"svelte": "./dist/layouts/stacked.svelte"
-		},
-		"./Maintenance.svelte": {
-			"types": "./dist/pages/Maintenance.svelte.d.ts",
-			"svelte": "./dist/pages/Maintenance.svelte"
-		},
-		"./NotFound.svelte": {
-			"types": "./dist/pages/NotFound.svelte.d.ts",
-			"svelte": "./dist/pages/NotFound.svelte"
-		},
-		"./Pricing.svelte": {
-			"types": "./dist/pages/Pricing.svelte.d.ts",
-			"svelte": "./dist/pages/Pricing.svelte"
-		},
-		"./ServerError.svelte": {
-			"types": "./dist/pages/ServerError.svelte.d.ts",
-			"svelte": "./dist/pages/ServerError.svelte"
-		},
-		"./Stacked.svelte": {
-			"types": "./dist/playground/Stacked.svelte.d.ts",
-			"svelte": "./dist/playground/Stacked.svelte"
-		},
-		"./Accounts.svelte": {
-			"types": "./dist/settings/Accounts.svelte.d.ts",
-			"svelte": "./dist/settings/Accounts.svelte"
-		},
-		"./Alerts.svelte": {
-			"types": "./dist/settings/Alerts.svelte.d.ts",
-			"svelte": "./dist/settings/Alerts.svelte"
-		},
-		"./CardList.svelte": {
-			"types": "./dist/settings/CardList.svelte.d.ts",
-			"svelte": "./dist/settings/CardList.svelte"
-		},
-		"./Emails.svelte": {
-			"types": "./dist/settings/Emails.svelte.d.ts",
-			"svelte": "./dist/settings/Emails.svelte"
-		},
-		"./LanguageTime.svelte": {
-			"types": "./dist/settings/LanguageTime.svelte.d.ts",
-			"svelte": "./dist/settings/LanguageTime.svelte"
-		},
-		"./PasswordInfo.svelte": {
-			"types": "./dist/settings/PasswordInfo.svelte.d.ts",
-			"svelte": "./dist/settings/PasswordInfo.svelte"
-		},
-		"./ProfilePicture.svelte": {
-			"types": "./dist/settings/ProfilePicture.svelte.d.ts",
-			"svelte": "./dist/settings/ProfilePicture.svelte"
-		},
-		"./Sessions.svelte": {
-			"types": "./dist/settings/Sessions.svelte.d.ts",
-			"svelte": "./dist/settings/Sessions.svelte"
-		},
-		"./SocialAccounts.svelte": {
-			"types": "./dist/settings/SocialAccounts.svelte.d.ts",
-			"svelte": "./dist/settings/SocialAccounts.svelte"
-		},
-		"./AppsMenu.svelte": {
-			"types": "./dist/widgets/AppsMenu.svelte.d.ts",
-			"svelte": "./dist/widgets/AppsMenu.svelte"
-		},
-		"./ChartWidget.svelte": {
-			"types": "./dist/widgets/ChartWidget.svelte.d.ts",
-			"svelte": "./dist/widgets/ChartWidget.svelte"
-		},
-		"./LastRange.svelte": {
-			"types": "./dist/widgets/LastRange.svelte.d.ts",
-			"svelte": "./dist/widgets/LastRange.svelte"
-		},
-		"./UserMenu.svelte": {
-			"types": "./dist/widgets/UserMenu.svelte.d.ts",
-			"svelte": "./dist/widgets/UserMenu.svelte"
 		}
 	}
 }

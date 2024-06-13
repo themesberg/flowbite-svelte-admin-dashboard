@@ -1,9 +1,9 @@
 <script lang="ts">
 	import '../app.pcss';
 	import { page } from '$app/stores';
-	import NotFound from '$lib/pages/NotFound.svelte';
-	import Maintenance from '$lib/pages/Maintenance.svelte';
-	import ServerError from '$lib/pages/ServerError.svelte';
+	import NotFound from './utils/pages/NotFound.svelte';
+	import Maintenance from './utils/pages/Maintenance.svelte';
+	import ServerError from './utils/pages/ServerError.svelte';
 
 	const pages = {
 		400: Maintenance,

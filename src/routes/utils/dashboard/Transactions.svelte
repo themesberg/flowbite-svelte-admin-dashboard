@@ -1,5 +1,5 @@
 <script lang="ts">
-	import LastRange from '$lib/widgets/LastRange.svelte';
+	import LastRange from '../widgets/LastRange.svelte';
 	import {
 		Button,
 		Card,
