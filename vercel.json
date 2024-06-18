@@ -1,0 +1,94 @@
+{
+	"redirects": [
+			{
+					"source": "/",
+					"destination": "https://flowbite-svelte.com/admin-dashboard",
+					"permanent": true
+			},
+			{
+					"source": "/dashboard",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/dashboard",
+					"permanent": true
+			},
+			{
+					"source": "/layouts/stacked",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/layouts/stacked",
+					"permanent": true
+			},
+			{
+					"source": "/layouts/sidebar",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/layouts/sidebar",
+					"permanent": true
+			},
+			{
+					"source": "/crud/products",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/crud/products",
+					"permanent": true
+			},
+			{
+					"source": "/crud/users",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/crud/users",
+					"permanent": true
+			},
+			{
+					"source": "/settings",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/settings",
+					"permanent": true
+			},
+			{
+					"source": "/pages/pricing",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/pages/pricing",
+					"permanent": true
+			},
+			{
+					"source": "/errors/400",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/errors/400",
+					"permanent": true
+			},
+			{
+					"source": "/errors/404",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/errors/404",
+					"permanent": true
+			},
+			{
+					"source": "/errors/500",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/errors/500",
+					"permanent": true
+			},
+			{
+					"source": "/authentication/sign-in",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/authentication/sign-in",
+					"permanent": true
+			},
+			{
+					"source": "/authentication/sign-up",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/authentication/sign-up",
+					"permanent": true
+			},
+			{
+					"source": "/authentication/forgot-password",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/authentication/forgot-password",
+					"permanent": true
+			},
+			{
+					"source": "/authentication/reset-password",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/authentication/reset-password",
+					"permanent": true
+			},
+			{
+					"source": "/authentication/profile-lock",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/authentication/profile-lock",
+					"permanent": true
+			},
+			{
+					"source": "/playground/stacked",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/playground/stacked",
+					"permanent": true
+			},
+			{
+					"source": "/playground/sidebar",
+					"destination": "https://flowbite-svelte.com/admin-dashboard/playground/sidebar",
+					"permanent": true
+			}
+	]
+}
