@@ -1,5 +1,5 @@
 
-export default function (dark) {
+export default function (dark: boolean) {
     let mainChartColors;
     
 	if (dark) {

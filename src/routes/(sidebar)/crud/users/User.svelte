@@ -7,7 +7,7 @@
 	function init(form: HTMLFormElement) {
 		if (data?.name) [data.first_name, data.last_name] = data.name.split(' ');
 		for (const key in data) {
-			console.log(key, data[key]);
+			// console.log(key, data[key]);
 			const el = form.elements.namedItem(key);
 			if (el) el.value = data[key];
 		}
