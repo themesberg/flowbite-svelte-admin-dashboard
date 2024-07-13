@@ -8,7 +8,7 @@
 	<ExclamationCircleOutline class="mx-auto mb-4 mt-8 h-10 w-10 text-red-600" />
 
 	<h3 class="mb-6 text-center text-lg text-gray-500 dark:text-gray-400">
-		Are you sure you want to delete this product?
+		Are you sure you want to delete this user?
 	</h3>
 
 	<div class="flex items-center justify-center">
