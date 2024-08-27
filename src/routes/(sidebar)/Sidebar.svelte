@@ -120,7 +120,7 @@
 			icon: LifeSaverSolid
 		}
 	];
-	let dropdowns = Object.fromEntries(Object.keys(posts).map((x) => [x, false]));
+	let dropdowns = Object.fromEntries(posts.map((post) => [post.name, false]));
 </script>
 
 <Sidebar
