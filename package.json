@@ -56,9 +56,10 @@
 		"svelte": "^4.0.0"
 	},
 	"dependencies": {
+		"clsx": "^2.1.1",
 		"flowbite-svelte": "^0.44.24",
 		"flowbite-svelte-icons": "^1.6.1",
-		"tailwind-merge": "^2.3.0"
+		"tailwind-merge": "^2.5.2"
 	},
 	"keywords": [
 		"svelte",

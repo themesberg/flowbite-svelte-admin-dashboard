@@ -52,49 +52,56 @@
 		{ name: 'Dashboard', icon: ChartPieOutline, href: '/dashboard' },
 		{
 			name: 'Layouts',
-			icon: TableColumnSolid,
-			children: {
-				Stacked: '/layouts/stacked',
-				Sidebar: '/layouts/sidebar'
-			}
+			icon: ChartPieOutline,
+			children: [
+				{ name: 'Stacked', icon: ChartPieOutline, href: '/layouts/stacked' },
+				{
+					name: 'Sidebar',
+					icon: ChartPieOutline,
+					children: [
+						{ name: 'Left Sidebar', icon: ChartPieOutline, href: '/layouts/sidebar/left' },
+						{ name: 'Right Sidebar', icon: ChartPieOutline, href: '/layouts/sidebar/right' }
+					]
+				}
+			]
 		},
 		{
 			name: 'CRUD',
-			icon: RectangleListSolid,
-			children: {
-				Products: '/crud/products',
-				Users: '/crud/users'
-			}
+			icon: ChartPieOutline,
+			children: [
+				{ name: 'Products', icon: ChartPieOutline, href: '/crud/products' },
+				{ name: 'Users', icon: ChartPieOutline, href: '/crud/users' }
+			]
 		},
-		{ name: 'Settings', icon: CogOutline, href: '/settings' },
+		{ name: 'Settings', icon: ChartPieOutline, href: '/settings' },
 		{
 			name: 'Pages',
-			icon: FileChartBarSolid,
-			children: {
-				Pricing: '/pages/pricing',
-				Maintenance: '/errors/400',
-				'404 not found': '/errors/404',
-				'500 server error': '/errors/500'
-			}
+			icon: ChartPieOutline,
+			children: [
+				{ name: 'Pricing', icon: ChartPieOutline, href: '/pages/pricing' },
+				{ name: 'Maintenance', icon: ChartPieOutline, href: '/errors/400' },
+				{ name: '404 not found', icon: ChartPieOutline, href: '/errors/404' },
+				{ name: '500 server error', icon: ChartPieOutline, href: '/errors/500' }
+			]
 		},
 		{
 			name: 'Authenication',
-			icon: LockSolid,
-			children: {
-				'Sign in': '/authentication/sign-in',
-				'Sign up': '/authentication/sign-up',
-				'Forgot password': '/authentication/forgot-password',
-				'Reset password': '/authentication/reset-password',
-				'Profile lock': '/authentication/profile-lock'
-			}
+			icon: ChartPieOutline,
+			children: [
+				{ name: 'Sign in', icon: ChartPieOutline, href: '/authentication/sign-in' },
+				{ name: 'Sign up', icon: ChartPieOutline, href: '/authentication/sign-up' },
+				{ name: 'Forgot password', icon: ChartPieOutline, href: '/authentication/forgot-password' },
+				{ name: 'Reset password', icon: ChartPieOutline, href: '/authentication/reset-password' },
+				{ name: 'Profile lock', icon: ChartPieOutline, href: '/authentication/profile-lock' }
+			]
 		},
 		{
 			name: 'Playground',
-			icon: WandMagicSparklesOutline,
-			children: {
-				Stacked: '/playground/stacked',
-				Sidebar: '/playground/sidebar'
-			}
+			icon: ChartPieOutline,
+			children: [
+				{ name: 'Stacked', icon: ChartPieOutline, href: '/playground/stacked' },
+				{ name: 'Sidebar', icon: ChartPieOutline, href: '/playground/sidebar' }
+			]
 		}
 	];
 
@@ -120,7 +127,12 @@
 			icon: LifeSaverSolid
 		}
 	];
-	let dropdowns = Object.fromEntries(Object.keys(posts).map((x) => [x, false]));
+	let dropdowns = Object.fromEntries(
+		posts
+			.flatMap((post) => [post.name, ...(post.children?.map((child) => child.name) || [])])
+			.map((name) => [name, false])
+	);
+	dropdowns['Layouts'] = true;
 </script>
 
 <Sidebar
@@ -142,14 +154,40 @@
 							<AngleUpOutline slot="arrowup" strokeWidth="3.3" size="sm" />
 							<svelte:component this={icon} slot="icon" class={iconClass} />
 
-							{#each Object.entries(children) as [title, href]}
-								<SidebarItem
-									label={title}
-									{href}
-									spanClass="ml-9"
-									class={itemClass}
-									active={activeMainSidebar === href}
-								/>
+							{#each children as { name: childName, icon: childIcon, children: grandChildren, href: childHref } (childName)}
+								{#if grandChildren}
+									<SidebarDropdownWrapper
+										bind:isOpen={dropdowns[childName]}
+										label={childName}
+										class="pl-6"
+									>
+										<AngleDownOutline slot="arrowdown" strokeWidth="3.3" size="sm" />
+										<AngleUpOutline slot="arrowup" strokeWidth="3.3" size="sm" />
+										<svelte:component this={childIcon} slot="icon" class={iconClass} />
+
+										{#each grandChildren as { name: grandChildName, icon: grandChildIcon, href: grandChildHref } (grandChildName)}
+											<SidebarItem
+												label={grandChildName}
+												href={grandChildHref}
+												spanClass="ml-3"
+												class="{itemClass} pl-12"
+												active={activeMainSidebar === grandChildHref}
+											>
+												<svelte:component this={grandChildIcon} slot="icon" class={iconClass} />
+											</SidebarItem>
+										{/each}
+									</SidebarDropdownWrapper>
+								{:else}
+									<SidebarItem
+										label={childName}
+										href={childHref}
+										spanClass="ml-3"
+										class="{itemClass} pl-6"
+										active={activeMainSidebar === childHref}
+									>
+										<svelte:component this={childIcon} slot="icon" class={iconClass} />
+									</SidebarItem>
+								{/if}
 							{/each}
 						</SidebarDropdownWrapper>
 					{:else}
