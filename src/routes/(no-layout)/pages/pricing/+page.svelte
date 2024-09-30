@@ -34,7 +34,7 @@
 	</NavBrand>
 	<NavHamburger />
 	<NavUl class="me-auto ms-8">
-		<NavLi href="/" active={true}>Home</NavLi>
+		<NavLi href="/">Home</NavLi>
 		<NavLi href="/">Team</NavLi>
 		<NavLi href="/pricing">Pricing</NavLi>
 		<NavLi href="/contact">Contact</NavLi>
@@ -57,7 +57,7 @@
 		</p>
 		<div class="flex items-center">
 			<span class="text-base font-medium text-gray-900 dark:text-white"> Monthly</span>
-			<Toggle class="ms-3" classDiv="peer-focus:ring-0" bind:checked={yearly} />
+			<Toggle class="ms-3 peer-focus:ring-0" bind:checked={yearly} />
 			<span class="text-base font-medium text-gray-900 dark:text-gray-400"> Yearly </span>
 		</div>
 		<section

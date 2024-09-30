@@ -258,7 +258,7 @@
 
 			<label for="chat" class="sr-only">Your message</label>
 			<div class="flex items-center gap-5">
-				<Textarea rows="1" placeholder="Reply in thread..." />
+				<Textarea rows={1} placeholder="Reply in thread..." />
 				<ToolbarButton
 					type="submit"
 					color="default"

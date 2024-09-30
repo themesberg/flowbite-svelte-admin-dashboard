@@ -148,7 +148,6 @@
 									{href}
 									spanClass="ml-9"
 									class={itemClass}
-									active={activeMainSidebar === href}
 								/>
 							{/each}
 						</SidebarDropdownWrapper>
@@ -158,7 +157,6 @@
 							{href}
 							spanClass="ml-3"
 							class={itemClass}
-							active={activeMainSidebar === href}
 						>
 							<svelte:component this={icon} slot="icon" class={iconClass} />
 						</SidebarItem>
@@ -172,7 +170,6 @@
 						{href}
 						spanClass="ml-3"
 						class={itemClass}
-						active={activeMainSidebar === href}
 						target="_blank"
 					>
 						<svelte:component this={icon} slot="icon" class={iconClass} />

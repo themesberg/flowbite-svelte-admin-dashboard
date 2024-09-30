@@ -41,9 +41,9 @@ export default function(dark) {
 					backgroundBarRadius: 3
 				},
 			},
-			dataLabels: {
-				hideOverflowingLabels: false
-			}
+			// dataLabels: {
+			// 	hideOverflowingLabels: false
+			// }
 		},
 		xaxis: {
 			floating: false,

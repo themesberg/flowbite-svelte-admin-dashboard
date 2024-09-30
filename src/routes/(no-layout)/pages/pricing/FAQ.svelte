@@ -4,7 +4,6 @@
 
 <Heading
 	tag="h1"
-	size="xl"
 	class="mb-3 text-3xl font-bold text-gray-900 dark:text-white sm:text-4xl sm:leading-none sm:tracking-tight"
 >
 	Frequently asked questions
@@ -60,7 +59,7 @@
 		</p>
 		<p class="text-gray-600 dark:text-gray-400">
 			Find out more information by <link
-				to="/license"
+				href="/license"
 				class="font-medium text-primary-600 underline hover:no-underline dark:text-primary-500"
 			/>reading the license.
 		</p>
@@ -149,7 +148,7 @@
 		</p>
 		<p class="text-gray-600 dark:text-gray-400">
 			Find out more information by <link
-				to="/license"
+				href="/license"
 				class="font-medium text-primary-600 underline hover:no-underline dark:text-primary-500"
 			/>reading the license.
 		</p>
@@ -168,7 +167,7 @@
 		</p>
 		<p class="text-gray-600 dark:text-gray-400">
 			Find out more information by <link
-				to="/license"
+				href="/license"
 				class="font-medium text-primary-600 underline hover:no-underline dark:text-primary-500"
 			/>reading the license.
 		</p>
@@ -187,7 +186,7 @@
 		</p>
 		<p class="text-gray-600 dark:text-gray-400">
 			Find out more information by <link
-				to="/license"
+				href="/license"
 				class="font-medium text-primary-600 underline hover:no-underline dark:text-primary-500"
 			/>reading the license.
 		</p>

@@ -39,6 +39,6 @@
 				{item.subtitle}
 			</div>
 		</div>
-		<Toggle checked={item.active} classDiv="peer-focus:ring-0 me-0" />
+		<Toggle checked={item.active} class="peer-focus:ring-0 me-0" />
 	</div>
 </CardList>

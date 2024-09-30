@@ -39,7 +39,7 @@
 		<Label class="space-y-2">
 			<span>Description</span>
 			<Textarea
-				rows="4"
+				rows={4}
 				placeholder="Enter event description here"
 				class="border-gray-300 font-normal outline-none"
 			></Textarea>

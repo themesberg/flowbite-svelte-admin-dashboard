@@ -29,7 +29,7 @@
 	];
 </script>
 
-<Table striped bordered={false}>
+<Table striped>
 	<TableHead class="normal-case">
 		<TableHeadCell></TableHeadCell>
 		{#each columns as column}

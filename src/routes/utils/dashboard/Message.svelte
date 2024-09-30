@@ -7,7 +7,7 @@
 </script>
 
 <form>
-	<Textarea rows="8" placeholder="Write your message" required>
+	<Textarea rows={8} placeholder="Write your message" required>
 		<div slot="footer" class="flex items-center justify-between">
 			<Button type="submit" size="xs">Post comment</Button>
 			<Toolbar embedded class="text-gray-500 dark:text-gray-400" slot="foot">

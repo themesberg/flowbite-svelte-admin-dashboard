@@ -9,7 +9,7 @@
 </script>
 
 <button class="ms-3 rounded-full ring-gray-400 focus:ring-4 dark:ring-gray-600">
-	<Avatar size="sm" src={imagesPath(avatar, 'users')} tabindex="0" />
+	<Avatar size="sm" src={imagesPath(avatar, 'users')} tabindex={0} />
 </button>
 <Dropdown placement="bottom-end">
 	<DropdownHeader>

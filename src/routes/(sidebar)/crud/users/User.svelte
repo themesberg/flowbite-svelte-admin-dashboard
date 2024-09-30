@@ -9,7 +9,13 @@
 		for (const key in data) {
 			// console.log(key, data[key]);
 			const el = form.elements.namedItem(key);
-			if (el) el.value = data[key];
+			if (el) {
+				if (el instanceof HTMLInputElement) {
+					el.value = data[key];
+				} else if (el instanceof HTMLTextAreaElement) {
+					el.value = data[key];
+				}
+			}
 		}
 	}
 </script>
@@ -76,7 +82,7 @@
 					<span>Biography</span>
 					<Textarea
 						id="biography"
-						rows="4"
+						rows={4}
 						class="bg-gray-50 outline-none dark:bg-gray-700"
 						placeholder="👨‍💻Full-stack web developer. Open-source contributor."
 					>
