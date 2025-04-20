@@ -22,7 +22,7 @@
 		WandMagicSparklesOutline,
 		ChartPieOutline,
 		RectangleListSolid,
-		TableColumnSolid
+		TableColumnSolid, GridSolid
 	} from 'flowbite-svelte-icons';
 
 	interface Props {
@@ -172,6 +172,11 @@
 						</SidebarItem>
 					{/if}
 				{/each}
+				<SidebarItem label="About" spanClass="flex-1 ms-3 whitespace-nowrap" href="/about">
+					{#snippet icon()}
+						<GridSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" />
+					{/snippet}
+				</SidebarItem>
 			</SidebarGroup>
 			<SidebarGroup class={groupClass}>
 				{#each links as { label, href, Icon } (label)}
@@ -188,7 +193,7 @@
 					</SidebarItem>
 				{/each}
 			</SidebarGroup>
-
+			
 	</SidebarWrapper>
 </Sidebar>
 
