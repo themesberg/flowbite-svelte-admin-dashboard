@@ -1,8 +1,12 @@
-<script>
+<script lang="ts">
 	import Footer from '../(no-sidebar)/Footer.svelte';
 	import Navbar from '../(sidebar)/Navbar.svelte';
-
-	import '../../app.pcss';
+  import type { Snippet } from 'svelte';
+	import '../../app.css';
+	interface Props{
+    children: Snippet;
+	}
+	let { children }:Props = $props();
 </script>
 
 <header
@@ -11,6 +15,6 @@
 	<Navbar />
 </header>
 <div class="mx-auto max-w-screen-2xl pt-[70px]">
-	<slot />
+	{@render children()}
 	<Footer />
 </div>

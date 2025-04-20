@@ -1,8 +1,10 @@
 <script lang="ts">
-	export let number: number;
-
+	interface Props{
+		 number: number;
+	}
+	let { number }:Props = $props()
 	// random assignment to issuer type
-	$: type = number % 2 ? 'visa' : 'master';
+	let type = $derived(number % 2 ? 'visa' : 'master');
 </script>
 
 {#if type === 'master'}

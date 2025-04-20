@@ -1,7 +1,10 @@
 <script lang="ts">
-	import { Button, CloseButton, Heading, Modal } from 'flowbite-svelte';
+	import { Button, Modal } from 'flowbite-svelte';
 	import { ExclamationCircleOutline } from 'flowbite-svelte-icons';
-	export let open: boolean = false; // modal control
+	interface Props{
+		open?: boolean;
+	}
+	let { open = $bindable(true) }:Props = $props();
 </script>
 
 <Modal bind:open size="sm">
@@ -13,6 +16,6 @@
 
 	<div class="flex items-center justify-center">
 		<Button href="/" color="red" class="mr-2">Yes, I'm sure</Button>
-		<Button color="alternative" on:click={() => (open = false)}>No, cancel</Button>
+		<Button color="alternative" onclick={() => (open = false)}>No, cancel</Button>
 	</div>
 </Modal>

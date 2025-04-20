@@ -7,7 +7,7 @@
 	import Change from './Change.svelte';
 </script>
 
-<Card size="xl" class="h-fit">
+<Card size="xl" class="h-fit max-w-none p-4 sm:p-6">
 	<div
 		class="items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-700 sm:flex"
 	>
@@ -21,10 +21,15 @@
 		<div class="w-full max-w-lg">
 			<div class="grid grid-cols-2 items-center gap-4">
 				<Input placeholder="From" class="border">
-					<CalendarMonthOutline slot="left" size="md" />
+					{#snippet left()}
+						<CalendarMonthOutline size="md" />
+					{/snippet}
 				</Input>
+
 				<Input placeholder="To" class="border">
-					<CalendarMonthOutline slot="left" size="md" />
+					{#snippet left()}
+					<CalendarMonthOutline size="md" />
+					{/snippet}
 				</Input>
 			</div>
 		</div>

@@ -16,12 +16,12 @@
 			</Heading>
 		</div>
 		<div class="col-span-full xl:col-auto">
-			<EmptyCard size="xl" class="mb-4 h-80 w-full space-y-6 2xl:col-span-2"></EmptyCard>
-			<EmptyCard size="xl" class="mb-4 h-80 w-full space-y-6 2xl:col-span-2"></EmptyCard>
+			<EmptyCard size="xl" class="p-4 mb-4 h-80 w-full space-y-6 2xl:col-span-2"></EmptyCard>
+			<EmptyCard size="xl" class="p-4 mb-4 h-80 w-full space-y-6 2xl:col-span-2"></EmptyCard>
 		</div>
 		<div class="col-span-2">
-			<EmptyCard size="none" class="mb-4 h-80 w-full space-y-6"></EmptyCard>
-			<EmptyCard size="none" class="mb-4 h-80 w-full space-y-6"></EmptyCard>
+			<EmptyCard size={undefined} class="p-4 mb-4 h-80 space-y-6 max-w-none"></EmptyCard>
+			<EmptyCard size={undefined} class="p-4 mb-4 h-80 w-full space-y-6 max-w-none"></EmptyCard>
 		</div>
 	</div>
 	<div class="grid gap-4 md:grid-cols-2 xl:grid-cols-4">

@@ -1,22 +1,38 @@
 <script lang="ts">
 	import { imagesPath } from '../../utils/variables';
 	import { Button, P } from 'flowbite-svelte';
-	export let title = 'Something has gone seriously wrong';
-	export let description =
-		"It's always time for a coffee break. We should be back by the time you finish your coffee.";
-	export let image = {
+	interface ImgType{
+		src: string;
+		alt: string;
+	}
+	interface Props{
+		title?: string;
+		description?: string;
+		image?: ImgType;
+		btnTitle?: string;
+		btnHref?: string;
+		mainClass?: string;
+		mainDivClass?: string;
+		h1Class?: string;
+		imgDiv?: string;
+		div2Class?: string;
+	}
+	let { title = 'Something has gone seriously wrong', 
+	description =
+		'It\'s always time for a coffee break. We should be back by the time you finish your coffee.', 
+	image = {
 		src: imagesPath('illustrations/500.svg'),
 		alt: 'astronaut'
-	};
-	export let btnHref = '/';
-	export let btnTitle = 'Go back home';
-	export let mainClass = 'bg-gray-50 dark:bg-gray-900';
-	export let mainDivClass =
-		'flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900';
-	export let h1Class =
-		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white';
-	export let imgDiv = 'block md:max-w-lg';
-	export let div2Class = 'text-center xl:max-w-4xl';
+	}, 
+	btnTitle = 'Go back home', 
+	btnHref = '/', 
+	mainClass = 'bg-gray-50 dark:bg-gray-900', 
+	mainDivClass =
+		'flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900', 
+	h1Class =
+		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', 
+	imgDiv = 'block md:max-w-lg',
+	div2Class = 'text-center xl:max-w-4xl' }: Props = $props();
 </script>
 
 <main class={mainClass}>

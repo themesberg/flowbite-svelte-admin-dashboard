@@ -4,11 +4,11 @@
 	import SmallPanel from './SmallPanel.svelte';
 	import { DesktopPcOutline, MobilePhoneOutline, TabletOutline } from 'flowbite-svelte-icons';
 	import More from '../widgets/More.svelte';
-
-	export let dark: boolean = false;
+	
+	let { dark } = $props<{dark: boolean}>()
 </script>
 
-<Card size="xl" class="h-fit">
+<Card size="xl" class="h-fit max-w-none p-4 sm:p-6">
 	<div
 		class="mb-4 items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-700 sm:flex"
 	>
@@ -23,13 +23,19 @@
 	<Chart options={options(dark)}></Chart>
 	<div class="mb-4 flex items-center justify-between pt-4 sm:pt-6 lg:justify-evenly">
 		<SmallPanel title="Desktop" subtitle="234k" change={4}>
-			<DesktopPcOutline slot="icon" size="xl" class="mb-1" />
+			{#snippet icon()}
+			<DesktopPcOutline size="xl" class="mb-1" />
+			{/snippet}
 		</SmallPanel>
 		<SmallPanel title="Phone" subtitle="94k" change={-1}>
-			<MobilePhoneOutline slot="icon" size="xl" class="mb-1" />
+			{#snippet icon()}
+			<MobilePhoneOutline size="xl" class="mb-1" />
+			{/snippet}
 		</SmallPanel>
 		<SmallPanel title="Tablet" subtitle="16k" change={-0.6}>
-			<TabletOutline slot="icon" size="xl" class="mb-1" />
+			{#snippet icon()}
+			<TabletOutline size="xl" class="mb-1" />
+			{/snippet}
 		</SmallPanel>
 	</div>
 </Card>

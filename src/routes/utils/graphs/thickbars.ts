@@ -1,5 +1,5 @@
-/** @type {import('apexcharts').ApexOptions} */
-export default {
+import type { ApexOptions } from 'apexcharts';
+const chartOptions: ApexOptions = {
 	colors: ['#1A56DB', '#FDBA8C'],
 	series: [
 		{
@@ -42,8 +42,7 @@ export default {
 	states: {
 		hover: {
 			filter: {
-				type: 'darken',
-				value: 1
+				type: 'darken'
 			}
 		}
 	},
@@ -80,3 +79,5 @@ export default {
 		opacity: 1
 	}
 };
+
+export default chartOptions;

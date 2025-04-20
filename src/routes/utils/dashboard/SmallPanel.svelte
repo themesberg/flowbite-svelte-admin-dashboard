@@ -1,13 +1,19 @@
 <script lang="ts">
 	import Change from './Change.svelte';
-
-	export let title: string;
-	export let subtitle: string = '';
-	export let change: number = 0;
+	import type { Snippet } from 'svelte';
+  interface Props{
+    icon?: Snippet;
+		title?: string;
+		subtitle?: string;
+		change?: number;
+	}
+	let { icon, title, subtitle, change = 0 }:Props = $props();
 </script>
 
 <div>
-	<slot name="icon" />
+	{#if icon}
+	{@render icon()}
+	{/if}
 	<h3 class="text-gray-500 dark:text-gray-400">{title}</h3>
 	<h4 class="text-xl font-bold dark:text-white">{subtitle}</h4>
 	{#if change}

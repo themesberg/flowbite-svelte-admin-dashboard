@@ -33,7 +33,7 @@
 
 <MetaTag {path} {description} title={metaTitle} {subtitle} />
 
-<ResetPassword {title} {site} {acceptTerms} {btnTitle} {termsLink} on:submit={onSubmit}>
+<ResetPassword {title} {site} {acceptTerms} {btnTitle} {termsLink} onsubmit={onSubmit}>
 	<div>
 		<Label for="email" class={labelClass}>Your email</Label>
 		<Input

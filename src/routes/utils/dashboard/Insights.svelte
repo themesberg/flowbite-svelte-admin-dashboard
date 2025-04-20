@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button, Card, Carousel } from 'flowbite-svelte';
+	import { Button, Card, Carousel, Controls } from 'flowbite-svelte';
 	import {
 		ArrowLeftOutline,
 		ArrowRightOutline,
@@ -26,9 +26,9 @@
 	};
 </script>
 
-<Card size="xl">
-	<Carousel images={items} let:Controls class="flex h-full">
-		<div slot="slide" let:index>
+<Card size="xl" class="p-4 sm:p-6">
+	<Carousel images={items} class="flex h-full">
+		{#snippet slide({index})}
 			{#if index == 0}
 				<div in:fly={transitionSlideIn} out:fly={transitionSlideOut} class="h-full">
 					<div class="mb-4 flex items-center gap-2 text-lg font-medium text-primary-600">
@@ -139,12 +139,7 @@
 					</Button>
 				</div>
 			{/if}
-		</div>
-		<Controls let:changeSlide>
-			<div class="-mt-2 flex items-center justify-center gap-5">
-				<button on:click={() => changeSlide(false)}><ArrowLeftOutline size="lg" /></button>
-				<button on:click={() => changeSlide(true)}><ArrowRightOutline size="lg" /></button>
-			</div>
-		</Controls>
+		{/snippet}
+		<Controls />
 	</Carousel>
 </Card>

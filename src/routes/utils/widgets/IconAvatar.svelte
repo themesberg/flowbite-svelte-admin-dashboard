@@ -1,13 +1,19 @@
 <script lang="ts">
 	import { imagesPath } from '../../utils/variables';
-	import { Avatar, Indicator } from 'flowbite-svelte';
-	export let src: string = '';
-	export let color: Indicator['color'] = 'dark';
+	import { Avatar, Indicator, type IndicatorProps } from 'flowbite-svelte';
+	import type { Snippet } from 'svelte';
+	
+	interface Props{
+		children: Snippet;
+		src: string;
+		color?: IndicatorProps['color'];
+	}
+	let { children, src, color = 'primary' }:Props = $props();
 </script>
 
-<Avatar size="none" class="h-11 w-11">
+<Avatar class="h-11 w-11">
 	<img alt="" src={imagesPath(src, 'users')} class="rounded-full" />
 	<Indicator placement="bottom-right" class="h-5 w-5 translate-y-0" {color}>
-		<slot />
+		{@render children()}
 	</Indicator>
 </Avatar>

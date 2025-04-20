@@ -69,7 +69,6 @@ export default function(dark) {
 			hover: {
 				filter: {
 					type: 'darken',
-					value: 0.8
 				}
 			}
 		},

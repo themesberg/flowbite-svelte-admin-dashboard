@@ -1,55 +1,94 @@
 <script lang="ts">
 	import { Button, Card, Checkbox, P } from 'flowbite-svelte';
+	import type { HTMLFormAttributes } from "svelte/elements";
 	import { LockOpenSolid } from 'flowbite-svelte-icons';
-	export let site = {
+	import type { Snippet } from 'svelte';
+	import { twMerge } from 'tailwind-merge';
+	interface SiteType{
+		name: string;
+		img: string;
+		link: string;
+		imgAlt: string;
+	}
+	interface UserType{
+		name: string;
+		img: string;
+		imgAlt: string;
+	}
+	interface Props extends HTMLFormAttributes{
+		children: Snippet;
+		site?: SiteType;
+		user?: UserType;
+		btnTitle?: string;
+		pageDescription?: string;
+		mainClass?: string;
+		mainDivClass?: string;
+		siteLinkClass?: string;
+		siteImgClass?: string;
+		cardH1Class?: string;
+		cardDiv3Class?: string;
+		userImgClass?: string;
+		acceptTerms?: boolean;
+		termsLink?: string;
+		termsLinkClass?: string;
+	}
+	let { children, site, user, btnTitle = 'Unlock', pageDescription = 'Better to be safe than sorry.', mainClass = 'bg-gray-50 dark:bg-gray-900 w-full', mainDivClass, siteLinkClass, siteImgClass, cardH1Class, cardDiv3Class, userImgClass, acceptTerms = true, termsLink = '/', termsLinkClass, ...restProps }: Props = $props();
+	const siteDefault = {
 		name: 'Flowbite',
 		img: '/images/flowbite-svelte-icon-logo.svg',
 		link: '/',
 		imgAlt: 'FlowBite Logo'
 	};
-	export let user = {
+	const actualSite = $derived(site ?? siteDefault);
+	const userDefault = {
 		name: 'Bonnie Green',
 		img: '/images/users/bonnie-green.png',
 		imgAlt: 'Bonnie Green'
 	};
-	export let btnTitle = 'Unlock';
-	export let pageDescription = 'Better to be safe than sorry.';
-	export let mainClass = 'bg-gray-50 dark:bg-gray-900 w-full';
-	export let mainDivClass =
-		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';
-	export let siteLinkClass =
-		'flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white';
-	export let siteImgClass = 'mr-4 h-11';
-	export let cardH1Class = 'mb-3 text-2xl font-bold text-gray-900 dark:text-white';
-	export let cardDiv3Class = 'flex space-x-4';
-	export let userImgClass = 'w-8 h-8 rounded-full';
+	const acturalUser = $derived(user ?? userDefault);
 
-	export let acceptTerms: boolean = true;
-	export let termsLink = '/';
-	export let termsLinkClass = 'text-primary-700 hover:underline dark:text-primary-500';
+	const mainDivCls = twMerge(
+		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
+	const siteLinkCls =
+		twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass);
+	const siteImgCls = twMerge('mr-4 h-11', siteImgClass);
+	const cardH1Cls = twMerge('mb-3 text-2xl font-bold text-gray-900 dark:text-white', cardH1Class);
+	const cardDiv3Cls = twMerge('flex space-x-4', cardDiv3Class);
+	const userImgCls = twMerge('w-8 h-8 rounded-full', userImgClass);
+	const termsLinkCls = twMerge('text-primary-700 hover:underline dark:text-primary-500', termsLinkClass);
+
+	const preventDefault = <E extends Event>(fn: (event: E) => void) => {
+    return function (this: any, event: E) {
+      event.preventDefault();
+      fn.call(this, event);
+    };
+  }
+  const handler = ()=>{
+    alert('Submitted!')
+  }
 </script>
 
 <main class={mainClass}>
-	<div class={mainDivClass}>
-		<a href={site.link} class={siteLinkClass}>
-			<img src={site.img} class={siteImgClass} alt={site.imgAlt} />
-			<span>{site.name}</span>
+	<div class={mainDivCls}>
+		<a href={actualSite.link} class={siteLinkCls}>
+			<img src={actualSite.img} class={siteImgCls} alt={actualSite.imgAlt} />
+			<span>{actualSite.name}</span>
 		</a>
 		<!-- Card -->
-		<Card class="w-full max-w-md" border={false}>
-			<div class={cardDiv3Class}>
-				<img class={userImgClass} src={user.img} alt={user.imgAlt} />
-				<h1 class={cardH1Class}>{user.name}</h1>
+		<Card class="w-full max-w-md p-4 sm:p-6">
+			<div class={cardDiv3Cls}>
+				<img class={userImgCls} src={acturalUser.img} alt={acturalUser.imgAlt} />
+				<h1 class={cardH1Cls}>{acturalUser.name}</h1>
 			</div>
 			<P class="text-base font-normal text-gray-500 dark:text-gray-400">
 				{pageDescription}
 			</P>
-			<form class="mt-8 space-y-6" on:submit|preventDefault>
-				<slot />
+			<form class="mt-8 space-y-6" onsubmit={preventDefault(handler)} {...restProps}>
+				{@render children()}
 				{#if acceptTerms}
 					<Checkbox class="accent-primary-600">
 						<span>
-							I accept the <a href={termsLink} class={termsLinkClass}>Terms and Conditions</a>
+							I accept the <a href={termsLink} class={termsLinkCls}>Terms and Conditions</a>
 						</span>
 					</Checkbox>
 				{/if}

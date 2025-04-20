@@ -1,6 +1,9 @@
 <script lang="ts">
-	export let value: string;
-	export let period: string = '';
+	interface Props {
+		value: string;
+		period: string;
+	}
+	let { value, period }: Props = $props();
 </script>
 
 <div class="my-8 flex items-baseline">

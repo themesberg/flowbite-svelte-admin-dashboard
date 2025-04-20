@@ -5,12 +5,16 @@
 	import LastRange from './LastRange.svelte';
 	import More from './More.svelte';
 
-	export let title: string = '';
-	export let subtitle: string = '';
-	export let chartOptions: ApexOptions;
+	interface Props {
+		title: string;
+		subtitle: string;
+		chartOptions?: ApexOptions;
+	}
+	let {  title, subtitle, chartOptions }:Props = $props();
+
 </script>
 
-<Card size="xl" class="w-full max-w-none 2xl:col-span-2">
+<Card size="xl" class="w-full max-w-none 2xl:col-span-2 p-4 sm:p-6">
 	<div class="mb-4 flex items-center justify-between">
 		<div class="flex-shrink-0">
 			<Heading tag="h3" class="text-2xl">{title}</Heading>
@@ -19,7 +23,7 @@
 		<Change value={12.5} since="" class="justify-end font-medium" />
 	</div>
 
-	<Chart options={chartOptions}></Chart>
+	<Chart options={chartOptions || {}}></Chart>
 	<div
 		class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700 sm:pt-6"
 	>

@@ -4,14 +4,19 @@
 		ChevronDownOutline,
 		DotsHorizontalOutline
 	} from 'flowbite-svelte-icons';
-
-	export let avatar: string = 'https://flowbite.com/docs/images/people/profile-picture-2.jpg';
-	export let name: string = 'Michael Gough';
-	export let timestamp: Date = new Date();
-	export let replays: number = 0;
+	import type { Snippet } from 'svelte';
+  interface Props{
+		children: Snippet;
+		avatar?: string;
+		name?: string;
+		timestamp?: Date;
+		replays?: number;
+		class?: string
+	}
+	let {children, avatar = 'https://flowbite.com/docs/images/people/profile-picture-2.jpg', name = 'Michael Gough', timestamp= new Date(), replays = 0, class:className }:Props = $props();
 </script>
 
-<article class="mb-5 space-y-3 {$$props.class ?? ''}">
+<article class="mb-5 space-y-3 {className}">
 	<footer class="flex items-center justify-between">
 		<div class="flex items-center gap-2">
 			<Avatar size="xs" src={avatar} alt={name} />
@@ -34,7 +39,9 @@
 			<DropdownItem>Report</DropdownItem>
 		</Dropdown>
 	</footer>
-	<div class="space-y-2 text-gray-900 dark:text-white"><slot /></div>
+	<div class="space-y-2 text-gray-900 dark:text-white">
+		{@render children()}
+	</div>
 	{#if replays}
 		<a
 			href="/"

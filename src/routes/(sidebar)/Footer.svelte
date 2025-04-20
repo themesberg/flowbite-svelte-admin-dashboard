@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Card, Frame, type LinkType } from 'flowbite-svelte';
+	import type { LinkType } from 'flowbite-svelte';
+	import Frame from './Frame.svelte'
 	import {
 		DiscordSolid,
 		DribbbleSolid,
@@ -7,7 +8,7 @@
 		GithubSolid,
 		TwitterSolid
 	} from 'flowbite-svelte-icons';
-	import type { ComponentType } from 'svelte';
+	import type { Component } from 'svelte';
 
 	const links: LinkType[] = [
 		{ name: 'Terms and conditions', href: '#' },
@@ -17,7 +18,7 @@
 		{ name: 'Contact', href: '#' }
 	];
 
-	const brands: [ComponentType, string][] = [
+	const brands: [Component, string][] = [
 		[FacebookSolid, ''],
 		[DiscordSolid, ''],
 		[TwitterSolid, ''],

@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { Badge } from 'flowbite-svelte';
-	import type { BadgeProps } from 'flowbite-svelte/Badge.svelte';
+	import type { BadgeProps } from 'flowbite-svelte';
 
-	export let state: keyof typeof states;
-	export let dark: boolean = false;
+	interface Props {
+		state: keyof typeof states;
+		dark?: boolean;
+	}
+  let { state, dark }: Props = $props();
 
 	const states = {
 		completed: 'Completed',
@@ -20,4 +23,4 @@
 	};
 </script>
 
-<Badge color={colors[state] ?? 'dark'} border={dark}>{states[state] ?? 'Unknown'}</Badge>
+<Badge color={colors[state] ?? 'gray'} border={dark}>{states[state] ?? 'Unknown'}</Badge>

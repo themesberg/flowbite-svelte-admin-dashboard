@@ -1,15 +1,18 @@
 <script lang="ts">
-	import { Button, Heading } from 'flowbite-svelte';
+	import { Button, Toggle } from 'flowbite-svelte';
 	import Card from '../../utils/widgets/Card.svelte';
+	interface Props{
+		title:string;
+		subtitle?: string;
+		buttonLabel?: string;
+		items: any[];
+		class?: string;
+	}
 
-	export let title: string;
-	export let subtitle: string = '';
-	export let buttonLabel: string = 'Save all';
-
-	export let items: any[] = [];
+ let { title, subtitle, buttonLabel = 'Save all', items = [], class:className, ...restProps }:Props = $props();
 </script>
 
-<Card {title} {...$$restProps}>
+<Card {title} class={className} {...restProps}>
 	{#if subtitle}
 		<p class="text-sm font-normal text-gray-500 dark:text-gray-400">{subtitle}</p>
 	{/if}
@@ -17,7 +20,15 @@
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each items as item}
 			<li class="py-4">
-				<slot {item} />
+				<div class="flex items-center justify-between">
+					<div class="flex flex-grow flex-col">
+						<div class="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</div>
+						<div class="text-base font-normal text-gray-500 dark:text-gray-400">
+							{item.subtitle}
+						</div>
+					</div>
+					<Toggle checked={item.active} class="peer-focus:ring-0 me-0" />
+				</div>
 			</li>
 		{/each}
 	</ul>

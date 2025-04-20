@@ -17,12 +17,14 @@
 	<BellSolid size="lg" />
 </ToolbarButton>
 <Popover class="max-w-sm border-0" trigger="click" defaultClass="p-0" arrow={false} offset={10}>
-	<div slot="title" class="rounded text-center">Notifications</div>
+	{#snippet title()}
+	<div class="rounded text-center">Notifications</div>
+	{/snippet}
 	<div class="bg-50 dark:bg-gray-700">
 		<Notification
 			href="#"
 			src={Users[0].avatar}
-			icon={DownloadSolid}
+			Icon={DownloadSolid}
 			when="a few moments ago"
 			color="purple"
 		>
@@ -32,9 +34,9 @@
 		<Notification
 			href="#"
 			src={Users[1].avatar}
-			icon={UsersGroupSolid}
+			Icon={UsersGroupSolid}
 			when="10 minutes ago"
-			color="dark"
+			color="gray"
 		>
 			<span class="font-semibold text-gray-900 dark:text-white">Jese leos</span> and
 			<span class="font-medium text-gray-900 dark:text-white">5 others</span> started following you.
@@ -43,7 +45,7 @@
 		<Notification
 			href="#"
 			src={Users[3].avatar}
-			icon={HeartSolid}
+			Icon={HeartSolid}
 			when="44 minutes ago"
 			color="red"
 		>
@@ -55,7 +57,7 @@
 		<Notification
 			href="#"
 			src={Users[4].avatar}
-			icon={AnnotationSolid}
+			Icon={AnnotationSolid}
 			when="1 hour ago"
 			color="green"
 		>
@@ -68,7 +70,7 @@
 		<Notification
 			href="#"
 			src={Users[5].avatar}
-			icon={CameraPhotoOutline}
+			Icon={CameraPhotoOutline}
 			when="3 hours ago"
 			color="purple"
 		>
@@ -78,7 +80,7 @@
 	</div>
 	<Button
 		href="/"
-		color="none"
+		color={undefined}
 		size="lg"
 		class="w-full gap-2 rounded-none rounded-b bg-gray-50 py-2.5 text-center text-gray-900 hover:bg-gray-100 dark:mt-0 dark:bg-gray-700 dark:text-white"
 	>

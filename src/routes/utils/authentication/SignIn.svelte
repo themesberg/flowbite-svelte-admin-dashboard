@@ -1,49 +1,84 @@
 <script lang="ts">
-	import { Label, Input, Checkbox, A, Button, Card } from 'flowbite-svelte';
-	export let title = 'Sign in to platform';
-	export let site = {
+	import { Checkbox, A, Button, Card } from 'flowbite-svelte';
+	import type { HTMLFormAttributes } from "svelte/elements";
+	import type { Snippet } from 'svelte';
+	import { twMerge } from 'tailwind-merge';
+
+	interface SiteType{
+		name: string;
+		img: string;
+		link: string;
+		imgAlt: string;
+	}
+	
+	interface Props extends HTMLFormAttributes{
+		children: Snippet;
+		site?: SiteType;
+		rememberMe?: boolean;
+		title?: string;
+		lostPassword?: boolean;
+		createAccount?: boolean;
+		lostPasswordLink?: string;
+		loginTitle?: string;
+		registerLink?: string;
+		createAccountTitle?: string;
+		acceptTerms?: boolean;
+		btnTitle?: string;
+		pageDescription?: string;
+		mainClass?: string;
+		mainDivClass?: string;
+		siteLinkClass?: string;
+		siteImgClass?: string;
+		cardH1Class?: string;
+	}
+	let { children, title = 'Sign in to platform', site, rememberMe = true, lostPassword = true,  createAccount = true, lostPasswordLink,  loginTitle = 'Login to your account', registerLink, createAccountTitle = 'Create account', mainClass = 'bg-gray-50 dark:bg-gray-900 w-full', mainDivClass, siteLinkClass, siteImgClass, cardH1Class, ...restProps }:Props = $props();
+
+	const siteDefault = {
 		name: 'Flowbite',
 		img: '/images/flowbite-svelte-icon-logo.svg',
 		link: '/',
 		imgAlt: 'FlowBite Logo'
 	};
-	export let rememberMe = true;
-	export let lostPassword = true;
-	export let createAccount = true;
-	export let lostPasswordLink = '';
-	export let loginTitle = 'Login to your account';
-	export let registerLink = '';
-	export let createAccountTitle = 'Create account';
+	const actualSite = $derived(site ?? siteDefault);
+	
+	const mainDivCls = twMerge(
+		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
+	const siteLinkCls =
+		twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass);
+	const siteImgCls = twMerge('mr-4 h-11', siteImgClass);
+	const cardH1Cls = twMerge('mb-3 text-2xl font-bold text-gray-900 dark:text-white', cardH1Class);
 
-	export let mainClass = 'bg-gray-50 dark:bg-gray-900 w-full';
-	export let mainDivClass =
-		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';
-	export let siteLinkClass =
-		'flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white';
-	export let siteImgClass = 'mr-4 h-11';
-	export let cardH1Class = 'text-2xl font-bold text-gray-900 dark:text-white';
+	const preventDefault = <E extends Event>(fn: (event: E) => void) => {
+    return function (this: any, event: E) {
+      event.preventDefault();
+      fn.call(this, event);
+    };
+  }
+  const handler = ()=>{
+    alert('Submitted!')
+  }
 </script>
 
 <main class={mainClass}>
-	<div class={mainDivClass}>
-		<a href={site.link} class={siteLinkClass}>
-			<img src={site.img} class={siteImgClass} alt={site.imgAlt} />
-			<span>{site.name}</span>
+	<div class={mainDivCls}>
+		<a href={actualSite.link} class={siteLinkCls}>
+			<img src={actualSite.img} class={siteImgCls} alt={actualSite.imgAlt} />
+			<span>{actualSite.name}</span>
 		</a>
 		<!-- Card -->
-		<Card class="w-full" size="md" border={false}>
-			<h1 class={cardH1Class}>
+		<Card class="w-full p-4 sm:p-6" size="md">
+			<h1 class={cardH1Cls}>
 				{title}
 			</h1>
-			<form class="mt-8 space-y-6" on:submit|preventDefault>
-				<slot />
+			<form class="mt-8 space-y-6" onsubmit={preventDefault(handler)} {...restProps}>
+				{@render children()}
 				{#if rememberMe || lostPassword}
 					<div class="flex items-start">
 						{#if rememberMe}
 							<Checkbox class="accent-primary-600" name="remember">Remember me</Checkbox>
 						{/if}
 						{#if lostPassword}
-							<A href={lostPasswordLink} aClass="ml-auto text-sm">Lost Password?</A>
+							<A href={lostPasswordLink} class="ml-auto text-sm">Lost Password?</A>
 						{/if}
 					</div>
 				{/if}

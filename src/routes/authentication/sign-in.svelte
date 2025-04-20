@@ -46,7 +46,7 @@
 	{loginTitle}
 	{registerLink}
 	{createAccountTitle}
-	on:submit={onSubmit}
+	onsubmit={onSubmit}
 >
 	<div>
 		<Label for="email" class="mb-2 dark:text-white">Your email</Label>

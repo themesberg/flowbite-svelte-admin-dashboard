@@ -2,7 +2,8 @@
 	import Dashboard from '../../utils/dashboard/Dashboard.svelte';
 	import MetaTag from '../../utils/MetaTag.svelte';
 	import Footer from '../Footer.svelte';
-	export let data;
+	import type { PageProps } from './$types';
+	let { data }: PageProps = $props();
 
 	const path: string = '/dashboard';
   const description: string = 'Admin Dashboard example using Flowbite Svelte';

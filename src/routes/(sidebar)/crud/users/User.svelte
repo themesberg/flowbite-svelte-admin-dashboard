@@ -1,8 +1,11 @@
 <script lang="ts">
 	import { Button, Input, Label, Modal, Textarea } from 'flowbite-svelte';
-	export let open: boolean = false; // modal control
 
-	export let data: Record<string, string> = {};
+	interface Props{
+		open: boolean;
+		data: Record<string, string>;
+	}
+	let { open = $bindable(true), data }:Props = $props();
 
 	function init(form: HTMLFormElement) {
 		if (data?.name) [data.first_name, data.last_name] = data.name.split(' ');
@@ -94,7 +97,7 @@
 	</div>
 
 	<!-- Modal footer -->
-	<div slot="footer">
+	 {#snippet footer()}
 		<Button type="submit">{Object.keys(data).length ? 'Save all' : 'Add user'}</Button>
-	</div>
+	 {/snippet}
 </Modal>

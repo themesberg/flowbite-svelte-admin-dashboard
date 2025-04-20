@@ -1,22 +1,38 @@
 <script lang="ts">
 	import { imagesPath } from '../variables';
 	import { Button, P } from 'flowbite-svelte';
-	export let title = 'Under Maintenance';
-	export let description =
-		'Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always <a href="/" class="text-primary-700 hover:underline dark:text-primary-500">contact us</a>, otherwise we’ll be back online shortly!.';
-	export let image = {
+	interface ImgType{
+		src: string;
+		alt: string;
+	}
+	interface Props{
+		title?: string;
+		description?: string;
+		image?: ImgType;
+		btnTitle?: string;
+		btnHref?: string;
+		mainClass?: string;
+		mainDivClass?: string;
+		h1Class?: string;
+		imgDiv?: string;
+		div2Class?: string;
+	}
+	let { title = 'Under Maintenance', 
+	description =
+		'Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always <a href="/" class="text-primary-700 hover:underline dark:text-primary-500">contact us</a>, otherwise we’ll be back online shortly!.', 
+		image = {
 		src: imagesPath('illustrations/maintenance.svg'),
 		alt: 'maintenance'
-	};
-	export let btnTitle = 'Go back home';
-	export let btnHref = '/';
-	export let mainClass = 'bg-gray-50 dark:bg-gray-900';
-	export let mainDivClass =
-		'flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900';
-	export let h1Class =
-		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white';
-	export let imgDiv = 'block mb-5 md:max-w-md';
-	export let div2Class = 'text-center xl:max-w-4xl';
+	}, 
+	btnTitle = 'Go back home', 
+	btnHref = '/', 
+	mainClass = 'bg-gray-50 dark:bg-gray-900', 
+	mainDivClass =
+		'flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900', 
+	h1Class =
+		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', 
+	imgDiv = 'block mb-5 md:max-w-md',
+	div2Class = 'text-center xl:max-w-4xl' }: Props = $props();
 </script>
 
 <main class={mainClass}>

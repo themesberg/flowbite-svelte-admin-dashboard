@@ -23,7 +23,7 @@
 
 <MetaTag {path} {description} title={metaTitle} {subtitle} />
 
-<ProfileLock on:submit={onSubmit} {user}>
+<ProfileLock onsubmit={onSubmit} {user}>
 	<div>
 		<Label for="password" class="mb-2 dark:text-white">Your password</Label>
 		<Input

@@ -1,10 +1,12 @@
 <script lang="ts">
   import { MetaTags } from 'svelte-meta-tags';
-
-  export let path: string = '';
-  export let description: string = '';
-  export let title: string = '';
-  export let subtitle: string = '';
+  interface Props{
+    path: string;
+    description: string;
+    title: string;
+    subtitle: string;
+  }
+  let { path, description, title, subtitle }:Props = $props();
 
   let imgsrc = `https://open-graph-vercel.vercel.app/api/flowbite-svelte-admin-dashboard?title=${subtitle}`;
 
@@ -30,7 +32,7 @@ openGraph={{
   siteName: 'Flowbite Svelte Admin Dashboard',
 }}
 twitter={{
-  handle: '@shinokada',
+  creator: '@shinokada',
   cardType: 'summary_large_image',
   title: `${title}`,
   description: `${description}`,

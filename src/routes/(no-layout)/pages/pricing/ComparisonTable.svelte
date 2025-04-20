@@ -8,8 +8,13 @@
 		TableHeadCell
 	} from 'flowbite-svelte';
 	import { CheckOutline, CloseOutline } from 'flowbite-svelte-icons';
-	export let columns: string[] = ['Freelancer', 'Company', 'Enterprise'];
-	export let rows: { name: string; [key: string]: string | boolean }[] = [
+
+	interface Props {
+		columns?: string[];
+		rows?: { name: string; [key: string]: string | boolean }[];
+	}
+
+	let { columns = ['Freelancer', 'Company', 'Enterprise'], rows = [
 		{ name: 'Seperate business/personal', freelancer: true, company: true, enterprise: true },
 		{ name: 'Estimate tax payments', freelancer: true, company: true, enterprise: true },
 		{ name: 'Stock control', freelancer: true, company: true, enterprise: true },
@@ -26,7 +31,7 @@
 		{ name: 'Track deductible mileage', freelancer: false, company: false, enterprise: true },
 		{ name: 'Track employee time', freelancer: false, company: false, enterprise: true },
 		{ name: 'Multi-device', freelancer: false, company: false, enterprise: true }
-	];
+	] }: Props = $props();
 </script>
 
 <Table striped>

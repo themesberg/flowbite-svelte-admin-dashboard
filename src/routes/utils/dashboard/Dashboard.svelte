@@ -2,7 +2,6 @@
   import thickbars from '../graphs/thickbars';
   import ChartWidget from '../widgets/ChartWidget.svelte';
   import { Card, Chart } from 'flowbite-svelte';
-  import type { PageData } from '../../(sidebar)/$types';
   import Stats from './Stats.svelte';
   import users from '../graphs/users';
   import DarkChart from '../widgets/DarkChart.svelte';
@@ -16,12 +15,16 @@
   import Traffic from './Traffic.svelte';
   import Transactions from './Transactions.svelte';
 
-  export let data: PageData;
+  import type { PageProps } from '../../(sidebar)/$types';
+	let { data }: PageProps = $props();
 
-  let chartOptions = getChartOptions(false);
-  chartOptions.series = data.series;
+  let chartOptions = $derived(getChartOptions(false));
 
-  let dark = false;
+  $effect(()=>{
+    chartOptions.series = data.series;
+  })
+
+  let dark = $state(false);
 
   function handler(ev: Event) {
     if ('detail' in ev && typeof ev.detail === 'boolean') {
@@ -43,7 +46,7 @@
     <Stats />
   </div>
   <div class="grid grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3">
-    <Card horizontal class="items-center justify-between" size="xl">
+    <Card horizontal class="items-center justify-between p-4 sm:p-6" size="xl">
       <div class="w-full">
         <p>New products</p>
         <p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
@@ -53,7 +56,7 @@
       </div>
       <Chart options={thickbars} class="w-full" />
     </Card>
-    <Card horizontal class="items-center justify-between" size="xl">
+    <Card horizontal class="items-center justify-between p-4 sm:p-6" size="xl">
       <div class="w-full">
         <p>Users</p>
         <p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
@@ -63,7 +66,7 @@
       </div>
       <DarkChart configFunc={users} class="w-full" />
     </Card>
-    <Card horizontal class="items-center justify-between" size="xl">
+    <Card horizontal class="items-center justify-between p-4 sm:p-6" size="xl">
       <div class="w-full">
         <p>Users</p>
         <p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">

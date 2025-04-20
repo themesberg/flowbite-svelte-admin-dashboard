@@ -1,12 +1,15 @@
 <script lang="ts">
 	import { Button, CloseButton, Heading } from 'flowbite-svelte';
 	import { ExclamationCircleOutline } from 'flowbite-svelte-icons';
-	export let hidden: boolean = true; // modal control
+	interface Props{
+		hidden?: boolean;
+	}
+	let { hidden = true }:Props = $props();
 </script>
 
 <Heading tag="h5" class="mb-6 text-sm font-semibold uppercase">Delete item</Heading>
 <CloseButton
-	on:click={() => (hidden = true)}
+	onclick={() => (hidden = true)}
 	class="absolute right-2.5 top-2.5 text-gray-400 hover:text-black dark:text-white"
 />
 
@@ -17,4 +20,4 @@
 </h3>
 
 <Button href="/" color="red" class="mr-2">Yes, I'm sure</Button>
-<Button color="alternative" on:click={() => (hidden = true)}>No, cancel</Button>
+<Button color="alternative" onclick={() => (hidden = true)}>No, cancel</Button>

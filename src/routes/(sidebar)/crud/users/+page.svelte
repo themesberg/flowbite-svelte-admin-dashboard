@@ -75,12 +75,12 @@
 					<DotsVerticalOutline size="lg" />
 				</ToolbarButton>
 			</div>
-
-			<div slot="end" class="flex items-center space-x-2">
+      {#snippet end()}
+			<div class="flex items-center space-x-2">
 				<Button
 					size="sm"
 					class="gap-2 whitespace-nowrap px-3"
-					on:click={() => ((current_user = {}), (openUser = true))}
+					onclick={() => ((current_user = {}), (openUser = true))}
 				>
 					<PlusOutline size="sm" />Add user
 				</Button>
@@ -88,6 +88,7 @@
 					<DownloadSolid size="md" class="-ml-1" />Export
 				</Button>
 			</div>
+			{/snippet}
 		</Toolbar>
 	</div>
 	<Table>
@@ -125,7 +126,7 @@
 						<Button
 							size="sm"
 							class="gap-2 px-3"
-							on:click={() => ((current_user = user), (openUser = true))}
+							onclick={() => ((current_user = user), (openUser = true))}
 						>
 							<EditOutline size="sm" /> Edit user
 						</Button>
@@ -133,7 +134,7 @@
 							color="red"
 							size="sm"
 							class="gap-2 px-3"
-							on:click={() => ((current_user = user), (openDelete = true))}
+							onclick={() => ((current_user = user), (openDelete = true))}
 						>
 							<TrashBinSolid size="sm" /> Delete user
 						</Button>

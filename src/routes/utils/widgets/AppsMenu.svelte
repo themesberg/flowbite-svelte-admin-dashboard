@@ -24,20 +24,22 @@
 		{ name: 'Billing', href: '/billing', icon: SalePercentOutline },
 		{ name: 'Logout', href: '/logout', icon: ArrowRightToBracketOutline }
 	];
+	let { open = $bindable() } = $props();
 </script>
 
 <ToolbarButton size="lg" class="-mx-0.5 hover:text-gray-900 dark:hover:text-white">
 	<GridSolid size="lg" />
 </ToolbarButton>
-<MegaMenu items={menu} let:item>
+<MegaMenu items={menu}>
+	{#snippet children({ item })}
 	<a
 		href={item.href}
 		class="block rounded-lg p-4 text-center hover:bg-gray-100 dark:hover:bg-gray-600"
 	>
-		<svelte:component
-			this={item.icon}
+		<item.icon
 			class="mx-auto mb-1 h-7 w-7 text-gray-500 dark:text-gray-400"
 		/>
 		<div class="text-sm font-medium text-gray-900 dark:text-white">{item.name}</div>
 	</a>
+	{/snippet}
 </MegaMenu>

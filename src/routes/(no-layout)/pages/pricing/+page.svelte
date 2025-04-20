@@ -6,14 +6,15 @@
 	import Faq from './FAQ.svelte';
 	import Footer from './Footer.svelte';
 	import PriceCard from './PriceCard.svelte';
+	import PriceCardListItem from './PriceCardListItem.svelte';
 
-	let yearly: boolean = false;
+	let yearly: boolean = $state(false);
 	let prices: string[][] = [
 		['$24', '$200'],
 		['$49', '$400'],
 		['$499', '$1500']
 	];
-	$: period = yearly ? 'year' : 'month';
+	let period = $derived(yearly ? 'year' : 'month');
 
 	const path: string = '/pages/pricing';
   const description: string = 'Pricing examaple - Flowbite Svelte Admin Dashboard';
@@ -24,7 +25,7 @@
 <MetaTag {path} {description} {title} {subtitle} />
 
 <Navbar
-	class="fixed start-0 top-0 z-20 w-full border-b border-gray-200 px-2 py-1 dark:border-gray-700 sm:px-4"
+	class="fixed start-0 top-0 z-20 w-full border-b border-gray-200 px-2 py-1 dark:border-gray-700 sm:px-4 bg-white dark:bg-gray-900"
 	color="dark"
 >
 	<NavBrand href="/">
@@ -63,41 +64,41 @@
 		<section
 			class="grid grid-cols-1 space-y-12 pt-9 md:grid-cols-2 md:gap-6 md:gap-x-6 md:space-y-0 lg:grid-cols-3"
 		>
-			<PriceCard title="Starter" price={prices[0][+yearly]} {period} let:Item>
-				<svelte:fragment slot="subtitle">
+			<PriceCard title="Starter" price={prices[0][+yearly]} {period}>
+				{#snippet subtitle()}
 					Best option for personal use and for your next project.
-				</svelte:fragment>
-				<Item>Individual configuration</Item>
-				<Item>No setup, or hidden fees</Item>
-				<Item>Team size: <span class="font-semibold">1 developer</span></Item>
-				<Item>
-					<CloseOutline slot="icon" class="text-red-500 dark:text-red-400" />
+				{/snippet}
+				<PriceCardListItem>Individual configuration</PriceCardListItem>
+				<PriceCardListItem>No setup, or hidden fees</PriceCardListItem>
+				<PriceCardListItem>Team size: <span class="font-semibold">1 developer</span></PriceCardListItem>
+				<PriceCardListItem icon>
+					<CloseOutline class="text-red-500 dark:text-red-400 inline mr-2" />
 					Premium support
-				</Item>
-				<Item>
-					<CloseOutline slot="icon" class="text-red-500 dark:text-red-400" />
+				</PriceCardListItem>
+				<PriceCardListItem icon>
+					<CloseOutline class="text-red-500 dark:text-red-400 inline mr-2" />
 					Free updates
-				</Item>
+				</PriceCardListItem>
 			</PriceCard>
-			<PriceCard title="Company" price={prices[1][+yearly]} {period} let:Item>
-				<svelte:fragment slot="subtitle">
+			<PriceCard title="Company" price={prices[1][+yearly]} {period}>
+				{#snippet subtitle()}
 					Relevant for multiple users, extended & premium support.
-				</svelte:fragment>
-				<Item>Individual configuration</Item>
-				<Item>No setup, or hidden fees</Item>
-				<Item>Team size: <span class="font-semibold">10 developers</span></Item>
-				<Item>Premium support: <span class="font-semibold">24 months</span></Item>
-				<Item>Free updates: <span class="font-semibold">24 months</span></Item>
+				{/snippet}
+				<PriceCardListItem>Individual configuration</PriceCardListItem>
+				<PriceCardListItem>No setup, or hidden fees</PriceCardListItem>
+				<PriceCardListItem>Team size: <span class="font-semibold">10 developers</span></PriceCardListItem>
+				<PriceCardListItem>Premium support: <span class="font-semibold">24 months</span></PriceCardListItem>
+				<PriceCardListItem>Free updates: <span class="font-semibold">24 months</span></PriceCardListItem>
 			</PriceCard>
-			<PriceCard title="Enterprise" price={prices[2][+yearly]} {period} let:Item>
-				<svelte:fragment slot="subtitle">
+			<PriceCard title="Enterprise" price={prices[2][+yearly]} {period}>
+				{#snippet subtitle()}
 					Best for large scale uses and extended redistribution rights.
-				</svelte:fragment>
-				<Item>Individual configuration</Item>
-				<Item>No setup, or hidden fees</Item>
-				<Item>Team size: <span class="font-semibold">100 developers</span></Item>
-				<Item>Premium support: <span class="font-semibold">36 months</span></Item>
-				<Item>Free updates: <span class="font-semibold">36 months</span></Item>
+				{/snippet}
+				<PriceCardListItem>Individual configuration</PriceCardListItem>
+				<PriceCardListItem>No setup, or hidden fees</PriceCardListItem>
+				<PriceCardListItem>Team size: <span class="font-semibold">100 developers</span></PriceCardListItem>
+				<PriceCardListItem>Premium support: <span class="font-semibold">36 months</span></PriceCardListItem>
+				<PriceCardListItem>Free updates: <span class="font-semibold">36 months</span></PriceCardListItem>
 			</PriceCard>
 		</section>
 		<section class="flex flex-col pt-10 md:pt-20">

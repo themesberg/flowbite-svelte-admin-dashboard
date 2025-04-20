@@ -1,16 +1,19 @@
 <script lang="ts">
 	import type { SizeType } from 'flowbite-svelte';
 	import { twMerge } from 'tailwind-merge';
-	export let value: number;
-	export let unit: string = '%';
-	export let since: string = 'vs last month';
+	interface Props{
+		value?: number;
+		unit?: string;
+		since?: string;
+		size?: SizeType;
+		equalHeight?: boolean;
+		class?: string;
+	}
+
+	let { value = 0, unit= '%', since = 'vs last month', size = 'md', equalHeight = false, class:className }: Props = $props();
 
 	const colorUp = 'text-green-500 dark:text-green-400';
 	const colorDown = 'text-red-500 dark:text-red-400';
-
-	export let size: SizeType = 'md';
-	export let equalHeight: boolean = false;
-
 	const textSize = {
 		xs: 'text-xs',
 		sm: 'text-sm',
@@ -27,10 +30,8 @@
 		xl: 'text-2xl'
 	};
 
-	let divClass: string;
-	$: divClass = twMerge(textSize[size], $$props.class);
-	let color: string;
-	$: color = value > 0 ? colorUp : value < 0 ? colorDown : '';
+	let divClass: string = $derived(twMerge(textSize[size], className));
+	let color: string = $derived(value > 0 ? colorUp : value < 0 ? colorDown : '');
 </script>
 
 <div class={divClass}>
@@ -44,7 +45,7 @@
 		{/if}
 	</span>&nbsp;
 	{#if equalHeight}
-		<span>{since}</span>
+		<span class="text-gray-300 dark:text-gray-400">{since}</span>
 	{:else}
 		<span class={spanTextSize[size]}>{since}</span>
 	{/if}

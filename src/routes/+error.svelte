@@ -1,6 +1,6 @@
 <script lang="ts">
-	import '../app.pcss';
-	import { page } from '$app/stores';
+	import '../app.css';
+	import { page } from '$app/state';
 	import NotFound from './utils/pages/NotFound.svelte';
 	import Maintenance from './utils/pages/Maintenance.svelte';
 	import ServerError from './utils/pages/ServerError.svelte';
@@ -13,7 +13,7 @@
 
 	type ErrorCode = keyof typeof pages;
 
-	const status = +$page.status;
+	const status = +page.status;
 	const index = Object.keys(pages)
 		.map((x) => +x)
 		.reduce((p, c) => (p < status ? c : p)) as ErrorCode;

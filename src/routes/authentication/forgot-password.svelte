@@ -21,7 +21,7 @@
 
 <MetaTag {path} {description} {title} {subtitle} />
 
-<ForgotPassword on:submit={onSubmit}>
+<ForgotPassword onsubmit={onSubmit}>
 	<div>
 		<Label for="email" class="mb-2">Your email</Label>
 		<Input

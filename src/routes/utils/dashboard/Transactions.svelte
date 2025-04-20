@@ -22,7 +22,10 @@
 	import CreditCard from './CreditCard.svelte';
 	import StatusBadge from './StatusBadge.svelte';
 
-	export let dark: boolean = false;
+	let { dark } = $props<{dark: boolean}>() ;
+
+	// Define the state type to match StatusBadge requirements
+	type StatusState = "completed" | "cancelled" | "inreview" | "inprogress";
 
 	const headers = [
 		'Transaction',
@@ -32,7 +35,9 @@
 		'Payment method',
 		'Status'
 	];
-	const data: [string, string, string, string, number, CreditCard['state']][] = [
+	
+	// Update the type definition to include the specific StatusState type
+	const data: [string, string, string, string, number, StatusState][] = [
 		['Payment from Bonnie Green', 'Apr 23 ,2021', '$2300', '0047568936', 475, 'completed'],
 		['Payment refund to #00910', 'Apr 23 ,2021', '-$670', '0078568936', 924, 'completed'],
 		['Payment failed from #087651', 'Apr 18 ,2021', '$234', '0088568934', 826, 'cancelled'],
@@ -46,7 +51,7 @@
 	];
 </script>
 
-<Card size="xl" class="shadow-sm max-w-none">
+<Card size="xl" class="shadow-sm max-w-none p-4 sm:p-6">
 	<div class="items-center justify-between lg:flex">
 		<div class="mb-4 mt-px lg:mb-0">
 			<Heading tag="h3" class="-ml-0.25 mb-2 text-xl font-semibold dark:text-white">
@@ -71,17 +76,20 @@
 			</div>
 			<div class="flex items-center space-x-4">
 				<Input placeholder="From" class="w-full">
-					<CalendarMonthOutline slot="left" size="md" />
+					{#snippet left()}
+					<CalendarMonthOutline size="md" />
+					{/snippet}
 				</Input>
 				<Input placeholder="To" class="w-full">
-					<CalendarMonthOutline slot="left" size="md" />
+					{#snippet left()}
+					<CalendarMonthOutline size="md" />
+					{/snippet}
 				</Input>
 			</div>
 		</div>
 	</div>
 	<Table
 		hoverable={true}
-		noborder
 		striped
 		class="mt-6 min-w-full divide-y divide-gray-200 dark:divide-gray-600"
 	>
@@ -106,9 +114,9 @@
 					>
 						<CreditCard number={method} /> <span>••• {method}</span>
 					</TableBodyCell>
-					<TableBodyCell class="px-4 font-normal"
-						><StatusBadge state={status} {dark} /></TableBodyCell
-					>
+					<TableBodyCell class="px-4 font-normal">
+						<StatusBadge state={status} {dark} />
+					</TableBodyCell>
 				</TableBodyRow>
 			{/each}
 		</TableBody>

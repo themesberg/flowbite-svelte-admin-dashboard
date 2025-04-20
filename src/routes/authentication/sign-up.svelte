@@ -44,7 +44,7 @@
 	{btnTitle}
 	{termsLink}
 	{loginLink}
-	on:submit={onSubmit}
+	onsubmit={onSubmit}
 >
 	<div>
 		<Label class={labelClass}>

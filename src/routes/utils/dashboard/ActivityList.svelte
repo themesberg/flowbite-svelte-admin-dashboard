@@ -3,7 +3,7 @@
 	import { ArrowRightOutline } from 'flowbite-svelte-icons';
 </script>
 
-<Card size="xl">
+<Card size="xl" class="p-4 sm:p-6">
 	<div class="mb-4 flex items-center justify-between">
 		<h3 class="text-lg font-semibold text-gray-900 dark:text-white">Latest Activity</h3>
 		<a
@@ -16,7 +16,7 @@
 	<Timeline>
 		<TimelineItem title="Application UI design in Figma" date="April 2023">
 			<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
-				GGet access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,
+				Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,
 				and pre-order E-commerce & Marketing pages.
 			</p>
 			<Button color="alternative">Learn more<ArrowRightOutline class="ms-2" size="sm" /></Button>

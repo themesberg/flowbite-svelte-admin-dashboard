@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Notifications from '../utils/dashboard/NotificationList.svelte';
 	import AppsMenu from '../utils/widgets/AppsMenu.svelte';
 	import UserMenu from '../utils/widgets/UserMenu.svelte';
@@ -14,17 +14,20 @@
 		Search
 	} from 'flowbite-svelte';
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
-	import '../../app.pcss';
+	import '../../app.css';
 	import Users from '../data/users.json';
+	interface Props {
+		fluid?: boolean;
+		drawerHidden?: boolean;
+		list?: boolean;
+	}
 
-	export let fluid = true;
-	export let drawerHidden = false;
-	export let list = false;
+  let { fluid = true, drawerHidden = $bindable(false), list = false }:Props = $props();
 </script>
 
-<Navbar {fluid} class="text-black" color="default" let:NavContainer>
+<Navbar {fluid} class="text-black" color="default">
 	<NavHamburger
-		onClick={() => (drawerHidden = !drawerHidden)}
+		onclick={() => (drawerHidden = !drawerHidden)}
 		class="m-0 me-3 md:block lg:hidden"
 	/>
 	<NavBrand href="/" class={list ? 'w-40' : 'lg:w-60'}>

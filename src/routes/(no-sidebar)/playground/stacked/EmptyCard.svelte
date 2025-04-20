@@ -1,8 +1,13 @@
 <script lang="ts">
-	import { Card } from 'flowbite-svelte';
+	import { Card, type CardProps } from 'flowbite-svelte';
+	interface Props {
+		size?: CardProps['size'];
+		class?: CardProps['class'];
+	}
+	let { size, class: className, ...restProps } = $props();
 </script>
 
-<Card {...$$restProps}>
+<Card {size} class={className} {...restProps}>
 	<div
 		class="rounded border border-dashed border-gray-200 px-4 py-2 text-gray-400 dark:border-gray-600"
 	>

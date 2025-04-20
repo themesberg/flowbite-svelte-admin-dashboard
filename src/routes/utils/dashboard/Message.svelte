@@ -8,9 +8,10 @@
 
 <form>
 	<Textarea rows={8} placeholder="Write your message" required>
-		<div slot="footer" class="flex items-center justify-between">
+		{#snippet footer()}
+		<div class="flex items-center justify-between">
 			<Button type="submit" size="xs">Post comment</Button>
-			<Toolbar embedded class="text-gray-500 dark:text-gray-400" slot="foot">
+			<Toolbar embedded class="text-gray-500 dark:text-gray-400" >
 				<ToolbarButton class="p-2 hover:text-gray-900 dark:hover:text-white">
 					<PaperClipOutline size="md" />
 					<span class="sr-only">Attach file</span>
@@ -25,5 +26,6 @@
 				</ToolbarButton>
 			</Toolbar>
 		</div>
+		{/snippet}
 	</Textarea>
 </form>

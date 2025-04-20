@@ -69,7 +69,6 @@ export default {
 		hover: {
 			filter: {
 				type: 'darken',
-				value: 1
 			}
 		}
 	},

@@ -1,5 +1,5 @@
 <script>
-	import { Button, Heading, Label, Select } from 'flowbite-svelte';
+	import { Button, Label, Select } from 'flowbite-svelte';
 	import Card from '../widgets/Card.svelte';
 	const languages = [
 		{ name: 'English (US)', value: 'en' },
@@ -22,7 +22,7 @@
 	];
 </script>
 
-<Card title="Language &amp; Time">
+<Card title="Language &amp; Time" class="p-4 sm:p-6">
 	<div class="space-y-4">
 		<Label class="space-y-2">
 			<span>Select language</span>

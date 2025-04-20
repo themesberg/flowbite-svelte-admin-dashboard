@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { PageData } from './$types';
 	import Dashboard from '../utils/dashboard/Dashboard.svelte';
 	import MetaTag from '../utils/MetaTag.svelte';
-	export let data: PageData;
+	import type { PageProps } from './$types';
+	let { data }: PageProps = $props();
 
 	const path: string = '';
   const description: string = 'Admin Dashboard example using Flowbite Svelte';

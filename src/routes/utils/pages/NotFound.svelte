@@ -1,22 +1,38 @@
 <script lang="ts">
 	import { imagesPath } from '../../utils/variables';
 	import { Button, P } from 'flowbite-svelte';
-	export let title = 'Page not found';
-	export let description =
-		'Oops! Looks like you followed a bad link. If you think this is a problem with us, please	tell us.';
-	export let image = {
+	interface ImgType{
+		src: string;
+		alt: string;
+	}
+	interface Props{
+		title?: string;
+		description?: string;
+		image?: ImgType;
+		btnTitle?: string;
+		btnHref?: string;
+		mainClass?: string;
+		mainDivClass?: string;
+		h1Class?: string;
+		imgDiv?: string;
+		div2Class?: string;
+	}
+	let { title = 'Page not found', 
+	description =
+		'Oops! Looks like you followed a bad link. If you think this is a problem with us, please	tell us.', 
+	image = {
 		src: imagesPath('404.svg', 'illustrations'),
 		alt: 'astronaut'
-	};
-	export let btnTitle = 'Go back home';
-	export let btnHref = '/';
-	export let mainClass = 'bg-gray-50 dark:bg-gray-900';
-	export let mainDivClass =
-		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';
-	export let h1Class =
-		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white';
-	export let imgDiv = 'block md:max-w-lg';
-	export let div2Class = 'text-center xl:max-w-4xl';
+	}, 
+	btnTitle = 'Go back home', 
+	btnHref = '/', 
+	mainClass = 'bg-gray-50 dark:bg-gray-900', 
+	mainDivClass =
+		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', 
+	h1Class =
+		'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', 
+	imgDiv = 'block md:max-w-md',
+	div2Class = 'text-center xl:max-w-4xl' }: Props = $props();
 </script>
 
 <main class={mainClass}>

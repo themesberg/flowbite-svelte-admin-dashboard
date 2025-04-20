@@ -45,8 +45,7 @@ const getTrafficChannelsChartConfig = (dark: boolean): ApexOptions => {
     states: {
       hover: {
         filter: {
-          type: 'darken',
-          value: 0.9
+          type: 'darken'
         }
       }
     },

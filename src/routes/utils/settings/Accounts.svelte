@@ -4,7 +4,7 @@
 	import Users from '../../data/users.json';
 </script>
 
-<Card size="xl">
+<Card size="xl" class="max-w-none p-4 sm:p-6">
 	<Heading tag="h3" class="text-xl font-semibold tracking-wide">Other accounts</Heading>
 	<ul class="divide-y divide-gray-200 dark:divide-gray-700">
 		{#each Users.slice(0, 4) as { avatar, name, country, status }}
