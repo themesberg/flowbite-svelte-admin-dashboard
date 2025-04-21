@@ -8,6 +8,10 @@ node_modules
 .wrangler
 /.svelte-kit
 /build
+/dist
+/package
+/test-results
+bun.lockb
 
 # OS
 .DS_Store
