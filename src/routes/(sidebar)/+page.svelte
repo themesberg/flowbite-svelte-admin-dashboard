@@ -12,5 +12,6 @@
 
 <MetaTag {path} {description} {title} {subtitle} />
 <main class="p-4">
+  <h1 class="hidden">Dashboard</h1>
   <Dashboard {data} />
 </main>

@@ -1,6 +1,7 @@
 import type { Component, Snippet } from 'svelte';
 import type { SizeType, IndicatorProps } from 'flowbite-svelte';
 import type { ApexOptions } from 'apexcharts';
+import type { HTMLFormAttributes } from 'svelte/elements';
 
 export type MenuItem = {
   name: string;
@@ -137,4 +138,24 @@ export interface UserMenuProps {
   email: string;
   menuItems: string[];
   children?: Snippet;
+}
+
+export interface SiteType {
+  name: string;
+  img: string;
+  link: string;
+  imgAlt: string;
+}
+
+export interface ForgotPasswordProps extends HTMLFormAttributes {
+  children: Snippet;
+  title?: string;
+  site?: SiteType;
+  btnTitle?: string;
+  pageDescription?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  siteLinkClass?: string;
+  siteImgClass?: string;
+  cardH1Class?: string;
 }

@@ -2,6 +2,7 @@ export { default as AppsMenu } from './AppsMenu.svelte';
 export { default as Change } from './Change.svelte';
 export { default as ChartWidget } from './ChartWidget.svelte';
 export { default as ChatMsg } from './ChatMsg.svelte';
+export { default as ForgotPassword } from './ForgotPassword.svelte'
 export { default as IconAvatar } from './IconAvatar.svelte';
 export { default as LastRange } from './LastRange.svelte';
 export { default as More } from './More.svelte';

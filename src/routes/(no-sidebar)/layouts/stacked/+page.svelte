@@ -14,5 +14,6 @@
 <MetaTag {path} {description} {title} {subtitle} />
 
 <main class="py-4">
+  <h1 class="hidden">Layouts: Stacked</h1>
   <Dashboard {data} />
 </main>

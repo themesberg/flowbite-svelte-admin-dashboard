@@ -1,27 +1,8 @@
 <script lang="ts">
   import { Button, Card, P } from 'flowbite-svelte';
   import { twMerge } from 'tailwind-merge';
-  import type { HTMLFormAttributes } from 'svelte/elements';
-  import type { Snippet } from 'svelte';
-  interface SiteType {
-    name: string;
-    img: string;
-    link: string;
-    imgAlt: string;
-  }
-  interface Props extends HTMLFormAttributes {
-    children: Snippet;
-    title?: string;
-    site?: SiteType;
-    btnTitle?: string;
-    pageDescription?: string;
-    mainClass?: string;
-    mainDivClass?: string;
-    siteLinkClass?: string;
-    siteImgClass?: string;
-    cardH1Class?: string;
-  }
-
+  import type { ForgotPasswordProps } from './types';
+  
   let {
     children,
     title = 'Forgot your password?',
@@ -39,7 +20,7 @@
     siteImgClass = 'mr-4 h-11',
     cardH1Class,
     ...restProps
-  }: Props = $props();
+  }: ForgotPasswordProps = $props();
   
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass)
   const siteLinkCls = twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass)
