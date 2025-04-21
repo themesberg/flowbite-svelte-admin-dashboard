@@ -2,7 +2,7 @@
   import { Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
   import { CheckOutline, CloseOutline } from 'flowbite-svelte-icons';
 
-  interface Props {
+  interface ComparisonTableProps {
     columns?: string[];
     rows?: { name: string; [key: string]: string | boolean }[];
   }
@@ -27,7 +27,7 @@
       { name: 'Track employee time', freelancer: false, company: false, enterprise: true },
       { name: 'Multi-device', freelancer: false, company: false, enterprise: true }
     ]
-  }: Props = $props();
+  }: ComparisonTableProps = $props();
 </script>
 
 <Table striped>

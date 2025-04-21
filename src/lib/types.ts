@@ -159,3 +159,32 @@ export interface ForgotPasswordProps extends HTMLFormAttributes {
   siteImgClass?: string;
   cardH1Class?: string;
 }
+
+export interface PriceCardPriceProps {
+  children?: Snippet;
+  subtitle?: Snippet;
+  title?: string;
+  price?: string;
+  period: string;
+}
+
+export interface PriceCardPriceProps {
+  value?: string;
+  period: string;
+}
+
+export interface PriceCardListItemProps {
+  icon?: boolean;
+  children: Snippet;
+}
+
+export type FaqType = {
+  title: string;
+  answer: string;
+};
+
+export interface FaqProps {
+  title: string;
+  description?: string;
+  faqs: FaqType[];
+}

@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-admin-dashboard",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flowbite Admin Dashboard components for Svelte",
   "homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
   "private": false,
@@ -41,7 +41,7 @@
     "@tailwindcss/vite": "^4.1.4",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/svelte": "^5.2.7",
-    "apexcharts": "^4.5.0",
+    "apexcharts": "^4.6.0",
     "dayjs": "^1.11.13",
     "eslint": "^9.25.0",
     "eslint-config-prettier": "^10.1.2",
@@ -56,6 +56,7 @@
     "prettier-plugin-tailwindcss": "^0.6.11",
     "publint": "^0.3.12",
     "runatics": "^0.1.4",
+    "runes-meta-tags": "^0.4.3",
     "svelte": "^5.28.1",
     "svelte-check": "^4.1.6",
     "svelte-lib-helpers": "^0.4.25",
@@ -65,7 +66,7 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.2",
-    "vitest": "^3.1.1"
+    "vitest": "^3.1.2"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -121,6 +122,22 @@
       "types": "./dist/ChatMsg.svelte.d.ts",
       "svelte": "./dist/ChatMsg.svelte"
     },
+    "./ComparisonTable.svelte": {
+      "types": "./dist/ComparisonTable.svelte.d.ts",
+      "svelte": "./dist/ComparisonTable.svelte"
+    },
+    "./Faq.svelte": {
+      "types": "./dist/Faq.svelte.d.ts",
+      "svelte": "./dist/Faq.svelte"
+    },
+    "./Footer.svelte": {
+      "types": "./dist/Footer.svelte.d.ts",
+      "svelte": "./dist/Footer.svelte"
+    },
+    "./ForgotPassword.svelte": {
+      "types": "./dist/ForgotPassword.svelte.d.ts",
+      "svelte": "./dist/ForgotPassword.svelte"
+    },
     "./IconAvatar.svelte": {
       "types": "./dist/IconAvatar.svelte.d.ts",
       "svelte": "./dist/IconAvatar.svelte"
@@ -136,6 +153,18 @@
     "./Notification.svelte": {
       "types": "./dist/Notification.svelte.d.ts",
       "svelte": "./dist/Notification.svelte"
+    },
+    "./PriceCard.svelte": {
+      "types": "./dist/PriceCard.svelte.d.ts",
+      "svelte": "./dist/PriceCard.svelte"
+    },
+    "./PriceCardListItem.svelte": {
+      "types": "./dist/PriceCardListItem.svelte.d.ts",
+      "svelte": "./dist/PriceCardListItem.svelte"
+    },
+    "./PriceCardPrice.svelte": {
+      "types": "./dist/PriceCardPrice.svelte.d.ts",
+      "svelte": "./dist/PriceCardPrice.svelte"
     },
     "./SmallPanel.svelte": {
       "types": "./dist/SmallPanel.svelte.d.ts",

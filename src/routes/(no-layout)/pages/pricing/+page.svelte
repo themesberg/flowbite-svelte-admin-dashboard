@@ -1,19 +1,11 @@
 <script lang="ts">
-  import { Button, DarkMode, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle } from 'flowbite-svelte';
+  import { Button, DarkMode, NavBrand, NavHamburger, NavLi, NavUl, Navbar, Toggle, P } from 'flowbite-svelte';
   import { ArrowLeftToBracketOutline, CloseOutline } from 'flowbite-svelte-icons';
   import MetaTag from '../../../utils/MetaTag.svelte';
-  import ComparisonTable from './ComparisonTable.svelte';
-  import Faq from './FAQ.svelte';
-  import Footer from './Footer.svelte';
-  import PriceCard from './PriceCard.svelte';
-  import PriceCardListItem from './PriceCardListItem.svelte';
+  import { PriceCard, PriceCardListItem, ComparisonTable, Faq, Footer } from '$lib';
+  import { faqs, menus, rows, prices, brand } from './data';
 
   let yearly: boolean = $state(false);
-  let prices: string[][] = [
-    ['$24', '$200'],
-    ['$49', '$400'],
-    ['$499', '$1500']
-  ];
   let period = $derived(yearly ? 'year' : 'month');
 
   const path: string = '/pages/pricing';
@@ -94,14 +86,18 @@
       <div class="overflow-x-auto rounded-lg">
         <div class="inline-block min-w-full align-middle">
           <div class="overflow-hidden shadow sm:rounded-lg">
-            <ComparisonTable />
+            <ComparisonTable {rows} />
           </div>
         </div>
       </div>
     </section>
     <section class="pt-20">
-      <Faq />
+      <Faq {faqs} />
     </section>
   </div>
 </main>
-<Footer />
+<Footer {menus} {brand}>
+  {#snippet description()}
+    <P>Flowbite is a UI library of elements &amp; components based on Tailwind CSS that can get you started building websites faster and more efficiently.</P>
+  {/snippet}
+</Footer>

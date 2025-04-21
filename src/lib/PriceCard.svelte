@@ -1,15 +1,9 @@
 <script lang="ts">
   import { Card, List } from 'flowbite-svelte';
-  import type { Snippet } from 'svelte';
-  import PriceCardPrice from './PriceCardPrice.svelte';
-  interface Props {
-    children: Snippet;
-    subtitle: Snippet;
-    title: string;
-    price: string;
-    period: string;
-  }
-  let { children, subtitle, title, price, period = 'month' }: Props = $props();
+  import { PriceCardPrice } from '$lib';
+  import type { PriceCardPriceProps } from './types';
+
+  let { children, subtitle, title, price, period = 'month' }: PriceCardPriceProps = $props();
 </script>
 
 <Card class="mx-auto max-w-lg p-4 text-gray-900 sm:p-6">
@@ -22,7 +16,9 @@
   <PriceCardPrice value={price} {period} />
   <!-- List -->
   <List tag="dl" class="mb-8 space-y-4 text-left">
-    {@render children()}
+    {#if children}
+      {@render children()}
+    {/if}
   </List>
   <a
     href="#top"
@@ -30,3 +26,16 @@
     >Get started</a
   >
 </Card>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[PriceCardPriceProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L163)
+## Props
+@prop children
+@prop subtitle
+@prop title
+@prop price
+@prop period = 'month'
+-->

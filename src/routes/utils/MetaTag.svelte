@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { MetaTags } from 'svelte-meta-tags';
+  import { RunesMetaTags } from 'runes-meta-tags';
+
   interface Props {
     path: string;
     description: string;
@@ -13,27 +14,23 @@
   let og_url: string = `https://flowbite-svelte-admin-dashboard.vercel.app${path}`;
 </script>
 
-<MetaTags
+<RunesMetaTags
   {title}
   {description}
-  openGraph={{
+  og={{
     type: 'website',
     url: `${og_url}`,
     title: `${title}`,
     description: `${description}`,
-    images: [
-      {
-        url: imgsrc,
-        width: 1200,
-        height: 630,
-        alt: `${title}`
-      }
-    ],
+    image: imgsrc,
+    imageWidth: 1200,
+    imageHeight: 630,
+    imageAlt: `${title}`,
     siteName: 'Flowbite Svelte Admin Dashboard'
   }}
   twitter={{
     creator: '@shinokada',
-    cardType: 'summary_large_image',
+    card: 'summary_large_image',
     title: `${title}`,
     description: `${description}`,
     image: imgsrc,
