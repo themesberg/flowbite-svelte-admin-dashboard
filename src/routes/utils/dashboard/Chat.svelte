@@ -9,7 +9,7 @@
 		TableColumnOutline
 	} from 'flowbite-svelte-icons';
 	import Users from '../../data/users.json';
-	import ChatMsg from './ChatMsg.svelte';
+	import {ChatMsg} from '$lib';
 	import Message from './Message.svelte';
 </script>
 
@@ -64,7 +64,7 @@
 							fill="#FFCC4D"
 						></path>
 					</svg>
-					<span class="text-sm font-medium text-gray-500 dark:text-gray-400">14</span>
+					<span class="text-sm font-medium text-gray-500 dark:text-gray-300">14</span>
 				</button>
 				<button
 					type="button"
@@ -98,7 +98,7 @@
 							fill="#5DADEC"
 						></path>
 					</svg>
-					<span class="text-sm font-medium text-gray-500 dark:text-gray-400">8</span>
+					<span class="text-sm font-medium text-gray-500 dark:text-gray-300">8</span>
 				</button>
 				<button
 					type="button"
@@ -172,7 +172,7 @@
 							fill="#FFCC4D"
 						></path>
 					</svg>
-					<span class="text-sm font-medium text-gray-500 dark:text-gray-400">3</span>
+					<span class="text-sm font-medium text-gray-500 dark:text-gray-300">3</span>
 				</button>
 			</div>
 		</ChatMsg>
@@ -196,9 +196,9 @@
 					</div>
 					<div class="mr-4">
 						<p class="text-sm font-semibold text-gray-900 dark:text-white">flowbite_offer_345"</p>
-						<p class="text-sm text-gray-500 dark:text-gray-400">PDF, 2.3 MB</p>
+						<p class="text-sm text-gray-500 dark:text-gray-300">PDF, 2.3 MB</p>
 					</div>
-					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-400">
+					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-300">
 						<ToolbarButton class="rounded">
 							<DownloadOutline size="lg" /><span class="sr-only">Download</span>
 						</ToolbarButton>
@@ -218,9 +218,9 @@
 					</div>
 					<div class="mr-4">
 						<p class="text-sm font-semibold text-gray-900 dark:text-white">bergside_pitch"</p>
-						<p class="text-sm text-gray-500 dark:text-gray-400">PPTX, 10.1 MB</p>
+						<p class="text-sm text-gray-500 dark:text-gray-300">PPTX, 10.1 MB</p>
 					</div>
-					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-400">
+					<div class="ml-auto flex items-center text-gray-500 dark:text-gray-300">
 						<ToolbarButton class="rounded">
 							<DownloadOutline size="lg" /><span class="sr-only">Download</span>
 						</ToolbarButton>

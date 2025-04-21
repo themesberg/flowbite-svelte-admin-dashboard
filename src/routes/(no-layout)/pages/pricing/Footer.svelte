@@ -20,7 +20,7 @@
 						alt="Flowbite Logo"
 						name="Flowbite"
 					/>
-					<p class="mt-4 max-w-lg text-gray-500 dark:text-gray-400">
+					<p class="mt-4 max-w-lg text-gray-500 dark:text-gray-300">
 						Flowbite is a UI library of elements &amp; components based on Tailwind CSS that can get
 						you started building websites faster and more efficiently.
 					</p>

@@ -23,7 +23,7 @@
 						<p class="truncate text-base font-semibold text-gray-900 dark:text-white">
 							{name}
 						</p>
-						<p class="truncate text-sm font-normal text-gray-500 dark:text-gray-400">
+						<p class="truncate text-sm font-normal text-gray-500 dark:text-gray-300">
 							{#if link}
 								<A href="">{link}</A>
 							{:else}

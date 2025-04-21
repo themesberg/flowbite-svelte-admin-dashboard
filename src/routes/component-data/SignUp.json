@@ -23,6 +23,6 @@
 		],
 		["siteImgClass", "string", "'mr-4 h-11'"],
 		["cardH1Class", "string", "'text-2xl font-bold text-gray-900 dark:text-white'"],
-		["haveAccountDivClass", "string", "'text-sm font-medium text-gray-500 dark:text-gray-400'"]
+		["haveAccountDivClass", "string", "'text-sm font-medium text-gray-500 dark:text-gray-300'"]
 	]
 }

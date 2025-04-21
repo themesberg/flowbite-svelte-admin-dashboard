@@ -24,7 +24,7 @@
 		<Heading tag="h1" class="text-xl font-semibold text-gray-900 dark:text-white sm:text-2xl mb-8">
 			Flowbite Svelte Admin Dashboard
 		</Heading>
-    <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-400">
+    <List tag="ul" class="space-y-1 text-gray-500 dark:text-gray-300">
       <Li icon>
         <CheckCircleSolid class="me-2 h-5 w-5 text-green-500 dark:text-green-400" />
         Svelte: {svelteVersion}

@@ -1,22 +1,59 @@
 <script lang="ts">
   import thickbars from '../graphs/thickbars';
-  import ChartWidget from '../widgets/ChartWidget.svelte';
-  import { Card, Chart } from 'flowbite-svelte';
-  import Stats from './Stats.svelte';
+  import { Card, Chart, P } from 'flowbite-svelte';
   import users from '../graphs/users';
   import DarkChart from '../widgets/DarkChart.svelte';
-  import { onMount } from 'svelte';
   import getChartOptions from '../../(sidebar)/dashboard/chart_options';
   import ActivityList from './ActivityList.svelte';
-  import Change from './Change.svelte';
+  import { Change, ChartWidget, Stats, More } from '$lib';
   import Chat from './Chat.svelte';
   import DesktopPc from './DesktopPc.svelte';
   import Insights from './Insights.svelte';
   import Traffic from './Traffic.svelte';
   import Transactions from './Transactions.svelte';
+  import Customers from '../../data/users.json';
 
   import type { PageProps } from '../../(sidebar)/$types';
 	let { data }: PageProps = $props();
+
+  const products = [
+		{
+			src: 'iphone.png',
+			image: 'iphone',
+			label: 'iPhone 14 Pro',
+			change: 2.5,
+			price: '$445,467'
+		},
+		{
+			src: 'imac.png',
+			image: 'imac',
+			label: 'Apple iMac 27',
+			change: 12.5,
+			price: '$256,982'
+		},
+		{
+			src: 'watch.png',
+			image: 'watch',
+			label: 'Apple Watch SE',
+			change: -1.35,
+			price: '$201,869'
+		},
+		{
+			src: 'ipad.png',
+			image: 'ipad',
+			label: 'Apple iPad Air',
+			change: 12.5,
+			price: '$103,967'
+		},
+		{
+			src: 'imac.png',
+			image: 'imac',
+			label: 'Apple iMac 24',
+			change: -2,
+			price: '$98,543 '
+		}
+	];
+  const customers = Customers.slice(0, 5);
 
   let chartOptions = $derived(getChartOptions(false));
 
@@ -25,30 +62,30 @@
   })
 
   let dark = $state(false);
+  const statsCont = {
+    title: "Statistics this month",
+    popoverTitle: "Statistics",
 
-  function handler(ev: Event) {
-    if ('detail' in ev && typeof ev.detail === 'boolean') {
-      chartOptions = getChartOptions(ev.detail);
-      chartOptions.series = data.series;
-      dark = !!ev.detail;
-    }
   }
-
-  onMount(() => {
-    document.addEventListener('dark', handler);
-    return () => document.removeEventListener('dark', handler);
-  });
 </script>
 
 <div class="mt-px space-y-4">
   <div class="grid gap-4 xl:grid-cols-2 2xl:grid-cols-3">
-    <ChartWidget {chartOptions} title="$45,385" subtitle="Sales this week" />
-    <Stats />
+    <ChartWidget value={12.5} {chartOptions} title="$45,385" subtitle="Sales this week" />
+    <Stats {products} {customers} {...statsCont}>
+      {#snippet popoverDesc()}
+      <P>
+        Statistics is a branch of applied mathematics that involves the collection, description,
+        analysis, and inference of conclusions from quantitative data.
+      </P>
+        <More title="Read more" href="#top" flat />
+      {/snippet}
+    </Stats>
   </div>
   <div class="grid grid-cols-1 gap-4 xl:grid-cols-2 2xl:grid-cols-3">
     <Card horizontal class="items-center justify-between p-4 sm:p-6" size="xl">
       <div class="w-full">
-        <p>New products</p>
+        <P>New products</P>
         <p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
           2,340
         </p>
@@ -58,7 +95,7 @@
     </Card>
     <Card horizontal class="items-center justify-between p-4 sm:p-6" size="xl">
       <div class="w-full">
-        <p>Users</p>
+        <P>Users</P>
         <p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
           4,420
         </p>
@@ -68,7 +105,7 @@
     </Card>
     <Card horizontal class="items-center justify-between p-4 sm:p-6" size="xl">
       <div class="w-full">
-        <p>Users</p>
+        <P>Users</P>
         <p class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl">
           4,420
         </p>

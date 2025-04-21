@@ -1,70 +1,59 @@
 <script lang="ts">
 	import { Avatar, Card, Heading, Popover, TabItem, Tabs } from 'flowbite-svelte';
-	import Change from '../../utils/dashboard/Change.svelte';
-	import Customers from '../../data/users.json';
-	import { avatarPath, imagesPath } from '../../utils/variables';
-	import LastRange from '../widgets/LastRange.svelte';
-	import More from '../widgets/More.svelte';
+	import type { Snippet } from 'svelte';
+	import {Change, More, LastRange } from '$lib';
+	// import Customers from '../../data/users.json';
+	import { imagesPath } from './variables';
 	import { QuestionCircleSolid } from 'flowbite-svelte-icons';
+  type ProductType = {
+		id?: string;
+		name?: string;
+		src?: string;
+		image?: string;
+		label?: string;
+		change?: string | number;
+		price?: string;
+		attributes?: {
+			[key: string]: any;
+		};
+		metadata?: Record<string, any>;
+	}
+	type CustomerType = {
+		id?: number;
+		name?: string;
+		avatar?: string;
+		email?: string;
+		biography?: string;
+		position?: string;
+		country?: string;
+		status?: string;
+	}
+	interface Props{
+		products: ProductType[];
+    customers: CustomerType[];
+		title?: string;
+		popoverTitle?: string;
+		popoverDesc?: Snippet;
+	}
+	let { products, customers, title, popoverTitle, popoverDesc }:Props = $props();
 
-	const products = [
-		{
-			src: 'iphone.png',
-			image: 'iphone',
-			label: 'iPhone 14 Pro',
-			change: 2.5,
-			price: '$445,467'
-		},
-		{
-			src: 'imac.png',
-			image: 'imac',
-			label: 'Apple iMac 27',
-			change: 12.5,
-			price: '$256,982'
-		},
-		{
-			src: 'watch.png',
-			image: 'watch',
-			label: 'Apple Watch SE',
-			change: -1.35,
-			price: '$201,869'
-		},
-		{
-			src: 'ipad.png',
-			image: 'ipad',
-			label: 'Apple iPad Air',
-			change: 12.5,
-			price: '$103,967'
-		},
-		{
-			src: 'imac.png',
-			image: 'imac',
-			label: 'Apple iMac 24',
-			change: -2,
-			price: '$98,543 '
-		}
-	];
-
-	const customers = Customers.slice(0, 5);
 </script>
 
 <Card size="xl" class="p-4 sm:p-6">
 	<div class="mb-4 flex items-center gap-2">
 		<Heading tag="h3" class="w-fit text-lg font-semibold dark:text-white">
-			Statistics this month
+			{title}
 		</Heading>
 		<button>
 			<span class="sr-only">Show information</span>
 			<QuestionCircleSolid size="sm" class="text-gray-400 hover:text-gray-500" />
 		</button>
 		<Popover placement="bottom-start">
-			<div class="w-72 space-y-2 text-sm font-normal text-gray-500 dark:text-gray-400">
-				<h3 class="font-semibold text-gray-900 dark:text-white">Statistics</h3>
-				<p>
-					Statistics is a branch of applied mathematics that involves the collection, description,
-					analysis, and inference of conclusions from quantitative data.
-				</p>
-				<More title="Read more" href="#top" flat />
+			<div class="w-72 space-y-2 text-sm font-normal text-gray-500 dark:text-gray-300">
+				<h3 class="font-semibold text-gray-900 dark:text-white">{popoverTitle}</h3>
+				{#if popoverDesc}
+				  {@render popoverDesc()}
+			  {/if}
 			</div>
 		</Popover>
 	</div>
@@ -84,7 +73,7 @@
 							<div class="flex min-w-0 items-center">
 								<img
 									class="h-10 w-10 flex-shrink-0"
-									src={imagesPath(src, 'products')}
+									src={src ? imagesPath(src, 'products') : ''}
 									alt={image}
 								/>
 								<div class="ml-3">
@@ -113,7 +102,7 @@
 					<li class="py-3 sm:py-3.5">
 						<div class="flex items-center justify-between">
 							<div class="flex min-w-0 items-center">
-								<Avatar src={imagesPath(avatar, 'users')} />
+								<Avatar src={avatar ? imagesPath(avatar, 'users') : ''} />
 								<div class="ml-3">
 									<p class="truncate font-medium text-gray-900 dark:text-white">
 										{name}

@@ -23,7 +23,7 @@
 			<p class="text-sm font-semibold text-gray-900 dark:text-white">
 				{name}
 			</p>
-			<p class="ms-1 text-sm text-gray-600 dark:text-gray-400">
+			<p class="ms-1 text-sm text-gray-600 dark:text-gray-300">
 				<time datetime={timestamp.toDateString()} title={timestamp.toDateString()}
 					>{timestamp.toDateString()}</time
 				>

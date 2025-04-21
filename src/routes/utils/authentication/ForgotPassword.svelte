@@ -52,7 +52,7 @@ cardH1Class = 'mb-3 text-2xl font-bold text-gray-900 dark:text-white', ...restPr
 		<!-- Card -->
 		<Card class="w-full max-w-md p-4 sm:p-6">
 			<h1 class={cardH1Class}>{title}</h1>
-			<P class="text-base font-normal text-gray-500 dark:text-gray-400">
+			<P class="text-base font-normal text-gray-500 dark:text-gray-300">
 				{pageDescription}
 			</P>
 			<form class="mt-8 space-y-6"{...restProps} >

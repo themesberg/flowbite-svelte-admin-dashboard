@@ -84,7 +84,7 @@
 				{/if}
 				<Button type="submit" size="lg">{loginTitle}</Button>
 				{#if createAccount}
-					<div class="text-sm font-medium text-gray-500 dark:text-gray-400">
+					<div class="text-sm font-medium text-gray-500 dark:text-gray-300">
 						Not registered? <A href={registerLink}>{createAccountTitle}</A>
 					</div>
 				{/if}

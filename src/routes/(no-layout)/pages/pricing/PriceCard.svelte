@@ -15,7 +15,7 @@
 <Card class="mx-auto max-w-lg text-gray-900 p-4 sm:p-6">
 	<h3 class="mb-4 text-2xl font-semibold dark:text-white">{title}</h3>
 	{#if subtitle}
-		<p class="font-light text-gray-500 dark:text-gray-400 sm:text-lg">
+		<p class="font-light text-gray-500 dark:text-gray-300 sm:text-lg">
 			{@render subtitle()}
 		</p>
 	{/if}

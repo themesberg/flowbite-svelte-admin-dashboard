@@ -48,7 +48,7 @@
 		{#each rows as row}
 			<TableBodyRow class="border-none">
 				<TableBodyCell
-					class="whitespace-nowrap rounded-l-lg p-4 text-base font-normal text-gray-500 dark:text-gray-400"
+					class="whitespace-nowrap rounded-l-lg p-4 text-base font-normal text-gray-500 dark:text-gray-300"
 				>
 					{row.name}
 				</TableBodyCell>

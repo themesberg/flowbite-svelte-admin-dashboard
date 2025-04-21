@@ -10,7 +10,7 @@
 		UsersGroupSolid
 	} from 'flowbite-svelte-icons';
 	import Users from '../../data/users.json';
-	import Notification from './Notification.svelte';
+	import {Notification} from '$lib';
 </script>
 
 <ToolbarButton size="lg" class="-mx-0.5 hover:text-gray-900 dark:hover:text-white">

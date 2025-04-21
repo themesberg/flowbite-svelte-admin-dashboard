@@ -37,7 +37,7 @@
 		class="block rounded-lg p-4 text-center hover:bg-gray-100 dark:hover:bg-gray-600"
 	>
 		<item.icon
-			class="mx-auto mb-1 h-7 w-7 text-gray-500 dark:text-gray-400"
+			class="mx-auto mb-1 h-7 w-7 text-gray-500 dark:text-gray-300"
 		/>
 		<div class="text-sm font-medium text-gray-900 dark:text-white">{item.name}</div>
 	</a>

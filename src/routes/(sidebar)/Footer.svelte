@@ -38,7 +38,7 @@
 			<li>
 				<a
 					{href}
-					class="mr-4 text-sm font-normal text-gray-500 hover:underline dark:text-gray-400 sm:mr-6"
+					class="mr-4 text-sm font-normal text-gray-500 hover:underline dark:text-gray-300 sm:mr-6"
 				>
 					{name}
 				</a>
@@ -47,7 +47,7 @@
 	</ul>
 	<div class="flex space-x-6 sm:justify-center">
 		{#each brands as [component, href]}
-			<a {href} class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">
+			<a {href} class="text-gray-500 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white">
 				<svelte:component this={component} size="md" />
 			</a>
 		{/each}

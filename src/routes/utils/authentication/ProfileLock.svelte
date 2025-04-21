@@ -80,7 +80,7 @@
 				<img class={userImgCls} src={acturalUser.img} alt={acturalUser.imgAlt} />
 				<h1 class={cardH1Cls}>{acturalUser.name}</h1>
 			</div>
-			<P class="text-base font-normal text-gray-500 dark:text-gray-400">
+			<P class="text-base font-normal text-gray-500 dark:text-gray-300">
 				{pageDescription}
 			</P>
 			<form class="mt-8 space-y-6" onsubmit={preventDefault(handler)} {...restProps}>

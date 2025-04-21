@@ -20,7 +20,7 @@
 		ChevronRightOutline
 	} from 'flowbite-svelte-icons';
 	import CreditCard from './CreditCard.svelte';
-	import StatusBadge from './StatusBadge.svelte';
+	import {StatusBadge} from '$lib';
 
 	let { dark } = $props<{dark: boolean}>() ;
 
@@ -57,7 +57,7 @@
 			<Heading tag="h3" class="-ml-0.25 mb-2 text-xl font-semibold dark:text-white">
 				Transactions
 			</Heading>
-			<span class="text-base font-normal text-gray-500 dark:text-gray-400">
+			<span class="text-base font-normal text-gray-500 dark:text-gray-300">
 				This is a list of latest transactions
 			</span>
 		</div>
@@ -102,15 +102,15 @@
 			{#each data as [name, date, amount, reference, method, status]}
 				<TableBodyRow>
 					<TableBodyCell class="px-4 font-normal">{name}</TableBodyCell>
-					<TableBodyCell class="px-4 font-normal text-gray-500 dark:text-gray-400">
+					<TableBodyCell class="px-4 font-normal text-gray-500 dark:text-gray-300">
 						{date}
 					</TableBodyCell>
 					<TableBodyCell class="px-4">{amount}</TableBodyCell>
-					<TableBodyCell class="px-4 font-normal  text-gray-500 dark:text-gray-400">
+					<TableBodyCell class="px-4 font-normal  text-gray-500 dark:text-gray-300">
 						{reference}
 					</TableBodyCell>
 					<TableBodyCell
-						class="flex items-center gap-2 px-4 font-normal  text-gray-500 dark:text-gray-400"
+						class="flex items-center gap-2 px-4 font-normal  text-gray-500 dark:text-gray-300"
 					>
 						<CreditCard number={method} /> <span>••• {method}</span>
 					</TableBodyCell>

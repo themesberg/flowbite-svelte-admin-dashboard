@@ -1,13 +1,16 @@
 <script lang="ts">
-	import { imagesPath } from '../../utils/variables';
+	import { imagesPath } from './variables';
+	import type { Snippet } from 'svelte';
 	import { Avatar, Dropdown, DropdownDivider, DropdownHeader, DropdownItem } from 'flowbite-svelte';
 
 	interface Props{
 		name: string;
 		avatar: string;
 		email: string;
+		menuItems: string[];
+		children?: Snippet;
 	}
-	let { name, avatar, email }:Props = $props();
+	let { name, avatar, email, menuItems, children }:Props = $props();
 </script>
 
 <button class="ms-3 rounded-full ring-gray-400 focus:ring-4 dark:ring-gray-600">
@@ -18,11 +21,12 @@
 		<span class="block text-sm">{name}</span>
 		<span class="block truncate text-sm font-medium">{email}</span>
 	</DropdownHeader>
-	<DropdownItem>Dashboard</DropdownItem>
-	<DropdownItem>Settings</DropdownItem>
-	<DropdownItem>Earnings</DropdownItem>
-	<DropdownDivider />
-	<DropdownItem>Sign out</DropdownItem>
+	{#each menuItems as menu}
+		<DropdownItem>{menu}</DropdownItem>
+	{/each}
+	{#if children}
+    {@render children()}
+	{/if}
 </Dropdown>
 
 <!--

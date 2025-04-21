@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Button, Card, Carousel, Controls } from 'flowbite-svelte';
 	import {
-		ArrowLeftOutline,
 		ArrowRightOutline,
 		CheckCircleSolid,
 		CheckOutline,
@@ -9,20 +8,19 @@
 		LayersSolid,
 		RocketSolid
 	} from 'flowbite-svelte-icons';
-	import { fade, fly } from 'svelte/transition';
+	import { fly } from 'svelte/transition';
 	const items = [{}, {}, {}];
-	let animation = (node: Element) => fade(node, { duration: 200 });
 
 	let transitionSlideIn = {
 		x: '100%',
 		opacity: 0.5,
-		duration: 500
+		duration: 200
 	};
 
 	let transitionSlideOut = {
 		x: '-100%',
 		opacity: 0.5,
-		duration: 500
+		duration: 200
 	};
 </script>
 
@@ -37,12 +35,12 @@
 					<h3 class="mb-4 text-2xl font-medium text-gray-900 dark:text-white">
 						You are going to grow by 44% next year
 					</h3>
-					<p class="mb-4 text-gray-500 dark:text-gray-400">
+					<p class="mb-4 text-gray-500 dark:text-gray-300">
 						Get started with a free and open-source admin dashboard layout built with Tailwind CSS
 						and Flowbite featuring charts, widgets, CRUD layouts, authentication pages, and more
 					</p>
 					<p class="mb-2 text-lg font-medium text-gray-900 dark:text-white">Key Takeaways:</p>
-					<ul class="mb-4 list-disc space-y-3 pl-4 text-gray-500 dark:text-gray-400">
+					<ul class="mb-4 list-disc space-y-3 pl-4 text-gray-500 dark:text-gray-300">
 						<li>
 							What are the new challenges in the delivery industry due to new consumer expectations.
 						</li>
@@ -57,12 +55,12 @@
 					<div class="mb-4 flex items-center text-lg font-medium text-teal-500">
 						<RocketSolid class="me-2" /> Tips to grow
 					</div>
-					<p class="mb-4 text-gray-500 dark:text-gray-400">
+					<p class="mb-4 text-gray-500 dark:text-gray-300">
 						Marketing, sales &amp; business growth for small business. Improve your marketing &amp;
 						promotion results - and grow your sales!
 					</p>
 					<p class="mb-4 text-lg font-medium text-gray-900 dark:text-white">What you'll learn:</p>
-					<ul role="list" class="mb-4 list-disc space-y-3 pl-2 text-gray-500 dark:text-gray-400">
+					<ul role="list" class="mb-4 list-disc space-y-3 pl-2 text-gray-500 dark:text-gray-300">
 						<li class="flex items-center space-x-2">
 							<CheckOutline size="lg" />
 							<span class="leading-tight">Dynamic reports and dashboards</span>
@@ -107,7 +105,7 @@
 					<h3 class="mb-4 text-2xl font-medium text-gray-900 dark:text-white">
 						Go next level with Flowbite
 					</h3>
-					<p class="text-gray-500 dark:text-gray-400">
+					<p class="text-gray-500 dark:text-gray-300">
 						Deliver great service experiences fast - without the complexity of traditional ITSM
 						solutions.Accelerate critical development work, eliminate toil, and deploy changes with
 						ease.
@@ -115,7 +113,7 @@
 					<!-- List -->
 					<ul
 						role="list"
-						class="my-5 mb-4 list-disc space-y-3 pl-2 text-gray-500 dark:text-gray-400"
+						class="my-5 mb-4 list-disc space-y-3 pl-2 text-gray-500 dark:text-gray-300"
 					>
 						<li class="flex items-center space-x-3">
 							<CheckCircleSolid class="text-purple-600 dark:text-purple-500" size="sm" />

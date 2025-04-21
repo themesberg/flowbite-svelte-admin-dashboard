@@ -14,15 +14,15 @@
 		</a>
 	</div>
 	<Timeline>
-		<TimelineItem title="Application UI design in Figma" date="April 2023">
-			<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+		<TimelineItem title="Application UI design in Figma" date="April 2025">
+			<p class="mb-4 text-base font-normal text-gray-500 dark:text-gray-300">
 				Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar,
 				and pre-order E-commerce & Marketing pages.
 			</p>
 			<Button color="alternative">Learn more<ArrowRightOutline class="ms-2" size="sm" /></Button>
 		</TimelineItem>
-		<TimelineItem title="Marketing UI code in Flowbite" date="March 2023">
-			<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+		<TimelineItem title="Marketing UI code in Flowbite" date="March 2025">
+			<p class="text-base font-normal text-gray-500 dark:text-gray-300">
 				Get started with dozens of web components and interactive elements built on top of Tailwind
 				CSS.
 			</p>
@@ -33,8 +33,8 @@
 				Go to Flowbite Blocks<ArrowRightOutline class="ms-2" size="sm" />
 			</a>
 		</TimelineItem>
-		<TimelineItem title="Marketing UI design in Figma" date="February 2023">
-			<p class="text-base font-normal text-gray-500 dark:text-gray-400">
+		<TimelineItem title="Marketing UI design in Figma" date="February 2025">
+			<p class="text-base font-normal text-gray-500 dark:text-gray-300">
 				Get started with dozens of web components and interactive elements built on top of Tailwind
 				CSS.
 			</p>

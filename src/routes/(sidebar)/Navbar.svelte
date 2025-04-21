@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Notifications from '../utils/dashboard/NotificationList.svelte';
-	import AppsMenu from '../utils/widgets/AppsMenu.svelte';
-	import UserMenu from '../utils/widgets/UserMenu.svelte';
+	import { AppsMenu, UserMenu } from '$lib';
 	import {
 		DarkMode,
 		Dropdown,
@@ -11,8 +10,21 @@
 		NavLi,
 		NavUl,
 		Navbar,
-		Search
+		Search,
+		DropdownDivider
 	} from 'flowbite-svelte';
+	import {
+		ArchiveSolid,
+		ArrowRightToBracketOutline,
+		CogOutline,
+		DollarOutline,
+		GridSolid,
+		InboxOutline,
+		ProfileCardOutline,
+		SalePercentOutline,
+		ShoppingBagSolid,
+		UsersGroupSolid
+	} from 'flowbite-svelte-icons';
 	import { ChevronDownOutline } from 'flowbite-svelte-icons';
 	import '../../app.css';
 	import Users from '../data/users.json';
@@ -23,6 +35,19 @@
 	}
 
   let { fluid = true, drawerHidden = $bindable(false), list = false }:Props = $props();
+
+	const menu = [
+		{ name: 'Sales', href: '/sales', icon: ShoppingBagSolid },
+		{ name: 'Users', href: '/users', icon: UsersGroupSolid },
+		{ name: 'Inbox', href: '/inbox', icon: InboxOutline },
+		{ name: 'Profile', href: '/profile', icon: ProfileCardOutline },
+		{ name: 'Settings', href: '/settings', icon: CogOutline },
+		{ name: 'Prouducts', href: '/products', icon: ArchiveSolid },
+		{ name: 'Pricing', href: '/pricing', icon: DollarOutline },
+		{ name: 'Billing', href: '/billing', icon: SalePercentOutline },
+		{ name: 'Logout', href: '/logout', icon: ArrowRightToBracketOutline }
+	];
+	const menuItems = ['Dashboard', 'Settings', 'Earnings']
 </script>
 
 <Navbar {fluid} class="text-black" color="default">
@@ -65,10 +90,13 @@
 			</form>
 		{/if}
 	</div>
-	<div class="ms-auto flex items-center text-gray-500 dark:text-gray-400 sm:order-2">
+	<div class="ms-auto flex items-center text-gray-500 dark:text-gray-300 sm:order-2">
 		<Notifications />
-		<AppsMenu />
+		<AppsMenu {menu}/>
 		<DarkMode />
-		<UserMenu {...Users[4]} />
+		<UserMenu {...Users[4]} {menuItems}>
+			<DropdownDivider />
+			<DropdownItem>Sign out</DropdownItem>
+		</UserMenu>
 	</div>
 </Navbar>

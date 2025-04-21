@@ -45,8 +45,8 @@
 		{/if}
 	</span>&nbsp;
 	{#if equalHeight}
-		<span class="text-gray-300 dark:text-gray-400">{since}</span>
+		<span class="text-gray-300 dark:text-gray-300">{since}</span>
 	{:else}
-		<span class={spanTextSize[size]}>{since}</span>
+		<span class="{spanTextSize[size]} text-gray-300 dark:text-gray-300">{since}</span>
 	{/if}
 </div>

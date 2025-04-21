@@ -44,7 +44,7 @@
 		twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass);
 	const siteImgCls = twMerge('mr-4 h-11', siteImgClass);
 	const cardH1Cls = twMerge('mb-3 text-2xl font-bold text-gray-900 dark:text-white', cardH1Class);
-	const haveAccountDivCls = twMerge('text-sm font-medium text-gray-500 dark:text-gray-400', haveAccoutDivClass);
+	const haveAccountDivCls = twMerge('text-sm font-medium text-gray-500 dark:text-gray-300', haveAccoutDivClass);
 
 	const preventDefault = <E extends Event>(fn: (event: E) => void) => {
     return function (this: any, event: E) {
@@ -111,5 +111,5 @@
 		'flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white';
 @prop export let siteImgClass = 'mr-4 h-11';
 @prop export let cardH1Class = 'text-2xl font-bold text-gray-900 dark:text-white';
-@prop export let haveAccountDivClass = 'text-sm font-medium text-gray-500 dark:text-gray-400';
+@prop export let haveAccountDivClass = 'text-sm font-medium text-gray-500 dark:text-gray-300';
 -->

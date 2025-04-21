@@ -1,5 +1,5 @@
 <script lang="ts">
-	import IconAvatar from '../widgets/IconAvatar.svelte';
+	import {IconAvatar} from '$lib';
 	import type { Component, Snippet } from 'svelte';
 	import type { IndicatorProps } from 'flowbite-svelte';
 
@@ -25,7 +25,7 @@
 		{/if}
 	</IconAvatar>
 	<div class="w-full pl-3">
-		<div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-400">
+		<div class="mb-1.5 text-sm font-normal text-gray-500 dark:text-gray-300">
 			{@render children()}
 		</div>
 		{#if when}

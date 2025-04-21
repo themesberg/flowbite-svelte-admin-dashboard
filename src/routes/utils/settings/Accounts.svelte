@@ -18,7 +18,7 @@
 						<p class="truncate text-sm font-normal text-primary-700 dark:text-primary-500">
 							{country}
 						</p>
-						<p class="mt-1 text-xs font-medium text-gray-500 dark:text-gray-400">
+						<p class="mt-1 text-xs font-medium text-gray-500 dark:text-gray-300">
 							Last seen: {Math.ceil(Math.random() * 10)} min ago
 						</p>
 					</div>

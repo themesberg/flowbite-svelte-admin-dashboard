@@ -52,14 +52,14 @@
 		>
 			Our pricing plan made simple
 		</h1>
-		<p class="mb-6 text-lg font-normal text-gray-500 dark:text-gray-400 sm:text-xl">
+		<p class="mb-6 text-lg font-normal text-gray-500 dark:text-gray-300 sm:text-xl">
 			All types of businesses need access to development resources, so we give you the option to
 			decide how much you need to use.
 		</p>
 		<div class="flex items-center">
 			<span class="text-base font-medium text-gray-900 dark:text-white"> Monthly</span>
 			<Toggle class="ms-3 peer-focus:ring-0" bind:checked={yearly} />
-			<span class="text-base font-medium text-gray-900 dark:text-gray-400"> Yearly </span>
+			<span class="text-base font-medium text-gray-900 dark:text-gray-300"> Yearly </span>
 		</div>
 		<section
 			class="grid grid-cols-1 space-y-12 pt-9 md:grid-cols-2 md:gap-6 md:gap-x-6 md:space-y-0 lg:grid-cols-3"

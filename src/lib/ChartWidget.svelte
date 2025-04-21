@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Change from '../dashboard/Change.svelte';
+	import {Change} from '$lib';
 	import type { ApexOptions } from 'apexcharts';
 	import { Card, Chart, Heading } from 'flowbite-svelte';
 	import LastRange from './LastRange.svelte';
@@ -9,8 +9,9 @@
 		title: string;
 		subtitle: string;
 		chartOptions?: ApexOptions;
+		value?: number;
 	}
-	let {  title, subtitle, chartOptions }:Props = $props();
+	let {  title, subtitle, chartOptions, value }:Props = $props();
 
 </script>
 
@@ -18,9 +19,9 @@
 	<div class="mb-4 flex items-center justify-between">
 		<div class="flex-shrink-0">
 			<Heading tag="h3" class="text-2xl">{title}</Heading>
-			<p class="text-base font-light text-gray-500 dark:text-gray-400">{subtitle}</p>
+			<p class="text-base font-light text-gray-500 dark:text-gray-300">{subtitle}</p>
 		</div>
-		<Change value={12.5} since="" class="justify-end font-medium" />
+		<Change {value} since="" class="justify-end font-medium" />
 	</div>
 
 	<Chart options={chartOptions || {}}></Chart>

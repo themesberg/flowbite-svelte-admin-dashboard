@@ -36,7 +36,7 @@
 			All products
 		</Heading>
 
-		<Toolbar embedded class="w-full py-4 text-gray-500 dark:text-gray-400">
+		<Toolbar embedded class="w-full py-4 text-gray-500 dark:text-gray-300">
 			<Input placeholder="Search for products" class="me-6 w-80 border xl:w-96" />
 			<ToolbarButton
 				color="dark"
@@ -81,18 +81,18 @@
 				<TableBodyRow class="text-base">
 					<TableBodyCell class="w-4 p-4"><Checkbox /></TableBodyCell>
 					<TableBodyCell class="flex items-center space-x-6 whitespace-nowrap p-4">
-						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
+						<div class="text-sm font-normal text-gray-500 dark:text-gray-300">
 							<div class="text-base font-semibold text-gray-900 dark:text-white">
 								{product.name}
 							</div>
-							<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
+							<div class="text-sm font-normal text-gray-500 dark:text-gray-300">
 								{product.category}
 							</div>
 						</div>
 					</TableBodyCell>
 					<TableBodyCell class="p-4">{product.technology}</TableBodyCell>
 					<TableBodyCell
-						class="max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-gray-400 xl:max-w-xs"
+						class="max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-gray-300 xl:max-w-xs"
 						>{product.description}</TableBodyCell
 					>
 					<TableBodyCell class="p-4">#{product.id}</TableBodyCell>

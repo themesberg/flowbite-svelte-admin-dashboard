@@ -47,7 +47,7 @@
 			All users
 		</Heading>
 
-		<Toolbar embedded class="w-full py-4 text-gray-500  dark:text-gray-400">
+		<Toolbar embedded class="w-full py-4 text-gray-500  dark:text-gray-300">
 			<Input placeholder="Search for users" class="me-4 w-80 border xl:w-96" />
 			<div class="border-l border-gray-100 pl-2 dark:border-gray-700">
 				<ToolbarButton
@@ -104,13 +104,13 @@
 					<TableBodyCell class="w-4 p-4"><Checkbox /></TableBodyCell>
 					<TableBodyCell class="mr-12 flex items-center space-x-6 whitespace-nowrap p-4">
 						<Avatar src={imagesPath(user.avatar, 'users')} />
-						<div class="text-sm font-normal text-gray-500 dark:text-gray-400">
+						<div class="text-sm font-normal text-gray-500 dark:text-gray-300">
 							<div class="text-base font-semibold text-gray-900 dark:text-white">{user.name}</div>
-							<div class="text-sm font-normal text-gray-500 dark:text-gray-400">{user.email}</div>
+							<div class="text-sm font-normal text-gray-500 dark:text-gray-300">{user.email}</div>
 						</div>
 					</TableBodyCell>
 					<TableBodyCell
-						class="max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-gray-400 xl:max-w-xs"
+						class="max-w-sm overflow-hidden truncate p-4 text-base font-normal text-gray-500 dark:text-gray-300 xl:max-w-xs"
 					>
 						{user.biography}
 					</TableBodyCell>

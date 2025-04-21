@@ -7,7 +7,7 @@
 	<ul class="flex flex-wrap items-center justify-center gap-6">
 		{#each ['Terms', 'Licensing', 'Cookie Policy', 'Contact'] as elem}
 			<li>
-				<a href="/" class="text-sm font-normal text-gray-500 hover:underline dark:text-gray-400"
+				<a href="/" class="text-sm font-normal text-gray-500 hover:underline dark:text-gray-300"
 					>{elem}</a
 				>
 			</li>
