@@ -42,7 +42,7 @@
     border?: boolean;
     shadow?: boolean;
     node?: HTMLElement;
-    use?: Action<HTMLElement, any> ;
+    use?: Action<HTMLElement, any>;
     options?: Record<string, any>;
     role?: string;
     transition?: TransitionFunc;
@@ -51,12 +51,12 @@
     class?: string;
   }
 
-  let { children, tag, href, color = 'default', rounded, border, shadow, node, use = noop, options = {}, role, transition, params, open = true, class:className, ...restProps }: Props = $props();
+  let { children, tag, href, color = 'default', rounded, border, shadow, node, use = noop, options = {}, role, transition, params, open = true, class: className, ...restProps }: Props = $props();
 
   tag = href ? 'a' : 'div';
 
   setContext('background', true);
-  
+
   // const dispatch = createEventDispatcher();
   // $: dispatch(open ? 'open' : 'close');
   // $: dispatch('show', open);
@@ -116,7 +116,7 @@
     {@render children()}
   </svelte:element>
 {:else if open}
-  <svelte:element this={tag} use:use={options} bind:this={node} {role} {...restProps} class={divClass} >
+  <svelte:element this={tag} use:use={options} bind:this={node} {role} {...restProps} class={divClass}>
     {@render children()}
   </svelte:element>
 {/if}

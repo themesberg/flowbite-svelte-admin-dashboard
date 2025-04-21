@@ -1,34 +1,29 @@
 <script lang="ts">
-	import { Toggle } from 'flowbite-svelte';
-	import CardList from './CardList.svelte';
+  import { Toggle } from 'flowbite-svelte';
+  import CardList from './CardList.svelte';
 
-	const items = [
-		{
-			title: 'Rating reminders',
-			subtitle: 'Send an email reminding me to rate an item a week after purchase',
-			active: true
-		},
-		{
-			title: 'Item update notifications',
-			subtitle: 'Send user and product notifications for you',
-			active: false
-		},
-		{
-			title: 'Item comment notifications',
-			subtitle: 'Send me an email when someone comments on one of my items',
-			active: true
-		},
-		{
-			title: 'Buyer review notifications',
-			subtitle: 'Send me an email when someone leaves a review with their rating',
-			active: false
-		}
-	];
+  const items = [
+    {
+      title: 'Rating reminders',
+      subtitle: 'Send an email reminding me to rate an item a week after purchase',
+      active: true
+    },
+    {
+      title: 'Item update notifications',
+      subtitle: 'Send user and product notifications for you',
+      active: false
+    },
+    {
+      title: 'Item comment notifications',
+      subtitle: 'Send me an email when someone comments on one of my items',
+      active: true
+    },
+    {
+      title: 'Buyer review notifications',
+      subtitle: 'Send me an email when someone leaves a review with their rating',
+      active: false
+    }
+  ];
 </script>
 
-<CardList
-	title="Email Notifications"
-	subtitle="You can set up Themesberg to get email notifications "
-	{items}
-	class="p-4 sm:p-6"
-/>
+<CardList title="Email Notifications" subtitle="You can set up Themesberg to get email notifications " {items} class="p-4 sm:p-6" />

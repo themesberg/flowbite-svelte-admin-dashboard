@@ -9,21 +9,21 @@ interface MainChartColors {
 
 export default function getChartOptions(dark: boolean): ApexOptions {
   let mainChartColors: MainChartColors;
-    
+
   if (dark) {
     mainChartColors = {
       borderColor: '#374151',
       labelColor: '#9CA3AF',
       opacityFrom: 0,
-      opacityTo: 0.15,
+      opacityTo: 0.15
     };
   } else {
     mainChartColors = {
       borderColor: '#F3F4F6',
       labelColor: '#6B7280',
       opacityFrom: 0.45,
-      opacityTo: 0,
-    }
+      opacityTo: 0
+    };
   }
 
   const options: ApexOptions = {

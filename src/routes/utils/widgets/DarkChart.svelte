@@ -1,19 +1,19 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import type { ApexOptions } from 'apexcharts';
-  import { Chart } from "flowbite-svelte";
-  import { onMount } from "svelte";
+  import { Chart } from 'flowbite-svelte';
+  import { onMount } from 'svelte';
 
-  type ConfigFunc = (dark:boolean) => ApexOptions;
-  interface Props{
-    configFunc:ConfigFunc;
+  type ConfigFunc = (dark: boolean) => ApexOptions;
+  interface Props {
+    configFunc: ConfigFunc;
     class?: string;
   }
-  let { configFunc, class:className }:Props = $props();
+  let { configFunc, class: className }: Props = $props();
 
-  let dark = browser ? document.documentElement.classList.contains('dark'): false;
-    
-  let options:ApexOptions = $derived(configFunc(dark));
+  let dark = browser ? document.documentElement.classList.contains('dark') : false;
+
+  let options: ApexOptions = $derived(configFunc(dark));
 
   function handler(ev: Event) {
     if ('detail' in ev) {
@@ -21,11 +21,10 @@
     }
   }
 
-  onMount(() => {        
+  onMount(() => {
     document.addEventListener('dark', handler);
     return () => document.removeEventListener('dark', handler);
   });
-
 </script>
 
 <Chart {options} class={className} />

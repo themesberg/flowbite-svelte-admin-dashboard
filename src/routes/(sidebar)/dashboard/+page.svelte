@@ -1,11 +1,11 @@
 <script lang="ts">
-	import Dashboard from '../../utils/dashboard/Dashboard.svelte';
-	import MetaTag from '../../utils/MetaTag.svelte';
-	import Footer from '../Footer.svelte';
-	import type { PageProps } from './$types';
-	let { data }: PageProps = $props();
+  import Dashboard from '../../utils/dashboard/Dashboard.svelte';
+  import MetaTag from '../../utils/MetaTag.svelte';
+  import Footer from '../Footer.svelte';
+  import type { PageProps } from './$types';
+  let { data }: PageProps = $props();
 
-	const path: string = '/dashboard';
+  const path: string = '/dashboard';
   const description: string = 'Admin Dashboard example using Flowbite Svelte';
   const title: string = 'Flowbite Svelte Admin Dashboard - Dashboard';
   const subtitle: string = 'Admin Dashboard';
@@ -14,6 +14,6 @@
 <MetaTag {path} {description} {title} {subtitle} />
 
 <main class="p-4">
-	<Dashboard {data} />
+  <Dashboard {data} />
 </main>
 <Footer />

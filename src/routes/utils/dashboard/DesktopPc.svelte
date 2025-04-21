@@ -1,44 +1,38 @@
 <script lang="ts">
-	import options from '../graphs/thinmultibars';
-	import LastRange from '../widgets/LastRange.svelte';
-	import More from '../widgets/More.svelte';
-	import { Card, Chart, Input } from 'flowbite-svelte';
-	import { CalendarMonthOutline } from 'flowbite-svelte-icons';
-	import {Change} from '$lib';
+  import options from '../graphs/thinmultibars';
+  import LastRange from '../widgets/LastRange.svelte';
+  import More from '../widgets/More.svelte';
+  import { Card, Chart, Input } from 'flowbite-svelte';
+  import { CalendarMonthOutline } from 'flowbite-svelte-icons';
+  import { Change } from '$lib';
 </script>
 
 <Card size="xl" class="h-fit max-w-none p-4 sm:p-6">
-	<div
-		class="items-center justify-between border-b border-gray-200 pb-4 dark:border-gray-700 sm:flex"
-	>
-		<div class="mb-4 w-full sm:mb-0">
-			<h3 class="text-base font-normal text-gray-500 dark:text-gray-300">Sales by category</h3>
-			<span class="text-2xl font-bold leading-none text-gray-900 dark:text-white sm:text-3xl"
-				>Desktop PC</span
-			>
-			<Change value={2.5} since="Since last month" size="sm" />
-		</div>
-		<div class="w-full max-w-lg">
-			<div class="grid grid-cols-2 items-center gap-4">
-				<Input placeholder="From" class="border">
-					{#snippet left()}
-						<CalendarMonthOutline size="md" />
-					{/snippet}
-				</Input>
+  <div class="items-center justify-between border-b border-gray-200 pb-4 sm:flex dark:border-gray-700">
+    <div class="mb-4 w-full sm:mb-0">
+      <h3 class="text-base font-normal text-gray-500 dark:text-gray-300">Sales by category</h3>
+      <span class="text-2xl leading-none font-bold text-gray-900 sm:text-3xl dark:text-white">Desktop PC</span>
+      <Change value={2.5} since="Since last month" size="sm" />
+    </div>
+    <div class="w-full max-w-lg">
+      <div class="grid grid-cols-2 items-center gap-4">
+        <Input placeholder="From" class="border">
+          {#snippet left()}
+            <CalendarMonthOutline size="md" />
+          {/snippet}
+        </Input>
 
-				<Input placeholder="To" class="border">
-					{#snippet left()}
-					<CalendarMonthOutline size="md" />
-					{/snippet}
-				</Input>
-			</div>
-		</div>
-	</div>
-	<Chart {options}></Chart>
-	<div
-		class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 dark:border-gray-700 sm:pt-6"
-	>
-		<LastRange />
-		<More title="Sales Report" href="#top" />
-	</div></Card
+        <Input placeholder="To" class="border">
+          {#snippet left()}
+            <CalendarMonthOutline size="md" />
+          {/snippet}
+        </Input>
+      </div>
+    </div>
+  </div>
+  <Chart {options}></Chart>
+  <div class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 sm:pt-6 dark:border-gray-700">
+    <LastRange />
+    <More title="Sales Report" href="#top" />
+  </div></Card
 >

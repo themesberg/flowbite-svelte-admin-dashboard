@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { PageProps } from './$types';
-	import Dashboard from '../../../utils/dashboard/Dashboard.svelte';
-	import MetaTag from '../../../utils/MetaTag.svelte';
-	
-	let { data }: PageProps = $props();
+  import type { PageProps } from './$types';
+  import Dashboard from '../../../utils/dashboard/Dashboard.svelte';
+  import MetaTag from '../../../utils/MetaTag.svelte';
 
-	const path: string = '/layouts/stacked';
+  let { data }: PageProps = $props();
+
+  const path: string = '/layouts/stacked';
   const description: string = 'Stacked layout examaple - Flowbite Svelte Admin Dashboard';
   const title: string = 'Flowbite Svelte Admin Dashboard - Stacked Layout';
   const subtitle: string = 'Stacked Layout';
@@ -14,5 +14,5 @@
 <MetaTag {path} {description} {title} {subtitle} />
 
 <main class="py-4">
-	<Dashboard {data} />
+  <Dashboard {data} />
 </main>
