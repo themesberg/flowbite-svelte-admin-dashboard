@@ -46,5 +46,4 @@
 ## Props
 @prop children
 @prop avatar = 'https:
-		name
 -->
