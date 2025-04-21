@@ -2,7 +2,6 @@
 	import { Avatar, Card, Heading, Popover, TabItem, Tabs } from 'flowbite-svelte';
 	import type { Snippet } from 'svelte';
 	import {Change, More, LastRange } from '$lib';
-	// import Customers from '../../data/users.json';
 	import { imagesPath } from './variables';
 	import { QuestionCircleSolid } from 'flowbite-svelte-icons';
   type ProductType = {
@@ -11,7 +10,7 @@
 		src?: string;
 		image?: string;
 		label?: string;
-		change?: string | number;
+		change?: number;
 		price?: string;
 		attributes?: {
 			[key: string]: any;
@@ -34,8 +33,10 @@
 		title?: string;
 		popoverTitle?: string;
 		popoverDesc?: Snippet;
+		tab1Title?: string;
+		tab2Title?: string;
 	}
-	let { products, customers, title, popoverTitle, popoverDesc }:Props = $props();
+	let { products, customers, title, popoverTitle, popoverDesc, tab1Title, tab2Title }:Props = $props();
 
 </script>
 
@@ -64,7 +65,7 @@
 	>
 		<TabItem class="w-full" open>
 			{#snippet titleSlot()}
-			Top products
+			  {tab1Title}
 			{/snippet}
 			<ul class="-m-3 divide-y divide-gray-200 dark:divide-gray-700 dark:bg-gray-800">
 				{#each products as { src, image, label, price, change }}
@@ -95,7 +96,7 @@
 		</TabItem>
 		<TabItem class="w-full">
 			{#snippet titleSlot()}
-			Top customers
+				{tab2Title}
 			{/snippet}
 			<ul class="-m-3 divide-y divide-gray-200 bg-white dark:divide-gray-700 dark:bg-gray-800">
 				{#each customers as { email, name, avatar }}

@@ -65,7 +65,8 @@
   const statsCont = {
     title: "Statistics this month",
     popoverTitle: "Statistics",
-
+    tab1Title: "Top products",
+    tab2Title: "Top customers"
   }
 </script>
 
