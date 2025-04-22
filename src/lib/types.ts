@@ -1,5 +1,5 @@
 import type { Component, Snippet } from 'svelte';
-import type { SizeType, IndicatorProps } from 'flowbite-svelte';
+import type { SizeType, IndicatorProps, CardProps  } from 'flowbite-svelte';
 import type { ApexOptions } from 'apexcharts';
 import type { HTMLFormAttributes } from 'svelte/elements';
 
@@ -187,4 +187,120 @@ export interface FaqProps {
   title: string;
   description?: string;
   faqs: FaqType[];
+}
+
+export interface ImgType {
+  src: string;
+  alt: string;
+}
+
+export interface NotFoundProps {
+  title?: string;
+  description?: string;
+  image?: ImgType;
+  btnTitle?: string;
+  btnHref?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  h1Class?: string;
+  imgDiv?: string;
+  div2Class?: string;
+}
+
+export interface MaintenanceProps {
+  title?: string;
+  description?: string;
+  image?: ImgType;
+  btnTitle?: string;
+  btnHref?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  h1Class?: string;
+  imgDiv?: string;
+  div2Class?: string;
+}
+
+export interface ServerErrorProps {
+  title?: string;
+  description?: string;
+  image?: ImgType;
+  btnTitle?: string;
+  btnHref?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  h1Class?: string;
+  imgDiv?: string;
+  div2Class?: string;
+}
+
+export interface EmptyCardProps {
+  size?: CardProps['size'];
+  class?: CardProps['class'];
+}
+
+export interface PlaygroundProps {
+  breadcrumb?: Snippet;
+  title?: string;
+}
+
+export interface DeleteModalProps {
+  open?: boolean;
+  title?: string;
+  yes?: string;
+  no?: string;
+}
+
+export interface UserModalProps {
+  open: boolean;
+  data: Record<string, string>;
+}
+
+export interface DeleteDrawerProps {
+  hidden?: boolean;
+  title: string;
+  confirm?: string;
+  yes?: string;
+  no?: string;
+}
+
+export interface UserType {
+  name: string;
+  img: string;
+  imgAlt: string;
+}
+
+export interface ProfileLockProps extends HTMLFormAttributes {
+  children: Snippet;
+  site?: SiteType;
+  user?: UserType;
+  btnTitle?: string;
+  pageDescription?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  siteLinkClass?: string;
+  siteImgClass?: string;
+  cardH1Class?: string;
+  cardDiv3Class?: string;
+  userImgClass?: string;
+  acceptTerms?: boolean;
+  termsLink?: string;
+  termsLinkClass?: string;
+}
+
+export interface RestPasswordProps extends HTMLFormAttributes {
+  children: Snippet;
+  site?: SiteType;
+  title?: string;
+  acceptTerms?: boolean;
+  btnTitle?: string;
+  pageDescription?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  siteLinkClass?: string;
+  siteImgClass?: string;
+  cardH1Class?: string;
+  cardDiv3Class?: string;
+  userImgClass?: string;
+  termsLink?: string;
+  termsLinkClass?: string;
 }

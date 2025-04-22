@@ -1,10 +1,8 @@
 <script lang="ts">
-  import { Card, type CardProps } from 'flowbite-svelte';
-  interface Props {
-    size?: CardProps['size'];
-    class?: CardProps['class'];
-  }
-  let { size, class: className, ...restProps } = $props();
+  import { Card } from 'flowbite-svelte';
+  import type { EmptyCardProps } from './types';
+  
+  let { size, class: className, ...restProps }: EmptyCardProps = $props();
 </script>
 
 <Card {size} class={className} {...restProps}>

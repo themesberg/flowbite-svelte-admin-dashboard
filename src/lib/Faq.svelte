@@ -9,7 +9,9 @@
   }: FaqProps = $props();
 </script>
 
-<Heading tag="h1" class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl sm:leading-none sm:tracking-tight dark:text-white">{title}</Heading>
+<Heading tag="h1" class="mb-3 text-3xl font-bold text-gray-900 sm:text-4xl sm:leading-none sm:tracking-tight dark:text-white">
+  {title}
+</Heading>
 <p class="mb-6 text-lg font-normal text-gray-500 sm:text-xl dark:text-gray-300">
   {description}
 </p>

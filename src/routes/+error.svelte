@@ -1,9 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/state';
-  import NotFound from './utils/pages/NotFound.svelte';
-  import Maintenance from './utils/pages/Maintenance.svelte';
-  import ServerError from './utils/pages/ServerError.svelte';
+  import { NotFound, Maintenance, ServerError } from "$lib";
 
   const pages = {
     400: Maintenance,

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Maintenance from '../../utils/pages/Maintenance.svelte';
+  import {Maintenance} from '$lib';
 </script>
 
 <Maintenance />

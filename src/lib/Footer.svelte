@@ -7,7 +7,7 @@
     src: string;
     alt: string;
   };
-  type FooterLink = {
+  type FooterLinkType = {
     className: string;
     href: string;
     item: string;
@@ -15,7 +15,7 @@
 
   type Menu = {
     title: string;
-    links: FooterLink[];
+    links: FooterLinkType[];
   };
 
   interface FooterProps {

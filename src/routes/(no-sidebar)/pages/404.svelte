@@ -1,5 +1,5 @@
 <script lang="ts">
-  import NotFound from '../../utils/pages/NotFound.svelte';
+  import { NotFound } from '$lib';
 </script>
 
 <NotFound />

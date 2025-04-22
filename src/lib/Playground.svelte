@@ -1,17 +1,19 @@
-<script>
+<script lang='ts'>
   import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
   import {EmptyCard} from '$lib';
+  import type { PlaygroundProps } from './types';
+
+  let { breadcrumb, title = 'Create something awesome here' }: PlaygroundProps = $props();
+  
 </script>
 
 <main>
   <div class="grid grid-cols-1 pt-2 xl:grid-cols-3 xl:gap-4 xl:px-0 dark:bg-gray-900">
     <div class="col-span-full mb-4 xl:mb-2">
-      <Breadcrumb class="mb-5">
-        <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-        <BreadcrumbItem href="/">Pages</BreadcrumbItem>
-        <BreadcrumbItem>Playground</BreadcrumbItem>
-      </Breadcrumb>
-      <Heading tag="h1" class="text-xl font-semibold sm:text-2xl">Create something awesome here</Heading>
+      {#if breadcrumb}
+        {@render breadcrumb()}
+      {/if}
+      <Heading tag="h1" class="text-xl font-semibold sm:text-2xl">{title}</Heading>
     </div>
     <div class="col-span-full xl:col-auto">
       <EmptyCard size="xl" class="mb-4 h-80 w-full space-y-6 p-4 2xl:col-span-2"></EmptyCard>

@@ -1,13 +1,14 @@
 <script lang="ts">
   import { Button, CloseButton, Heading, Input, Label, Select, Textarea } from 'flowbite-svelte';
   import { CloseOutline } from 'flowbite-svelte-icons';
-  interface Props {
+  interface ProductDrawerProps {
     hidden?: boolean;
+    title?: string;
   }
-  let { hidden = true }: Props = $props();
+  let { hidden = $bindable(true), title = 'Add new product' }: ProductDrawerProps = $props();
 </script>
 
-<Heading tag="h5" class="mb-6 text-sm font-semibold uppercase">Add new product</Heading>
+<Heading tag="h5" class="mb-6 text-sm font-semibold uppercase">{title}</Heading>
 <CloseButton onclick={() => (hidden = true)} class="absolute top-2.5 right-2.5 text-gray-400 hover:text-black dark:text-white" />
 
 <form action="#">

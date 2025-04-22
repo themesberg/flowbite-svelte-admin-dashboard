@@ -1,14 +1,11 @@
 <script lang="ts">
   import { Avatar, Breadcrumb, BreadcrumbItem, Button, Checkbox, Heading, Indicator } from 'flowbite-svelte';
   import { Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead } from 'flowbite-svelte';
-  import { TableHeadCell, Toolbar, ToolbarButton, ToolbarGroup } from 'flowbite-svelte';
+  import { TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
   import { CogSolid, DotsVerticalOutline, DownloadSolid } from 'flowbite-svelte-icons';
   import { EditOutline, ExclamationCircleSolid, PlusOutline, TrashBinSolid } from 'flowbite-svelte-icons';
   import Users from '../../../data/users.json';
-  import { imagesPath } from '../../../utils/variables';
-
-  import User from './User.svelte';
-  import Delete from './Delete.svelte';
+  import { imagesPath, DeleteModal, UserModal } from '$lib';
   import MetaTag from '../../../utils/MetaTag.svelte';
 
   let openUser: boolean = false; // modal control
@@ -106,5 +103,5 @@
 
 <!-- Modals -->
 
-<User bind:open={openUser} data={current_user} />
-<Delete bind:open={openDelete} />
+<UserModal bind:open={openUser} data={current_user} />
+<DeleteModal bind:open={openDelete} />

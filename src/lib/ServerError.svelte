@@ -1,22 +1,9 @@
 <script lang="ts">
-  import { imagesPath } from '../../utils/variables';
+  import { imagesPath } from './variables';
+  import { twMerge } from 'tailwind-merge';
   import { Button, P } from 'flowbite-svelte';
-  interface ImgType {
-    src: string;
-    alt: string;
-  }
-  interface Props {
-    title?: string;
-    description?: string;
-    image?: ImgType;
-    btnTitle?: string;
-    btnHref?: string;
-    mainClass?: string;
-    mainDivClass?: string;
-    h1Class?: string;
-    imgDiv?: string;
-    div2Class?: string;
-  }
+  import type { ServerErrorProps } from './types';
+
   let {
     title = 'Something has gone seriously wrong',
     description = "It's always time for a coffee break. We should be back by the time you finish your coffee.",
@@ -27,20 +14,23 @@
     btnTitle = 'Go back home',
     btnHref = '/',
     mainClass = 'bg-gray-50 dark:bg-gray-900',
-    mainDivClass = 'flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900',
-    h1Class = 'mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white',
+    mainDivClass,
+    h1Class,
     imgDiv = 'block md:max-w-lg',
     div2Class = 'text-center xl:max-w-4xl'
-  }: Props = $props();
+  }: ServerErrorProps = $props();
+
+  const mainDivCls = twMerge('flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900', mainDivClass);
+  const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class)
 </script>
 
 <main class={mainClass}>
-  <div class={mainDivClass}>
+  <div class={mainDivCls}>
     <div class={imgDiv}>
       <img src={image.src} alt={image.alt} />
     </div>
     <div class={div2Class}>
-      <h1 class={h1Class}>
+      <h1 class={h1Cls}>
         {title}
       </h1>
       <P class="mb-5 text-base font-normal text-gray-500 md:text-lg dark:text-gray-300">

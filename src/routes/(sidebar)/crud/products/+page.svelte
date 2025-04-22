@@ -20,11 +20,12 @@
   import type { Component } from 'svelte';
   import Products from '../../../data/product.json';
   import MetaTag from '../../../utils/MetaTag.svelte';
-  import Delete from './Delete.svelte';
-  import Product from './Product.svelte';
+  import { DeleteDrawer, ProductDrawer } from '$lib';
 
-  let hidden: boolean = true; // modal control
-  let DrawerComponent: Component = Product; // drawer component
+  // import Product from './Product.svelte';
+
+  let hidden: boolean = $state(true); // modal control
+  let DrawerComponent: Component = $state(ProductDrawer); // drawer component
 
   const toggle = (component: Component) => {
     DrawerComponent = component;
@@ -65,7 +66,7 @@
       </ToolbarButton>
       {#snippet end()}
         <div class="space-x-2">
-          <Button class="whitespace-nowrap" onclick={() => toggle(Product)}>Add new product</Button>
+          <Button class="whitespace-nowrap" onclick={() => toggle(ProductDrawer)}>Add new product</Button>
         </div>
       {/snippet}
     </Toolbar>
@@ -97,10 +98,10 @@
           <TableBodyCell class="p-4">{product.price}</TableBodyCell>
           <TableBodyCell class="p-4">{product.discount}</TableBodyCell>
           <TableBodyCell class="space-x-2">
-            <Button size="sm" class="gap-2 px-3" onclick={() => toggle(Product)}>
+            <Button size="sm" class="gap-2 px-3" onclick={() => toggle(ProductDrawer)}>
               <EditOutline size="sm" /> Update
             </Button>
-            <Button color="red" size="sm" class="gap-2 px-3" onclick={() => toggle(Delete)}>
+            <Button color="red" size="sm" class="gap-2 px-3" onclick={() => toggle(DeleteDrawer as Component)}>
               <TrashBinSolid size="sm" /> Delete item
             </Button>
           </TableBodyCell>
@@ -110,6 +111,6 @@
   </Table>
 </main>
 
-<Drawer placement="right" bind:hidden>
-  <DrawerComponent />
+<Drawer placement="right" bind:hidden={hidden}>
+  <DrawerComponent bind:hidden={hidden} />
 </Drawer>

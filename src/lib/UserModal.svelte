@@ -1,11 +1,8 @@
 <script lang="ts">
   import { Button, Input, Label, Modal, Textarea } from 'flowbite-svelte';
+  import type { UserModalProps } from './types';
 
-  interface Props {
-    open: boolean;
-    data: Record<string, string>;
-  }
-  let { open = $bindable(true), data }: Props = $props();
+  let { open = $bindable(true), data }: UserModalProps = $props();
 
   function init(form: HTMLFormElement) {
     if (data?.name) [data.first_name, data.last_name] = data.name.split(' ');
