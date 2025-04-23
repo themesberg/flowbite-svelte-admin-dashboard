@@ -21,7 +21,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[DeleteModalProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L241)
+[DeleteModalProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L236)
 ## Props
 @prop open = $bindable(true)
 @prop title = 'Are you sure you want to delete this?'

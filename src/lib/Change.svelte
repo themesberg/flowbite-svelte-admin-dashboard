@@ -1,6 +1,7 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
   import type { ChangeProps } from './types';
+  import { Span } from 'flowbite-svelte';
 
   let { value = 0, unit = '%', since = 'vs last month', size = 'md', equalHeight = false, class: className }: ChangeProps = $props();
 
@@ -29,17 +30,17 @@
 <div class={divClass}>
   <span class={color}>
     {#if value > 0}
-      <span class="text-base leading-4">↑</span>{value}{unit}
+      <Span class="text-base leading-4">↑</Span>{value}{unit}
     {:else if value < 0}
-      <span class="text-base leading-4">↓</span>{Math.abs(value)}{unit}
+      <Span class="text-base leading-4">↓</Span>{Math.abs(value)}{unit}
     {:else}
       --
     {/if}
   </span>&nbsp;
   {#if equalHeight}
-    <span class="text-gray-300 dark:text-gray-300">{since}</span>
+    <Span class="text-gray-300 dark:text-gray-300">{since}</Span>
   {:else}
-    <span class="{spanTextSize[size]} text-gray-300 dark:text-gray-300">{since}</span>
+    <Span class="{spanTextSize[size]} text-gray-300 dark:text-gray-300">{since}</Span>
   {/if}
 </div>
 

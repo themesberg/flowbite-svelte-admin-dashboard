@@ -6,7 +6,7 @@
   let { columns, rows }: ComparisonTableProps = $props();
 
   const columnsDefault = ['Freelancer', 'Company', 'Enterprise'];
-  const actualColumns = $derived(columns ?? columnsDefault);
+  const columnOptions = $derived(columns ?? columnsDefault);
   const rowsDefault: TableRow[] = [
     { name: 'Seperate business/personal', freelancer: true, company: true, enterprise: true },
     { name: 'Estimate tax payments', freelancer: true, company: true, enterprise: true },
@@ -25,23 +25,23 @@
     { name: 'Track employee time', freelancer: false, company: false, enterprise: true },
     { name: 'Multi-device', freelancer: false, company: false, enterprise: true }
   ];
-  const actualRows = $derived(rows ?? rowsDefault);
+  const rowOptions = $derived(rows ?? rowsDefault);
 </script>
 
 <Table striped>
   <TableHead class="normal-case">
     <TableHeadCell></TableHeadCell>
-    {#each actualColumns as column}
+    {#each columnOptions as column}
       <TableHeadCell class="p-4 text-right text-base font-semibold tracking-wider text-gray-900 dark:text-white">{column}</TableHeadCell>
     {/each}
   </TableHead>
   <TableBody>
-    {#each actualRows as row}
+    {#each rowOptions as row}
       <TableBodyRow class="border-none">
         <TableBodyCell class="rounded-l-lg p-4 text-base font-normal whitespace-nowrap text-gray-500 dark:text-gray-300">
           {row.name}
         </TableBodyCell>
-        {#each actualColumns as column}
+        {#each columnOptions as column}
           {@const value = row[column.toLowerCase() as keyof typeof row]}
           {#if typeof value === 'boolean'}
             <TableBodyCell>
@@ -66,7 +66,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[ComparisonTableProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L399)
+[ComparisonTableProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L402)
 ## Props
 @prop columns
 @prop rows

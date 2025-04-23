@@ -28,6 +28,8 @@ export interface ChartWidgetProps {
   subtitle: string;
   chartOptions?: ApexOptions;
   value?: number;
+  cardClass?: string;
+  headingClass?: string;
 }
 
 export interface ChatMsgProps {
@@ -69,13 +71,6 @@ export interface NotificationProps {
   when?: string;
   href?: string;
   color: IndicatorProps['color'];
-}
-
-export interface SmallPanelProps {
-  icon?: Snippet;
-  title?: string;
-  subtitle?: string;
-  change?: number;
 }
 
 export type ProductType = {
@@ -353,7 +348,7 @@ export interface ProductMetricCardProps {
   cardProps?: CardProps;
   title: string;
   subTitle?: string;
-  changeProps: ChangeProps;
+  changeProps?: ChangeProps;
   headingTag?: HeadingProps['tag'];
 }
 
@@ -393,7 +388,15 @@ export interface ActivityListProps {
 }
 
 export interface CategorySalesReportProps {
-  options: ApexOptions;
+  title: string;
+  titleTag?: HeadingProps['tag'];
+  subtitle?: string;
+  changeProps?: ChangeProps;
+  chart?: Snippet;
+  cardClasss?: string;
+  divClass?: string;
+  headingClass?: string;
+  spanClass?: string;
 }
 
 export interface ComparisonTableProps {
@@ -405,3 +408,121 @@ export type TableRow = {
   [key: string]: string | boolean;
   name: string;
 };
+
+export interface CardWidgetProps {
+  children: Snippet;
+  title: string;
+  subtitle?: string;
+  class?: string;
+}
+
+export interface CardListProps {
+  title: string;
+  subtitle?: string;
+  buttonLabel?: string;
+  items: any[];
+  class?: string;
+}
+
+export type NotificationItem = {
+  title: string;
+  subtitle: string;
+  active: boolean;
+};
+
+export interface NotificationCardProps {
+  title?: string;
+  items: NotificationItem[];
+  subtitle?: string;
+  class?: string;
+}
+
+type InputType =
+  | 'color'
+  | 'date'
+  | 'datetime-local'
+  | 'email'
+  | 'file'
+  | 'hidden'
+  | 'image'
+  | 'month'
+  | 'number'
+  | 'password'
+  | 'reset'
+  | 'submit'
+  | 'tel'
+  | 'text'
+  | 'time'
+  | 'url'
+  | 'week'
+  | 'search';
+
+export interface InputField {
+  label: string;
+  type: InputType;
+  placeholder: string;
+}
+
+export interface GeneralInfoProps {
+  inputs: InputField[];
+}
+
+export type Language = {
+  name: string;
+  value: string;
+};
+
+export type Timezone = {
+  name: string;
+  value: string;
+};
+
+export interface LanguageTimeProps {
+  timezones?: Timezone[];
+  languages?: Language[];
+}
+
+export type MoreOption = {
+  title: string;
+  href: string;
+};
+
+export interface IconOption {
+  icon: Component;
+  iconClass?: string;
+  size?: string;
+}
+
+export interface SmallPanelProps {
+  IconOption?: IconOption;
+  title?: string;
+  subtitle?: string;
+  change?: number;
+}
+
+export type DeviceOption = {
+  title?: string;
+  subtitle?: string;
+  change?: number;
+  IconOption: IconOption;
+};
+
+export interface TrafficProps {
+  chart?: Snippet;
+  title?: string;
+  subtitle?: string;
+  more?: MoreOption;
+  devices?: DeviceOption[];
+}
+
+export type SessionType = {
+  ipaddress: string;
+  device: string;
+  href: string;
+  btnName?: string;
+  IconOption?: IconOption;
+};
+export interface SessionProps {
+  seeMorehref?: string;
+  sessions: SessionType[];
+}

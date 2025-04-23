@@ -1,15 +1,15 @@
 <script lang="ts">
   import thickbars from '../graphs/thickbars';
-  import { Card, Chart, P, Button, Timeline, TimelineItem } from 'flowbite-svelte';
-  import { ArrowRightOutline } from 'flowbite-svelte-icons';
+  import options from '../graphs/thinmultibars';
+  import trafficOptions from '../graphs/traffic';
   import users from '../graphs/users';
-  import DarkChart from '../widgets/DarkChart.svelte';
+  import { DesktopPcOutline, MobilePhoneOutline, TabletOutline, ArrowRightOutline } from 'flowbite-svelte-icons';
+  import { Chart, P, Button, Timeline, TimelineItem } from 'flowbite-svelte';
   import getChartOptions from '../../(sidebar)/dashboard/chart_options';
-  import { Change, ChartWidget, Stats, More, ActivityList, ProductMetricCard } from '$lib';
+  import { ChartWidget, Stats, More, ActivityList, ProductMetricCard, CategroySalesReport, DarkChart, Traffic } from '$lib';
+  import type { DeviceOption } from '$lib/types';
   import Chat from './Chat.svelte';
-  import DesktopPc from './DesktopPc.svelte';
   import Insights from './Insights.svelte';
-  import Traffic from './Traffic.svelte';
   import Transactions from './Transactions.svelte';
   import Customers from '../../data/users.json';
 
@@ -68,6 +68,33 @@
     tab1Title: 'Top products',
     tab2Title: 'Top customers'
   };
+
+  const devices: DeviceOption[] = [
+    {
+      title: 'Desktop',
+      subtitle: '234k',
+      change: 4,
+      IconOption: {
+        icon: DesktopPcOutline
+      }
+    },
+    {
+      title: 'Phone',
+      subtitle: '94k',
+      change: -1,
+      IconOption: {
+        icon: MobilePhoneOutline
+      }
+    },
+    {
+      title: 'Tablet',
+      subtitle: '16k',
+      change: -0.6,
+      IconOption: {
+        icon: TabletOutline
+      }
+    }
+  ];
 </script>
 
 <div class="mt-px space-y-4">
@@ -118,8 +145,16 @@
   <div class="grid grid-cols-1 gap-4 xl:grid-cols-2">
     <Chat />
     <div class="flex flex-col gap-4">
-      <DesktopPc />
-      <Traffic {dark} />
+      <CategroySalesReport title="Sales by category" subtitle="Desktop PC" changeProps={{ value: 2.5, since: 'Since last month', size: 'sm' }}>
+        {#snippet chart()}
+          <Chart {options} />
+        {/snippet}
+      </CategroySalesReport>
+      <Traffic {devices}>
+        {#snippet chart()}
+          <Chart options={trafficOptions(dark)} />
+        {/snippet}
+      </Traffic>
     </div>
   </div>
   <div class="grid grid-cols-1 gap-4 xl:grid-cols-2">

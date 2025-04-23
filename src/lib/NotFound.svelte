@@ -21,7 +21,7 @@
     src: imagesPath('404.svg', 'illustrations'),
     alt: 'astronaut'
   };
-  const actualImage = $derived(image ?? imageDefault);
+  const imageOptions = $derived(image ?? imageDefault);
 
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
   const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class);
@@ -30,7 +30,7 @@
 <main class={mainClass}>
   <div class={mainDivCls}>
     <div class={imgDiv}>
-      <img src={actualImage.src} alt={actualImage.alt} />
+      <img src={imageOptions.src} alt={imageOptions.alt} />
     </div>
     <div class={div2Class}>
       <h1 class={h1Cls}>
@@ -53,7 +53,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[NotFoundProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L192)
+[NotFoundProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L187)
 ## Props
 @prop title = 'Page not found'
 @prop description = 'Oops! Looks like you followed a bad link. If you think this is a problem with us, please	tell us.'

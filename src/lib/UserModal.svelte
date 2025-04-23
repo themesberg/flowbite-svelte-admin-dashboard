@@ -71,7 +71,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[UserModalProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L248)
+[UserModalProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L243)
 ## Props
 @prop open = $bindable(true)
 @prop data

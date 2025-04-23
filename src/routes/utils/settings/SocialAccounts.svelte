@@ -1,7 +1,7 @@
 <script>
   import { A, Button } from 'flowbite-svelte';
   import { DribbbleSolid, FacebookSolid, GithubSolid, TwitterSolid } from 'flowbite-svelte-icons';
-  import Card from '../widgets/Card.svelte';
+  import { CardWidget } from '$lib';
 
   const items = [
     { icon: FacebookSolid, name: 'Facebook account', link: 'www.facebook.com/themesberg' },
@@ -11,7 +11,7 @@
   ];
 </script>
 
-<Card title="Social accounts" class="p-4 sm:p-6">
+<CardWidget title="Social accounts" class="p-4 sm:p-6">
   <ul class="divide-y divide-gray-200 dark:divide-gray-700">
     {#each items as { icon, name, link }}
       <li class="py-4">
@@ -43,4 +43,4 @@
     {/each}
   </ul>
   <Button class="mt-2 w-fit">Save all</Button>
-</Card>
+</CardWidget>

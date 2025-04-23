@@ -29,7 +29,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[FaqProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L181)
+[FaqProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L176)
 ## Props
 @prop title = 'Frequently asked questions'
 @prop description = 'All types of businesses need access to development resources, so we give you the option to decide how much you need to use.'

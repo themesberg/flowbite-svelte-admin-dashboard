@@ -21,7 +21,7 @@
     src: imagesPath('illustrations/500.svg'),
     alt: 'astronaut'
   };
-  const actualImage = $derived(image ?? imageDefault);
+  const imageOptions = $derived(image ?? imageDefault);
 
   const mainDivCls = twMerge('flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900', mainDivClass);
   const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class);
@@ -30,7 +30,7 @@
 <main class={mainClass}>
   <div class={mainDivCls}>
     <div class={imgDiv}>
-      <img src={actualImage.src} alt={actualImage.alt} />
+      <img src={imageOptions.src} alt={imageOptions.alt} />
     </div>
     <div class={div2Class}>
       <h1 class={h1Cls}>
@@ -53,7 +53,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[ServerErrorProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L218)
+[ServerErrorProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L213)
 ## Props
 @prop title = 'Something has gone seriously wrong'
 @prop description = "It's always time for a coffee break. We should be back by the time you finish your coffee."

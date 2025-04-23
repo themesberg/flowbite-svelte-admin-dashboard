@@ -27,7 +27,7 @@
     link: '/',
     imgAlt: 'FlowBite Logo'
   };
-  const actualSite = $derived(site ?? siteDefault);
+  const siteOptions = $derived(site ?? siteDefault);
 
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
   const siteLinkCls = twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass);
@@ -48,9 +48,9 @@
 
 <main class={mainClass}>
   <div class={mainDivCls}>
-    <a href={actualSite.link} class={siteLinkCls}>
-      <img src={actualSite.img} class={siteImgCls} alt={actualSite.imgAlt} />
-      <span>{actualSite.name}</span>
+    <a href={siteOptions.link} class={siteLinkCls}>
+      <img src={siteOptions.img} class={siteImgCls} alt={siteOptions.imgAlt} />
+      <span>{siteOptions.name}</span>
     </a>
     <!-- Card -->
     <Card class="w-full p-4 sm:p-6" size="md">
@@ -81,7 +81,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[SingUpProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L324)
+[SingUpProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L319)
 ## Props
 @prop children
 @prop title = 'Create a Free Account'

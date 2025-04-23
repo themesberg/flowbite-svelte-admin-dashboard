@@ -38,7 +38,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[FooterProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L378)
+[FooterProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L373)
 ## Props
 @prop brand
 @prop description

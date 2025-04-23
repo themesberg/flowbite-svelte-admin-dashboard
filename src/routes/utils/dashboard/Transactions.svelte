@@ -1,5 +1,4 @@
 <script lang="ts">
-  // import LastRange from '../widgets/LastRange.svelte';
   import { Button, Card, Checkbox, Dropdown, DropdownItem, Heading, Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Datepicker } from 'flowbite-svelte';
   import { ChevronDownOutline, ChevronRightOutline } from 'flowbite-svelte-icons';
   import { StatusBadge, CreditCard, DateRangeSelector } from '$lib';

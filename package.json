@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-admin-dashboard",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Flowbite Admin Dashboard components for Svelte",
   "homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
   "private": false,
@@ -114,6 +114,14 @@
       "types": "./dist/AppsMenu.svelte.d.ts",
       "svelte": "./dist/AppsMenu.svelte"
     },
+    "./CardList.svelte": {
+      "types": "./dist/CardList.svelte.d.ts",
+      "svelte": "./dist/CardList.svelte"
+    },
+    "./CardWidget.svelte": {
+      "types": "./dist/CardWidget.svelte.d.ts",
+      "svelte": "./dist/CardWidget.svelte"
+    },
     "./CategorySalesReport.svelte": {
       "types": "./dist/CategorySalesReport.svelte.d.ts",
       "svelte": "./dist/CategorySalesReport.svelte"
@@ -137,6 +145,10 @@
     "./CreditCard.svelte": {
       "types": "./dist/CreditCard.svelte.d.ts",
       "svelte": "./dist/CreditCard.svelte"
+    },
+    "./DarkChart.svelte": {
+      "types": "./dist/DarkChart.svelte.d.ts",
+      "svelte": "./dist/DarkChart.svelte"
     },
     "./DateRangeSelector.svelte": {
       "types": "./dist/DateRangeSelector.svelte.d.ts",
@@ -166,9 +178,17 @@
       "types": "./dist/ForgotPassword.svelte.d.ts",
       "svelte": "./dist/ForgotPassword.svelte"
     },
+    "./GeneralInfo.svelte": {
+      "types": "./dist/GeneralInfo.svelte.d.ts",
+      "svelte": "./dist/GeneralInfo.svelte"
+    },
     "./IconAvatar.svelte": {
       "types": "./dist/IconAvatar.svelte.d.ts",
       "svelte": "./dist/IconAvatar.svelte"
+    },
+    "./LanguageTime.svelte": {
+      "types": "./dist/LanguageTime.svelte.d.ts",
+      "svelte": "./dist/LanguageTime.svelte"
     },
     "./Maintenance.svelte": {
       "types": "./dist/Maintenance.svelte.d.ts",
@@ -185,6 +205,10 @@
     "./Notification.svelte": {
       "types": "./dist/Notification.svelte.d.ts",
       "svelte": "./dist/Notification.svelte"
+    },
+    "./NotificationCard.svelte": {
+      "types": "./dist/NotificationCard.svelte.d.ts",
+      "svelte": "./dist/NotificationCard.svelte"
     },
     "./Playground.svelte": {
       "types": "./dist/Playground.svelte.d.ts",
@@ -222,6 +246,10 @@
       "types": "./dist/ServerError.svelte.d.ts",
       "svelte": "./dist/ServerError.svelte"
     },
+    "./Sessions.svelte": {
+      "types": "./dist/Sessions.svelte.d.ts",
+      "svelte": "./dist/Sessions.svelte"
+    },
     "./SignIn.svelte": {
       "types": "./dist/SignIn.svelte.d.ts",
       "svelte": "./dist/SignIn.svelte"
@@ -241,6 +269,10 @@
     "./StatusBadge.svelte": {
       "types": "./dist/StatusBadge.svelte.d.ts",
       "svelte": "./dist/StatusBadge.svelte"
+    },
+    "./Traffic.svelte": {
+      "types": "./dist/Traffic.svelte.d.ts",
+      "svelte": "./dist/Traffic.svelte"
     },
     "./UserMenu.svelte": {
       "types": "./dist/UserMenu.svelte.d.ts",

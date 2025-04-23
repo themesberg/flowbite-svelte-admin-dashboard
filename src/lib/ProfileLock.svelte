@@ -29,7 +29,7 @@
     link: '/',
     imgAlt: 'FlowBite Logo'
   };
-  const actualSite = $derived(site ?? siteDefault);
+  const siteOptions = $derived(site ?? siteDefault);
   const userDefault = {
     name: 'Bonnie Green',
     img: '/images/users/bonnie-green.png',
@@ -58,9 +58,9 @@
 
 <main class={mainClass}>
   <div class={mainDivCls}>
-    <a href={actualSite.link} class={siteLinkCls}>
-      <img src={actualSite.img} class={siteImgCls} alt={actualSite.imgAlt} />
-      <span>{actualSite.name}</span>
+    <a href={siteOptions.link} class={siteLinkCls}>
+      <img src={siteOptions.img} class={siteImgCls} alt={siteOptions.imgAlt} />
+      <span>{siteOptions.name}</span>
     </a>
     <!-- Card -->
     <Card class="w-full max-w-md p-4 sm:p-6">
@@ -93,7 +93,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[ProfileLockProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L267)
+[ProfileLockProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L262)
 ## Props
 @prop children
 @prop site

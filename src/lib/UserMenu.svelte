@@ -26,7 +26,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[UserMenuProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L130)
+[UserMenuProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L125)
 ## Props
 @prop name
 @prop avatar

@@ -23,7 +23,7 @@
     link: '/',
     imgAlt: 'FlowBite Logo'
   };
-  const actualSite = $derived(site ?? siteDefault);
+  const siteOptions = $derived(site ?? siteDefault);
 
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
   const siteLinkCls = twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass);
@@ -32,10 +32,10 @@
 
 <main class={mainClass}>
   <div class={mainDivCls}>
-    {#if actualSite}
-      <a href={actualSite.link} class={siteLinkCls}>
-        <img src={actualSite.img} class={siteImgClass} alt={actualSite.imgAlt} />
-        <span>{actualSite.name}</span>
+    {#if siteOptions}
+      <a href={siteOptions.link} class={siteLinkCls}>
+        <img src={siteOptions.img} class={siteImgClass} alt={siteOptions.imgAlt} />
+        <span>{siteOptions.name}</span>
       </a>
     {/if}
     <!-- Card -->
@@ -56,7 +56,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[ForgotPasswordProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L145)
+[ForgotPasswordProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L140)
 ## Props
 @prop children
 @prop title = 'Forgot your password?'

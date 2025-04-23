@@ -61,7 +61,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[ProductDrawerProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L384)
+[ProductDrawerProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L379)
 ## Props
 @prop hidden = $bindable(true)
 @prop title = 'Add new product'

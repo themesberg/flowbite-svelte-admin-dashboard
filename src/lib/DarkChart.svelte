@@ -28,3 +28,13 @@
 </script>
 
 <Chart {options} class={className} />
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+Props
+## Props
+@prop configFunc
+@prop class: className
+-->

@@ -2,12 +2,12 @@
   import { Change } from '$lib';
   import type { SmallPanelProps } from './types';
 
-  let { icon, title, subtitle, change = 0 }: SmallPanelProps = $props();
+  let { IconOption, title, subtitle, change = 0 }: SmallPanelProps = $props();
 </script>
 
 <div>
-  {#if icon}
-    {@render icon()}
+  {#if IconOption?.icon}
+    <IconOption.icon size={IconOption.size} />
   {/if}
   <h3 class="text-gray-500 dark:text-gray-300">{title}</h3>
   <h4 class="text-xl font-bold dark:text-white">{subtitle}</h4>
@@ -20,9 +20,9 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[SmallPanelProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L74)
+[SmallPanelProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L496)
 ## Props
-@prop icon
+@prop IconOption
 @prop title
 @prop subtitle
 @prop change = 0
