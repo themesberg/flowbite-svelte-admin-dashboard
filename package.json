@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-admin-dashboard",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Flowbite Admin Dashboard components for Svelte",
   "homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
   "private": false,

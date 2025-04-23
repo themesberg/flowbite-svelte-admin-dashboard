@@ -18,10 +18,10 @@
   }: MaintenanceProps = $props();
 
   const imageDefault = {
-      src: imagesPath('illustrations/maintenance.svg'),
-      alt: 'maintenance'
-    }
-  const actualImage = $derived( image ?? imageDefault);
+    src: imagesPath('illustrations/maintenance.svg'),
+    alt: 'maintenance'
+  };
+  const actualImage = $derived(image ?? imageDefault);
 
   const mainDivCls = twMerge('flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900', mainDivClass);
   const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class);
@@ -46,3 +46,21 @@
     </div>
   </div>
 </main>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[MaintenanceProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L205)
+## Props
+@prop title = 'Under Maintenance'
+@prop description = 'Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always <a href
+@prop image
+@prop btnTitle = 'Go back home'
+@prop btnHref = '/'
+@prop mainClass = 'bg-gray-50 dark:bg-gray-900'
+@prop mainDivClass
+@prop h1Class
+@prop imgDiv = 'block mb-5 md:max-w-md'
+@prop div2Class = 'text-center xl:max-w-4xl'
+-->

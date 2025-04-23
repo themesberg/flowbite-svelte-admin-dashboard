@@ -24,7 +24,7 @@
 [DeleteModalProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L241)
 ## Props
 @prop open = $bindable(true)
-@prop title = 'Are you sure you want to delete this product?'
+@prop title = 'Are you sure you want to delete this?'
 @prop yes = "Yes, I'm sure"
 @prop no = 'No, cancel'
 -->

@@ -24,7 +24,7 @@
 ## Props
 @prop hidden = $bindable(true)
 @prop title = 'Delete item'
-@prop confirm = 'Are you sure you want to delete this product?'
+@prop confirm = 'Are you sure you want to delete this?'
 @prop yes = "Yes, I'm sure"
 @prop no = 'No, cancel'
 -->

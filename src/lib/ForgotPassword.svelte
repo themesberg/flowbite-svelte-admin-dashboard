@@ -18,11 +18,11 @@
   }: ForgotPasswordProps = $props();
 
   const siteDefault = {
-      name: 'Flowbite',
-      img: '/images/flowbite-svelte-icon-logo.svg',
-      link: '/',
-      imgAlt: 'FlowBite Logo'
-    };
+    name: 'Flowbite',
+    img: '/images/flowbite-svelte-icon-logo.svg',
+    link: '/',
+    imgAlt: 'FlowBite Logo'
+  };
   const actualSite = $derived(site ?? siteDefault);
 
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
@@ -51,3 +51,22 @@
     </Card>
   </div>
 </main>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[ForgotPasswordProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L145)
+## Props
+@prop children
+@prop title = 'Forgot your password?'
+@prop site
+@prop btnTitle = 'Reset password'
+@prop pageDescription = "Don't fret! Just type in your email and we will send you a code to reset your password!"
+@prop mainClass = 'bg-gray-50 dark:bg-gray-900'
+@prop mainDivClass
+@prop siteLinkClass
+@prop siteImgClass = 'mr-4 h-11'
+@prop cardH1Class
+@prop ...restProps
+-->
