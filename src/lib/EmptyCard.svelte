@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Card } from 'flowbite-svelte';
   import type { EmptyCardProps } from './types';
-  
+
   let { size, class: className, ...restProps }: EmptyCardProps = $props();
 </script>
 
@@ -16,3 +16,14 @@
     <h3>Card footer</h3>
   </div>
 </Card>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[EmptyCardProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L231)
+## Props
+@prop size
+@prop class: className
+@prop ...restProps
+-->

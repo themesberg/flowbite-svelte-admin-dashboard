@@ -66,3 +66,13 @@
     <Button type="submit">{Object.keys(data).length ? 'Save all' : 'Add user'}</Button>
   {/snippet}
 </Modal>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[UserModalProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L248)
+## Props
+@prop open = $bindable(true)
+@prop data
+-->

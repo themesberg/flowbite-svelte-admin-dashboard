@@ -1,9 +1,10 @@
 <script lang="ts">
-  import options from '../graphs/thinmultibars';
-  // import LastRange from '../widgets/LastRange.svelte';
-  // import More from '../widgets/More.svelte';
+  // replacement for DesktopPc
   import { Card, Chart, Datepicker } from 'flowbite-svelte';
   import { Change, More, DateRangeSelector } from '$lib';
+  import type { CategorySalesReportProps } from './types';
+
+  let { options }: CategorySalesReportProps = $props();
 
   let dateRange: { from: Date | undefined; to: Date | undefined } = $state({
     from: undefined,
@@ -30,3 +31,12 @@
     <More title="Sales Report" href="#top" />
   </div></Card
 >
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[CategorySalesReportProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L395)
+## Props
+@prop options
+-->

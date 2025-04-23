@@ -1,9 +1,8 @@
 <script lang="ts">
-  import LastRange from '../widgets/LastRange.svelte';
-  import { Button, Card, Checkbox, Dropdown, Heading, Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell } from 'flowbite-svelte';
-  import { CalendarMonthOutline, ChevronDownOutline, ChevronRightOutline } from 'flowbite-svelte-icons';
-  import CreditCard from './CreditCard.svelte';
-  import { StatusBadge } from '$lib';
+  // import LastRange from '../widgets/LastRange.svelte';
+  import { Button, Card, Checkbox, Dropdown, DropdownItem, Heading, Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Datepicker } from 'flowbite-svelte';
+  import { ChevronDownOutline, ChevronRightOutline } from 'flowbite-svelte-icons';
+  import { StatusBadge, CreditCard, DateRangeSelector } from '$lib';
 
   let { dark } = $props<{ dark: boolean }>();
 
@@ -11,6 +10,11 @@
   type StatusState = 'completed' | 'cancelled' | 'inreview' | 'inprogress';
 
   const headers = ['Transaction', 'Date & Time', 'Amount', 'Reference number', 'Payment method', 'Status'];
+
+  let dateRange: { from: Date | undefined; to: Date | undefined } = $state({
+    from: undefined,
+    to: undefined
+  });
 
   // Update the type definition to include the specific StatusState type
   const data: [string, string, string, string, number, StatusState][] = [
@@ -39,24 +43,15 @@
           Filter by status
           <ChevronDownOutline size="lg" />
         </Button>
-        <Dropdown class="w-44 space-y-3 p-3 text-sm" placement="bottom-start">
-          <li><Checkbox class="accent-primary-600">Completed (56)</Checkbox></li>
-          <li><Checkbox checked>Cancelled (56)</Checkbox></li>
-          <li><Checkbox class="accent-primary-600">In progress (56)</Checkbox></li>
-          <li><Checkbox checked>In review (97)</Checkbox></li>
+        <Dropdown simple class="w-48 space-y-2 text-sm" placement="bottom-start">
+          <DropdownItem><Checkbox class="accent-primary-600">Completed (56)</Checkbox></DropdownItem>
+          <DropdownItem><Checkbox checked>Cancelled (56)</Checkbox></DropdownItem>
+          <DropdownItem><Checkbox class="accent-primary-600">In progress (56)</Checkbox></DropdownItem>
+          <DropdownItem><Checkbox checked>In review (97)</Checkbox></DropdownItem>
         </Dropdown>
       </div>
       <div class="flex items-center space-x-4">
-        <Input placeholder="From" class="w-full">
-          {#snippet left()}
-            <CalendarMonthOutline size="md" />
-          {/snippet}
-        </Input>
-        <Input placeholder="To" class="w-full">
-          {#snippet left()}
-            <CalendarMonthOutline size="md" />
-          {/snippet}
-        </Input>
+        <Datepicker range bind:rangeFrom={dateRange.from} bind:rangeTo={dateRange.to} color="pink" inputClass="w-64" />
       </div>
     </div>
   </div>
@@ -88,7 +83,7 @@
     </TableBody>
   </Table>
   <div class="-mb-1 flex items-center justify-between pt-3 sm:pt-6">
-    <LastRange />
+    <DateRangeSelector />
     <a href="#top" class="text-primary-700 dark:text-primary-500 inline-flex items-center rounded-lg p-1 text-xs font-medium uppercase hover:bg-gray-100 sm:text-sm dark:hover:bg-gray-700">
       Transactions report <ChevronRightOutline size="lg" />
     </a>

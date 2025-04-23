@@ -15,7 +15,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[PriceCardPriceProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L163)
+[PriceCardPriceProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L158)
 ## Props
 @prop value
 @prop period

@@ -1,6 +1,6 @@
 <script>
   import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
-  import {EmptyCard} from '$lib';
+  import { EmptyCard } from '$lib';
 </script>
 
 <main>

@@ -92,7 +92,7 @@
       </div>
     </section>
     <section class="pt-20">
-      <Faq {faqs} title='Frequently asked questions'/>
+      <Faq {faqs} title="Frequently asked questions" />
     </section>
   </div>
 </main>

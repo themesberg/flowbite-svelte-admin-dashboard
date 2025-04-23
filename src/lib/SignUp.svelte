@@ -1,33 +1,8 @@
 <script lang="ts">
   import { A, Checkbox, Button, Card } from 'flowbite-svelte';
-  import type { HTMLFormAttributes } from 'svelte/elements';
-  import type { Snippet } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  import type { SingUpProps } from './types';
 
-  interface SiteType {
-    name: string;
-    img: string;
-    link: string;
-    imgAlt: string;
-  }
-
-  interface Props extends HTMLFormAttributes {
-    children: Snippet;
-    site?: SiteType;
-    title?: string;
-    haveAccount?: boolean;
-    acceptTerms?: boolean;
-    btnTitle?: string;
-    termsLink?: string;
-    loginLink?: string;
-    pageDescription?: string;
-    mainClass?: string;
-    mainDivClass?: string;
-    siteLinkClass?: string;
-    siteImgClass?: string;
-    cardH1Class?: string;
-    haveAccoutDivClass?: string;
-  }
   let {
     children,
     title = 'Create a Free Account',
@@ -44,7 +19,7 @@
     cardH1Class,
     haveAccoutDivClass,
     ...restProps
-  }: Props = $props();
+  }: SingUpProps = $props();
 
   const siteDefault = {
     name: 'Flowbite',
@@ -105,25 +80,22 @@
 <!--
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[SingUpProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L324)
 ## Props
-@prop export let title = 'Create a Free Account';
-@prop export let site = {
-		name: 'Flowbite1',
-		img: '/images/flowbite-svelte-icon-logo.svg',
-		link: '/',
-		imgAlt: 'FlowBite Logo1'
-	};
-@prop export let acceptTerms: boolean = true;
-@prop export let haveAccount: boolean = true;
-@prop export let btnTitle = 'Create account';
-@prop export let termsLink = '/';
-@prop export let loginLink = '/';
-@prop export let mainClass = 'bg-gray-50 dark:bg-gray-900 w-full';
-@prop export let mainDivClass =
-		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';
-@prop export let siteLinkClass =
-		'flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white';
-@prop export let siteImgClass = 'mr-4 h-11';
-@prop export let cardH1Class = 'text-2xl font-bold text-gray-900 dark:text-white';
-@prop export let haveAccountDivClass = 'text-sm font-medium text-gray-500 dark:text-gray-300';
+@prop children
+@prop title = 'Create a Free Account'
+@prop site
+@prop haveAccount = true
+@prop acceptTerms = true
+@prop btnTitle = 'Create account'
+@prop termsLink = '/'
+@prop loginLink = '/'
+@prop mainClass = 'bg-gray-50 dark:bg-gray-900 w-full'
+@prop mainDivClass
+@prop siteLinkClass
+@prop siteImgClass
+@prop cardH1Class
+@prop haveAccoutDivClass
+@prop ...restProps
 -->

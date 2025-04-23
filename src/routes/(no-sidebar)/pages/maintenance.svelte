@@ -1,5 +1,5 @@
 <script lang="ts">
-  import {Maintenance} from '$lib';
+  import { Maintenance } from '$lib';
 </script>
 
 <Maintenance />

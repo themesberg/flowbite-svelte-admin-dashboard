@@ -20,17 +20,17 @@
   <div class="mb-4 flex items-center justify-between pt-4 sm:pt-6 lg:justify-evenly">
     <SmallPanel title="Desktop" subtitle="234k" change={4}>
       {#snippet icon()}
-        <DesktopPcOutline size="xl" class="mb-1" />
+        <DesktopPcOutline size="xl" class="mb-1 dark:text-gray-100" />
       {/snippet}
     </SmallPanel>
     <SmallPanel title="Phone" subtitle="94k" change={-1}>
       {#snippet icon()}
-        <MobilePhoneOutline size="xl" class="mb-1" />
+        <MobilePhoneOutline size="xl" class="mb-1 dark:text-gray-100" />
       {/snippet}
     </SmallPanel>
     <SmallPanel title="Tablet" subtitle="16k" change={-0.6}>
       {#snippet icon()}
-        <TabletOutline size="xl" class="mb-1" />
+        <TabletOutline size="xl" class="mb-1 dark:text-gray-100" />
       {/snippet}
     </SmallPanel>
   </div>

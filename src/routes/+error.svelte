@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css';
   import { page } from '$app/state';
-  import { NotFound, Maintenance, ServerError } from "$lib";
+  import { NotFound, Maintenance, ServerError } from '$lib';
 
   const pages = {
     400: Maintenance,

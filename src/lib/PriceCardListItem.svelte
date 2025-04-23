@@ -19,7 +19,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[PriceCardListItemProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L176)
+[PriceCardListItemProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L171)
 ## Props
 @prop icon
 @prop children

@@ -3,16 +3,25 @@
   import LocalizedFormat from 'dayjs/plugin/localizedFormat';
   import { Dropdown, DropdownHeader, DropdownItem, DropdownDivider } from 'flowbite-svelte';
   import { ChevronDownOutline } from 'flowbite-svelte-icons';
-  import { type TimeSlot, type LastRangeProps, DEFAULT_TIMESLOTS } from './types';
+  import type { DateRangeSelectorProps, TimeSlot } from './types';
 
   dayjs.extend(LocalizedFormat);
 
-  let { timeslot = 'Last 7 days', timeslots = DEFAULT_TIMESLOTS }: LastRangeProps = $props();
+  let { timeslot = 'Last 7 days', timeslots }: DateRangeSelectorProps = $props();
 
-  let timeslots_keys: TimeSlot[] = Object.keys(timeslots) as TimeSlot[];
+  const timeslotsDefault = {
+    Yesterday: -1,
+    Today: 0,
+    'Last 7 days': 7,
+    'Last 30 days': 30,
+    'Last 90 days': 90
+  };
+  const actualTimeslots = $derived(timeslots ?? timeslotsDefault);
+
+  let timeslots_keys: TimeSlot[] = $derived(Object.keys(actualTimeslots) as TimeSlot[]);
 
   let today = dayjs();
-  let start = $derived(today.subtract(timeslots[timeslot], 'days').format('ll'));
+  let start = $derived(today.subtract(actualTimeslots[timeslot], 'days').format('ll'));
   let end = $derived(timeslot == 'Yesterday' ? start : today.format('ll'));
 </script>
 
@@ -44,8 +53,8 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[LastRangeProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L58)
+[DateRangeSelectorProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L346)
 ## Props
 @prop timeslot = 'Last 7 days'
-@prop timeslots = DEFAULT_TIMESLOTS
+@prop timeslots
 -->

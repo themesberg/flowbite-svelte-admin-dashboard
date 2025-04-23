@@ -25,7 +25,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[NotificationProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L70)
+[NotificationProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L65)
 ## Props
 @prop children
 @prop src

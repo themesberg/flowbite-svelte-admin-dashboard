@@ -1,36 +1,8 @@
 <script lang="ts">
   import { Checkbox, A, Button, Card } from 'flowbite-svelte';
-  import type { HTMLFormAttributes } from 'svelte/elements';
-  import type { Snippet } from 'svelte';
   import { twMerge } from 'tailwind-merge';
+  import type { SingInProps } from './types';
 
-  interface SiteType {
-    name: string;
-    img: string;
-    link: string;
-    imgAlt: string;
-  }
-
-  interface Props extends HTMLFormAttributes {
-    children: Snippet;
-    site?: SiteType;
-    rememberMe?: boolean;
-    title?: string;
-    lostPassword?: boolean;
-    createAccount?: boolean;
-    lostPasswordLink?: string;
-    loginTitle?: string;
-    registerLink?: string;
-    createAccountTitle?: string;
-    acceptTerms?: boolean;
-    btnTitle?: string;
-    pageDescription?: string;
-    mainClass?: string;
-    mainDivClass?: string;
-    siteLinkClass?: string;
-    siteImgClass?: string;
-    cardH1Class?: string;
-  }
   let {
     children,
     title = 'Sign in to platform',
@@ -48,7 +20,7 @@
     siteImgClass,
     cardH1Class,
     ...restProps
-  }: Props = $props();
+  }: SingInProps = $props();
 
   const siteDefault = {
     name: 'Flowbite',
@@ -111,26 +83,23 @@
 <!--
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[SingInProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L303)
 ## Props
-@prop export let title = 'Sign in to platform';
-@prop export let site = {
-		name: 'Flowbite',
-		img: '/images/flowbite-svelte-icon-logo.svg',
-		link: '/',
-		imgAlt: 'FlowBite Logo'
-	};
-@prop export let rememberMe = true;
-@prop export let lostPassword = true;
-@prop export let createAccount = true;
-@prop export let lostPasswordLink = '';
-@prop export let loginTitle = 'Login to your account';
-@prop export let registerLink = '';
-@prop export let createAccountTitle = 'Create account';
-@prop export let mainClass = 'bg-gray-50 dark:bg-gray-900 w-full';
-@prop export let mainDivClass =
-		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';
-@prop export let siteLinkClass =
-		'flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white';
-@prop export let siteImgClass = 'mr-4 h-11';
-@prop export let cardH1Class = 'text-2xl font-bold text-gray-900 dark:text-white';
+@prop children
+@prop title = 'Sign in to platform'
+@prop site
+@prop rememberMe = true
+@prop lostPassword = true
+@prop createAccount = true
+@prop lostPasswordLink
+@prop loginTitle = 'Login to your account'
+@prop registerLink
+@prop createAccountTitle = 'Create account'
+@prop mainClass = 'bg-gray-50 dark:bg-gray-900 w-full'
+@prop mainDivClass
+@prop siteLinkClass
+@prop siteImgClass
+@prop cardH1Class
+@prop ...restProps
 -->

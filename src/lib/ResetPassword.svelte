@@ -1,8 +1,8 @@
 <script lang="ts">
   import { Button, Card, Checkbox } from 'flowbite-svelte';
   import { twMerge } from 'tailwind-merge';
-  import type { RestPasswordProps } from './types'
-  
+  import type { RestPasswordProps } from './types';
+
   let {
     children,
     title = 'Reset your password',
@@ -77,23 +77,22 @@
 <!--
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[RestPasswordProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L285)
 ## Props
-@prop export let title = 'Reset your password';
-@prop export let site = {
-		name: 'Flowbite',
-		img: '/images/flowbite-svelte-icon-logo.svg',
-		link: '/',
-		imgAlt: 'FlowBite Logo'
-	};
-@prop export let acceptTerms: boolean = true;
-@prop export let btnTitle = 'Create account';
-@prop export let termsLink = '/';
-@prop export let mainClass = 'bg-gray-50 dark:bg-gray-900 w-full';
-@prop export let mainDivClass =
-		'flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900';
-@prop export let siteLinkClass =
-		'flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white';
-@prop export let siteImgClass = 'mr-4 h-11';
-@prop export let cardH1Class = 'text-2xl font-bold text-gray-900 dark:text-white';
-@prop export let termsLinkClass = 'text-primary-700 hover:underline dark:text-primary-500';
+@prop children
+@prop title = 'Reset your password'
+@prop site
+@prop btnTitle = 'Create account'
+@prop mainClass = 'bg-gray-50 dark:bg-gray-900 w-full'
+@prop mainDivClass
+@prop siteLinkClass
+@prop siteImgClass
+@prop cardH1Class
+@prop cardDiv3Class
+@prop userImgClass
+@prop acceptTerms = true
+@prop termsLink = '/'
+@prop termsLinkClass
+@prop ...restProps
 -->

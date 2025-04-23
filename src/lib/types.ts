@@ -1,5 +1,5 @@
 import type { Component, Snippet } from 'svelte';
-import type { SizeType, IndicatorProps, CardProps  } from 'flowbite-svelte';
+import type { SizeType, IndicatorProps, CardProps, HeadingProps } from 'flowbite-svelte';
 import type { ApexOptions } from 'apexcharts';
 import type { HTMLFormAttributes } from 'svelte/elements';
 
@@ -54,11 +54,6 @@ export const DEFAULT_TIMESLOTS = {
 };
 
 export type TimeSlot = keyof typeof DEFAULT_TIMESLOTS;
-
-export interface LastRangeProps {
-  timeslot?: TimeSlot;
-  timeslots?: { [key: string]: number };
-}
 
 export interface MoreProps {
   title?: string;
@@ -304,3 +299,109 @@ export interface RestPasswordProps extends HTMLFormAttributes {
   termsLink?: string;
   termsLinkClass?: string;
 }
+
+export interface SingInProps extends HTMLFormAttributes {
+  children: Snippet;
+  site?: SiteType;
+  rememberMe?: boolean;
+  title?: string;
+  lostPassword?: boolean;
+  createAccount?: boolean;
+  lostPasswordLink?: string;
+  loginTitle?: string;
+  registerLink?: string;
+  createAccountTitle?: string;
+  acceptTerms?: boolean;
+  btnTitle?: string;
+  pageDescription?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  siteLinkClass?: string;
+  siteImgClass?: string;
+  cardH1Class?: string;
+}
+
+export interface SingUpProps extends HTMLFormAttributes {
+  children: Snippet;
+  site?: SiteType;
+  title?: string;
+  haveAccount?: boolean;
+  acceptTerms?: boolean;
+  btnTitle?: string;
+  termsLink?: string;
+  loginLink?: string;
+  pageDescription?: string;
+  mainClass?: string;
+  mainDivClass?: string;
+  siteLinkClass?: string;
+  siteImgClass?: string;
+  cardH1Class?: string;
+  haveAccoutDivClass?: string;
+}
+
+export interface CreditCardProps {
+  number: number;
+}
+
+export interface DateRangeSelectorProps {
+  timeslot?: TimeSlot;
+  timeslots?: Record<string, number>;
+}
+
+export interface ProductMetricCardProps {
+  chart?: Snippet;
+  cardProps?: CardProps;
+  title: string;
+  subTitle?: string;
+  changeProps: ChangeProps;
+  headingTag?: HeadingProps['tag'];
+}
+
+export type BrandType = {
+  name: string;
+  href: string;
+  src: string;
+  alt: string;
+};
+
+export type FooterLinkType = {
+  className: string;
+  href: string;
+  item: string;
+};
+
+export type Menu = {
+  title: string;
+  links: FooterLinkType[];
+};
+
+export interface FooterProps {
+  brand: BrandType;
+  description?: Snippet;
+  menus: Menu[];
+}
+
+export interface ProductDrawerProps {
+  hidden?: boolean;
+  title?: string;
+}
+
+export interface ActivityListProps {
+  title?: string;
+  children: Snippet;
+  actions?: Snippet;
+}
+
+export interface CategorySalesReportProps {
+  options: ApexOptions;
+}
+
+export interface ComparisonTableProps {
+  columns?: string[];
+  rows?: { name: string; [key: string]: string | boolean }[];
+}
+
+export type TableRow = {
+  [key: string]: string | boolean;
+  name: string;
+};

@@ -111,6 +111,6 @@
   </Table>
 </main>
 
-<Drawer placement="right" bind:hidden={hidden}>
-  <DrawerComponent bind:hidden={hidden} />
+<Drawer placement="right" bind:hidden>
+  <DrawerComponent bind:hidden />
 </Drawer>

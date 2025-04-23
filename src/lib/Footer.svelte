@@ -1,28 +1,6 @@
 <script lang="ts">
   import { Footer, FooterCopyright, FooterLinkGroup, FooterLink, FooterBrand } from 'flowbite-svelte';
-  import type { Snippet } from 'svelte';
-  type BrandType = {
-    name: string;
-    href: string;
-    src: string;
-    alt: string;
-  };
-  type FooterLinkType = {
-    className: string;
-    href: string;
-    item: string;
-  };
-
-  type Menu = {
-    title: string;
-    links: FooterLinkType[];
-  };
-
-  interface FooterProps {
-    brand: BrandType;
-    description?: Snippet;
-    menus: Menu[];
-  }
+  import type { FooterProps } from './types';
 
   let { brand, description, menus }: FooterProps = $props();
 </script>
@@ -60,7 +38,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-FooterProps
+[FooterProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L378)
 ## Props
 @prop brand
 @prop description

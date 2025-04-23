@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Avatar, Card, Heading, Popover, TabItem, Tabs } from 'flowbite-svelte';
-  import { Change, More, LastRange } from '$lib';
+  import { Change, More, DateRangeSelector } from '$lib';
   import { imagesPath } from './variables';
   import { QuestionCircleSolid } from 'flowbite-svelte-icons';
   import type { StatsProps } from './types';
@@ -80,7 +80,7 @@
   </Tabs>
 
   <div class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 sm:pt-6 dark:border-gray-700">
-    <LastRange />
+    <DateRangeSelector />
     <More title="Full Report" href="#top" />
   </div>
 </Card>
@@ -89,7 +89,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[StatsProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L111)
+[StatsProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L106)
 ## Props
 @prop products
 @prop customers

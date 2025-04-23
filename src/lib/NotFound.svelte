@@ -3,7 +3,7 @@
   import { twMerge } from 'tailwind-merge';
   import { Button, P } from 'flowbite-svelte';
   import type { NotFoundProps } from './types';
-  
+
   let {
     title = 'Page not found',
     description = 'Oops! Looks like you followed a bad link. If you think this is a problem with us, please	tell us.',
@@ -20,8 +20,8 @@
     div2Class = 'text-center xl:max-w-4xl'
   }: NotFoundProps = $props();
 
-  const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass)
-  const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class)
+  const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
+  const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class);
 </script>
 
 <main class={mainClass}>

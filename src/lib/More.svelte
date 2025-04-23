@@ -25,7 +25,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[MoreProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L63)
+[MoreProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L58)
 ## Props
 @prop title
 @prop href = '#'

@@ -15,3 +15,16 @@
 
 <Button href="/" color="red" class="mr-2">{yes}</Button>
 <Button color="alternative" onclick={() => (hidden = true)}>{no}</Button>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[DeleteDrawerProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L253)
+## Props
+@prop hidden = $bindable(true)
+@prop title = 'Delete item'
+@prop confirm = 'Are you sure you want to delete this product?'
+@prop yes = "Yes, I'm sure"
+@prop no = 'No, cancel'
+-->

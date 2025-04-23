@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Button, Modal } from 'flowbite-svelte';
   import { ExclamationCircleOutline } from 'flowbite-svelte-icons';
-  import type { DeleteModalProps } from './types'
+  import type { DeleteModalProps } from './types';
 
   let { open = $bindable(true), title = 'Are you sure you want to delete this product?', yes = "Yes, I'm sure", no = 'No, cancel' }: DeleteModalProps = $props();
 </script>
@@ -16,3 +16,15 @@
     <Button color="alternative" onclick={() => (open = false)}>{no}</Button>
   </div>
 </Modal>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[DeleteModalProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L241)
+## Props
+@prop open = $bindable(true)
+@prop title = 'Are you sure you want to delete this product?'
+@prop yes = "Yes, I'm sure"
+@prop no = 'No, cancel'
+-->

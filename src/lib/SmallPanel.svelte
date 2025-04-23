@@ -20,7 +20,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[SmallPanelProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L79)
+[SmallPanelProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L74)
 ## Props
 @prop icon
 @prop title

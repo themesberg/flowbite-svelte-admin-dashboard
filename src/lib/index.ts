@@ -1,34 +1,38 @@
 export { default as ActivityList } from './ActivityList.svelte';
 export { default as AppsMenu } from './AppsMenu.svelte';
+export { default as CategroySalesReport } from './CategorySalesReport.svelte';
 export { default as Change } from './Change.svelte';
 export { default as ChartWidget } from './ChartWidget.svelte';
 export { default as ChatMsg } from './ChatMsg.svelte';
 export { default as ComparisonTable } from './ComparisonTable.svelte';
+export { default as CreditCard } from './CreditCard.svelte';
 export { default as DeleteDrawer } from './DeleteDrawer.svelte';
 export { default as DeleteModal } from './DeleteModal.svelte';
-export { default as EmptyCard } from './EmptyCard.svelte'
+export { default as EmptyCard } from './EmptyCard.svelte';
 export { default as Faq } from './Faq.svelte';
 export { default as Footer } from './Footer.svelte';
 export { default as ForgotPassword } from './ForgotPassword.svelte';
 export { default as IconAvatar } from './IconAvatar.svelte';
-export { default as LastRange } from './LastRange.svelte';
+export { default as DateRangeSelector } from './DateRangeSelector.svelte';
 export { default as More } from './More.svelte';
 export { default as Maintenance } from './Maintenance.svelte';
-export { default as NotFound } from './NotFound.svelte'
+export { default as NotFound } from './NotFound.svelte';
 export { default as Notification } from './Notification.svelte';
 export { default as Playground } from './Playground.svelte';
 export { default as PriceCard } from './PriceCard.svelte';
 export { default as PriceCardPrice } from './PriceCardPrice.svelte';
 export { default as PriceCardListItem } from './PriceCardListItem.svelte';
 export { default as ProductDrawer } from './ProductDrawer.svelte';
+export { default as ProductMetricCard } from './ProductMetricCard.svelte';
 export { default as ProfileLock } from './ProfileLock.svelte';
-export { default as ResetPassword } from './ResetPassword.svelte'
+export { default as ResetPassword } from './ResetPassword.svelte';
 export { default as ServerError } from './ServerError.svelte';
+export { default as SignIn } from './SignIn.svelte';
+export { default as SignUp } from './SignUp.svelte';
 export { default as SmallPanel } from './SmallPanel.svelte';
 export { default as Stats } from './Stats.svelte';
 export { default as StatusBadge } from './StatusBadge.svelte';
 export { default as UserMenu } from './UserMenu.svelte';
 export { default as UserModal } from './UserModal.svelte';
 
-
-export * from './variables'
+export * from './variables';

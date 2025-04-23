@@ -1,8 +1,7 @@
 <script lang="ts">
-  interface Props {
-    number: number;
-  }
-  let { number }: Props = $props();
+  import type { CreditCardProps } from './types';
+
+  let { number }: CreditCardProps = $props();
   // random assignment to issuer type
   let type = $derived(number % 2 ? 'visa' : 'master');
 </script>
@@ -34,3 +33,12 @@
     ></path></svg
   >
 {/if}
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[CreditCardProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L342)
+## Props
+@prop number
+-->

@@ -1,10 +1,8 @@
 <script lang="ts">
   import { Button, CloseButton, Heading, Input, Label, Select, Textarea } from 'flowbite-svelte';
   import { CloseOutline } from 'flowbite-svelte-icons';
-  interface ProductDrawerProps {
-    hidden?: boolean;
-    title?: string;
-  }
+  import type { ProductDrawerProps } from './types';
+
   let { hidden = $bindable(true), title = 'Add new product' }: ProductDrawerProps = $props();
 </script>
 
@@ -58,3 +56,13 @@
     </div>
   </div>
 </form>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[ProductDrawerProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L384)
+## Props
+@prop hidden = $bindable(true)
+@prop title = 'Add new product'
+-->

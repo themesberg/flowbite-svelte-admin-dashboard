@@ -1,10 +1,9 @@
-<script lang='ts'>
+<script lang="ts">
   import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
-  import {EmptyCard} from '$lib';
+  import { EmptyCard } from '$lib';
   import type { PlaygroundProps } from './types';
 
   let { breadcrumb, title = 'Create something awesome here' }: PlaygroundProps = $props();
-  
 </script>
 
 <main>
@@ -30,3 +29,13 @@
     {/each}
   </div>
 </main>
+
+<!--
+@component
+[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
+## Type
+[PlaygroundProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L236)
+## Props
+@prop breadcrumb
+@prop title = 'Create something awesome here'
+-->

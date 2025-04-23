@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Change } from '$lib';
   import { Card, Chart, Heading } from 'flowbite-svelte';
-  import LastRange from './LastRange.svelte';
+  import { DateRangeSelector } from '$lib';
   import More from './More.svelte';
   import type { ChartWidgetProps } from './types';
 
@@ -19,7 +19,7 @@
 
   <Chart options={chartOptions || {}}></Chart>
   <div class="mt-4 flex items-center justify-between border-t border-gray-200 pt-3 sm:pt-6 dark:border-gray-700">
-    <LastRange />
+    <DateRangeSelector />
     <More title="Sales Report" href="#top" />
   </div>
 </Card>
