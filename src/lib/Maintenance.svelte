@@ -7,10 +7,7 @@
   let {
     title = 'Under Maintenance',
     description = 'Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always <a href="/" class="text-primary-700 hover:underline dark:text-primary-500">contact us</a>, otherwise we’ll be back online shortly!.',
-    image = {
-      src: imagesPath('illustrations/maintenance.svg'),
-      alt: 'maintenance'
-    },
+    image,
     btnTitle = 'Go back home',
     btnHref = '/',
     mainClass = 'bg-gray-50 dark:bg-gray-900',
@@ -20,6 +17,12 @@
     div2Class = 'text-center xl:max-w-4xl'
   }: MaintenanceProps = $props();
 
+  const imageDefault = {
+      src: imagesPath('illustrations/maintenance.svg'),
+      alt: 'maintenance'
+    }
+  const actualImage = $derived( image ?? imageDefault);
+
   const mainDivCls = twMerge('flex flex-col justify-center items-center px-6 mx-auto h-screen xl:px-0 dark:bg-gray-900', mainDivClass);
   const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class);
 </script>
@@ -27,7 +30,7 @@
 <main class={mainClass}>
   <div class={mainDivCls}>
     <div class={imgDiv}>
-      <img src={image.src} alt={image.alt} />
+      <img src={actualImage.src} alt={actualImage.alt} />
     </div>
     <div class={div2Class}>
       <h1 class={h1Cls}>{title}</h1>

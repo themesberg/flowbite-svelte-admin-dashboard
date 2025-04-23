@@ -7,10 +7,7 @@
   let {
     title = 'Page not found',
     description = 'Oops! Looks like you followed a bad link. If you think this is a problem with us, please	tell us.',
-    image = {
-      src: imagesPath('404.svg', 'illustrations'),
-      alt: 'astronaut'
-    },
+    image,
     btnTitle = 'Go back home',
     btnHref = '/',
     mainClass = 'bg-gray-50 dark:bg-gray-900',
@@ -20,6 +17,12 @@
     div2Class = 'text-center xl:max-w-4xl'
   }: NotFoundProps = $props();
 
+  const imageDefault = {
+      src: imagesPath('404.svg', 'illustrations'),
+      alt: 'astronaut'
+    }
+  const actualImage = $derived( image ?? imageDefault);
+
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
   const h1Cls = twMerge('mb-3 text-2xl font-bold leading-tight text-gray-900 sm:text-4xl lg:text-5xl dark:text-white', h1Class);
 </script>
@@ -27,7 +30,7 @@
 <main class={mainClass}>
   <div class={mainDivCls}>
     <div class={imgDiv}>
-      <img src={image.src} alt={image.alt} />
+      <img src={actualImage.src} alt={actualImage.alt} />
     </div>
     <div class={div2Class}>
       <h1 class={h1Cls}>

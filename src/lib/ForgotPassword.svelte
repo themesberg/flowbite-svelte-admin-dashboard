@@ -6,12 +6,7 @@
   let {
     children,
     title = 'Forgot your password?',
-    site = {
-      name: 'Flowbite',
-      img: '/images/flowbite-svelte-icon-logo.svg',
-      link: '/',
-      imgAlt: 'FlowBite Logo'
-    },
+    site,
     btnTitle = 'Reset password',
     pageDescription = "Don't fret! Just type in your email and we will send you a code to reset your password!",
     mainClass = 'bg-gray-50 dark:bg-gray-900',
@@ -22,6 +17,14 @@
     ...restProps
   }: ForgotPasswordProps = $props();
 
+  const siteDefault = {
+      name: 'Flowbite',
+      img: '/images/flowbite-svelte-icon-logo.svg',
+      link: '/',
+      imgAlt: 'FlowBite Logo'
+    };
+  const actualSite = $derived(site ?? siteDefault);
+
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
   const siteLinkCls = twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass);
   const cardH1Cls = twMerge('mb-3 text-2xl font-bold text-gray-900 dark:text-white', cardH1Class);
@@ -29,10 +32,10 @@
 
 <main class={mainClass}>
   <div class={mainDivCls}>
-    {#if site}
-      <a href={site.link} class={siteLinkCls}>
-        <img src={site.img} class={siteImgClass} alt={site.imgAlt} />
-        <span>{site.name}</span>
+    {#if actualSite}
+      <a href={actualSite.link} class={siteLinkCls}>
+        <img src={actualSite.img} class={siteImgClass} alt={actualSite.imgAlt} />
+        <span>{actualSite.name}</span>
       </a>
     {/if}
     <!-- Card -->
