@@ -3,7 +3,7 @@
   import { ExclamationCircleOutline } from 'flowbite-svelte-icons';
   import type { DeleteModalProps } from './types';
 
-  let { open = $bindable(true), title = 'Are you sure you want to delete this product?', yes = "Yes, I'm sure", no = 'No, cancel' }: DeleteModalProps = $props();
+  let { open = $bindable(true), title = 'Are you sure you want to delete this?', yes = "Yes, I'm sure", no = 'No, cancel' }: DeleteModalProps = $props();
 </script>
 
 <Modal bind:open size="sm">

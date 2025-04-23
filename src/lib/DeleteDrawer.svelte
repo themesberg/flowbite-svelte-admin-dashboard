@@ -3,7 +3,7 @@
   import { ExclamationCircleOutline } from 'flowbite-svelte-icons';
   import type { DeleteDrawerProps } from './types';
 
-  let { hidden = $bindable(true), title = 'Delete item', confirm = 'Are you sure you want to delete this product?', yes = "Yes, I'm sure", no = 'No, cancel' }: DeleteDrawerProps = $props();
+  let { hidden = $bindable(true), title = 'Delete item', confirm = 'Are you sure you want to delete this?', yes = "Yes, I'm sure", no = 'No, cancel' }: DeleteDrawerProps = $props();
 </script>
 
 <Heading tag="h5" class="mb-6 text-sm font-semibold uppercase">{title}</Heading>
