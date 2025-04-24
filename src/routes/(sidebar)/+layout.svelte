@@ -2,11 +2,19 @@
   import '../../app.css';
   import Navbar from './Navbar.svelte';
   import Sidebar from './Sidebar.svelte';
-  import type { Snippet } from 'svelte';
-  interface Props {
-    children: Snippet;
+  import type { LayoutProps } from './$types';
+
+  interface Route {
+    path: string;
   }
-  let { children }: Props = $props();
+
+  let { children, data }: LayoutProps = $props();
+  const routes: Route[] = data.posts.posts;
+  const docsRoute = routes
+  .filter(route => route.path !== '')
+  .map(route => route.path);
+  // console.log('routes and docsRoute:', routes, docsRoute);
+  // const posts: Record<string, any[]> = data.posts || {};
   let drawerHidden = $state(false);
 </script>
 
@@ -14,7 +22,7 @@
   <Navbar bind:drawerHidden />
 </header>
 <div class="overflow-hidden lg:flex">
-  <Sidebar bind:drawerHidden />
+  <Sidebar bind:drawerHidden {docsRoute}/>
   <div class="relative h-full w-full overflow-y-auto pt-[70px] lg:ml-64">
     {@render children()}
   </div>

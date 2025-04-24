@@ -14,7 +14,7 @@
 <MetaTag {path} {description} {title} {subtitle} />
 
 <main class="p-4">
-  <h1 class="Layouts: Sidebar">Layouts: Sidebar</h1>
-  <Dashboard {data} />
+  <h1 class="hidden">Layouts: Sidebar</h1>
+  <Dashboard />
 </main>
 <Footer />

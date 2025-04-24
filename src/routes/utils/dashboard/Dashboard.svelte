@@ -5,17 +5,26 @@
   import users from '../graphs/users';
   import { DesktopPcOutline, MobilePhoneOutline, TabletOutline, ArrowRightOutline } from 'flowbite-svelte-icons';
   import { Chart, P, Button, Timeline, TimelineItem } from 'flowbite-svelte';
-  import getChartOptions from '../../(sidebar)/dashboard/chart_options';
-  import { ChartWidget, Stats, More, ActivityList, ProductMetricCard, CategroySalesReport, DarkChart, Traffic } from '$lib';
+  import { ChartWidget, Stats, More, ActivityList, ProductMetricCard, CategorySalesReport, DarkChart, Traffic, getChartOptions } from '$lib';
   import type { DeviceOption } from '$lib/types';
   import Chat from './Chat.svelte';
   import Insights from './Insights.svelte';
   import Transactions from './Transactions.svelte';
   import Customers from '../../data/users.json';
 
-  import type { PageProps } from '../../(sidebar)/$types';
-  let { data }: PageProps = $props();
-
+  const series = [
+      {
+        name: 'Revenue',
+        data: [6356, 6218, 6156, 6526, 6356, 6256, 6056],
+        color: '#EF562F'
+      },
+      {
+        name: 'Revenue (previous period)',
+        data: [6556, 6725, 6424, 6356, 6586, 6756, 6616],
+        color: '#FDBA8C'
+      }
+    ]
+    
   const products = [
     {
       src: 'iphone.png',
@@ -58,7 +67,7 @@
   let chartOptions = $derived(getChartOptions(false));
 
   $effect(() => {
-    chartOptions.series = data.series;
+    chartOptions.series = series;
   });
 
   let dark = $state(false);
@@ -145,11 +154,11 @@
   <div class="grid grid-cols-1 gap-4 xl:grid-cols-2">
     <Chat />
     <div class="flex flex-col gap-4">
-      <CategroySalesReport title="Sales by category" subtitle="Desktop PC" changeProps={{ value: 2.5, since: 'Since last month', size: 'sm' }}>
+      <CategorySalesReport title="Sales by category" subtitle="Desktop PC" changeProps={{ value: 2.5, since: 'Since last month', size: 'sm' }}>
         {#snippet chart()}
           <Chart {options} />
         {/snippet}
-      </CategroySalesReport>
+      </CategorySalesReport>
       <Traffic {devices}>
         {#snippet chart()}
           <Chart options={trafficOptions(dark)} />

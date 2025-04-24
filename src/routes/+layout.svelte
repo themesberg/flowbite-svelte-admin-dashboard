@@ -5,7 +5,7 @@
   import { Runatics } from 'runatics';
 
   let { children, data }: LayoutProps = $props();
-  const analyticsId = data.ANALYTICS_ID;
+  const analyticsId = data.posts.ANALYTICS_ID;
 
   onMount(modeobserver);
 </script>

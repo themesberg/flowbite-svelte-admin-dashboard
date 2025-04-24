@@ -17,14 +17,15 @@
     ChartPieOutline,
     RectangleListSolid,
     TableColumnSolid,
-    GridSolid
+    GridSolid, FireOutline, BookOpenOutline
   } from 'flowbite-svelte-icons';
 
   interface Props {
     drawerHidden: boolean;
+    docsRoute: string[];
   }
-  let { drawerHidden = $bindable(false) }: Props = $props();
-
+  let { drawerHidden = $bindable(false), docsRoute }: Props = $props();
+  console.log('data in Sidebar docsRoute:', docsRoute)
   const closeDrawer = () => {
     drawerHidden = true;
   };
@@ -122,7 +123,7 @@
 <Sidebar
   activeUrl={mainSidebarUrl}
   activeClass="bg-gray-100 dark:bg-gray-700"
-  class="{drawerHidden ? 'hidden' : ''} fixed inset-0 z-30 h-full w-64 flex-none border-e border-gray-200 lg:block lg:h-auto lg:overflow-y-visible lg:pt-16 dark:border-gray-600"
+  class="{drawerHidden ? 'hidden' : ''} fixed inset-0 z-30 h-full w-64 flex-none border-e border-gray-200 lg:block lg:h-auto lg:overflow-y-visible lg:pt-16 dark:border-gray-600 md:hidden"
 >
   <h4 class="sr-only">Main menu</h4>
   <SidebarWrapper divClass="overflow-y-auto px-3 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2">
@@ -151,12 +152,33 @@
           </SidebarItem>
         {/if}
       {/each}
+    </SidebarGroup>
+    <SidebarGroup class={groupClass}>
+      <SidebarDropdownWrapper label="Docs" class="pr-3">
+        {#snippet arrowdown()}
+          <AngleDownOutline strokeWidth="3.3" size="sm" />
+        {/snippet}
+        {#snippet arrowup()}
+          <AngleUpOutline strokeWidth="3.3" size="sm" />
+        {/snippet}
+        {#snippet icon()}
+          <BookOpenOutline class={iconClass} />
+        {/snippet}
+        {#each docsRoute as doc}
+        <SidebarItem label={doc} href={`/docs/${doc}`} spanClass="ml-3" class={itemClass}>
+          {#snippet icon()}
+          <FireOutline class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-white"/>
+          {/snippet}
+        </SidebarItem>
+      {/each}
+      </SidebarDropdownWrapper>
       <SidebarItem label="About" spanClass="flex-1 ms-3 whitespace-nowrap" href="/about">
         {#snippet icon()}
           <GridSolid class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-white" />
         {/snippet}
       </SidebarItem>
     </SidebarGroup>
+    
     <SidebarGroup class={groupClass}>
       {#each links as { label, href, Icon } (label)}
         <SidebarItem {label} {href} spanClass="ml-3" class={itemClass} target="_blank">
@@ -166,6 +188,9 @@
         </SidebarItem>
       {/each}
     </SidebarGroup>
+    {#each docsRoute as doc}
+        {doc}
+      {/each}
   </SidebarWrapper>
 </Sidebar>
 

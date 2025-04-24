@@ -1,9 +1,6 @@
 <script lang="ts">
-  import type { PageProps } from './$types';
   import Dashboard from '../../../utils/dashboard/Dashboard.svelte';
   import MetaTag from '../../../utils/MetaTag.svelte';
-
-  let { data }: PageProps = $props();
 
   const path: string = '/layouts/stacked';
   const description: string = 'Stacked layout examaple - Flowbite Svelte Admin Dashboard';
@@ -15,5 +12,5 @@
 
 <main class="py-4">
   <h1 class="hidden">Layouts: Stacked</h1>
-  <Dashboard {data} />
+  <Dashboard />
 </main>

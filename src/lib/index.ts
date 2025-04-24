@@ -2,7 +2,7 @@ export { default as ActivityList } from './ActivityList.svelte';
 export { default as AppsMenu } from './AppsMenu.svelte';
 export { default as CardList } from './CardList.svelte';
 export { default as CardWidget } from './CardWidget.svelte';
-export { default as CategroySalesReport } from './CategorySalesReport.svelte';
+export { default as CategorySalesReport } from './CategorySalesReport.svelte';
 export { default as Change } from './Change.svelte';
 export { default as ChartWidget } from './ChartWidget.svelte';
 export { default as ChatMsg } from './ChatMsg.svelte';
@@ -44,3 +44,4 @@ export { default as UserMenu } from './UserMenu.svelte';
 export { default as UserModal } from './UserModal.svelte';
 
 export * from './variables';
+export { default as getChartOptions } from './chart_options';
