@@ -25,8 +25,8 @@
   <NavUl class="ms-8 me-auto">
     <NavLi href="/">Home</NavLi>
     <NavLi href="/">Team</NavLi>
-    <NavLi href="/pricing">Pricing</NavLi>
-    <NavLi href="/contact">Contact</NavLi>
+    <NavLi href="/">Pricing</NavLi>
+    <NavLi href="/">Contact</NavLi>
   </NavUl>
   <div class="py-4">
     <DarkMode />

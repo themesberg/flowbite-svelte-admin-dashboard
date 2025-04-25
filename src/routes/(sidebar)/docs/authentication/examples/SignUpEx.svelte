@@ -13,7 +13,7 @@
   const haveAccount = true;
   const btnTitle = 'Create account';
   const termsLink = '/';
-  const loginLink = 'sign-in';
+  const loginLink = '/';
   const labelClass = 'space-y-2 dark:text-white';
   const onSubmit = (e: Event) => {
     const formData = new FormData(e.target as HTMLFormElement);

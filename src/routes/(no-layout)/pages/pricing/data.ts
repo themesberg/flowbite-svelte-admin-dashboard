@@ -28,7 +28,7 @@ export const faqs = [
     with FlowBite either as a UI kit, theme, or template, it's fine.
   </p>
   <p class="text-gray-600 dark:text-gray-300">
-    Find out more information by <link href="/license" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
+    Find out more information by <link href="/" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
   </p>`
   },
   {
@@ -77,7 +77,7 @@ export const faqs = [
     title: 'Can I build/sell templates or themes using FlowBite?',
     answer: `<p class="text-gray-600 dark:text-gray-300">It is not allowed to use FlowBite or parts of the project to build themes, templates, UI kits, or page builders.</p>
   <p class="text-gray-600 dark:text-gray-300">
-    Find out more information by <link href="/license" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
+    Find out more information by <link href="/" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
   </p>`
   },
   {
@@ -88,7 +88,7 @@ export const faqs = [
   </p>
   <p class="text-gray-600 dark:text-gray-300">With that being said, feel free to use this design kit for your open-source projects.</p>
   <p class="text-gray-600 dark:text-gray-300">
-    Find out more information by <link href="/license" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
+    Find out more information by <link href="/" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
   </p>`
   },
   {
@@ -96,7 +96,7 @@ export const faqs = [
     answer: `<p class="text-gray-600 dark:text-gray-300">Absolutely! You can use this design kit to build any type of commercial business, whether it's a SaaS, an e-commerce app, an application UI.</p>
   <p class="text-gray-600 dark:text-gray-300">As long as it is not a design resource that you will re-sell, it is alright to use it for commercial purposes.</p>
   <p class="text-gray-600 dark:text-gray-300">
-    Find out more information by <link href="/license" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
+    Find out more information by <link href="/" class="text-primary-600 dark:text-primary-500 font-medium underline hover:no-underline" />reading the license.
   </p>`
   },
   {

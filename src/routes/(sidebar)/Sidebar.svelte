@@ -25,7 +25,7 @@
     docsRoute: string[];
   }
   let { drawerHidden = $bindable(false), docsRoute }: Props = $props();
-  console.log('data in Sidebar docsRoute:', docsRoute)
+  // console.log('data in Sidebar docsRoute:', docsRoute)
   const closeDrawer = () => {
     drawerHidden = true;
   };

@@ -12,9 +12,9 @@
   let rememberMe = true;
   let lostPassword = true;
   let createAccount = true;
-  let lostPasswordLink = 'forgot-password';
+  let lostPasswordLink = '/';
   let loginTitle = 'Login to your account';
-  let registerLink = 'sign-up';
+  let registerLink = '/';
   let createAccountTitle = 'Create account';
 
   const onSubmit = (e: Event) => {

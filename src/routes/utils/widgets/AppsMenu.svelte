@@ -14,15 +14,15 @@
   } from 'flowbite-svelte-icons';
 
   const menu = [
-    { name: 'Sales', href: '/sales', icon: ShoppingBagSolid },
-    { name: 'Users', href: '/users', icon: UsersGroupSolid },
-    { name: 'Inbox', href: '/inbox', icon: InboxOutline },
-    { name: 'Profile', href: '/profile', icon: ProfileCardOutline },
+    { name: 'Sales', href: '/', icon: ShoppingBagSolid },
+    { name: 'Users', href: '/', icon: UsersGroupSolid },
+    { name: 'Inbox', href: '/', icon: InboxOutline },
+    { name: 'Profile', href: '/', icon: ProfileCardOutline },
     { name: 'Settings', href: '/settings', icon: CogOutline },
-    { name: 'Prouducts', href: '/products', icon: ArchiveSolid },
-    { name: 'Pricing', href: '/pricing', icon: DollarOutline },
-    { name: 'Billing', href: '/billing', icon: SalePercentOutline },
-    { name: 'Logout', href: '/logout', icon: ArrowRightToBracketOutline }
+    { name: 'Prouducts', href: '/', icon: ArchiveSolid },
+    { name: 'Pricing', href: '/pages/pricing', icon: DollarOutline },
+    { name: 'Billing', href: '/', icon: SalePercentOutline },
+    { name: 'Logout', href: '/', icon: ArrowRightToBracketOutline }
   ];
   let { open = $bindable() } = $props();
 </script>

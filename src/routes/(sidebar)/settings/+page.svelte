@@ -131,7 +131,7 @@
     <div class="col-span-full xl:mb-0">
       <Breadcrumb class="mb-6">
         <BreadcrumbItem home>Home</BreadcrumbItem>
-        <BreadcrumbItem class="hover:text-primary-600 inline-flex items-center text-gray-700 dark:text-gray-300 dark:hover:text-white" href="/curd/users">Users</BreadcrumbItem>
+        <BreadcrumbItem class="hover:text-primary-600 inline-flex items-center text-gray-700 dark:text-gray-300 dark:hover:text-white" href="/crud/users">Users</BreadcrumbItem>
         <BreadcrumbItem>Settings</BreadcrumbItem>
       </Breadcrumb>
 

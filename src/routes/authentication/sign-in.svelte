@@ -14,7 +14,7 @@
   let createAccount = true;
   let lostPasswordLink = 'forgot-password';
   let loginTitle = 'Login to your account';
-  let registerLink = 'sign-up';
+  let registerLink = '/';
   let createAccountTitle = 'Create account';
 
   const onSubmit = (e: Event) => {
