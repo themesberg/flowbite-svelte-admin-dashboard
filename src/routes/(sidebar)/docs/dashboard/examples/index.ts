@@ -1,6 +1,6 @@
 export { default as ActivityList } from './ActivityListEx.svelte';
-export { default as CategorySalesReport } from './CategorySalesReportEx.svelte'
-export { default as ChartWidget } from './ChartWidgetEx.svelte' 
+export { default as CategorySalesReport } from './CategorySalesReportEx.svelte';
+export { default as ChartWidget } from './ChartWidgetEx.svelte';
 export { default as CreditCard } from './CreditCardEx.svelte';
 export { default as More } from './MoreEx.svelte';
 export { default as ProductMetricCard } from './ProductMetricCardEx.svelte';

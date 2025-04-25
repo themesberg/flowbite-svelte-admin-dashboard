@@ -17,7 +17,9 @@
     ChartPieOutline,
     RectangleListSolid,
     TableColumnSolid,
-    GridSolid, FireOutline, BookOpenOutline
+    GridSolid,
+    FireOutline,
+    BookOpenOutline
   } from 'flowbite-svelte-icons';
 
   interface Props {
@@ -129,7 +131,7 @@
 </script>
 
 <SidebarButton breakpoint="lg" onclick={sidebarUi.toggle} class="fixed top-[22px] z-40 mb-2" />
-<Sidebar breakpoint="lg" backdrop={false} isOpen={isOpen} closeSidebar={closeSidebar} params={{ x: -50, duration: 50 }} class="mt-[69px] min-h-full" position="absolute" activeClass="p-2" nonActiveClass="p-2">
+<Sidebar breakpoint="lg" backdrop={false} {isOpen} {closeSidebar} params={{ x: -50, duration: 50 }} class="mt-[69px] min-h-full" position="absolute" activeClass="p-2" nonActiveClass="p-2">
   <h4 class="sr-only">Main menu</h4>
   <SidebarWrapper divClass="overflow-y-auto px-3 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2">
     <SidebarGroup class={groupClass}>
@@ -170,12 +172,12 @@
           <BookOpenOutline class={iconClass} />
         {/snippet}
         {#each docsRoute as doc}
-        <SidebarItem label={doc} href={`/docs/${doc}`} spanClass="ml-3" class={itemClass}>
-          {#snippet icon()}
-          <FireOutline class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-white"/>
-          {/snippet}
-        </SidebarItem>
-      {/each}
+          <SidebarItem label={doc} href={`/docs/${doc}`} spanClass="ml-3" class={itemClass}>
+            {#snippet icon()}
+              <FireOutline class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-white" />
+            {/snippet}
+          </SidebarItem>
+        {/each}
       </SidebarDropdownWrapper>
       <SidebarItem label="About" spanClass="flex-1 ms-3 whitespace-nowrap" href="/about">
         {#snippet icon()}
@@ -183,7 +185,7 @@
         {/snippet}
       </SidebarItem>
     </SidebarGroup>
-    
+
     <SidebarGroup class={groupClass}>
       {#each links as { label, href, Icon } (label)}
         <SidebarItem {label} {href} spanClass="ml-3" class={itemClass} target="_blank">
@@ -194,9 +196,7 @@
       {/each}
     </SidebarGroup>
     {#each docsRoute as doc}
-        {doc}
-      {/each}
+      {doc}
+    {/each}
   </SidebarWrapper>
 </Sidebar>
-
-

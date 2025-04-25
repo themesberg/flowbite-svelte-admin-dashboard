@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Label, Input } from 'flowbite-svelte';
   import { SignIn } from '$lib';
-  
+
   let title = 'Sign in to platform';
   let site = {
     name: 'Flowbite',

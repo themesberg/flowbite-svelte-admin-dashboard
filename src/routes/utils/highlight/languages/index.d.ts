@@ -1,8 +1,8 @@
 import type { LanguageFn } from 'highlight.js';
 
 interface LanguageType<TName extends string> {
-	name: TName;
-	register: LanguageFn;
+  name: TName;
+  register: LanguageFn;
 }
 
 export declare const _1c: LanguageType<'1c'>;

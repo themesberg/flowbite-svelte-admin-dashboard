@@ -4,7 +4,6 @@
   import { ArrowRightOutline } from 'flowbite-svelte-icons';
 </script>
 
-
 <ActivityList title="Latest Activity">
   {#snippet actions()}
     <a href="#top" class="text-primary-700 dark:text-primary-500 inline-flex items-center rounded-lg p-2 text-sm font-medium hover:bg-gray-100 dark:hover:bg-gray-700"> View all </a>

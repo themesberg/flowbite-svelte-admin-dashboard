@@ -2,7 +2,7 @@
   import { ProfileLock, imagesPath } from '$lib';
   import { Input, Label } from 'flowbite-svelte';
   import Users from '../../../../data/users.json';
- 
+
   const onSubmit = (e: Event) => {
     const formData = new FormData(e.target as HTMLFormElement);
     console.log(formData);

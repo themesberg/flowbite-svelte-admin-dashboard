@@ -1,6 +1,6 @@
 import type { ApexOptions } from 'apexcharts';
 
-export default function(dark: boolean): ApexOptions {
+export default function (dark: boolean): ApexOptions {
   let backgroundBarColors: string[] = ['#E5E7EB', '#E5E7EB', '#E5E7EB', '#E5E7EB', '#E5E7EB', '#E5E7EB', '#E5E7EB'];
 
   if (dark) {

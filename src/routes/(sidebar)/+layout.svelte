@@ -10,9 +10,7 @@
 
   let { children, data }: LayoutProps = $props();
   const routes: Route[] = data.posts.posts;
-  const docsRoute = routes
-  .filter(route => route.path !== '')
-  .map(route => route.path);
+  const docsRoute = routes.filter((route) => route.path !== '').map((route) => route.path);
   // console.log('routes and docsRoute:', routes, docsRoute);
   // const posts: Record<string, any[]> = data.posts || {};
   let drawerHidden = $state(false);
@@ -22,7 +20,7 @@
   <Navbar bind:drawerHidden />
 </header>
 <div class="overflow-hidden lg:flex">
-  <Sidebar bind:drawerHidden {docsRoute}/>
+  <Sidebar bind:drawerHidden {docsRoute} />
   <div class="relative h-full w-full overflow-y-auto pt-[70px] lg:ml-64">
     {@render children()}
   </div>

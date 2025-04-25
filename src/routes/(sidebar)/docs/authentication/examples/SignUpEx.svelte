@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Label, Input } from 'flowbite-svelte';
   import { SignUp } from '$lib';
-  
+
   const title = 'Create a Free Account';
   const site = {
     name: 'Flowbite',

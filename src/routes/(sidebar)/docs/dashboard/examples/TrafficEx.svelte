@@ -32,7 +32,6 @@
       }
     }
   ];
-
 </script>
 
 <Traffic {devices}>

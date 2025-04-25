@@ -5,15 +5,10 @@ const json = (r: Response) => r.json();
 
 export const load: LayoutServerLoad = async ({ fetch }) => {
   try {
-    const posts = await fetch("/api/posts").then(json);
+    const posts = await fetch('/api/posts').then(json);
     // console.log('posts: ', posts);
     return { ANALYTICS_ID_FLOWBITE, posts };
   } catch (error) {
     console.error(`Error in load function for /: ${error}`);
   }
 };
-
-
-
-
-
