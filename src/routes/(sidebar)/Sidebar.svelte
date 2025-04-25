@@ -195,8 +195,5 @@
         </SidebarItem>
       {/each}
     </SidebarGroup>
-    {#each docsRoute as doc}
-      {doc}
-    {/each}
   </SidebarWrapper>
 </Sidebar>
