@@ -39,9 +39,8 @@
   const menuItems = ['Dashboard', 'Settings', 'Earnings'];
 </script>
 
-<Navbar {fluid} class="text-black" color="default">
-  <NavHamburger onclick={() => (drawerHidden = !drawerHidden)} class="m-0 me-3 md:block lg:hidden" />
-  <NavBrand href="/" class={list ? 'w-40' : 'lg:w-60'}>
+<Navbar class="ml-10">
+  <NavBrand href="/">
     <img src="/images/flowbite-svelte-icon-logo.svg" class="me-2.5 h-6 sm:h-8" alt="Flowbite Logo" />
     <span class="ml-px self-center text-xl font-semibold whitespace-nowrap sm:text-2xl dark:text-white"> Flowbite </span>
   </NavBrand>

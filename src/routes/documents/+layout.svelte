@@ -13,7 +13,7 @@
   <Navbar bind:drawerHidden />
 </header>
 <div class="overflow-hidden lg:flex">
-
+  <Sidebar bind:drawerHidden />
   <div class="relative h-full w-full overflow-y-auto pt-[70px] lg:ml-64">
     {@render children()}
   </div>
