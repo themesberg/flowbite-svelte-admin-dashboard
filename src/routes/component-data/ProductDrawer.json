@@ -1,0 +1,17 @@
+{
+  "name": "ProductDrawer",
+  "type": {
+    "name": "ProductDrawerProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L380"
+  },
+  "props": [
+    [
+      "hidden",
+      "$bindable(true)"
+    ],
+    [
+      "title",
+      "'Add new product'"
+    ]
+  ]
+}

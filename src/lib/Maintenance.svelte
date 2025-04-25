@@ -51,7 +51,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[MaintenanceProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L200)
+[MaintenanceProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L201)
 ## Props
 @prop title = 'Under Maintenance'
 @prop description = 'Sorry for the inconvenience but we’re performing some maintenance at the moment. If you need to you can always <a href

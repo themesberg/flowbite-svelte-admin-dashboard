@@ -1,0 +1,29 @@
+{
+  "name": "Traffic",
+  "type": {
+    "name": "TrafficProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L512"
+  },
+  "props": [
+    [
+      "chart",
+      ""
+    ],
+    [
+      "title",
+      "'Traffic by device'"
+    ],
+    [
+      "subtitle",
+      "'Desktop'"
+    ],
+    [
+      "more",
+      ""
+    ],
+    [
+      "devices",
+      ""
+    ]
+  ]
+}

@@ -81,7 +81,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[SingUpProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L319)
+[SingUpProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L320)
 ## Props
 @prop children
 @prop title = 'Create a Free Account'

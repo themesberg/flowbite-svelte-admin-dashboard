@@ -479,6 +479,7 @@ export type Timezone = {
 };
 
 export interface LanguageTimeProps {
+  children?: Snippet;
   timezones?: Timezone[];
   languages?: Language[];
 }
@@ -541,4 +542,20 @@ export interface UserProfileProps {
   src: string;
   title?: string;
   subtitle?: string;
+}
+
+export type UserAccount = {
+  avatar: string;
+  name: string;
+  country: string;
+  status: string;
+}
+export interface AccountsProps{
+  children?: Snippet;
+  users: UserAccount[];
+  title?: string;
+  headingTag?: HeadingProps['tag'];
+  headingClass?: string;
+  listClass?: string;
+  liClass?: string;
 }

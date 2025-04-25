@@ -1,0 +1,21 @@
+{
+  "name": "Footer",
+  "type": {
+    "name": "FooterProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L374"
+  },
+  "props": [
+    [
+      "brand",
+      ""
+    ],
+    [
+      "description",
+      ""
+    ],
+    [
+      "menus",
+      ""
+    ]
+  ]
+}

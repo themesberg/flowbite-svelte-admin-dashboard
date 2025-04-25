@@ -1,0 +1,17 @@
+{
+  "name": "DateRangeSelector",
+  "type": {
+    "name": "DateRangeSelectorProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L342"
+  },
+  "props": [
+    [
+      "timeslot",
+      "'Last 7 days'"
+    ],
+    [
+      "timeslots",
+      ""
+    ]
+  ]
+}

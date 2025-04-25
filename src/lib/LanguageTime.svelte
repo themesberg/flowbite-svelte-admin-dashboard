@@ -3,7 +3,7 @@
   import { CardWidget } from '$lib';
   import type { LanguageTimeProps } from './types';
 
-  let { languages, timezones }: LanguageTimeProps = $props();
+  let { languages, timezones, children }: LanguageTimeProps = $props();
 
   const defaultLanguages = [
     { name: 'English (US)', value: 'en' },
@@ -39,15 +39,18 @@
       <Select items={timezoneOptions} class="font-normal"></Select>
     </Label>
   </div>
-  <Button class="mt-6 w-fit">Save all</Button>
+  {#if children}
+    {@render children()}
+  {/if}
 </CardWidget>
 
 <!--
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[LanguageTimeProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L480)
+[LanguageTimeProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L481)
 ## Props
 @prop languages
 @prop timezones
+@prop children
 -->

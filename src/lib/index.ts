@@ -1,3 +1,4 @@
+export { default as Accounts } from './Accounts.svelte';
 export { default as ActivityList } from './ActivityList.svelte';
 export { default as AppsMenu } from './AppsMenu.svelte';
 export { default as CardList } from './CardList.svelte';

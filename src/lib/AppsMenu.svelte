@@ -22,7 +22,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[AppsMenuProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L12)
+[AppsMenuProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L12)
 ## Props
 @prop open = $bindable()
 @prop menu

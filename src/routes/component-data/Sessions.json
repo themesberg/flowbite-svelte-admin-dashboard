@@ -1,1 +1,17 @@
-{ "name": "Sessions", "slots": [], "events": [], "props": [] }
+{
+  "name": "Sessions",
+  "type": {
+    "name": "SessionProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L527"
+  },
+  "props": [
+    [
+      "seeMorehref",
+      ""
+    ],
+    [
+      "sessions",
+      ""
+    ]
+  ]
+}

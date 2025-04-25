@@ -1,0 +1,17 @@
+{
+  "name": "StatusBadge",
+  "type": {
+    "name": "StatusBadgeProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L120"
+  },
+  "props": [
+    [
+      "state",
+      ""
+    ],
+    [
+      "dark",
+      ""
+    ]
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ChatMsg",
+  "type": {
+    "name": "ChatMsgProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L35"
+  },
+  "props": [
+    [
+      "children",
+      ""
+    ],
+    [
+      "avatar",
+      "'https:"
+    ]
+  ]
+}

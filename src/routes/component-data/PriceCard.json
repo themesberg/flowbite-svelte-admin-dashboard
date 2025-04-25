@@ -1,0 +1,29 @@
+{
+  "name": "PriceCard",
+  "type": {
+    "name": "PriceCardPriceProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L154"
+  },
+  "props": [
+    [
+      "children",
+      ""
+    ],
+    [
+      "subtitle",
+      ""
+    ],
+    [
+      "title",
+      ""
+    ],
+    [
+      "price",
+      ""
+    ],
+    [
+      "period",
+      "'month'"
+    ]
+  ]
+}

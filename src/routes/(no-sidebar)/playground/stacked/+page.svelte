@@ -16,8 +16,8 @@
     {#snippet breadcrumb()}
       <Breadcrumb class="mb-5">
         <BreadcrumbItem href="/" home>Home</BreadcrumbItem>
-        <BreadcrumbItem href="/">Pages</BreadcrumbItem>
-        <BreadcrumbItem>Playground</BreadcrumbItem>
+        <BreadcrumbItem href="/">Playground</BreadcrumbItem>
+        <BreadcrumbItem>Stacked</BreadcrumbItem>
       </Breadcrumb>
     {/snippet}
   </Playground>

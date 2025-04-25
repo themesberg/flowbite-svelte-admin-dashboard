@@ -1,0 +1,33 @@
+{
+  "name": "Notification",
+  "type": {
+    "name": "NotificationProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L67"
+  },
+  "props": [
+    [
+      "children",
+      ""
+    ],
+    [
+      "src",
+      ""
+    ],
+    [
+      "Icon",
+      ""
+    ],
+    [
+      "when",
+      ""
+    ],
+    [
+      "href",
+      ""
+    ],
+    [
+      "color",
+      "'gray'"
+    ]
+  ]
+}

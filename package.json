@@ -20,10 +20,10 @@
     "test": "npm run test:unit -- --run && npm run test:e2e",
     "test:e2e": "playwright test",
     "gen:exports": "svelte-lib-helpers exports",
-    "gen:docspropvalue": "svelte-lib-helpers docspropvalue themesberg/flowbite-svelte-next",
-    "gen:component-data-prop-value": "svelte-lib-helpers component-data-prop-value themesberg/flowbite-svelte-next",
+    "gen:docspropvalue": "svelte-lib-helpers docspropvalue themesberg/flowbite-svelte-admin-dashboard",
+    "gen:component-data-prop-value": "svelte-lib-helpers component-data-prop-value themesberg/flowbite-svelte-admin-dashboard",
     "copy:packagejson": "svelte-lib-helpers package",
-    "lib-helpers": "pnpm gen:docspropvalue && pnpm format && pnpm package && pnpm gen:exports && pnpm copy:packagejson",
+    "lib-helpers": "pnpm gen:docspropvalue && gen:component-data-prop-value && pnpm format && pnpm package && pnpm gen:exports && pnpm copy:packagejson",
     "ch": "npx changeset",
     "cv": "npx changeset version",
     "cp": "npx changeset publish"

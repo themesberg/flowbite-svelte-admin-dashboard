@@ -1,0 +1,1 @@
+export { default as Faq } from './FaqEx.svelte'

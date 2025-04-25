@@ -1,12 +1,12 @@
 <script lang="ts">
   import { DesktopPcOutline, MobilePhoneOutline } from 'flowbite-svelte-icons';
-  import Accounts from '../../utils/settings/Accounts.svelte';
+  // import Accounts from '../../utils/settings/Accounts.svelte';
   import PasswordInfo from '../../utils/settings/PasswordInfo.svelte';
   // import UserProfile from '../../utils/settings/UserProfile.svelte';
   // import Sessions from '../../utils/settings/Sessions.svelte';
   import SocialAccounts from '../../utils/settings/SocialAccounts.svelte';
-  import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
-  import { NotificationCard, GeneralInfo, LanguageTime, Sessions, UserProfile } from '$lib';
+  import { Breadcrumb, BreadcrumbItem, Heading, Button } from 'flowbite-svelte';
+  import { NotificationCard, GeneralInfo, LanguageTime, Sessions, UserProfile, Accounts} from '$lib';
   import type { InputField, SessionProps } from '$lib/types';
   import Footer from '../Footer.svelte';
 
@@ -141,7 +141,9 @@
       <UserProfile src={imagesPath(Users[4].avatar, 'users')} />
       <LanguageTime {languages} {timezones} />
       <SocialAccounts />
-      <Accounts />
+      <Accounts users={Users.slice(0, 4)} >
+        <Button class="mt-2 w-fit">Save all</Button>
+      </Accounts>
     </div>
     <div class="col-span-2 space-y-4">
       <GeneralInfo {inputs} />

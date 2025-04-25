@@ -1,1 +1,37 @@
-{ "name": "Accounts", "slots": [], "events": [], "props": [] }
+{
+  "name": "Accounts",
+  "type": {
+    "name": "AccountsProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L553"
+  },
+  "props": [
+    [
+      "children",
+      ""
+    ],
+    [
+      "users",
+      ""
+    ],
+    [
+      "title",
+      "'Other accounts'"
+    ],
+    [
+      "headingTag",
+      "'h3'"
+    ],
+    [
+      "headingClass",
+      "\"text-xl font-semibold tracking-wide\""
+    ],
+    [
+      "listClass",
+      "\"divide-y divide-gray-200 dark:divide-gray-700\""
+    ],
+    [
+      "liClass",
+      "\"flex items-center justify-between space-x-4 py-4\""
+    ]
+  ]
+}

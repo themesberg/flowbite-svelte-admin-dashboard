@@ -1,0 +1,17 @@
+{
+  "name": "PriceCardListItem",
+  "type": {
+    "name": "PriceCardListItemProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L167"
+  },
+  "props": [
+    [
+      "icon",
+      ""
+    ],
+    [
+      "children",
+      ""
+    ]
+  ]
+}

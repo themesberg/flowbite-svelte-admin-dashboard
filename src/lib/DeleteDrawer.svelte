@@ -20,7 +20,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[DeleteDrawerProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L248)
+[DeleteDrawerProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L249)
 ## Props
 @prop hidden = $bindable(true)
 @prop title = 'Delete item'

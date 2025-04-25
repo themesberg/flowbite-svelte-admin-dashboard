@@ -1,3 +1,7 @@
+export { default as JSONView } from './JSONView.svelte';
+export { default as CompoAttributesViewer } from './CompoAttributesViewer.svelte';
+export { default as CodeWrapper } from './CodeWrapper.svelte';
+export { default as HighlightCompo } from './HighlightCompo.svelte';
 /**
  * Extracts the route name from a SvelteKit file path
  * @param {string} path - The file path (e.g. '/src/routes/builder/video/+page.svelte')

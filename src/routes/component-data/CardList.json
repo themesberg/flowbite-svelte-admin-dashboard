@@ -1,11 +1,29 @@
 {
   "name": "CardList",
-  "slots": [],
-  "events": [],
+  "type": {
+    "name": "CardListProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L420"
+  },
   "props": [
-    ["title", "string", ""],
-    ["subtitle", "string", "''"],
-    ["buttonLabel", "string", "'Save all'"],
-    ["items", "any[]", "[]"]
+    [
+      "title",
+      ""
+    ],
+    [
+      "subtitle",
+      ""
+    ],
+    [
+      "buttonLabel",
+      "'Save all'"
+    ],
+    [
+      "items",
+      "[]"
+    ],
+    [
+      "class: className",
+      ""
+    ]
   ]
 }

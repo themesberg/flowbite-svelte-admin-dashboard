@@ -53,7 +53,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[ServerErrorProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L213)
+[ServerErrorProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L214)
 ## Props
 @prop title = 'Something has gone seriously wrong'
 @prop description = "It's always time for a coffee break. We should be back by the time you finish your coffee."

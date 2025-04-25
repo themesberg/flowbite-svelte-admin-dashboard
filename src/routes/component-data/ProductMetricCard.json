@@ -1,0 +1,33 @@
+{
+  "name": "ProductMetricCard",
+  "type": {
+    "name": "ProductMetricCardProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L347"
+  },
+  "props": [
+    [
+      "chart",
+      ""
+    ],
+    [
+      "title",
+      ""
+    ],
+    [
+      "subTitle",
+      ""
+    ],
+    [
+      "changeProps",
+      ""
+    ],
+    [
+      "cardProps",
+      ""
+    ],
+    [
+      "headingTag",
+      "'h5'"
+    ]
+  ]
+}

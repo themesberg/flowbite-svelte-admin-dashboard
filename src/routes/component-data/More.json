@@ -1,0 +1,25 @@
+{
+  "name": "More",
+  "type": {
+    "name": "MoreProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L60"
+  },
+  "props": [
+    [
+      "title",
+      ""
+    ],
+    [
+      "href",
+      "'#'"
+    ],
+    [
+      "flat",
+      ""
+    ],
+    [
+      "class: className",
+      ""
+    ]
+  ]
+}

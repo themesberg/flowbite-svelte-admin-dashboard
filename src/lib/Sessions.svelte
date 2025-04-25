@@ -34,7 +34,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[SessionProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L525)
+[SessionProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L527)
 ## Props
 @prop seeMorehref
 @prop sessions

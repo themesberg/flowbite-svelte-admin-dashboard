@@ -1,0 +1,33 @@
+{
+  "name": "Change",
+  "type": {
+    "name": "ChangeProps",
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L17"
+  },
+  "props": [
+    [
+      "value",
+      "0"
+    ],
+    [
+      "unit",
+      "'%'"
+    ],
+    [
+      "since",
+      "'vs last month'"
+    ],
+    [
+      "size",
+      "'md'"
+    ],
+    [
+      "equalHeight",
+      "false"
+    ],
+    [
+      "class: className",
+      ""
+    ]
+  ]
+}

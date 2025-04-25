@@ -78,7 +78,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[RestPasswordProps](https://github.com/themesberg/flowbite-svelte-next/blob/main/src/lib/types.ts#L280)
+[RestPasswordProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L281)
 ## Props
 @prop children
 @prop title = 'Reset your password'
