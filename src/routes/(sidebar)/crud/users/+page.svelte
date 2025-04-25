@@ -8,10 +8,10 @@
   import { imagesPath, DeleteModal, UserModal } from '$lib';
   import MetaTag from '../../../utils/MetaTag.svelte';
 
-  let openUser: boolean = false; // modal control
-  let openDelete: boolean = false; // modal control
+  let openUser: boolean = $state(false); // modal control
+  let openDelete: boolean = $state(false); // modal control
 
-  let current_user: any = {};
+  let current_user: any = $state({});
   const path: string = '/crud/users';
   const description: string = 'CRUD users examaple - Flowbite Svelte Admin Dashboard';
   const title: string = 'Flowbite Svelte Admin Dashboard - CRUD Users';

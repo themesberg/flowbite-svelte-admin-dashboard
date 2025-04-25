@@ -248,10 +248,12 @@ export interface UserModalProps {
 
 export interface DeleteDrawerProps {
   hidden?: boolean;
-  title: string;
+  title?: string;
   confirm?: string;
   yes?: string;
   no?: string;
+  headingTag?: HeadingProps['tag'];
+  headingClass?: string;
 }
 
 export interface UserType {

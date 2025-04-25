@@ -53,6 +53,19 @@
 
   <CompoAttributesViewer fileName='CreditCard' />
 
+  <Heading tag="h2" class="my-2 text-3xl">DateRangeSelector</Heading>
+  <CodeWrapper class="my-8">
+    <div class="h-80 flex justify-center">
+      <ExampleComponents.DateRangeSelector />
+    </div>
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/DateRangeSelectorEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='DateRangeSelector' />
+
+
   <Heading tag="h2" class="my-2 text-3xl">More</Heading>
   <CodeWrapper class="my-8">
     <ExampleComponents.More />
