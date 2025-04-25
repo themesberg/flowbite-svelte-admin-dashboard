@@ -24,6 +24,7 @@ export { default as Maintenance } from './Maintenance.svelte';
 export { default as NotFound } from './NotFound.svelte';
 export { default as Notification } from './Notification.svelte';
 export { default as NotificationCard } from './NotificationCard.svelte';
+export { default as NotificationList } from './NotificationList.svelte';
 export { default as Playground } from './Playground.svelte';
 export { default as PriceCard } from './PriceCard.svelte';
 export { default as PriceCardPrice } from './PriceCardPrice.svelte';
@@ -42,6 +43,7 @@ export { default as StatusBadge } from './StatusBadge.svelte';
 export { default as Traffic } from './Traffic.svelte';
 export { default as UserMenu } from './UserMenu.svelte';
 export { default as UserModal } from './UserModal.svelte';
+export { default as UserProfile } from './UserProfile.svelte';
 
 export * from './variables';
 export { default as getChartOptions } from './chart_options';

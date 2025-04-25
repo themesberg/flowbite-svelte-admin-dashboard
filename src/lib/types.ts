@@ -1,5 +1,5 @@
 import type { Component, Snippet } from 'svelte';
-import type { SizeType, IndicatorProps, CardProps, HeadingProps } from 'flowbite-svelte';
+import type { SizeType, IndicatorProps, CardProps, HeadingProps, DropdownProps } from 'flowbite-svelte';
 import type { ApexOptions } from 'apexcharts';
 import type { HTMLFormAttributes } from 'svelte/elements';
 
@@ -128,6 +128,7 @@ export interface UserMenuProps {
   email: string;
   menuItems: string[];
   children?: Snippet;
+  placement?: DropdownProps['placement'];
 }
 
 export interface SiteType {
@@ -525,4 +526,19 @@ export type SessionType = {
 export interface SessionProps {
   seeMorehref?: string;
   sessions: SessionType[];
+}
+
+export type NotificationData = Omit<NotificationProps, 'children'> & {
+  content: string;
+};
+
+export interface NotificationListProps {
+  notifications: NotificationData[];
+}
+
+export interface UserProfileProps {
+  children?: Snippet;
+  src: string;
+  title?: string;
+  subtitle?: string;
 }

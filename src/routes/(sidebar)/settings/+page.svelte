@@ -2,11 +2,11 @@
   import { DesktopPcOutline, MobilePhoneOutline } from 'flowbite-svelte-icons';
   import Accounts from '../../utils/settings/Accounts.svelte';
   import PasswordInfo from '../../utils/settings/PasswordInfo.svelte';
-  import ProfilePicture from '../../utils/settings/ProfilePicture.svelte';
+  // import UserProfile from '../../utils/settings/UserProfile.svelte';
   // import Sessions from '../../utils/settings/Sessions.svelte';
   import SocialAccounts from '../../utils/settings/SocialAccounts.svelte';
   import { Breadcrumb, BreadcrumbItem, Heading } from 'flowbite-svelte';
-  import { NotificationCard, GeneralInfo, LanguageTime, Sessions } from '$lib';
+  import { NotificationCard, GeneralInfo, LanguageTime, Sessions, UserProfile } from '$lib';
   import type { InputField, SessionProps } from '$lib/types';
   import Footer from '../Footer.svelte';
 
@@ -138,7 +138,7 @@
       <Heading tag="h1" class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">User settings</Heading>
     </div>
     <div class="col-span-full space-y-4 xl:col-auto">
-      <ProfilePicture src={imagesPath(Users[4].avatar, 'users')} />
+      <UserProfile src={imagesPath(Users[4].avatar, 'users')} />
       <LanguageTime {languages} {timezones} />
       <SocialAccounts />
       <Accounts />
