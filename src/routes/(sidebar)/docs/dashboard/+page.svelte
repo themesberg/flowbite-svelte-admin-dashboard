@@ -43,6 +43,16 @@
 
   <CompoAttributesViewer fileName='ChartWidget' />
 
+  <Heading tag="h2" class="my-2 text-3xl">ChatMsg</Heading>
+  <CodeWrapper class="my-8">
+    <ExampleComponents.ChatMsg />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/ChatMsgEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='ChatMsg' />
+
   <Heading tag="h2" class="my-2 text-3xl">CreditCard</Heading>
   <CodeWrapper class="my-8">
     <ExampleComponents.CreditCard />

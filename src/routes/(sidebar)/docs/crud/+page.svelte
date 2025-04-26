@@ -23,6 +23,16 @@
 
   <CompoAttributesViewer fileName='DeleteDrawer' />
 
+  <Heading tag="h2" class="my-2 text-3xl">DeleteModal</Heading>
+  <CodeWrapper class="my-8" innerClass="flex justify-center">
+    <ExampleComponents.DeleteModal />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/DeleteModalEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='DeleteModal' />
+
   <Heading tag="h2" class="my-2 text-3xl">ProductDrawer</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
     <ExampleComponents.ProductDrawer />

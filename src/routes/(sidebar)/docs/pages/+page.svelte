@@ -13,6 +13,16 @@
 <div class="p-8 max-w-7xl mx-auto mb-24">
   <Heading tag="h1" class="my-3 text-4xl">Pages Components</Heading>
   
+  <Heading tag="h2" class="my-2 text-3xl">ComparisonTable</Heading>
+  <CodeWrapper class="my-8">
+    <ExampleComponents.ComparisonTable />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/ComparisonTableEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='ComparisonTable' />
+
   <Heading tag="h2" class="my-2 text-3xl">Faq</Heading>
   <CodeWrapper class="my-8">
     <ExampleComponents.Faq />
