@@ -33,6 +33,16 @@
 
   <CompoAttributesViewer fileName='Faq' />
 
+  <Heading tag="h2" class="my-2 text-3xl">Footer</Heading>
+  <CodeWrapper class="my-8">
+    <ExampleComponents.Footer />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/FooterEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='Footer' />
+
   <Heading tag="h2" class="my-2 text-3xl">Maintenance</Heading>
   <CodeWrapper class="my-8">
     <ExampleComponents.Maintenance />
@@ -52,6 +62,17 @@
   </CodeWrapper>
 
   <CompoAttributesViewer fileName='NotFound' />
+
+  <Heading tag="h2" class="my-2 text-3xl">PriceCard</Heading>
+  <CodeWrapper class="my-8">
+    <ExampleComponents.PriceCard />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/PriceCardEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='PriceCard' />
+  <CompoAttributesViewer fileName='PriceCardListItem' />
 
   <Heading tag="h2" class="my-2 text-3xl">ServerError</Heading>
   <CodeWrapper class="my-8">

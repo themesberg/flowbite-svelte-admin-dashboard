@@ -57,4 +57,28 @@
 
   <CompoAttributesViewer fileName='LanguageTime' />
 
+  <Heading tag="h2" class="my-2 text-3xl">NotificationCard</Heading>
+  <CodeWrapper class="my-8" innerClass="flex justify-center">
+    <div class="flex justify-center">
+      <ExampleComponents.NotificationCard />
+    </div>
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/NotificationCardEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='NotificationCard' />
+
+  <Heading tag="h2" class="my-2 text-3xl">Sessions</Heading>
+  <CodeWrapper class="my-8" innerClass="flex justify-center">
+    <div class="flex justify-center">
+      <ExampleComponents.Sessions />
+    </div>
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/SessionsEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='Sessions' />
+
 </div>
