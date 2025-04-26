@@ -131,7 +131,7 @@
 </script>
 
 <SidebarButton breakpoint="lg" onclick={sidebarUi.toggle} class="fixed top-[22px] z-40 mb-2" />
-<Sidebar breakpoint="lg" backdrop={false} {isOpen} {closeSidebar} params={{ x: -50, duration: 50 }} class="top-0 left-0 z-60 w-64 h-screen transition-transform bg-gray-50 dark:bg-gray-800 lg:block mt-[69px]" divClass="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800" activeClass="p-2" nonActiveClass="p-2">
+<Sidebar breakpoint="lg" backdrop={false} {isOpen} {closeSidebar} params={{ x: -50, duration: 50 }} class="top-0 left-0 w-64 h-screen transition-transform bg-gray-50 dark:bg-gray-800 lg:block mt-[69px]" divClass="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800" activeClass="p-2" nonActiveClass="p-2">
   <h4 class="sr-only">Main menu</h4>
   <SidebarWrapper divClass="overflow-y-auto px-3 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2">
     <SidebarGroup class={groupClass}>

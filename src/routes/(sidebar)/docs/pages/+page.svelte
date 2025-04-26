@@ -33,4 +33,34 @@
 
   <CompoAttributesViewer fileName='Faq' />
 
+  <Heading tag="h2" class="my-2 text-3xl">Maintenance</Heading>
+  <CodeWrapper class="my-8">
+    <ExampleComponents.Maintenance />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/MaintenanceEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='Maintenance' />
+
+  <Heading tag="h2" class="my-2 text-3xl">NotFound</Heading>
+  <CodeWrapper class="my-8">
+    <ExampleComponents.NotFound />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/NotFoundEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='NotFound' />
+
+  <Heading tag="h2" class="my-2 text-3xl">ServerError</Heading>
+  <CodeWrapper class="my-8">
+    <ExampleComponents.ServerError />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/ServerErrorEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='ServerError' />
+
 </div>

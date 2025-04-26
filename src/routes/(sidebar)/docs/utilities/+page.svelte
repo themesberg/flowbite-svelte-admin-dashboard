@@ -37,8 +37,18 @@
 
   <CompoAttributesViewer fileName='EmptyCard' />
 
-  <Heading tag="h2" class="my-2 text-3xl">Playground</Heading>
+  <Heading tag="h2" class="my-2 text-3xl">IconAvatar</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
+    <ExampleComponents.IconAvatar />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/IconAvatarEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='IconAvatar' />
+
+  <Heading tag="h2" class="my-2 text-3xl">Playground</Heading>
+  <CodeWrapper class="my-8">
     <ExampleComponents.Playground />
     {#snippet codeblock()}
       <HighlightCompo codeLang="ts" code={exampleModules['./examples/PlaygroundEx.svelte'] as string} />
@@ -46,4 +56,14 @@
   </CodeWrapper>
 
   <CompoAttributesViewer fileName='Playground' />
+
+  <Heading tag="h2" class="my-2 text-3xl">SmallPanel</Heading>
+  <CodeWrapper class="my-8" innerClass="flex justify-center">
+    <ExampleComponents.SmallPanel />
+    {#snippet codeblock()}
+      <HighlightCompo codeLang="ts" code={exampleModules['./examples/SmallPanelEx.svelte'] as string} />
+    {/snippet}
+  </CodeWrapper>
+
+  <CompoAttributesViewer fileName='SmallPanel' />
 </div>
