@@ -85,7 +85,7 @@
       }
     },
     {
-      name: 'Authenication',
+      name: 'Authentication',
       Icon: LockSolid,
       children: {
         'Sign in': '/authentication/sign-in',
