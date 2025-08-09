@@ -2,68 +2,23 @@
   "name": "ProfileLock",
   "type": {
     "name": "ProfileLockProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L263"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L265"
   },
   "props": [
-    [
-      "children",
-      ""
-    ],
-    [
-      "site",
-      ""
-    ],
-    [
-      "user",
-      ""
-    ],
-    [
-      "btnTitle",
-      "'Unlock'"
-    ],
-    [
-      "pageDescription",
-      "'Better to be safe than sorry.'"
-    ],
-    [
-      "mainClass",
-      "'bg-gray-50 dark:bg-gray-900 w-full'"
-    ],
-    [
-      "mainDivClass",
-      ""
-    ],
-    [
-      "siteLinkClass",
-      ""
-    ],
-    [
-      "siteImgClass",
-      ""
-    ],
-    [
-      "cardH1Class",
-      ""
-    ],
-    [
-      "cardDiv3Class",
-      ""
-    ],
-    [
-      "userImgClass",
-      ""
-    ],
-    [
-      "acceptTerms",
-      "true"
-    ],
-    [
-      "termsLink",
-      "'/'"
-    ],
-    [
-      "termsLinkClass",
-      ""
-    ]
+    ["children", ""],
+    ["site", ""],
+    ["user", ""],
+    ["btnTitle", "'Unlock'"],
+    ["pageDescription", "'Better to be safe than sorry.'"],
+    ["mainClass", "'bg-gray-50 dark:bg-gray-900 w-full'"],
+    ["mainDivClass", ""],
+    ["siteLinkClass", ""],
+    ["siteImgClass", ""],
+    ["cardH1Class", ""],
+    ["cardDiv3Class", ""],
+    ["userImgClass", ""],
+    ["acceptTerms", "true"],
+    ["termsLink", "'/'"],
+    ["termsLinkClass", ""]
   ]
 }

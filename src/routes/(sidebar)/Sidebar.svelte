@@ -131,9 +131,17 @@
 </script>
 
 <SidebarButton breakpoint="lg" onclick={sidebarUi.toggle} class="fixed top-[22px] z-40 mb-2" />
-<Sidebar breakpoint="lg" backdrop={false} {isOpen} {closeSidebar} params={{ x: -50, duration: 50 }} class="top-0 left-0 w-64 h-screen transition-transform bg-gray-50 dark:bg-gray-800 lg:block mt-[69px]" classes={{ div: "h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800", nonactive: "p-2", active: "p-2" }}>
+<Sidebar
+  breakpoint="lg"
+  backdrop={false}
+  {isOpen}
+  {closeSidebar}
+  params={{ x: -50, duration: 50 }}
+  class="top-0 left-0 mt-[69px] h-screen w-64 bg-gray-50 transition-transform lg:block dark:bg-gray-800"
+  classes={{ div: 'h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800', nonactive: 'p-2', active: 'p-2' }}
+>
   <h4 class="sr-only">Main menu</h4>
-  <SidebarWrapper class="overflow-y-auto px-3 pt-20 lg:pt-5 h-full bg-white scrolling-touch max-w-2xs lg:h-[calc(100vh-4rem)] lg:block dark:bg-gray-800 lg:me-0 lg:sticky top-2">
+  <SidebarWrapper class="scrolling-touch top-2 h-full max-w-2xs overflow-y-auto bg-white px-3 pt-20 lg:sticky lg:me-0 lg:block lg:h-[calc(100vh-4rem)] lg:pt-5 dark:bg-gray-800">
     <SidebarGroup class={groupClass}>
       {#each posts as { name, Icon, children, href } (name)}
         {#if children}

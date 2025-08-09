@@ -1,7 +1,7 @@
 <script lang="ts">
   import { GeneralInfo } from '$lib';
   import type { InputField } from '$lib/types';
-  
+
   const inputs: InputField[] = [
     { label: 'First Name', type: 'text', placeholder: 'Bonnie' },
     { label: 'Last Name', type: 'text', placeholder: 'Green' },

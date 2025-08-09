@@ -24,8 +24,10 @@ export const fetchAdminDashboardApiCheck = async () => {
     .map((path) => ({
       path: extractRouteName(path)
     }))
-    .filter((item, index, self) => item.path !== "builder" && item.path !== "layout" && item.path !== "layoutExamples" && item.path !== "utils" && self.findIndex((i) => i.path === item.path) === index);
+    .filter(
+      (item, index, self) => item.path !== 'builder' && item.path !== 'layout' && item.path !== 'layoutExamples' && item.path !== 'utils' && self.findIndex((i) => i.path === item.path) === index
+    );
 
   // console.log(allPaths)
-  return allPaths;  
+  return allPaths;
 };

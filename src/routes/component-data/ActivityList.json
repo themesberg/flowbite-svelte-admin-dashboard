@@ -2,20 +2,11 @@
   "name": "ActivityList",
   "type": {
     "name": "ActivityListProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L385"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L387"
   },
   "props": [
-    [
-      "title",
-      "'Latest Activity'"
-    ],
-    [
-      "children",
-      ""
-    ],
-    [
-      "actions",
-      ""
-    ]
+    ["title", "'Latest Activity'"],
+    ["children", ""],
+    ["actions", ""]
   ]
 }

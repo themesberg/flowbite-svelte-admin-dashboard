@@ -24,4 +24,4 @@
   ];
 </script>
 
-<CardList title = 'Email Notifications' {items} class='p-4 sm:p-6' />
+<CardList title="Email Notifications" {items} class="p-4 sm:p-6" />

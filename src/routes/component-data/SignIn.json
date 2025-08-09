@@ -2,68 +2,23 @@
   "name": "SignIn",
   "type": {
     "name": "SingInProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L299"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L301"
   },
   "props": [
-    [
-      "children",
-      ""
-    ],
-    [
-      "title",
-      "'Sign in to platform'"
-    ],
-    [
-      "site",
-      ""
-    ],
-    [
-      "rememberMe",
-      "true"
-    ],
-    [
-      "lostPassword",
-      "true"
-    ],
-    [
-      "createAccount",
-      "true"
-    ],
-    [
-      "lostPasswordLink",
-      ""
-    ],
-    [
-      "loginTitle",
-      "'Login to your account'"
-    ],
-    [
-      "registerLink",
-      ""
-    ],
-    [
-      "createAccountTitle",
-      "'Create account'"
-    ],
-    [
-      "mainClass",
-      "'bg-gray-50 dark:bg-gray-900 w-full'"
-    ],
-    [
-      "mainDivClass",
-      ""
-    ],
-    [
-      "siteLinkClass",
-      ""
-    ],
-    [
-      "siteImgClass",
-      ""
-    ],
-    [
-      "cardH1Class",
-      ""
-    ]
+    ["children", ""],
+    ["title", "'Sign in to platform'"],
+    ["site", ""],
+    ["rememberMe", "true"],
+    ["lostPassword", "true"],
+    ["createAccount", "true"],
+    ["lostPasswordLink", ""],
+    ["loginTitle", "'Login to your account'"],
+    ["registerLink", ""],
+    ["createAccountTitle", "'Create account'"],
+    ["mainClass", "'bg-gray-50 dark:bg-gray-900 w-full'"],
+    ["mainDivClass", ""],
+    ["siteLinkClass", ""],
+    ["siteImgClass", ""],
+    ["cardH1Class", ""]
   ]
 }

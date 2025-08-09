@@ -1,5 +1,13 @@
 # flowbite-svelte-admin-dashboard
 
+## 1.1.0
+
+### Minor Changes
+
+- feat: update for latest dependencies
+
+- fix: dependencies update ([`f4e7931`](https://github.com/themesberg/flowbite-svelte-admin-dashboard/commit/f4e7931efd9851275efa8795f767730293909abe))
+
 ## 1.0.6
 
 ### Patch Changes

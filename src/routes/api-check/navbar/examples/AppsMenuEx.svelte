@@ -1,17 +1,7 @@
 <script lang="ts">
   import { AppsMenu } from '$lib';
-  import {
-    ArchiveSolid,
-    ArrowRightToBracketOutline,
-    CogOutline,
-    DollarOutline,
-    InboxOutline,
-    ProfileCardOutline,
-    SalePercentOutline,
-    ShoppingBagSolid,
-    UsersGroupSolid
-  } from 'flowbite-svelte-icons';
-const menu = [
+  import { ArchiveSolid, ArrowRightToBracketOutline, CogOutline, DollarOutline, InboxOutline, ProfileCardOutline, SalePercentOutline, ShoppingBagSolid, UsersGroupSolid } from 'flowbite-svelte-icons';
+  const menu = [
     { name: 'Sales', href: '/', icon: ShoppingBagSolid },
     { name: 'Users', href: '/', icon: UsersGroupSolid },
     { name: 'Inbox', href: '/', icon: InboxOutline },

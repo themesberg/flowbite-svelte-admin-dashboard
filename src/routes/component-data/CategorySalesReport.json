@@ -2,44 +2,17 @@
   "name": "CategorySalesReport",
   "type": {
     "name": "CategorySalesReportProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L391"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L393"
   },
   "props": [
-    [
-      "title",
-      ""
-    ],
-    [
-      "titleTag",
-      "'h3'"
-    ],
-    [
-      "subtitle",
-      ""
-    ],
-    [
-      "chart",
-      ""
-    ],
-    [
-      "changeProps",
-      ""
-    ],
-    [
-      "cardClasss",
-      ""
-    ],
-    [
-      "divClass",
-      ""
-    ],
-    [
-      "headingClass",
-      ""
-    ],
-    [
-      "spanClass",
-      ""
-    ]
+    ["title", ""],
+    ["titleTag", "'h3'"],
+    ["subtitle", ""],
+    ["chart", ""],
+    ["changeProps", ""],
+    ["cardClasss", ""],
+    ["divClass", ""],
+    ["headingClass", ""],
+    ["spanClass", ""]
   ]
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Heading } from 'flowbite-svelte';
-  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils'
+  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils';
   import * as ExampleComponents from './examples';
   let { data } = $props();
   // console.log(data.posts.adminDashboard)
@@ -11,7 +11,7 @@
   }) as Record<string, string>;
 </script>
 
-<div class="p-8 max-w-4xl mx-auto mb-24">
+<div class="mx-auto mb-24 max-w-4xl p-8">
   <Heading tag="h1" class="my-3 text-4xl">Authenication Components</Heading>
   <Heading tag="h2" class="my-2 text-3xl">ForgotPassword</Heading>
   <CodeWrapper class="my-8">
@@ -21,7 +21,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='ForgotPassword' />
+  <CompoAttributesViewer fileName="ForgotPassword" />
 
   <Heading tag="h2" class="my-2 text-3xl">ProfileLock</Heading>
   <CodeWrapper class="my-8">
@@ -30,8 +30,8 @@
       <HighlightCompo codeLang="ts" code={exampleModules['./examples/ProfileLockEx.svelte'] as string} />
     {/snippet}
   </CodeWrapper>
-  
-  <CompoAttributesViewer fileName='ProfileLock' />
+
+  <CompoAttributesViewer fileName="ProfileLock" />
 
   <Heading tag="h2" class="my-2 text-3xl">ResetPassword</Heading>
   <CodeWrapper class="my-8">
@@ -41,7 +41,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='ResetPassword' />
+  <CompoAttributesViewer fileName="ResetPassword" />
 
   <Heading tag="h2" class="my-2 text-3xl">SignIn</Heading>
   <CodeWrapper class="my-8">
@@ -51,7 +51,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='SignIn' />
+  <CompoAttributesViewer fileName="SignIn" />
 
   <Heading tag="h2" class="my-2 text-3xl">SignUp</Heading>
   <CodeWrapper class="my-8">
@@ -61,5 +61,5 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='SignUp' />
+  <CompoAttributesViewer fileName="SignUp" />
 </div>

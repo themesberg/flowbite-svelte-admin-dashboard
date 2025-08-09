@@ -2,7 +2,7 @@
   import { Change } from '$lib';
   import { twMerge } from 'tailwind-merge';
   import { Card, Heading, P } from 'flowbite-svelte';
-  import { Chart } from "@flowbite-svelte-plugins/chart";
+  import { Chart } from '@flowbite-svelte-plugins/chart';
   import { DateRangeSelector, More } from '$lib';
   import type { ChartWidgetProps } from './types';
 

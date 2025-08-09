@@ -5,13 +5,7 @@
     "link": null
   },
   "props": [
-    [
-      "configFunc",
-      ""
-    ],
-    [
-      "class: className",
-      ""
-    ]
+    ["configFunc", ""],
+    ["class: className", ""]
   ]
 }

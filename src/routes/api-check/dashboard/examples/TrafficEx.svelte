@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Traffic } from '$lib';
-  import { Chart } from "@flowbite-svelte-plugins/chart";
+  import { Chart } from '@flowbite-svelte-plugins/chart';
   import { DesktopPcOutline, MobilePhoneOutline, TabletOutline } from 'flowbite-svelte-icons';
   import type { DeviceOption } from '$lib/types';
   import trafficOptions from '../../../utils/graphs/traffic';

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Heading } from 'flowbite-svelte';
-  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils'
+  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils';
   import * as ExampleComponents from './examples';
 
   const exampleModules = import.meta.glob('./examples/*.svelte', {
@@ -10,7 +10,7 @@
   }) as Record<string, string>;
 </script>
 
-<div class="p-8 max-w-4xl mx-auto mb-24">
+<div class="mx-auto mb-24 max-w-4xl p-8">
   <Heading tag="h1" class="my-3 text-4xl">CRUD Components</Heading>
 
   <Heading tag="h2" class="my-2 text-3xl">DeleteDrawer</Heading>
@@ -21,7 +21,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='DeleteDrawer' />
+  <CompoAttributesViewer fileName="DeleteDrawer" />
 
   <Heading tag="h2" class="my-2 text-3xl">DeleteModal</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -31,7 +31,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='DeleteModal' />
+  <CompoAttributesViewer fileName="DeleteModal" />
 
   <Heading tag="h2" class="my-2 text-3xl">ProductDrawer</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -41,7 +41,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='ProductDrawer' />
+  <CompoAttributesViewer fileName="ProductDrawer" />
 
   <Heading tag="h2" class="my-2 text-3xl">UserModal</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -51,5 +51,5 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='UserModal' />
+  <CompoAttributesViewer fileName="UserModal" />
 </div>

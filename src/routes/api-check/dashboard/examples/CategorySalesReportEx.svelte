@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Chart } from "@flowbite-svelte-plugins/chart";
+  import { Chart } from '@flowbite-svelte-plugins/chart';
   import { CategorySalesReport } from '$lib';
   import options from '../../../utils/graphs/thinmultibars';
 </script>

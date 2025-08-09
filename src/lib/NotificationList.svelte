@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Button, Popover, ToolbarButton } from 'flowbite-svelte';
-  import { BellSolid, EyeSolid} from 'flowbite-svelte-icons';
+  import { BellSolid, EyeSolid } from 'flowbite-svelte-icons';
   import { Notification } from '$lib';
   import type { NotificationListProps } from '$lib/types';
 
@@ -10,7 +10,7 @@
 <ToolbarButton size="lg" class="-mx-0.5 hover:text-gray-900 dark:hover:text-white">
   <BellSolid size="lg" />
 </ToolbarButton>
-<Popover class="max-w-sm border-0" trigger="click" classes={{ content: "p-0" }} arrow={false} offset={10}>
+<Popover class="max-w-sm border-0" trigger="click" classes={{ content: 'p-0' }} arrow={false} offset={10}>
   {#snippet title()}
     <div class="rounded text-center">Notifications</div>
   {/snippet}
@@ -31,7 +31,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[NotificationListProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L536)
+[NotificationListProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L538)
 ## Props
 @prop notifications
 -->

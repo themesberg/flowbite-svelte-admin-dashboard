@@ -26,7 +26,7 @@
       </div>
     </Popover>
   </div>
-  <Tabs style="full" class="flex divide-x divide-gray-200 shadow rtl:divide-x-reverse dark:divide-gray-700" classes={{ content: "p-3 mt-4" }}>
+  <Tabs style="full" class="flex divide-x divide-gray-200 shadow rtl:divide-x-reverse dark:divide-gray-700" classes={{ content: 'p-3 mt-4' }}>
     <TabItem class="w-full" open>
       {#snippet titleSlot()}
         {tab1Title}

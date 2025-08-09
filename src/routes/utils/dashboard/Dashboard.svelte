@@ -4,7 +4,7 @@
   import trafficOptions from '../graphs/traffic';
   import users from '../graphs/users';
   import { DesktopPcOutline, MobilePhoneOutline, TabletOutline, ArrowRightOutline } from 'flowbite-svelte-icons';
-  import { Chart } from "@flowbite-svelte-plugins/chart";
+  import { Chart } from '@flowbite-svelte-plugins/chart';
   import { P, Button, Timeline, TimelineItem } from 'flowbite-svelte';
   import { ChartWidget, Stats, More, ActivityList, ProductMetricCard, CategorySalesReport, DarkChart, Traffic, getChartOptions } from '$lib';
   import type { DeviceOption } from '$lib/types';

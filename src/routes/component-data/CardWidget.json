@@ -2,24 +2,12 @@
   "name": "CardWidget",
   "type": {
     "name": "CardWidgetProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L413"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L415"
   },
   "props": [
-    [
-      "children",
-      ""
-    ],
-    [
-      "title",
-      ""
-    ],
-    [
-      "subtitle",
-      ""
-    ],
-    [
-      "class: className",
-      ""
-    ]
+    ["children", ""],
+    ["title", ""],
+    ["subtitle", ""],
+    ["class: className", ""]
   ]
 }

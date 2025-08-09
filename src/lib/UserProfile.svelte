@@ -10,10 +10,10 @@
 
   <div class="py-0.5">
     {#if title}
-    <Heading tag="h3" class="text-xl">{title}</Heading>
+      <Heading tag="h3" class="text-xl">{title}</Heading>
     {/if}
     {#if subtitle}
-    <p class="mt-1 mb-4 pt-px text-sm dark:text-gray-300">{subtitle}</p>
+      <p class="mt-1 mb-4 pt-px text-sm dark:text-gray-300">{subtitle}</p>
     {/if}
     {#if children}
       {@render children()}
@@ -25,7 +25,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[UserProfileProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L540)
+[UserProfileProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L542)
 ## Props
 @prop children
 @prop src

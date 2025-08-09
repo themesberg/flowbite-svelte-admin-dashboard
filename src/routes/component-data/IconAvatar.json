@@ -5,17 +5,8 @@
     "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L44"
   },
   "props": [
-    [
-      "children",
-      ""
-    ],
-    [
-      "src",
-      ""
-    ],
-    [
-      "color",
-      "'primary'"
-    ]
+    ["children", ""],
+    ["src", ""],
+    ["color", "'primary'"]
   ]
 }

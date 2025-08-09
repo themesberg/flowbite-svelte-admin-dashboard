@@ -1,6 +1,6 @@
 {
   "name": "flowbite-svelte-admin-dashboard",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Flowbite Admin Dashboard components for Svelte",
   "homepage": "https://flowbite-svelte-admin-dashboard.vercel.app/",
   "private": false,
@@ -23,7 +23,7 @@
     "gen:docspropvalue": "svelte-lib-helpers docspropvalue themesberg/flowbite-svelte-admin-dashboard",
     "gen:component-data-prop-value": "svelte-lib-helpers component-data-prop-value themesberg/flowbite-svelte-admin-dashboard",
     "copy:packagejson": "svelte-lib-helpers package",
-    "lib-helpers": "pnpm gen:docspropvalue && gen:component-data-prop-value && pnpm format && pnpm package && pnpm gen:exports && pnpm copy:packagejson",
+    "lib-helpers": "pnpm gen:docspropvalue && pnpm gen:component-data-prop-value && pnpm format && pnpm package && pnpm gen:exports && pnpm copy:packagejson",
     "ch": "npx changeset",
     "cv": "npx changeset version",
     "cp": "npx changeset publish"
@@ -108,6 +108,10 @@
     ".": {
       "types": "./dist/index.d.ts",
       "svelte": "./dist/index.js"
+    },
+    "./Accounts.svelte": {
+      "types": "./dist/Accounts.svelte.d.ts",
+      "svelte": "./dist/Accounts.svelte"
     },
     "./ActivityList.svelte": {
       "types": "./dist/ActivityList.svelte.d.ts",
@@ -213,6 +217,10 @@
       "types": "./dist/NotificationCard.svelte.d.ts",
       "svelte": "./dist/NotificationCard.svelte"
     },
+    "./NotificationList.svelte": {
+      "types": "./dist/NotificationList.svelte.d.ts",
+      "svelte": "./dist/NotificationList.svelte"
+    },
     "./Playground.svelte": {
       "types": "./dist/Playground.svelte.d.ts",
       "svelte": "./dist/Playground.svelte"
@@ -284,6 +292,10 @@
     "./UserModal.svelte": {
       "types": "./dist/UserModal.svelte.d.ts",
       "svelte": "./dist/UserModal.svelte"
+    },
+    "./UserProfile.svelte": {
+      "types": "./dist/UserProfile.svelte.d.ts",
+      "svelte": "./dist/UserProfile.svelte"
     },
     "./package.json": "./package.json"
   }

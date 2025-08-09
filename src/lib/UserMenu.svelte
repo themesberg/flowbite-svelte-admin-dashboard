@@ -2,7 +2,6 @@
   import { imagesPath } from './variables';
   import { Avatar, Dropdown, DropdownHeader, DropdownItem } from 'flowbite-svelte';
   import type { UserMenuProps } from './types';
- 
 
   let { name, avatar, email, menuItems, children, placement = 'bottom-end' }: UserMenuProps = $props();
 </script>

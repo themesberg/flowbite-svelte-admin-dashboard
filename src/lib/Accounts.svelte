@@ -4,12 +4,20 @@
   // import Users from '../../data/users.json';
   import type { AccountsProps } from './types';
 
-  let { children, users, title = 'Other accounts', headingTag = 'h3', headingClass = "text-xl font-semibold tracking-wide", listClass = "divide-y divide-gray-200 dark:divide-gray-700", liClass = "flex items-center justify-between space-x-4 py-4" }: AccountsProps = $props();
+  let {
+    children,
+    users,
+    title = 'Other accounts',
+    headingTag = 'h3',
+    headingClass = 'text-xl font-semibold tracking-wide',
+    listClass = 'divide-y divide-gray-200 dark:divide-gray-700',
+    liClass = 'flex items-center justify-between space-x-4 py-4'
+  }: AccountsProps = $props();
 </script>
 
 <Card size="xl" class="max-w-none p-4 sm:p-6">
   {#if title}
-  <Heading tag={headingTag} class={headingClass}>{title}</Heading>
+    <Heading tag={headingTag} class={headingClass}>{title}</Heading>
   {/if}
   <List tag="dl" class={listClass}>
     {#each users as { avatar, name, country, status }}
@@ -35,17 +43,17 @@
         {/if}
       </Li>
     {/each}
-    </List>
-    {#if children}
+  </List>
+  {#if children}
     {@render children()}
-    {/if}
+  {/if}
 </Card>
 
 <!--
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[AccountsProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L553)
+[AccountsProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L555)
 ## Props
 @prop children
 @prop users

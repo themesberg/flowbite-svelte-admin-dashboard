@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Heading } from 'flowbite-svelte';
-  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils'
+  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils';
   import * as ExampleComponents from './examples';
 
   const exampleModules = import.meta.glob('./examples/*.svelte', {
@@ -10,9 +10,9 @@
   }) as Record<string, string>;
 </script>
 
-<div class="p-8 max-w-4xl mx-auto mb-24">
+<div class="mx-auto mb-24 max-w-4xl p-8">
   <Heading tag="h1" class="my-3 text-4xl">Setting Components</Heading>
-  
+
   <Heading tag="h2" class="my-2 text-3xl">Accounts</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
     <ExampleComponents.Accounts />
@@ -21,7 +21,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='Accounts' />
+  <CompoAttributesViewer fileName="Accounts" />
 
   <Heading tag="h2" class="my-2 text-3xl">GeneralInfo</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -31,7 +31,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='GeneralInfo' />
+  <CompoAttributesViewer fileName="GeneralInfo" />
 
   <Heading tag="h2" class="my-2 text-3xl">UserProfile</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -43,7 +43,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='UserProfile' />
+  <CompoAttributesViewer fileName="UserProfile" />
 
   <Heading tag="h2" class="my-2 text-3xl">LanguageTime</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -55,7 +55,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='LanguageTime' />
+  <CompoAttributesViewer fileName="LanguageTime" />
 
   <Heading tag="h2" class="my-2 text-3xl">NotificationCard</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -67,7 +67,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='NotificationCard' />
+  <CompoAttributesViewer fileName="NotificationCard" />
 
   <Heading tag="h2" class="my-2 text-3xl">Sessions</Heading>
   <CodeWrapper class="my-8" innerClass="flex justify-center">
@@ -79,6 +79,5 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='Sessions' />
-
+  <CompoAttributesViewer fileName="Sessions" />
 </div>

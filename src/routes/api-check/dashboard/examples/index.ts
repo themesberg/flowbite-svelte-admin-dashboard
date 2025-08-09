@@ -3,7 +3,7 @@ export { default as CategorySalesReport } from './CategorySalesReportEx.svelte';
 export { default as ChartWidget } from './ChartWidgetEx.svelte';
 export { default as ChatMsg } from './ChatMsgEx.svelte';
 export { default as CreditCard } from './CreditCardEx.svelte';
-export { default as DateRangeSelector } from './DateRangeSelectorEx.svelte'
+export { default as DateRangeSelector } from './DateRangeSelectorEx.svelte';
 export { default as More } from './MoreEx.svelte';
 export { default as ProductMetricCard } from './ProductMetricCardEx.svelte';
 export { default as Stats } from './StatsEx.svelte';

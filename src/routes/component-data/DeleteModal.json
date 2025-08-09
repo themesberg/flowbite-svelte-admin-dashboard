@@ -5,21 +5,9 @@
     "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L237"
   },
   "props": [
-    [
-      "open",
-      "$bindable(true)"
-    ],
-    [
-      "title",
-      "'Are you sure you want to delete this?'"
-    ],
-    [
-      "yes",
-      "\"Yes, I'm sure\""
-    ],
-    [
-      "no",
-      "'No, cancel'"
-    ]
+    ["open", "$bindable(true)"],
+    ["title", "'Are you sure you want to delete this?'"],
+    ["yes", "\"Yes, I'm sure\""],
+    ["no", "'No, cancel'"]
   ]
 }

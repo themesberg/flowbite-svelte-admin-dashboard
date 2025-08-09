@@ -6,7 +6,6 @@
   import Users from '../../../data/users.json';
 </script>
 
-
 <UserProfile src={imagesPath(Users[4].avatar, 'users')}>
   <div class="flex items-center space-x-4">
     <Button size="sm" class="px-3"><UploadSolid size="sm" class="-ms-1 me-2" /> Upload picture</Button>

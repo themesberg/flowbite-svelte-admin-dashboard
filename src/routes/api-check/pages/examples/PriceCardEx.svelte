@@ -2,7 +2,7 @@
   import { PriceCard, PriceCardListItem } from '$lib';
   import { Toggle } from 'flowbite-svelte';
   import { CloseOutline } from 'flowbite-svelte-icons';
-  
+
   const prices: string[][] = [
     ['$24', '$200'],
     ['$49', '$400'],

@@ -2,24 +2,12 @@
   "name": "NotificationCard",
   "type": {
     "name": "NotificationCardProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L434"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L436"
   },
   "props": [
-    [
-      "title",
-      "'Email Notifications'"
-    ],
-    [
-      "subtitle",
-      "'You can set up Themesberg to get email notifications '"
-    ],
-    [
-      "items",
-      ""
-    ],
-    [
-      "class: className",
-      "'p-4 sm:p-6'"
-    ]
+    ["title", "'Email Notifications'"],
+    ["subtitle", "'You can set up Themesberg to get email notifications '"],
+    ["items", ""],
+    ["class: className", "'p-4 sm:p-6'"]
   ]
 }

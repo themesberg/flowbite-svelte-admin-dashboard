@@ -551,8 +551,8 @@ export type UserAccount = {
   name: string;
   country: string;
   status: string;
-}
-export interface AccountsProps{
+};
+export interface AccountsProps {
   children?: Snippet;
   users: UserAccount[];
   title?: string;

@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Breadcrumb, BreadcrumbItem, Heading, List, Li } from 'flowbite-svelte';
   import { CheckCircleSolid } from 'flowbite-svelte-icons';
-  import { HighlightCompo } from '../../utils'
+  import { HighlightCompo } from '../../utils';
   const name = __NAME__;
   const admindashboardVersion = __VERSION__;
   const svelteVersion = __SVELTEVERSION__;
@@ -13,10 +13,10 @@
   const tailwindmergeVersion = __TAILWINDMERGE__;
 
   const modules = import.meta.glob('./md/*.md', {
-		query: '?raw',
-		import: 'default',
-		eager: true
-	});
+    query: '?raw',
+    import: 'default',
+    eager: true
+  });
 </script>
 
 <main class="h-screen w-full overflow-y-auto bg-white dark:bg-gray-800">

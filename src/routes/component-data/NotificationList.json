@@ -2,12 +2,7 @@
   "name": "NotificationList",
   "type": {
     "name": "NotificationListProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L536"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L538"
   },
-  "props": [
-    [
-      "notifications",
-      ""
-    ]
-  ]
+  "props": [["notifications", ""]]
 }

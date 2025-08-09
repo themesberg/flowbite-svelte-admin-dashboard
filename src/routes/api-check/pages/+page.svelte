@@ -1,6 +1,6 @@
 <script lang="ts">
   import { Heading } from 'flowbite-svelte';
-  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils'
+  import { HighlightCompo, CodeWrapper, CompoAttributesViewer } from '../../utils';
   import * as ExampleComponents from './examples';
 
   const exampleModules = import.meta.glob('./examples/*.svelte', {
@@ -10,9 +10,9 @@
   }) as Record<string, string>;
 </script>
 
-<div class="p-8 max-w-4xl mx-auto mb-24">
+<div class="mx-auto mb-24 max-w-4xl p-8">
   <Heading tag="h1" class="my-3 text-4xl">Pages Components</Heading>
-  
+
   <Heading tag="h2" class="my-2 text-3xl">ComparisonTable</Heading>
   <CodeWrapper class="my-8">
     <ExampleComponents.ComparisonTable />
@@ -21,7 +21,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='ComparisonTable' />
+  <CompoAttributesViewer fileName="ComparisonTable" />
 
   <Heading tag="h2" class="my-2 text-3xl">Faq</Heading>
   <CodeWrapper class="my-8">
@@ -31,7 +31,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='Faq' />
+  <CompoAttributesViewer fileName="Faq" />
 
   <Heading tag="h2" class="my-2 text-3xl">Footer</Heading>
   <CodeWrapper class="my-8">
@@ -41,7 +41,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='Footer' />
+  <CompoAttributesViewer fileName="Footer" />
 
   <Heading tag="h2" class="my-2 text-3xl">Maintenance</Heading>
   <CodeWrapper class="my-8">
@@ -51,7 +51,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='Maintenance' />
+  <CompoAttributesViewer fileName="Maintenance" />
 
   <Heading tag="h2" class="my-2 text-3xl">NotFound</Heading>
   <CodeWrapper class="my-8">
@@ -61,7 +61,7 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='NotFound' />
+  <CompoAttributesViewer fileName="NotFound" />
 
   <Heading tag="h2" class="my-2 text-3xl">PriceCard</Heading>
   <CodeWrapper class="my-8">
@@ -71,8 +71,8 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='PriceCard' />
-  <CompoAttributesViewer fileName='PriceCardListItem' />
+  <CompoAttributesViewer fileName="PriceCard" />
+  <CompoAttributesViewer fileName="PriceCardListItem" />
 
   <Heading tag="h2" class="my-2 text-3xl">ServerError</Heading>
   <CodeWrapper class="my-8">
@@ -82,6 +82,5 @@
     {/snippet}
   </CodeWrapper>
 
-  <CompoAttributesViewer fileName='ServerError' />
-
+  <CompoAttributesViewer fileName="ServerError" />
 </div>

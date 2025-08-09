@@ -5,45 +5,15 @@
     "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L214"
   },
   "props": [
-    [
-      "title",
-      "'Something has gone seriously wrong'"
-    ],
-    [
-      "description",
-      "\"It's always time for a coffee break. We should be back by the time you finish your coffee.\""
-    ],
-    [
-      "image",
-      ""
-    ],
-    [
-      "btnTitle",
-      "'Go back home'"
-    ],
-    [
-      "btnHref",
-      "'/'"
-    ],
-    [
-      "mainClass",
-      "'bg-gray-50 dark:bg-gray-900'"
-    ],
-    [
-      "mainDivClass",
-      ""
-    ],
-    [
-      "h1Class",
-      ""
-    ],
-    [
-      "imgDiv",
-      "'block md:max-w-lg'"
-    ],
-    [
-      "div2Class",
-      "'text-center xl:max-w-4xl'"
-    ]
+    ["title", "'Something has gone seriously wrong'"],
+    ["description", "\"It's always time for a coffee break. We should be back by the time you finish your coffee.\""],
+    ["image", ""],
+    ["btnTitle", "'Go back home'"],
+    ["btnHref", "'/'"],
+    ["mainClass", "'bg-gray-50 dark:bg-gray-900'"],
+    ["mainDivClass", ""],
+    ["h1Class", ""],
+    ["imgDiv", "'block md:max-w-lg'"],
+    ["div2Class", "'text-center xl:max-w-4xl'"]
   ]
 }

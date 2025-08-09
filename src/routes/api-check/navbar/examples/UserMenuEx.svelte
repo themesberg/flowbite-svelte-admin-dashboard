@@ -2,7 +2,7 @@
   import { UserMenu } from '$lib';
   import { DropdownDivider, DropdownItem } from 'flowbite-svelte';
   import Users from '../../../data/users.json';
-  
+
   const menuItems = ['Dashboard', 'Settings', 'Earnings'];
 </script>
 
