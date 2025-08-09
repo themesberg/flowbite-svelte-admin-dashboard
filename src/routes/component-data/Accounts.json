@@ -9,8 +9,8 @@
     ["users", ""],
     ["title", "'Other accounts'"],
     ["headingTag", "'h3'"],
-    ["headingClass", "\"text-xl font-semibold tracking-wide\""],
-    ["listClass", "\"divide-y divide-gray-200 dark:divide-gray-700\""],
-    ["liClass", "\"flex items-center justify-between space-x-4 py-4\""]
+    ["headingClass", "'text-xl font-semibold tracking-wide'"],
+    ["listClass", "'divide-y divide-gray-200 dark:divide-gray-700'"],
+    ["liClass", "'flex items-center justify-between space-x-4 py-4'"]
   ]
 }

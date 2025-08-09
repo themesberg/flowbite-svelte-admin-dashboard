@@ -1,5 +1,11 @@
 # flowbite-svelte-admin-dashboard
 
+## 1.1.1
+
+### Patch Changes
+
+- fix: export types
+
 ## 1.1.0
 
 ### Minor Changes

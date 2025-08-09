@@ -59,7 +59,7 @@
 @prop users
 @prop title = 'Other accounts'
 @prop headingTag = 'h3'
-@prop headingClass = "text-xl font-semibold tracking-wide"
-@prop listClass = "divide-y divide-gray-200 dark:divide-gray-700"
-@prop liClass = "flex items-center justify-between space-x-4 py-4"
+@prop headingClass = 'text-xl font-semibold tracking-wide'
+@prop listClass = 'divide-y divide-gray-200 dark:divide-gray-700'
+@prop liClass = 'flex items-center justify-between space-x-4 py-4'
 -->
