@@ -1,7 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import type { ApexOptions } from 'apexcharts';
-  import { Chart } from 'flowbite-svelte';
+  import { Chart } from "@flowbite-svelte-plugins/chart";
   import { onMount } from 'svelte';
 
   type ConfigFunc = (dark: boolean) => ApexOptions;

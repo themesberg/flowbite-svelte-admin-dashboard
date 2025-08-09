@@ -10,7 +10,7 @@
 <ToolbarButton size="lg" class="-mx-0.5 hover:text-gray-900 dark:hover:text-white">
   <BellSolid size="lg" />
 </ToolbarButton>
-<Popover class="max-w-sm border-0" trigger="click" defaultClass="p-0" arrow={false} offset={10}>
+<Popover class="max-w-sm border-0" trigger="click" classes={{ content: "p-0" }} arrow={false} offset={10}>
   {#snippet title()}
     <div class="rounded text-center">Notifications</div>
   {/snippet}

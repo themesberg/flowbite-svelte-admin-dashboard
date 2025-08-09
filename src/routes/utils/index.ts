@@ -18,16 +18,14 @@ const extractRouteName = (path: string): string => {
   return pageIndex > 0 ? parts[pageIndex - 1] : '';
 };
 
-export const fetchDocs = async () => {
-  const docsFiles = import.meta.glob('/src/routes/**/docs/**/*.svelte');
-  const iterableDocsFiles = Object.entries(docsFiles);
-  const allDocs = await Promise.all(
-    iterableDocsFiles.map(async ([path, _]) => {
-      return {
-        path: extractRouteName(path)
-      };
-    })
-  );
-  // console.log('allBuilders: ', allBuilders)
-  return allDocs;
+export const fetchAdminDashboardApiCheck = async () => {
+  const adminDashboardFiles = import.meta.glob('/src/routes/api-check/**/*.svelte');
+  const allPaths = Object.keys(adminDashboardFiles)
+    .map((path) => ({
+      path: extractRouteName(path)
+    }))
+    .filter((item, index, self) => item.path !== "builder" && item.path !== "layout" && item.path !== "layoutExamples" && item.path !== "utils" && self.findIndex((i) => i.path === item.path) === index);
+
+  // console.log(allPaths)
+  return allPaths;  
 };

@@ -1,9 +1,9 @@
-import { fetchDocs } from '../../utils';
+import { fetchAdminDashboardApiCheck } from '../../utils';
 import { json } from '@sveltejs/kit';
 
 export const GET = async () => {
-  const allDocs = await fetchDocs();
+  const allDocs = await fetchAdminDashboardApiCheck();
   return json({
-    posts: allDocs
+    adminDashboard: allDocs
   });
 };

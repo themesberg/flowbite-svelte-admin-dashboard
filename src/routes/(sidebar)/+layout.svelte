@@ -9,10 +9,9 @@
   }
 
   let { children, data }: LayoutProps = $props();
-  const routes: Route[] = data.posts.posts;
+  const routes: Route[] = data.posts.adminDashboard;
   const docsRoute = routes.filter((route) => route.path !== '').map((route) => route.path);
-  // console.log('routes and docsRoute:', routes, docsRoute);
-  // const posts: Record<string, any[]> = data.posts || {};
+
   let drawerHidden = $state(false);
 </script>
 

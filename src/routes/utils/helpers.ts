@@ -102,9 +102,12 @@ export const isSvelteOverflow = (sveltefile: string, exampleModules: Record<stri
 // 	return fileNames;
 // }
 
-export function replaceLibImport(componentString: string): string {
-  if (!componentString) return '';
-  return componentString.replace(/from ["']\$lib["']/g, "from 'flowbite-svelte-admin-dashboard'").replace(/from ["']\$lib\//g, "from 'flowbite-svelte-admin-dashboard/");
+export function replaceLibImport(componentString: string | undefined, libraryName: string): string {
+  if (typeof componentString !== "string") {
+    throw new Error("Invalid componentString: Expected a string");
+  }
+
+  return componentString.replace(/from '\$lib'/g, `from '${libraryName}'`);
 }
 
 export function getExampleFileName(selectedExample: string, exampleArr: { name: string }[]): string {

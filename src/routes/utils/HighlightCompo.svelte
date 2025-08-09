@@ -1,85 +1,33 @@
 <script lang="ts">
-  import { HighlightSvelte, Highlight } from 'svelte-rune-highlight';
-  import markdown from 'svelte-rune-highlight/languages/markdown';
-  import { Button, Badge } from 'flowbite-svelte';
-  import { copyToClipboard, replaceLibImport } from './helpers';
-  import { highlightcompo } from './theme';
-  import { browser } from '$app/environment';
+  import { HighlightSvelte, Highlight } from "svelte-rune-highlight";
+  import markdown from "highlight.js/lib/languages/markdown";
+  import { Clipboard } from "flowbite-svelte";
+  import { replaceLibImport } from "./helpers";
+  import { highlightcompo } from "./theme";
+  // import clsx from "clsx";
 
   interface Props {
+    // componentStatus: boolean;
     code: string;
-    badgeClass?: string;
-    buttonClass?: string;
+    contentClass?: string;
     codeLang?: string;
     class?: string;
     expanded?: boolean;
-    replaceLib?: boolean;
+    replaceLib?: string;
   }
 
-  let { code, codeLang, badgeClass, buttonClass, replaceLib = true, class: className }: Props = $props();
+  let {
+    code,
+    codeLang,
+    contentClass = "overflow-hidden",
+    replaceLib = "runes-webkit",
+    class: className
+  }: Props = $props();
 
+  let value = $state(code);
   if (replaceLib) {
-    code = replaceLibImport(code);
+    code = replaceLibImport(code, replaceLib);
   }
-
-  // State for theme handling
-  let isDarkMode = $state(false);
-  let styleLink: HTMLLinkElement;
-  const localStorageName = 'highlight-theme';
-
-  // Function to check if dark mode is active
-  function checkDarkMode() {
-    if (browser) {
-      isDarkMode = document.documentElement.classList.contains('dark');
-      return isDarkMode;
-    }
-    return false;
-  }
-
-  // Load the appropriate highlight theme based on dark mode
-  $effect(() => {
-    if (!browser) return;
-
-    // Check dark mode status
-    checkDarkMode();
-
-    // Remove existing style link if it exists
-    if (styleLink) {
-      styleLink.remove();
-    }
-
-    // Create and add the new style link
-    (async () => {
-      const themeName = isDarkMode ? 'github-dark' : 'github';
-      const css = await import(`./highlight/styles/${themeName}.css?url`);
-
-      styleLink = document.createElement('link');
-      styleLink.rel = 'stylesheet';
-      styleLink.href = css.default;
-      document.head.append(styleLink);
-
-      // Store preference if needed
-      localStorage.setItem(localStorageName, themeName);
-    })();
-
-    // Set up dark mode observer
-    const observer = new MutationObserver((mutations) => {
-      mutations.forEach((mutation) => {
-        if (mutation.attributeName === 'class') {
-          checkDarkMode();
-        }
-      });
-    });
-
-    // Start observing the HTML element for class changes
-    observer.observe(document.documentElement, { attributes: true });
-
-    // Clean up function
-    return () => {
-      observer.disconnect();
-      if (styleLink) styleLink.remove();
-    };
-  });
 
   let showExpandButton: boolean = $state(false);
   let expand: boolean = $state(false);
@@ -88,49 +36,66 @@
     showExpandButton = isOverflowingY;
   };
 
-  const { base, badge, button } = $derived(highlightcompo());
-  let copiedStatus = $state(false);
+  // const base = $derived(highlightcompo({ class: clsx(className) }));
+  const base = $derived(highlightcompo({ class: className }));
 
   const handleExpandClick = () => {
     expand = !expand;
   };
 
-  function handleCopyClick() {
-    copyToClipboard(code)
-      .then(() => {
-        copiedStatus = true;
-        setTimeout(() => {
-          copiedStatus = false;
-        }, 1000);
-      })
-      .catch((err) => {
-        console.error('Error in copying:', err);
-      });
-  }
+  const mdLang = {
+    name: "markdown",
+    register: markdown
+  };
 </script>
 
-<div class={base({ className })}>
-  <div class="relative">
-    <div class="overflow-hidden {showExpandButton ? 'pb-8' : ''}" class:max-h-72={!expand} tabindex="-1" use:checkOverflow>
-      {#if copiedStatus}
-        <Badge class={badge({ class: badgeClass })} color="green">Copied to clipboard</Badge>
-      {/if}
-      {#if codeLang === 'md'}
-        <Highlight language={markdown} {code} />
-      {:else if code}
-        <HighlightSvelte {code} />
-      {:else}
-        no code is provided
-      {/if}
-    </div>
-    <Button class={button({ class: buttonClass })} onclick={handleCopyClick}>Copy</Button>
-    {#if showExpandButton}
-      <button
-        onclick={handleExpandClick}
-        type="button"
-        class="hover:text-primary-700 absolute start-0 bottom-0 w-full border-t border-gray-200 bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-        >{expand ? 'Collapse code' : 'Expand code'}</button
-      >
+<div class={base}>
+  <div
+    class="{contentClass} {showExpandButton ? 'pb-8' : ''}"
+    class:max-h-72={!expand}
+    tabindex="-1"
+    use:checkOverflow
+  >
+    <Clipboard
+      size="xs"
+      color="alternative"
+      bind:value
+      class="absolute top-8 right-2 w-20 bg-gray-50 focus:ring-0 dark:bg-gray-800"
+    >
+      {#snippet children(success)}
+        {#if success}
+          Copied
+        {:else}
+          Copy
+        {/if}
+      {/snippet}
+    </Clipboard>
+    {#if codeLang === "md"}
+      <Highlight language={mdLang} {code} class="m-0 p-0" />
+    {:else if code}
+      <HighlightSvelte {code} class="m-0 p-0" />
+    {:else}
+      no code is provided
     {/if}
   </div>
+
+  {#if showExpandButton}
+    <button
+      onclick={handleExpandClick}
+      type="button"
+      class="hover:text-primary-700 absolute start-0 bottom-0 w-full border-t border-gray-200 bg-gray-100 px-5 py-2.5 text-sm font-medium text-gray-900 hover:bg-gray-100 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+      >{expand ? "Collapse code" : "Expand code"}</button
+    >
+  {/if}
 </div>
+
+<!--
+@component
+[Go to docs](https://runes-webkit.codewithshin.com/)
+## Props
+@props: code: any;
+@props:codeLang: any;
+@props:contentClass: any = "overflow-hidden";
+@props:replaceLib: any = "runes-webkit";
+@props:class: string;
+-->

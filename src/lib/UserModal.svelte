@@ -53,7 +53,7 @@
 
         <Label class="col-span-6 space-y-2">
           <span>Biography</span>
-          <Textarea id="biography" rows={4} class="bg-gray-50 outline-none dark:bg-gray-700" placeholder="👨‍💻Full-stack web developer. Open-source contributor.">
+          <Textarea id="biography" rows={4} class="w-full bg-gray-50 outline-none dark:bg-gray-700" placeholder="👨‍💻Full-stack web developer. Open-source contributor.">
             👨‍💻Full-stack web developer. Open-source contributor.
           </Textarea>
         </Label>
