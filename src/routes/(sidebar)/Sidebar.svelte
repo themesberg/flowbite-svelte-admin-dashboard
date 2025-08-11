@@ -24,7 +24,7 @@
 
   interface Props {
     drawerHidden: boolean;
-    docsRoute: string[];
+    docsRoute?: string[];
   }
   let { drawerHidden = $bindable(false), docsRoute }: Props = $props();
   // console.log('data in Sidebar docsRoute:', docsRoute)
@@ -180,7 +180,7 @@
           <BookOpenOutline class={iconClass} />
         {/snippet}
         {#each docsRoute as doc}
-          <SidebarItem label={doc} href={`/docs/${doc}`} spanClass="ml-3" class={itemClass}>
+          <SidebarItem label={doc} href={`/api-check/${doc}`} spanClass="ml-3" class={itemClass}>
             {#snippet icon()}
               <FireOutline class="h-5 w-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-300 dark:group-hover:text-white" />
             {/snippet}

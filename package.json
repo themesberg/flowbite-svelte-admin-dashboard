@@ -66,6 +66,7 @@
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.39.0",
     "vite": "^6.3.5",
+    "vite-plugin-devtools-json": "^0.4.1",
     "vitest": "^3.2.4"
   },
   "pnpm": {
@@ -74,14 +75,14 @@
     ]
   },
   "peerDependencies": {
-    "tailwindcss": "^4.1.11",
     "@sveltejs/kit": "^2.5.5",
-    "svelte": "^5.29.0"
+    "svelte": "^5.29.0",
+    "tailwindcss": "^4.1.11"
   },
   "dependencies": {
+    "@flowbite-svelte-plugins/chart": "^0.2.4",
     "flowbite-svelte": "1.11.4",
     "flowbite-svelte-icons": "^2.2.1",
-    "@flowbite-svelte-plugins/chart": "^0.2.4",
     "tailwind-merge": "^3.3.1"
   },
   "keywords": [
