@@ -24,7 +24,7 @@
 
   interface Props {
     drawerHidden: boolean;
-    docsRoute?: string[];
+    docsRoute: string[];
   }
   let { drawerHidden = $bindable(false), docsRoute }: Props = $props();
   // console.log('data in Sidebar docsRoute:', docsRoute)
