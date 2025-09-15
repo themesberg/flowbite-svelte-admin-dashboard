@@ -14,6 +14,8 @@
           el.value = data[key];
         } else if (el instanceof HTMLTextAreaElement) {
           el.value = data[key];
+        }else if (el instanceof HTMLSelectElement) {
+          el.value = data[key];
         }
       }
     }
