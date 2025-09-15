@@ -6,7 +6,6 @@
   let { hidden = $bindable(true), title = 'Add new product', data = {} }: ProductDrawerProps = $props();
 
   function init(form: HTMLFormElement) {
-    if (data?.title) [data.title, data.price] = data.title.split(' ');
     for (const key in data) {
       // console.log(key, data[key]);
       const el = form.elements.namedItem(key);
