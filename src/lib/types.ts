@@ -382,6 +382,7 @@ export interface FooterProps {
 export interface ProductDrawerProps {
   hidden?: boolean;
   title?: string;
+  data?: Record<string, string>;
 }
 
 export interface ActivityListProps {

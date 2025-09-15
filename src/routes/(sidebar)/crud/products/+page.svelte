@@ -32,6 +32,8 @@
     hidden = !hidden;
   };
 
+  let current_product: any = $state({});
+
   const path: string = '/crud/products';
   const description: string = 'CRUD products examaple - Flowbite Svelte Admin Dashboard';
   const title: string = 'Flowbite Svelte Admin Dashboard - CRUD Products';
@@ -66,7 +68,7 @@
       </ToolbarButton>
       {#snippet end()}
         <div class="space-x-2">
-          <Button class="whitespace-nowrap" onclick={() => toggle(ProductDrawer)}>Add new product</Button>
+          <Button class="whitespace-nowrap" onclick={() => (current_product={}, toggle(ProductDrawer))}>Add new product</Button>
         </div>
       {/snippet}
     </Toolbar>
@@ -98,7 +100,7 @@
           <TableBodyCell class="p-4">{product.price}</TableBodyCell>
           <TableBodyCell class="p-4">{product.discount}</TableBodyCell>
           <TableBodyCell class="space-x-2">
-            <Button size="sm" class="gap-2 px-3" onclick={() => toggle(ProductDrawer)}>
+            <Button size="sm" class="gap-2 px-3" onclick={() => ((current_product = product), toggle(ProductDrawer))}>
               <EditOutline size="sm" /> Update
             </Button>
             <Button color="red" size="sm" class="gap-2 px-3" onclick={() => toggle(DeleteDrawer as Component)}>
@@ -112,5 +114,5 @@
 </main>
 
 <Drawer placement="right" bind:hidden>
-  <DrawerComponent bind:hidden />
+  <DrawerComponent bind:hidden data={current_product}/>
 </Drawer>
