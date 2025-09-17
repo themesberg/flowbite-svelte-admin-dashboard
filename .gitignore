@@ -1,5 +1,6 @@
 test-results
 node_modules
+src/routes/testdir
 
 # Output
 .output
