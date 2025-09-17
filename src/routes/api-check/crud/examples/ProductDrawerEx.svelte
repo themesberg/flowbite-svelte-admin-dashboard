@@ -3,10 +3,10 @@
   import { Button, Drawer } from 'flowbite-svelte';
   import { TrashBinSolid } from 'flowbite-svelte-icons';
 
-  let hidden: boolean = $state(true); // modal control
+  let open: boolean = $state(false); // modal control
 
   const toggle = () => {
-    hidden = !hidden;
+    open = !open;
   };
 </script>
 
@@ -14,9 +14,9 @@
   <TrashBinSolid size="sm" /> Delete item
 </Button>
 
-<Drawer placement="right" bind:hidden>
+<Drawer placement="right" bind:open>
   <ProductDrawer 
-    bind:hidden 
+    bind:open 
     additionalFields={[
       {
         name: 'technology',
