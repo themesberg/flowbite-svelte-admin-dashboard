@@ -145,6 +145,5 @@
   </Table>
 </main>
 
-
 <DrawerComponent bind:open data={current_product} {additionalFields} />
 
