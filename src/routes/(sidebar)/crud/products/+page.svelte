@@ -4,7 +4,6 @@
     BreadcrumbItem,
     Button,
     Checkbox,
-    Drawer,
     Heading,
     Input,
     Table,
@@ -22,14 +21,12 @@
   import MetaTag from '../../../utils/MetaTag.svelte';
   import { DeleteDrawer, ProductDrawer } from '$lib';
 
-  // import Product from './Product.svelte';
-
-  let hidden: boolean = $state(true); // modal control
-  let DrawerComponent: Component = $state(ProductDrawer); // drawer component
+  let open: boolean = $state(false);
+  let DrawerComponent: Component = $state(ProductDrawer);
 
   const toggle = (component: Component) => {
     DrawerComponent = component;
-    hidden = !hidden;
+    open = !open;
   };
 
   let current_product: any = $state({});
@@ -38,6 +35,41 @@
   const description: string = 'CRUD products examaple - Flowbite Svelte Admin Dashboard';
   const title: string = 'Flowbite Svelte Admin Dashboard - CRUD Products';
   const subtitle: string = 'CRUD Products';
+
+  const additionalFields = [
+    {
+      name: 'technology',
+      label: 'Technology/Brand',
+      options: [
+        { value: 'Angular', label: 'Angular' },
+        { value: 'React JS', label: 'React JS' },
+        { value: 'Svelte', label: 'Svelte' },
+        { value: 'Vue', label: 'Vue' }
+      ]
+    },
+    {
+      name: 'category',
+      label: 'Category',
+      options: [
+        { value: 'Html templates', label: 'HTML Templates' },
+        { value: 'UI Kit', label: 'UI Kit' },
+        { value: 'Dashboard', label: 'Dashboard' },
+        { value: 'Component Library', label: 'Component Library' }
+      ]
+    },
+    {
+      name: 'discount',
+      label: 'Discount',
+      options: [
+        { value: 'No', label: 'No Discount' },
+        { value: '5%', label: '5% Off' },
+        { value: '10%', label: '10% Off' },
+        { value: '15%', label: '15% Off' },
+        { value: '20%', label: '20% Off' },
+        { value: '25%', label: '25% Off' }
+      ]
+    }
+  ];
 </script>
 
 <MetaTag {path} {description} {title} {subtitle} />
@@ -113,6 +145,6 @@
   </Table>
 </main>
 
-<Drawer placement="right" bind:hidden>
-  <DrawerComponent bind:hidden data={current_product}/>
-</Drawer>
+
+<DrawerComponent bind:open data={current_product} {additionalFields} />
+

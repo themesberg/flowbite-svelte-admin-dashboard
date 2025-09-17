@@ -1,7 +1,7 @@
 import type { Component, Snippet } from 'svelte';
 import type { SizeType, IndicatorProps, CardProps, HeadingProps, DropdownProps } from 'flowbite-svelte';
 import type { ApexOptions } from 'apexcharts';
-import type { HTMLFormAttributes } from 'svelte/elements';
+import type { HTMLFormAttributes, HTMLAttributes } from 'svelte/elements';
 
 export type MenuItem = {
   name: string;
@@ -247,7 +247,7 @@ export interface UserModalProps {
 }
 
 export interface DeleteDrawerProps {
-  hidden?: boolean;
+  open?: boolean;
   title?: string;
   confirm?: string;
   yes?: string;
@@ -379,10 +379,23 @@ export interface FooterProps {
   menus: Menu[];
 }
 
-export interface ProductDrawerProps {
-  hidden?: boolean;
+interface SelectOption {
+  value: string;
+  label: string;
+}
+
+interface AdditionalField {
+  name: string;        // Form field name (e.g., 'technology', 'category')
+  label: string;       // Display label (e.g., 'Technology', 'Category')
+  placeholder?: string; // Default option text (e.g., 'Select technology')
+  options: SelectOption[];
+}
+
+export interface ProductDrawerProps extends HTMLFormAttributes {
+  open?: boolean;
   title?: string;
-  data?: Record<string, string>;
+  data?: Record<string, unknown>;
+  additionalFields?: AdditionalField[];
 }
 
 export interface ActivityListProps {
