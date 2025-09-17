@@ -15,5 +15,29 @@
 </Button>
 
 <Drawer placement="right" bind:hidden>
-  <ProductDrawer bind:hidden />
+  <ProductDrawer 
+    bind:hidden 
+    additionalFields={[
+      {
+        name: 'technology',
+        label: 'Technology',
+        placeholder: 'Select technology',
+        options: [
+          { value: 'REACT', label: 'React' },
+          { value: 'SVELTE', label: 'SvelteKit' },
+          { value: 'VUE', label: 'Vue.js' }
+        ]
+      },
+      {
+        name: 'discount',
+        label: 'Discount',
+        placeholder: 'No discount',
+        options: [
+          { value: '10', label: '10%' },
+          { value: '20', label: '20%' },
+          { value: '30', label: '30%' }
+        ]
+      }
+    ]}
+  />
 </Drawer>

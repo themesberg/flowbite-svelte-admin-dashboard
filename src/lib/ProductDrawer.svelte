@@ -1,68 +1,105 @@
 <script lang="ts">
-  import { Button, CloseButton, Heading, Input, Label, Select, Textarea } from 'flowbite-svelte';
+  import { Button, Heading, Input, Label, Select, Textarea, Drawer } from 'flowbite-svelte';
   import { CloseOutline } from 'flowbite-svelte-icons';
   import type { ProductDrawerProps } from './types';
+  import type { Attachment } from 'svelte/attachments';
 
-  let { hidden = $bindable(true), title = 'Add new product' }: ProductDrawerProps = $props();
+  let { open = $bindable(false), title = 'Add new product', data = {}, additionalFields = [], ...formAttrs }: ProductDrawerProps = $props();
+
+  const prefill: Attachment<HTMLFormElement> = (form) => {
+    const fill = (vals: Record<string, unknown> = {}) => {
+      for (const [key, value] of Object.entries(vals)) {
+        if (value == null) continue;
+        
+        // Try to find the element using multiple approaches
+        let el = form.elements.namedItem(key) as HTMLElement | null;
+        
+        // If not found with namedItem, try querySelector
+        if (!el) {
+          el = form.querySelector(`[name="${key}"]`);
+        }
+        
+        // If still not found, try finding by name attribute in the entire form
+        if (!el) {
+          el = form.querySelector(`input[name="${key}"], select[name="${key}"], textarea[name="${key}"]`);
+        }
+        
+        if (!el) {
+          console.warn(`Could not find form element with name: ${key}`);
+          continue;
+        }
+        
+        // Handle different input types
+        if (el instanceof HTMLInputElement) {
+          if (el.type === 'checkbox') {
+            el.checked = Boolean(value);
+          } else {
+            el.value = String(value);
+          }
+        } else if (el instanceof HTMLTextAreaElement) {
+          el.value = String(value);
+        } else if (el instanceof HTMLSelectElement) {
+          el.value = String(value);
+        } else {
+          // For custom components like Flowbite Select, try setting the value property
+          try {
+            (el as any).value = String(value);
+          } catch (e) {
+            console.warn(`Could not set value for element ${key}:`, e);
+          }
+        }
+      }
+    };
+
+    // Use a slight delay to ensure all components are mounted
+    setTimeout(() => {
+      fill(data);
+    }, 50);
+
+    return () => {
+      // Cleanup function (optional)
+    };
+  };
 </script>
 
-<Heading tag="h5" class="mb-6 text-sm font-semibold uppercase">{title}</Heading>
-<CloseButton onclick={() => (hidden = true)} class="absolute top-2.5 right-2.5 text-gray-400 hover:text-black dark:text-white" />
-
-<form action="#">
-  <div class="space-y-4">
-    <Label class="space-y-2">
-      <span>Name</span>
-      <Input name="title" class="border font-normal outline-none" placeholder="Type product name" required />
-    </Label>
-
-    <Label class="space-y-2">
-      <span>Price</span>
-      <Input name="price" class="border font-normal outline-none" placeholder="$2999" required />
-    </Label>
-    <Label class="space-y-2">
-      <span>Technology</span>
-      <Select class="border-gray-300 font-normal outline-none">
-        <option selected>Select category</option>
-        <option value="FL">Flowbite</option>
-        <option value="RE">React</option>
-        <option value="AN">Angular</option>
-        <option value="VU">Vue</option>
-      </Select>
-    </Label>
-    <Label class="space-y-2">
-      <span>Description</span>
-      <Textarea rows={4} placeholder="Enter event description here" class="border-gray-300 font-normal outline-none"></Textarea>
-    </Label>
-    <Label class="space-y-2">
-      <span>Discount</span>
-      <Select class="border-gray-300 font-normal outline-none">
-        <option selected>No</option>
-        <option value="5">5%</option>
-        <option value="10">10%</option>
-        <option value="20">20%</option>
-        <option value="30">30%</option>
-        <option value="40">40%</option>
-        <option value="50">50%</option>
-      </Select>
-    </Label>
-
-    <div class="bottom-0 left-0 flex w-full justify-center space-x-4 pb-4 md:absolute md:px-4">
-      <Button type="submit" class="w-full">Add product</Button>
-      <Button color="alternative" class="w-full" onclick={() => (hidden = true)}>
-        <CloseOutline />
-        Cancel
-      </Button>
+<Drawer placement="right" bind:open>
+  <Heading tag="h5" class="mb-6 text-sm font-semibold uppercase">
+    {title || (Object.keys(data).length ? 'Edit product' : 'Add new product')}
+  </Heading>
+ 
+  <form {...formAttrs} {@attach prefill}>
+    <div class="space-y-4">
+      <Label class="space-y-2">
+        <span>Name</span>
+        <Input name="name" class="border font-normal outline-none" placeholder="Type product name" required />
+      </Label>
+      <Label class="space-y-2">
+        <span>Price</span>
+        <Input name="price" class="border font-normal outline-none" placeholder="$2999" required />
+      </Label>
+      {#each additionalFields as field}
+        <Label class="space-y-2">
+          <span>{field.label}</span>
+          <Select name={field.name} class="border-gray-300 font-normal outline-none">
+            {#each field.options as option}
+              <option value={option.value}>{option.label}</option>
+            {/each}
+          </Select>
+        </Label>
+      {/each}
+      <Label class="space-y-2">
+        <span>Description</span>
+        <Textarea rows={4} name="description" placeholder="Enter event description here" class="w-full border-gray-300 font-normal outline-none"></Textarea>
+      </Label>
+      <div class="bottom-0 left-0 flex w-full justify-center space-x-4 pb-4 md:absolute md:px-4">
+        <Button type="submit" class="w-full">
+          {Object.keys(data).length ? 'Edit product' : 'Add product'}
+        </Button>
+        <Button color="alternative" class="w-full" onclick={() => (open = false)}>
+          <CloseOutline />
+          Cancel
+        </Button>
+      </div>
     </div>
-  </div>
-</form>
-
-<!--
-@component
-[Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
-## Type
-[ProductDrawerProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L382)
-## Props
-@prop hidden = $bindable(true)
-@prop title = 'Add new product'
--->
+  </form>
+</Drawer>
