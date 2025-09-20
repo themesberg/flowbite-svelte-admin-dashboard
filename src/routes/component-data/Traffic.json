@@ -2,7 +2,7 @@
   "name": "Traffic",
   "type": {
     "name": "TrafficProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L514"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L528"
   },
   "props": [
     ["chart", ""],

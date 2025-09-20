@@ -2,7 +2,7 @@
   "name": "Sessions",
   "type": {
     "name": "SessionProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L529"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L543"
   },
   "props": [
     ["seeMorehref", ""],

@@ -1,5 +1,11 @@
 # flowbite-svelte-admin-dashboard
 
+## 2.0.0
+
+### Major Changes
+
+- feat(ProductDrawer): add Drawer and additionalFields
+
 ## 1.1.1
 
 ### Patch Changes

@@ -15,8 +15,8 @@
 </Button>
 
 <Drawer placement="right" bind:open>
-  <ProductDrawer 
-    bind:open 
+  <ProductDrawer
+    bind:open
     additionalFields={[
       {
         name: 'technology',

@@ -11,7 +11,7 @@
 @component
 [Go to docs](https://flowbite-svelte-admin-dashboard.vercel.app/)
 ## Type
-[NotificationCardProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L436)
+[NotificationCardProps](https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L450)
 ## Props
 @prop title = 'Email Notifications'
 @prop subtitle = 'You can set up Themesberg to get email notifications '

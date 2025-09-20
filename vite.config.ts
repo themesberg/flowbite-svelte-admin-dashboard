@@ -3,7 +3,7 @@ import { svelteTesting } from '@testing-library/svelte/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import pkg from './package.json' with { type: 'json' };
-import devtoolsJson from "vite-plugin-devtools-json";
+import devtoolsJson from 'vite-plugin-devtools-json';
 import sveltePackage from './node_modules/svelte/package.json' with { type: 'json' };
 import svelteKitPackage from './node_modules/@sveltejs/kit/package.json' with { type: 'json' };
 import vitePackage from './node_modules/vite/package.json' with { type: 'json' };

@@ -10,25 +10,25 @@
     const fill = (vals: Record<string, unknown> = {}) => {
       for (const [key, value] of Object.entries(vals)) {
         if (value == null) continue;
-        
+
         // Try to find the element using multiple approaches
         let el = form.elements.namedItem(key) as HTMLElement | null;
-        
+
         // If not found with namedItem, try querySelector
         if (!el) {
           el = form.querySelector(`[name="${key}"]`);
         }
-        
+
         // If still not found, try finding by name attribute in the entire form
         if (!el) {
           el = form.querySelector(`input[name="${key}"], select[name="${key}"], textarea[name="${key}"]`);
         }
-        
+
         if (!el) {
           console.warn(`Could not find form element with name: ${key}`);
           continue;
         }
-        
+
         // Handle different input types
         if (el instanceof HTMLInputElement) {
           if (el.type === 'checkbox') {
@@ -66,7 +66,7 @@
   <Heading tag="h5" class="mb-6 text-sm font-semibold uppercase">
     {title || (Object.keys(data).length ? 'Edit product' : 'Add new product')}
   </Heading>
- 
+
   <form {...formAttrs} {@attach prefill}>
     <div class="space-y-4">
       <Label class="space-y-2">

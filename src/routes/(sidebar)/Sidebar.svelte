@@ -127,7 +127,6 @@
       Icon: LifeSaverSolid
     }
   ];
-
 </script>
 
 <SidebarButton breakpoint="lg" onclick={sidebarUi.toggle} class="fixed top-[22px] z-40 mb-2" />

@@ -2,7 +2,7 @@
   "name": "SmallPanel",
   "type": {
     "name": "SmallPanelProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L500"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L514"
   },
   "props": [
     ["IconOption", ""],

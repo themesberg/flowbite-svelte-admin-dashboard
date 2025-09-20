@@ -385,8 +385,8 @@ interface SelectOption {
 }
 
 interface AdditionalField {
-  name: string;        // Form field name (e.g., 'technology', 'category')
-  label: string;       // Display label (e.g., 'Technology', 'Category')
+  name: string; // Form field name (e.g., 'technology', 'category')
+  label: string; // Display label (e.g., 'Technology', 'Category')
   placeholder?: string; // Default option text (e.g., 'Select technology')
   options: SelectOption[];
 }

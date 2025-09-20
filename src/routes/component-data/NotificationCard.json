@@ -2,7 +2,7 @@
   "name": "NotificationCard",
   "type": {
     "name": "NotificationCardProps",
-    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L436"
+    "link": "https://github.com/themesberg/flowbite-svelte-admin-dashboard/blob/main/src/lib/types.ts#L450"
   },
   "props": [
     ["title", "'Email Notifications'"],

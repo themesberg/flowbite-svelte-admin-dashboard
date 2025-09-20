@@ -1,20 +1,5 @@
 <script lang="ts">
-  import {
-    Breadcrumb,
-    BreadcrumbItem,
-    Button,
-    Checkbox,
-    Heading,
-    Input,
-    Table,
-    TableBody,
-    TableBodyCell,
-    TableBodyRow,
-    TableHead,
-    TableHeadCell,
-    Toolbar,
-    ToolbarButton
-  } from 'flowbite-svelte';
+  import { Breadcrumb, BreadcrumbItem, Button, Checkbox, Heading, Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead, TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
   import { CogSolid, DotsVerticalOutline, EditOutline, ExclamationCircleSolid, TrashBinSolid } from 'flowbite-svelte-icons';
   import type { Component } from 'svelte';
   import Products from '../../../data/product.json';
@@ -100,7 +85,7 @@
       </ToolbarButton>
       {#snippet end()}
         <div class="space-x-2">
-          <Button class="whitespace-nowrap" onclick={() => (current_product={}, toggle(ProductDrawer))}>Add new product</Button>
+          <Button class="whitespace-nowrap" onclick={() => ((current_product = {}), toggle(ProductDrawer))}>Add new product</Button>
         </div>
       {/snippet}
     </Toolbar>
@@ -146,4 +131,3 @@
 </main>
 
 <DrawerComponent bind:open data={current_product} {additionalFields} />
-
