@@ -48,6 +48,14 @@
   ];
   const menuItems = ['Dashboard', 'Settings', 'Earnings'];
 
+    // for avatar
+  const MY_IMG_DIR = 'https://flowbite-admin-dashboard.vercel.app/images';
+  
+  const users = Users.map(user => ({
+    ...user,
+    avatar: `${MY_IMG_DIR}/users/${user.avatar}`
+  }));
+
   const notifications: NotificationData[] = [
     {
       src: Users[0].avatar,
@@ -86,8 +94,10 @@
     }
   ];
 
-  const imgDir: string = 'https://flowbite-admin-dashboard.vercel.app/images';
-  const myImagePath = (filename: string) => `${imgDir}/users/${filename}`;
+  const newNotifications = notifications.map(notification => ({
+    ...notification,
+    src: `${MY_IMG_DIR}/users/${notification.src}`
+  }));
 </script>
 
 <Navbar class="mx-10 sm:mx-0">
@@ -119,10 +129,10 @@
     {/if}
   </div>
   <div class="ms-auto flex items-center text-gray-500 sm:order-2 dark:text-gray-300">
-    <NotificationList {notifications} />
+    <NotificationList notifications={newNotifications} />
     <AppsMenu {menu} />
     <DarkMode />
-    <UserMenu {...Users[4]} avatar={myImagePath("bonnie-green.png")}  {menuItems}>
+    <UserMenu {...users[4]} {menuItems}>
       <DropdownDivider />
       <DropdownItem>Sign out</DropdownItem>
     </UserMenu>

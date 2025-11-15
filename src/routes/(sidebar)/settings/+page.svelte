@@ -1,9 +1,6 @@
 <script lang="ts">
   import { DesktopPcOutline, MobilePhoneOutline } from 'flowbite-svelte-icons';
-  // import Accounts from '../../utils/settings/Accounts.svelte';
   import PasswordInfo from '../../utils/settings/PasswordInfo.svelte';
-  // import UserProfile from '../../utils/settings/UserProfile.svelte';
-  // import Sessions from '../../utils/settings/Sessions.svelte';
   import SocialAccounts from '../../utils/settings/SocialAccounts.svelte';
   import { Breadcrumb, BreadcrumbItem, Heading, Button } from 'flowbite-svelte';
   import { NotificationCard, GeneralInfo, LanguageTime, Sessions, UserProfile, Accounts } from '$lib';
@@ -122,6 +119,14 @@
       }
     ]
   };
+
+  // for avatar
+  const MY_IMG_DIR = 'https://flowbite-admin-dashboard.vercel.app/images';
+  
+  const users = Users.map(user => ({
+    ...user,
+    avatar: `${MY_IMG_DIR}/users/${user.avatar}`
+  }));
 </script>
 
 <MetaTag {path} {description} {title} {subtitle} />
@@ -141,7 +146,7 @@
       <UserProfile src={imagesPath(Users[4].avatar, 'users')} />
       <LanguageTime {languages} {timezones} />
       <SocialAccounts />
-      <Accounts users={Users.slice(0, 4)}>
+      <Accounts users={users.slice(0, 4)}>
         <Button class="mt-2 w-fit">Save all</Button>
       </Accounts>
     </div>

@@ -3,6 +3,7 @@
   import type { UserMenuProps } from './types';
 
   let { name, avatar, email, menuItems, children, placement = 'bottom-end' }: UserMenuProps = $props();
+  console.log('avatar: ', avatar)
 </script>
 
 <button class="ms-3 rounded-full ring-gray-400 focus:ring-4 dark:ring-gray-600">
