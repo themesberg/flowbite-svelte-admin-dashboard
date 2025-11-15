@@ -7,7 +7,7 @@
   import type { InputField, SessionProps } from '$lib/types';
   import Footer from '../Footer.svelte';
 
-  import { imagesPath } from '../../utils/variables';
+  import { MY_IMG_DIR } from '../../utils';
   import Users from '../../data/users.json';
   import MetaTag from '../../utils/MetaTag.svelte';
 
@@ -121,8 +121,6 @@
   };
 
   // for avatar
-  const MY_IMG_DIR = 'https://flowbite-admin-dashboard.vercel.app/images';
-  
   const users = Users.map(user => ({
     ...user,
     avatar: `${MY_IMG_DIR}/users/${user.avatar}`
@@ -143,7 +141,7 @@
       <Heading tag="h1" class="text-xl font-semibold text-gray-900 sm:text-2xl dark:text-white">User settings</Heading>
     </div>
     <div class="col-span-full space-y-4 xl:col-auto">
-      <UserProfile src={imagesPath(Users[4].avatar, 'users')} />
+      <UserProfile src={users[4].avatar} />
       <LanguageTime {languages} {timezones} />
       <SocialAccounts />
       <Accounts users={users.slice(0, 4)}>

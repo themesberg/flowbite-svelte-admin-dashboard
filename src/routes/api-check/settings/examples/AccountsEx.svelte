@@ -3,9 +3,9 @@
   import { Button } from 'flowbite-svelte';
 
   import Users from '../../../data/users.json';
+  import { MY_IMG_DIR } from '../../../utils'
+
   // for avatar
-  const MY_IMG_DIR = 'https://flowbite-admin-dashboard.vercel.app/images';
-  
   const users = Users.map(user => ({
     ...user,
     avatar: `${MY_IMG_DIR}/users/${user.avatar}`

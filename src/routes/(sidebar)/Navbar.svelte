@@ -20,6 +20,7 @@
 
   import '../../app.css';
   import Users from '../data/users.json';
+  import { MY_IMG_DIR } from '../utils'
 
   import type { NotificationProps } from '$lib/types';
 
@@ -48,9 +49,7 @@
   ];
   const menuItems = ['Dashboard', 'Settings', 'Earnings'];
 
-    // for avatar
-  const MY_IMG_DIR = 'https://flowbite-admin-dashboard.vercel.app/images';
-  
+  // for avatar
   const users = Users.map(user => ({
     ...user,
     avatar: `${MY_IMG_DIR}/users/${user.avatar}`
