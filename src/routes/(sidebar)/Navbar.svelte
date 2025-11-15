@@ -85,6 +85,9 @@
       content: `<span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.`
     }
   ];
+
+  const imgDir: string = 'https://flowbite-admin-dashboard.vercel.app/images';
+  const myImagePath = (filename: string) => `${imgDir}/users/${filename}`;
 </script>
 
 <Navbar class="mx-10 sm:mx-0">
@@ -119,7 +122,7 @@
     <NotificationList {notifications} />
     <AppsMenu {menu} />
     <DarkMode />
-    <UserMenu {...Users[4]} {menuItems}>
+    <UserMenu {...Users[4]} avatar={myImagePath("bonnie-green.png")}  {menuItems}>
       <DropdownDivider />
       <DropdownItem>Sign out</DropdownItem>
     </UserMenu>
