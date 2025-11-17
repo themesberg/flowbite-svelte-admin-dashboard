@@ -2,8 +2,7 @@
   import { Breadcrumb, BreadcrumbItem, Heading, List, Li } from 'flowbite-svelte';
   import { CheckCircleSolid } from 'flowbite-svelte-icons';
   import { HighlightCompo } from '../../utils';
-  const name = __NAME__;
-  const admindashboardVersion = __VERSION__;
+
   const svelteVersion = __SVELTEVERSION__;
   const svelteKitVersion = __SVELTEKITVERSION__;
   const viteVersion = __VITEVERSION__;

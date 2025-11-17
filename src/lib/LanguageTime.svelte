@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Button, Label, Select } from 'flowbite-svelte';
+  import { Label, Select } from 'flowbite-svelte';
   import { CardWidget } from '$lib';
   import type { LanguageTimeProps } from './types';
 

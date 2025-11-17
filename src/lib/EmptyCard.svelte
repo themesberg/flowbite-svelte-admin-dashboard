@@ -2,10 +2,10 @@
   import { Card } from 'flowbite-svelte';
   import type { EmptyCardProps } from './types';
 
-  let { size, class: className, ...restProps }: EmptyCardProps = $props();
+  let { id, size, class: className, ...restProps }: EmptyCardProps = $props();
 </script>
 
-<Card {size} class={className} {...restProps}>
+<Card {size} class={className} id={String(id)} {...restProps}>
   <div class="rounded border border-dashed border-gray-200 px-4 py-2 text-gray-400 dark:border-gray-600">
     <h3>Card header</h3>
   </div>

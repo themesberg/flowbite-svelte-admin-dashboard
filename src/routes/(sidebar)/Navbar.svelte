@@ -34,7 +34,7 @@
     list?: boolean;
   }
 
-  let { fluid = true, drawerHidden = $bindable(false), list = false }: Props = $props();
+  let { drawerHidden = $bindable(false), list = false }: Props = $props();
 
   const menu = [
     { name: 'Sales', href: '/', icon: ShoppingBagSolid },

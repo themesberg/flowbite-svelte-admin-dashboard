@@ -30,11 +30,8 @@
   const siteOptions = $derived(site ?? siteDefault);
 
   const mainDivCls = twMerge('flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900', mainDivClass);
-  const siteLinkCls = twMerge('flex items-center justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white', siteLinkClass);
   const siteImgCls = twMerge('mr-4 h-11', siteImgClass);
   const cardH1Cls = twMerge('mb-3 text-2xl font-bold text-gray-900 dark:text-white', cardH1Class);
-  const cardDiv3Cls = twMerge('flex space-x-4', cardDiv3Class);
-  const userImgCls = twMerge('w-8 h-8 rounded-full', userImgClass);
   const termsLinkCls = twMerge('text-primary-700 hover:underline dark:text-primary-500', termsLinkClass);
 
   const preventDefault = <E extends Event>(fn: (event: E) => void) => {
