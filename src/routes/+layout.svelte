@@ -6,7 +6,6 @@
 
   let { children, data }: LayoutProps = $props();
   const analyticsId = data.ANALYTICS_ID as string;
-  // console.log('analyticsId', data.ANALYTICS_ID);
 
   onMount(modeobserver);
 </script>

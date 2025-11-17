@@ -53,12 +53,6 @@ export function toUpperSnakeCase(text: string): string {
   return text.replace(/[\s-]/g, '_').toUpperCase();
 }
 
-// export const isOverflow = (markdown: string, modules: Record<string, any>): boolean => {
-//   const markdownLines = modules[`./md/${markdown}`];
-//   const lines = markdownLines.split('\n');
-//   return lines.length > 7;
-// };
-
 export const isGeneratedCodeOverflow = (code: string): boolean => {
   const lines = code.split('\n');
   return lines.length > 7;
@@ -76,31 +70,6 @@ export const isSvelteOverflow = (sveltefile: string, exampleModules: Record<stri
   const lines = fileContent.split('\n');
   return lines.length > 7;
 };
-
-// import { fileList } from '../../generatedFileList';
-
-/**
- * Returns an array of file names from the `fileList` that include the specified `dirName`.
- *
- * @param {string} dirName - The directory name to filter the file list by.
- * @return {string[]} An array of file names without extensions.
- */
-// export function getFilteredFileNames(dirName: string): string[] {
-// 	const filteredPaths = fileList.filter((path) => path.includes(`src/lib/${dirName}`));
-// 	// console.log("filteredPaths", filteredPaths);
-// 	const fileNames = filteredPaths.map((path) => {
-// 		const parts = path.split('/');
-// 		const fileNameWithExtension = parts[parts.length - 1];
-// 		const fileNameWithoutExtension = fileNameWithExtension.substring(
-// 			0,
-// 			fileNameWithExtension.lastIndexOf('.')
-// 		);
-
-// 		return fileNameWithoutExtension;
-// 	});
-
-// 	return fileNames;
-// }
 
 export function replaceLibImport(componentString: string | undefined, libraryName: string): string {
   if (typeof componentString !== 'string') {

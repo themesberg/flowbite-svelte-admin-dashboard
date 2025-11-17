@@ -2,11 +2,13 @@
   import { UserMenu } from '$lib';
   import { DropdownDivider, DropdownItem } from 'flowbite-svelte';
   import Users from '../../../data/users.json';
+  import { mapUsersWithAvatars } from '../../../utils'
 
   const menuItems = ['Dashboard', 'Settings', 'Earnings'];
+  const users = mapUsersWithAvatars(Users);
 </script>
 
-<UserMenu {...Users[4]} {menuItems} placement="bottom">
+<UserMenu {...users[4]} {menuItems} placement="bottom">
   <DropdownDivider />
   <DropdownItem>Sign out</DropdownItem>
 </UserMenu>
