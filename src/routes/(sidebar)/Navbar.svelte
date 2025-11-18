@@ -29,7 +29,6 @@
   };
 
   interface Props {
-    fluid?: boolean;
     drawerHidden?: boolean;
     list?: boolean;
   }
