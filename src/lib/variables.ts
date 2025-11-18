@@ -1,8 +1,5 @@
-export const MY_IMG_DIR = import.meta.env.VITE_IMG_DIR;
+export const MY_IMG_DIR = import.meta.env.VITE_IMG_DIR ?? 'https://flowbite-admin-dashboard.vercel.app/images';
 
-if (!MY_IMG_DIR) {
-  throw new Error('VITE_IMG_DIR environment variable is required. Please add it to your .env file.');
-}
 /**
  * Constructs a path to an avatar image
  * @param src The avatar image filename
