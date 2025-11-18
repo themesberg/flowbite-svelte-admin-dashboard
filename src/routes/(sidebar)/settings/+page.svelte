@@ -3,14 +3,13 @@
   import PasswordInfo from '../../utils/settings/PasswordInfo.svelte';
   import SocialAccounts from '../../utils/settings/SocialAccounts.svelte';
   import { Breadcrumb, BreadcrumbItem, Heading, Button } from 'flowbite-svelte';
-  import { NotificationCard, GeneralInfo, LanguageTime, Sessions, UserProfile, Accounts } from '$lib';
+  import { NotificationCard, GeneralInfo, LanguageTime, Sessions, UserProfile, Accounts, mapUsersWithAvatars } from '$lib';
   import type { InputField, SessionProps } from '$lib/types';
   import Footer from '../Footer.svelte';
-
-  import { MY_IMG_DIR } from '../../utils';
   import Users from '../../data/users.json';
   import MetaTag from '../../utils/MetaTag.svelte';
 
+  const users = mapUsersWithAvatars(Users);
   const items = [
     {
       title: 'Rating reminders',
@@ -119,12 +118,6 @@
       }
     ]
   };
-
-  // for avatar
-  const users = Users.map((user) => ({
-    ...user,
-    avatar: `${MY_IMG_DIR}/users/${user.avatar}`
-  }));
 </script>
 
 <MetaTag {path} {description} {title} {subtitle} />
