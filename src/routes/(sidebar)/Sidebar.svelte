@@ -1,6 +1,5 @@
 <script lang="ts">
   import { afterNavigate } from '$app/navigation';
-  import { page } from '$app/state';
 
   import { Sidebar, SidebarDropdownWrapper, SidebarGroup, SidebarItem, SidebarWrapper, SidebarButton, uiHelpers } from 'flowbite-svelte';
   import {
@@ -35,23 +34,17 @@
   let itemClass = 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 w-full';
   let groupClass = 'pt-2 space-y-2 mb-3';
 
-  let activeUrl = $derived(page.url.pathname);
-  let activeMainSidebar: string;
-
   const sidebarUi = uiHelpers();
   let isOpen = $state(false);
   const closeSidebar = sidebarUi.close;
   $effect(() => {
     isOpen = sidebarUi.isOpen;
-    activeUrl = page.url.pathname;
   });
 
-  afterNavigate((navigation) => {
+  afterNavigate(() => {
     // this fixes https://github.com/themesberg/flowbite-svelte/issues/364
     document.getElementById('svelte')?.scrollTo({ top: 0 });
     closeDrawer();
-
-    activeMainSidebar = navigation.to?.url.pathname ?? '';
   });
 
   let posts = [
