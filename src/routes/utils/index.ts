@@ -29,4 +29,3 @@ export const fetchAdminDashboardApiCheck = async () => {
     );
   return allPaths;
 };
-

@@ -1,5 +1,22 @@
 <script lang="ts">
-  import { Avatar, Breadcrumb, BreadcrumbItem, Button, Checkbox, Heading, Indicator, Input, Table, TableBody, TableBodyCell, TableBodyRow, TableHead,TableHeadCell, Toolbar, ToolbarButton } from 'flowbite-svelte';
+  import {
+    Avatar,
+    Breadcrumb,
+    BreadcrumbItem,
+    Button,
+    Checkbox,
+    Heading,
+    Indicator,
+    Input,
+    Table,
+    TableBody,
+    TableBodyCell,
+    TableBodyRow,
+    TableHead,
+    TableHeadCell,
+    Toolbar,
+    ToolbarButton
+  } from 'flowbite-svelte';
   import { CogSolid, DotsVerticalOutline, DownloadSolid } from 'flowbite-svelte-icons';
   import { EditOutline, ExclamationCircleSolid, PlusOutline, TrashBinSolid } from 'flowbite-svelte-icons';
   import Users from '../../../data/users.json';

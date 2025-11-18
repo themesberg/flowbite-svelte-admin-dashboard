@@ -16,8 +16,7 @@ export const avatarPath = (src: string): string => MY_IMG_DIR + '/users/' + src;
  * @param subdirs Optional subdirectories to include in the path
  * @returns The full path to the image
  */
-export const imagesPath = (src: string, ...subdirs: string[]): string => 
-  [MY_IMG_DIR, ...subdirs, src].filter(Boolean).join('/');
+export const imagesPath = (src: string, ...subdirs: string[]): string => [MY_IMG_DIR, ...subdirs, src].filter(Boolean).join('/');
 
 export function mapUsersWithAvatars<T extends { avatar: string }>(users: T[]): T[] {
   if (!MY_IMG_DIR) {

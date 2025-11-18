@@ -1,5 +1,11 @@
 # flowbite-svelte-admin-dashboard
 
+## 2.1.0
+
+### Minor Changes
+
+- feat: require env VITE_IMG_DIR
+
 ## 2.0.2
 
 ### Patch Changes
