@@ -1,5 +1,11 @@
 # flowbite-svelte-admin-dashboard
 
+## 2.1.1
+
+### Patch Changes
+
+- fix: add fallback url to MY_IMG_DIR
+
 ## 2.1.0
 
 ### Minor Changes
