@@ -20,7 +20,7 @@
   import { mapUsersWithAvatars } from '../utils';
   import '../../app.css';
   import Users from '../data/users.json';
-  import { MY_IMG_DIR } from '../utils';
+  // import { MY_IMG_DIR } from '../utils';
 
   import type { NotificationProps } from '$lib/types';
 
@@ -29,12 +29,11 @@
   };
 
   interface Props {
-    fluid?: boolean;
     drawerHidden?: boolean;
     list?: boolean;
   }
 
-  let { fluid = true, drawerHidden = $bindable(false), list = false }: Props = $props();
+  let { drawerHidden = $bindable(false), list = false }: Props = $props();
 
   const menu = [
     { name: 'Sales', href: '/', icon: ShoppingBagSolid },
@@ -89,11 +88,6 @@
       content: `<span class="font-semibold text-gray-900 dark:text-white">Robert Brown</span> posted a new video: Glassmorphism - learn how to implement the new design trend.`
     }
   ];
-
-  const newNotifications = notifications.map((notification) => ({
-    ...notification,
-    src: `${MY_IMG_DIR}/users/${notification.src}`
-  }));
 </script>
 
 <Navbar class="mx-10 sm:mx-0">
@@ -125,7 +119,7 @@
     {/if}
   </div>
   <div class="ms-auto flex items-center text-gray-500 sm:order-2 dark:text-gray-300">
-    <NotificationList notifications={newNotifications} />
+    <NotificationList {notifications} />
     <AppsMenu {menu} />
     <DarkMode />
     <UserMenu {...users[4]} {menuItems}>

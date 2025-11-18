@@ -3,13 +3,10 @@
   import { Button } from 'flowbite-svelte';
 
   import Users from '../../../data/users.json';
-  import { MY_IMG_DIR } from '../../../utils';
+  import { mapUsersWithAvatars } from '../../../utils';
 
   // for avatar
-  const users = Users.map((user) => ({
-    ...user,
-    avatar: `${MY_IMG_DIR}/users/${user.avatar}`
-  }));
+  const users = mapUsersWithAvatars(Users);
 </script>
 
 <Accounts users={users.slice(0, 4)}>

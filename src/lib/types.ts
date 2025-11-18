@@ -1,7 +1,7 @@
 import type { Component, Snippet } from 'svelte';
 import type { SizeType, IndicatorProps, CardProps, HeadingProps, DropdownProps } from 'flowbite-svelte';
 import type { ApexOptions } from 'apexcharts';
-import type { HTMLFormAttributes, HTMLAttributes } from 'svelte/elements';
+import type { HTMLFormAttributes } from 'svelte/elements';
 
 export type MenuItem = {
   name: string;
