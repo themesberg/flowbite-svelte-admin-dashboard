@@ -17,10 +17,10 @@
     HeartSolid,
     ChevronDownOutline
   } from 'flowbite-svelte-icons';
-  import { mapUsersWithAvatars } from '../utils'
+  import { mapUsersWithAvatars } from '../utils';
   import '../../app.css';
   import Users from '../data/users.json';
-  import { MY_IMG_DIR } from '../utils'
+  import { MY_IMG_DIR } from '../utils';
 
   import type { NotificationProps } from '$lib/types';
 
@@ -90,7 +90,7 @@
     }
   ];
 
-  const newNotifications = notifications.map(notification => ({
+  const newNotifications = notifications.map((notification) => ({
     ...notification,
     src: `${MY_IMG_DIR}/users/${notification.src}`
   }));

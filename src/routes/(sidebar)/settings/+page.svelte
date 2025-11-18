@@ -121,7 +121,7 @@
   };
 
   // for avatar
-  const users = Users.map(user => ({
+  const users = Users.map((user) => ({
     ...user,
     avatar: `${MY_IMG_DIR}/users/${user.avatar}`
   }));

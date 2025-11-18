@@ -1,5 +1,11 @@
 # flowbite-svelte-admin-dashboard
 
+## 2.0.1
+
+### Patch Changes
+
+- fix: UserMenu
+
 ## 2.0.0
 
 ### Major Changes
