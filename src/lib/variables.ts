@@ -1,5 +1,8 @@
 export const MY_IMG_DIR = import.meta.env.VITE_IMG_DIR;
 
+if (!MY_IMG_DIR) {
+  throw new Error('VITE_IMG_DIR environment variable is required. Please add it to your .env file.');
+}
 /**
  * Constructs a path to an avatar image
  * @param src The avatar image filename
@@ -17,6 +20,9 @@ export const imagesPath = (src: string, ...subdirs: string[]): string =>
   [MY_IMG_DIR, ...subdirs, src].filter(Boolean).join('/');
 
 export function mapUsersWithAvatars<T extends { avatar: string }>(users: T[]): T[] {
+  if (!MY_IMG_DIR) {
+    console.error('MY_IMG_DIR is not configured. Avatar paths may be incorrect.');
+  }
   return users.map((user) => ({
     ...user,
     avatar: user.avatar.startsWith('http') ? user.avatar : `${MY_IMG_DIR}/users/${user.avatar}`

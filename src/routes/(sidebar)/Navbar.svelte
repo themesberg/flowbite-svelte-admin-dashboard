@@ -19,8 +19,6 @@
   } from 'flowbite-svelte-icons';
   import '../../app.css';
   import Users from '../data/users.json';
-  // import { MY_IMG_DIR } from '../utils';
-
   import type { NotificationProps } from '$lib/types';
 
   type NotificationData = Omit<NotificationProps, 'children'> & {
