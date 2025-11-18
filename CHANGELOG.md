@@ -1,5 +1,11 @@
 # flowbite-svelte-admin-dashboard
 
+## 2.0.2
+
+### Patch Changes
+
+- chore: cleanup
+
 ## 2.0.1
 
 ### Patch Changes
