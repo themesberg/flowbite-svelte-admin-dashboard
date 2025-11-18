@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { AppsMenu, UserMenu, NotificationList } from '$lib';
+  import { AppsMenu, UserMenu, NotificationList, mapUsersWithAvatars } from '$lib';
   import { DarkMode, Dropdown, DropdownItem, NavBrand, NavLi, NavUl, Navbar, Search, DropdownDivider } from 'flowbite-svelte';
   import {
     ArchiveSolid,
@@ -17,11 +17,8 @@
     HeartSolid,
     ChevronDownOutline
   } from 'flowbite-svelte-icons';
-  import { mapUsersWithAvatars } from '../utils';
   import '../../app.css';
   import Users from '../data/users.json';
-  // import { MY_IMG_DIR } from '../utils';
-
   import type { NotificationProps } from '$lib/types';
 
   type NotificationData = Omit<NotificationProps, 'children'> & {

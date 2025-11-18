@@ -1,9 +1,7 @@
 <script lang="ts">
-  import { Accounts } from '$lib';
+  import { Accounts, mapUsersWithAvatars } from '$lib';
   import { Button } from 'flowbite-svelte';
-
   import Users from '../../../data/users.json';
-  import { mapUsersWithAvatars } from '../../../utils';
 
   // for avatar
   const users = mapUsersWithAvatars(Users);

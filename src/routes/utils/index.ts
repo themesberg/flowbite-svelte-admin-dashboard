@@ -30,11 +30,3 @@ export const fetchAdminDashboardApiCheck = async () => {
   return allPaths;
 };
 
-export const MY_IMG_DIR = import.meta.env.VITE_IMG_DIR || 'https://flowbite-admin-dashboard.vercel.app/images';
-
-export function mapUsersWithAvatars<T extends { avatar: string }>(users: T[]): T[] {
-  return users.map((user) => ({
-    ...user,
-    avatar: user.avatar.startsWith('http') ? user.avatar : `${MY_IMG_DIR}/users/${user.avatar}`
-  }));
-}

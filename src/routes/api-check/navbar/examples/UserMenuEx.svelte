@@ -1,8 +1,7 @@
 <script lang="ts">
-  import { UserMenu } from '$lib';
+  import { UserMenu, mapUsersWithAvatars } from '$lib';
   import { DropdownDivider, DropdownItem } from 'flowbite-svelte';
   import Users from '../../../data/users.json';
-  import { mapUsersWithAvatars } from '../../../utils';
 
   const menuItems = ['Dashboard', 'Settings', 'Earnings'];
   const users = mapUsersWithAvatars(Users);
