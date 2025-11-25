@@ -46,7 +46,7 @@
 
 <main class={mainClass}>
   <div class={mainDivCls}>
-    <a href={siteOptions.link} class={siteLinkClass}>
+    <a href={siteOptions.link} class={siteLinkCls}>
       <img src={siteOptions.img} class={siteImgCls} alt={siteOptions.imgAlt} />
       <span>{siteOptions.name}</span>
     </a>
